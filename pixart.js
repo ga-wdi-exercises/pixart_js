@@ -1,7 +1,9 @@
+
+
 var setBoxColor = function( event ){
 	event.preventDefault();
-	var colorField = document.getElementById("color-field")
-	var chosenColor = colorField.value
+	colorField = document.getElementById("color-field")
+	chosenColor = colorField.value
 	var brush = document.querySelector(".brush")
 	brush.style.backgroundColor = chosenColor
 }
@@ -13,7 +15,8 @@ for(i = 0; i < 21; i++) {
 	var square = document.createElement('div');
 	square.className = "square";
 	square.addEventListener("click", function(event){
-		this.style.backgroundColor = "green"
+		this.style.backgroundColor = chosenColor
 	})
 	document.body.appendChild(square);
 }
+
