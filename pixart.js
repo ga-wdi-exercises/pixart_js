@@ -27,6 +27,6 @@ var squares = document.querySelectorAll(".square")
 
     squares[i].addEventListener("click", function (event) {
       //event.preventDefault();
-      this.style.backgroundColor = "green"
+      this.style.backgroundColor = colorField.value
     })
 }
