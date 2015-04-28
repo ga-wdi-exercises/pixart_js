@@ -29,3 +29,16 @@ function createSquares(){
 }
 
 createSquares();
+
+var squares = document.querySelectorAll(".square");
+
+function changeSquare(evt){
+  this.style.backgroundColor = "green";
+}
+
+for (var i = 0; i < squares.length; i++) {
+  squares[i].addEventListener('click', changeSquare);
+};
+
+
+
