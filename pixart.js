@@ -16,3 +16,16 @@ function changeColor(evt){
 // Take the form and call changeColor when the form is submitted 
 // submit.preventDefault() prevents the form from being submitted 
 color_form.addEventListener('submit', changeColor);
+
+
+function createSquares(){
+  i = 0;
+  while (i < 20){
+    var square = document.createElement("div");
+    square.className = "square";
+    document.body.appendChild(square);
+    i++ 
+  }
+}
+
+createSquares();
