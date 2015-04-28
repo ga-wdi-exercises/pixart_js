@@ -12,9 +12,10 @@ function changeSquare(event){
     event.target.style.backgroundColor = colorField.value;
 }
 
-for(var i = 0; i < 20; i ++){
+
+for(var i = 0; i < 8000; i ++){
     var square = document.createElement("div");
     square.className = "square";
-    square.addEventListener('click', changeSquare);
+    square.addEventListener('mouseover', changeSquare);
     document.body.appendChild(square);
 }
