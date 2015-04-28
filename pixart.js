@@ -1,4 +1,4 @@
-for(var i=0;i<20; i++){
+for(var i=0;i<8000; i++){
   elemDiv= document.createElement('div');
   elemDiv.className = "square";
  document.body.appendChild(elemDiv);
