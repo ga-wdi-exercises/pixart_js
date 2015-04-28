@@ -12,3 +12,20 @@ colorField.addEventListener("keypress", function(event){
     brush.style.background = colorField.value;
   }
 });
+
+var divs = [];
+
+for (i = 0; i < 8000; i++){
+  var div = document.createElement('div');
+  div.setAttribute("class", "square");
+  document.body.appendChild(div);
+  divs.push(div);
+};
+
+console.log(divs);
+
+for (i = 0; i < divs.length; i++){
+  divs[i].addEventListener("mouseover", function(event){
+    this.style.background = colorField.value;
+  });
+};
