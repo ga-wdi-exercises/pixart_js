@@ -9,3 +9,12 @@ form.addEventListener("submit", function( event ){
 
     brush.style.backgroundColor = colorField.value
 })
+
+//Using JavaScript, create 20 divs of the "square" class and append them to the body
+
+for(i=0; i<21;i++) {
+    var square = document.createElement('div')
+    square.className = "square"
+
+    document.body.appendChild(square)
+}
