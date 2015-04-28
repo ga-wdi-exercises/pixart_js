@@ -10,3 +10,9 @@ function changeBrush(){
   var colorField = document.querySelector("#color-field");
   brush.style.backgroundColor = colorField.value;
 }
+
+for(var i =0;i < 20;i++){
+  var createSquare = document.createElement("div");
+  createSquare.className = 'square';
+  document.body.appendChild(createSquare);
+}
