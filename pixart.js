@@ -39,6 +39,6 @@ for(var i = 1; i < 26; i++){
 // event.target.className
 for (var j = 0; j < 25; j++){
   document.querySelectorAll(".square")[j].addEventListener('click', function( event ){
-    this.style.backgroundColor = 'green'
+    this.style.backgroundColor = field.value
 })
 }
