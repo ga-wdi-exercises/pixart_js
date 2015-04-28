@@ -1,3 +1,4 @@
+var body = document.querySelector('body');
 var colorEntry = document.getElementById('color-field');
 var colorButton = document.getElementById('set-color');
 var brushBox = document.querySelector('.brush');
@@ -15,3 +16,9 @@ colorEntry.addEventListener('keydown', function(action){
     brushBox.style.background = colorEntry.value;
   }
 })
+
+for (var i = 1; i <= 20; i++) {
+  var paintedPixel = document.createElement('div');
+  paintedPixel.className = 'square';
+  body.appendChild(paintedPixel);
+};
