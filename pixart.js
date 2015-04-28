@@ -9,7 +9,7 @@ function changeBrush(event){
     brush.style.backgroundColor = colorField.value;
 }
 function changeSquare(event){
-    event.target.style.backgroundColor = 'green';
+    event.target.style.backgroundColor = colorField.value;
 }
 
 for(var i = 0; i < 20; i ++){
