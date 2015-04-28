@@ -10,3 +10,9 @@ function changeBoxColor(event){
 
 document.getElementById("set-color").addEventListener("click", changeBoxColor);
 document.getElementById("set-color").addEventListener("onkeypress", changeBoxColor);
+
+for(var i=0;i<20; i++){
+  elemDiv= document.createElement('div');
+  elemDiv.className = "square";
+ document.body.appendChild(elemDiv);
+}
