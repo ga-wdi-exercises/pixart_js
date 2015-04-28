@@ -18,11 +18,10 @@ for(var i = 0; i < 20; i++) {
 
 var draw = document.querySelectorAll(".square");
 
-for (var x = 0; x < 20; x++) {
+for (var x = 0; x < draw.length; x++) {
   draw[x].addEventListener("click", function(event){
   event.preventDefault();
-  this.style.background = "green"
-  console.log(draw[x]);
+  this.style.background = field.value
   })
 }
 // <form id="form">
