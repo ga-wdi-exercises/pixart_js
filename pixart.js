@@ -10,20 +10,31 @@ var button = document.getElementById("set-color");
 var form = document.querySelector("form");
 var brush = document.querySelector(".brush");
 
+//create 3 swatches
+for(i = 0; i < 3; i++){
+	var createSwatches = document.createElement('div');
+		document.body.appendChild(createSwatches).className = "swatch";
+}
 
-console.log("Hi");
-console.log(newColor);
+var swatches = document.querySelectorAll(".swatch");
 
 form.addEventListener("submit", function(event){
 	event.preventDefault();
 	brush.style.backgroundColor = newColor.value;
+	swatches[2].style.backgroundColor = swatches[1].style.backgroundColor;
+	swatches[1].style.backgroundColor = swatches[0].style.backgroundColor;
+	swatches[0].style.backgroundColor = newColor.value;
 })
+
+
+
 
 //create 8000 squares
 for(i = 0; i < 8000; i++){
 	var createSquares = document.createElement('div');
 		document.body.appendChild(createSquares).className = "square";
 }
+
 //paint on hover over the squares
 var squares = document.querySelectorAll(".square");
 for(i=0; i < 8000; i++){
