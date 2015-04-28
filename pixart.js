@@ -13,13 +13,23 @@ function changeIt (event){
 
 
 
-for(var i = 0; i < 21; i++) {
+for(var i = 0; i < 8000; i++) {
 	var square = document.createElement('div');
-	square.className = "square"
+	square.className = "square";
+	square.addEventListener("mouseover", function(event){
+		this.style.backgroundColor = colorChange.value;
+	})
 	document.body.appendChild(square);
 }
 
+// var squares = document.querySelectorAll(".square");
+// for (i = 0; i < squares.length; i++){
+// 	squares[i].addEventListener
+// }
+// 	form.addEventListener("click", function (event))
 
+
+// }
 
 
 
