@@ -8,9 +8,13 @@ function changeBrush(event){
     event.preventDefault();
     brush.style.backgroundColor = colorField.value;
 }
+function changeSquare(event){
+    event.target.style.backgroundColor = 'green';
+}
 
 for(var i = 0; i < 20; i ++){
     var square = document.createElement("div");
     square.className = "square";
+    square.addEventListener('click', changeSquare);
     document.body.appendChild(square);
 }
