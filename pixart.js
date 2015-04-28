@@ -9,7 +9,7 @@ document.getElementById("set-color").addEventListener("onkeypress", changeBoxCol
 
 var square =document.querySelectorAll(".square")
 for(var i=0; i<square.length; i++){
-  square[i].addEventListener("click", changeDivColor);
+  square[i].addEventListener("mouseover", changeDivColor);
 }
 
 
