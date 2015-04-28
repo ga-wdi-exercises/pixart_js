@@ -1,10 +1,13 @@
 @import url(http://fonts.googleapis.com/css?family=Monoton);
-
+#swatch{
+text-align: center;
+}
 .brush {
   width: 100px;
   height: 100px;
   background: #1B4370;
-  margin: 15px auto;
+  margin: 15px ;
+  display: inline-block;
 }
 
 .square {
