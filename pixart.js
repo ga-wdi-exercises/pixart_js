@@ -1,5 +1,5 @@
 function changeBoxColor(event){
-  
+
   event.preventDefault();
   // event.target // equals the button that was clicked
   // so we don't have to document.getElementById("set-color") again
