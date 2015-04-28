@@ -6,3 +6,9 @@ form.addEventListener("submit", function(event){
 	event.preventDefault();
 	box.style.backgroundColor = field.value;
 })
+
+for(i = 0; i < 20; i++){
+  var square = document.createElement("div");
+  square.className = "square";
+  document.body.appendChild(square);
+}
