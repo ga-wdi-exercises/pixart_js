@@ -17,8 +17,12 @@ colorEntry.addEventListener('keydown', function(action){
   }
 })
 
-for (var i = 1; i <= 20; i++) {
+for (var i = 1; i <= 8000; i++) {
   var paintedPixel = document.createElement('div');
   paintedPixel.className = 'square';
   body.appendChild(paintedPixel);
+  paintedPixel.addEventListener('mouseover', function(action){
+    var brushColor = window.getComputedStyle(brushBox).getPropertyValue("background-color");
+    this.style.background = brushColor;
+  })
 };
