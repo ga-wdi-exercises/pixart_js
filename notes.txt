@@ -1,0 +1,3 @@
+document.createElement
+document.setAttribute class, square
+document.body.appendChild(div)

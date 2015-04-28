@@ -7,12 +7,15 @@ var form = document.querySelector("#form");
 
 button.addEventListener("click", function(event){
   event.preventDefault();
-  // console.log(brush.style.background)
-
   brush.style.background = field.value
-  // console.log(brush.style.background)
-
 })
+
+
+ for(var i = 0; i < 20; i++) {
+  var square = document.createElement("div");
+  square.setAttribute("class" , "square");
+  document.body.appendChild(square);
+}
 
 
 // <form id="form">
