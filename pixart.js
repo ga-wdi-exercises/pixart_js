@@ -13,3 +13,17 @@ button.addEventListener("click", function(myEvent){
 	console.log(newColor);
 	document.querySelector(".brush").style.backgroundColor = newColor;
 })
+
+for(i = 1; i < 21; i++){
+	var createSquares = document.createElement('div');
+	document.body.appendChild(createSquares);
+    createSquares.className = "square";
+}
+
+var squares = document.querySelectorAll(".square");
+
+for(i=0; i < 8000; i++){
+squares[i].addEventListener("mouseover", function(paintEvent){
+	this.style.backgroundColor = "green";
+})
+}
