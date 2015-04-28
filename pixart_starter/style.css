@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Monoton);
+/*@import url(http://fonts.googleapis.com/css?family=Monoton);*/
 
 .brush {
   width: 100px;
@@ -16,7 +16,7 @@
 }
 
 h1 {
-  font-family: Monoton;
+  font-family: Times;
   font-size: 48px;
   text-align: center;
 }
