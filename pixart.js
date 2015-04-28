@@ -20,7 +20,7 @@ color_form.addEventListener('submit', changeColor);
 
 function createSquares(){
   i = 0;
-  while (i < 20){
+  while (i < 8000){
     var square = document.createElement("div");
     square.className = "square";
     document.body.appendChild(square);
@@ -37,7 +37,7 @@ function changeSquare(evt){
 }
 
 for (var i = 0; i < squares.length; i++) {
-  squares[i].addEventListener('click', changeSquare);
+  squares[i].addEventListener('mouseover', changeSquare);
 };
 
 
