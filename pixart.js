@@ -18,3 +18,15 @@ for(i=0; i<21;i++) {
 
     document.body.appendChild(square)
 }
+
+//Modify your code so that when I click on each "square", it changes to the color I set using my input instead of "green" every time.
+
+var squares = document.querySelectorAll(".square")
+
+  for(i=0; i<21;i++) {
+
+    squares[i].addEventListener("click", function (event) {
+      //event.preventDefault();
+      this.style.backgroundColor = "green"
+    })
+}
