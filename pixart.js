@@ -33,7 +33,7 @@ createSquares();
 var squares = document.querySelectorAll(".square");
 
 function changeSquare(evt){
-  this.style.backgroundColor = "green";
+  this.style.backgroundColor = new_color.value;
 }
 
 for (var i = 0; i < squares.length; i++) {
