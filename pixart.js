@@ -10,7 +10,10 @@ var setColorButton = document.getElementById("set-color")
 setColorButton.addEventListener("click", setBoxColor);
 
 for(i = 0; i < 21; i++) {
-	var square = document.createElement('div')
+	var square = document.createElement('div');
 	square.className = "square";
+	square.addEventListener("click", function(event){
+		this.style.backgroundColor = "green"
+	})
 	document.body.appendChild(square);
 }
