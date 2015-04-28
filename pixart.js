@@ -12,7 +12,7 @@ form.addEventListener("submit", function( event ){
 
 //Using JavaScript, create 20 divs of the "square" class and append them to the body
 
-for(i=0; i<21;i++) {
+for(i=0; i<8000;i++) {
     var square = document.createElement('div')
     square.className = "square"
 
@@ -23,9 +23,9 @@ for(i=0; i<21;i++) {
 
 var squares = document.querySelectorAll(".square")
 
-  for(i=0; i<21;i++) {
+  for(i=0; i<8000;i++) {
 
-    squares[i].addEventListener("click", function (event) {
+    squares[i].addEventListener("mouseover", function (event) {
       //event.preventDefault();
       this.style.backgroundColor = colorField.value
     })
