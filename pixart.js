@@ -7,3 +7,12 @@ form.addEventListener("submit", function( event ){
   console.log(field.value)
   box.style.backgroundColor = field.value
 })
+
+// var div = document.createElement("div")
+// document.body.appendChild( div )
+
+for(var i = 1; i < 26; i++){
+  var div = document.createElement("div")
+  div.className = "square"
+  document.body.appendChild( div )
+}
