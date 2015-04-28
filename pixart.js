@@ -8,3 +8,9 @@ function changeBrush(event){
     event.preventDefault();
     brush.style.backgroundColor = colorField.value;
 }
+
+for(var i = 0; i < 20; i ++){
+    var square = document.createElement("div");
+    square.className = "square";
+    document.body.appendChild(square);
+}
