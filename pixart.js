@@ -7,10 +7,10 @@ form.addEventListener("submit", function(event){
 	box.style.backgroundColor = field.value;
 })
 
-for(i = 0; i < 20; i++){
+for(i = 0; i < 8000; i++){
   var square = document.createElement("div");
   square.className = "square";
-  square.addEventListener("click", function(event){
+  square.addEventListener("mouseover", function(event){
   	this.style.backgroundColor = field.value;
   })
   document.body.appendChild(square);
