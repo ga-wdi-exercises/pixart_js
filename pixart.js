@@ -15,3 +15,10 @@ for(x = 0; x < 21; x++){
   board.className = "square";
   document.querySelector("body").appendChild(board);
 }
+//
+// * Add functionality so that when I click on each "square", it changes the color of that individual square to "green"
+var pixel = document.querySelector(".square")
+pixel.addEventListener("click", function(event){
+  event.preventDefault();
+  
+})
