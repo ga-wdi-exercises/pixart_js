@@ -11,5 +11,10 @@ function colorChange(){
     });
   }
 }
-
 //* The same thing should happen when I press the enter key from inside the input field
+function changeInsideField(){
+    var input = document.getElementById("input");
+    input.addEventListener("onclick", function(){
+      document.getElementById("color-field").innerText = input.value.length;
+    });
+  }
