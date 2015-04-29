@@ -14,7 +14,7 @@
       newDiv.className = "square";
       document.body.appendChild(newDiv);
       newDiv.addEventListener("click", function(){
-        this.style.backgroundColor = "green";
+        this.style.backgroundColor = color.value;
       })
     }
   }
