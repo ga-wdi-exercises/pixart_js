@@ -15,6 +15,21 @@
   margin: 0;
 }
 
+#swatch_box {
+  display: block;
+  margin: 0;
+  background: #000000;
+}
+
+.swatch {
+  float: left;
+  width: 50px;
+  height: 50px;
+  background: #ffffff;
+  margin: 5px;
+  display: block;
+}
+
 h1 {
   font-family: Monoton;
   font-size: 48px;
