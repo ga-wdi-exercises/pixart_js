@@ -6,6 +6,17 @@
   background: #1B4370;
   margin: 15px auto;
 }
+#swatch{
+  padding-left: 320px;
+}
+
+#swatch div{
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: white;
+  margin: 15px auto;
+}
 
 .square {
   float: left;

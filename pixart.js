@@ -30,8 +30,18 @@ function changeDivColor(event){
   if (brush.style.background === ""){
     var brushColor = window.getComputedStyle(document.querySelector(".brush"))["background-color"];
     event.target.style.background = brushColor;
+    document.getElementById("1").style.background = brushColor;
   }else{
+    var swatchColor = document.getElementById("1").style.background;
     var brushColor = brush.style.background;
     event.target.style.background = brushColor;
+
+    document.getElementById("1").style.background = brushColor;
+
+
+      if (swatchColor !== ""){
+        document.getElementById("2").style.background = swatchColor;
+        document.getElementById("1").style.background = brushColor
+      }
   }
 }
