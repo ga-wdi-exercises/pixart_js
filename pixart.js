@@ -1,12 +1,25 @@
 function setBrushToInputColor(){
 	var brush = document.getElementsByClassName("brush")[0];
-	var newColor = newColorField.value;
+	var newColor = document.getElementById("color-field").value;
 	brush.style.backgroundColor = newColor;
 }
 
-var button = document.getElementById("set-color");
-var newColorField = document.getElementById("color-field")
-button.addEventListener("click",
+function addEvents(){
+	var button = document.getElementById("set-color");
+	var newColorField = document.getElementById("color-field");
+	button.addEventListener("click",
 	function(event){ event.preventDefault(); setBrushToInputColor()});
-newColorField.addEventListener("keypress",
-	function(event){ var key = event.which; if (key === 13) {setBrushToInputColor}});
+	newColorField.addEventListener("keypress",
+	function(event){ var key = event.which; if (key === 13) {setBrushToInputColor;}});
+}
+
+function appendDivs(divCount){
+	for(var i = 0; i < divCount; i++) {
+		var div = document.createElement("DIV");
+		div.className = "square";
+		document.body.appendChild(div);
+	}
+}
+
+addEvents();
+appendDivs(20);
