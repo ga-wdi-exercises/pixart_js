@@ -13,7 +13,7 @@ var brush = document.querySelector(".brush");
 //create 3 swatches
 for(i = 0; i < 3; i++){
 	var createSwatches = document.createElement('div');
-		document.body.appendChild(createSwatches).className = "swatch";
+		document.body.firstElementChild.appendChild(createSwatches).className = "swatch";
 }
 
 var swatches = document.querySelectorAll(".swatch");
@@ -27,12 +27,18 @@ form.addEventListener("submit", function(event){
 })
 
 
-
-
 //create 8000 squares
 for(i = 0; i < 8000; i++){
 	var createSquares = document.createElement('div');
 		document.body.appendChild(createSquares).className = "square";
+}
+
+//add swatch clickability to choose old swatch color
+for(i=0; i < swatches.length; i++){
+	swatches[i].addEventListener("click", function(swatchChoice){
+		newColor.value = this.style.backgroundColor;
+		brush.style.backgroundColor = this.style.backgroundColor;
+	})
 }
 
 //paint on hover over the squares

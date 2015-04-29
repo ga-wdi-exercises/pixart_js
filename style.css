@@ -15,6 +15,12 @@
   margin: 0;
 }
 
+#swatch_box {
+  display: block;
+  margin: 0;
+  background: #000000;
+}
+
 .swatch {
   float: left;
   width: 50px;
