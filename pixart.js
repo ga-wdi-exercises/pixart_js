@@ -12,12 +12,19 @@ function changeBrush(){
   color = brush.style.backgroundColor;
 }
 
-for(var i =0;i < 20;i++){
+for(var i =0;i < 8000;i++){
   var createSquare = document.createElement("div");
   createSquare.className = 'square';
   var singleSquare = document.body.appendChild(createSquare);
 
 }
+//below was for earlier part of homework
+// for(var i =0;i < 20;i++){
+//   var createSquare = document.createElement("div");
+//   createSquare.className = 'square';
+//   var singleSquare = document.body.appendChild(createSquare);
+//
+// }
 
 
 var twentySquares = document.querySelectorAll(".square");
@@ -26,7 +33,8 @@ var twentySquares = document.querySelectorAll(".square");
 // for(var i in twentySquares)
 for(var i = 0;i < twentySquares.length;i++)
 {
-  twentySquares[i].addEventListener("click",changeSquare);
+  twentySquares[i].addEventListener("mouseover",changeSquare);
+  // twentySquares[i].addEventListener("click",changeSquare);
 }
 // twentySquares.addEventListener("mousedown",changeSquare);
 //above doesn't work, have to lope through each one in the array
