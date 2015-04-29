@@ -14,3 +14,4 @@ function colorChange() {
 setColor.addEventListener("click", preventDef);
 setColor.addEventListener("click", colorChange);
 
+//commit 2: This already works with both clicking the submit button and pressing the enter key. Was I supposed to do something else?
