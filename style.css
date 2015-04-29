@@ -7,6 +7,14 @@
   margin: 15px auto;
 }
 
+.brush_black {
+  width: 100px;
+  height: 100px;
+  background: black;
+  margin: 15px auto;
+}
+
+
 .square {
   float: left;
   width: 10px;
