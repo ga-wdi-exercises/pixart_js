@@ -68,8 +68,8 @@ colorSet.addEventListener("click", function(event){
   for(var div = 0; div < 20; div++){
     var squareClass = document.createElement("div");
       squareClass.className = "square";
-        squareClass.addEventListener("mouseover", function(event){
-          this.style.backgroundColor = colorField.value;
+        squareClass.addEventListener("click", function(event){
+          this.style.backgroundColor = "green";
       })
             document.body.appendChild(squareClass);
 }
