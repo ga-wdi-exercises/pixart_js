@@ -9,3 +9,14 @@ var changeBrushBox = function( event ) {
 
 colorButton.addEventListener( "click", changeBrushBox );
 colorButton.addEventListener( "change", changeBrushBox );
+
+
+var createSquares = function( number ) {
+  for( var i=0; i < number; i++ ) {
+    square = document.createElement( "div" );
+    square.classList.add( "square" );
+    document.body.appendChild( square );
+  }
+}
+
+createSquares( 20 );
