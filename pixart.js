@@ -44,9 +44,32 @@ colorSet.addEventListener("click", function(event){
 // * Using JavaScript, create 20 divs of the "square" class
  // and append them to the body
  // var squareClass = document.createElement("div")
+// var changeSquareColor = function (){
+//   event.target.style.backgroundColor = "green";
+// }
 
- for(var div = 0; div < 20; div++){
-   var squareClass = document.createElement("div");
-     squareClass.className = "square";
-       document.body.appendChild(squareClass);
+//  for(var div = 0; div < 20; div++){
+//    var squareClass = document.createElement("div");
+//      squareClass.className = "square";
+//        squareClass.addEventListener("mouseover", function(event){
+//          this.style.backgroundColor = colorField.value;
+//
+//        })
+//       document.body.appendChild(squareClass);
+// }
+// squareClass.addEventListener("hover", function(event){
+//     this.style.backgroundColor = "green";
+// });
+// ###Commit 4
+//
+// * Add functionality so that when I click on each "square",
+// it changes the color of that individual square to "green"
+
+  for(var div = 0; div < 20; div++){
+    var squareClass = document.createElement("div");
+      squareClass.className = "square";
+        squareClass.addEventListener("mouseover", function(event){
+          this.style.backgroundColor = colorField.value;
+      })
+            document.body.appendChild(squareClass);
 }
