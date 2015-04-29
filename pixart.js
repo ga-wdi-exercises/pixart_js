@@ -18,3 +18,13 @@ function changeInsideField(){
       document.getElementById("color-field").innerText = input.value.length;
     });
   }
+//* Using JavaScript, create 20 divs of the "square" class and append them to the body
+function colorBoard(){
+  for(var x = 0; x < square.length; x++){
+    var squareInfo = square[x];
+    var image = document.createElement("IMG");
+    image.src = imageInfo["ps_neutral.png"];
+
+    document.querySelector(".square").appendChild(image);
+  }
+}
