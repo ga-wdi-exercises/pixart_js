@@ -8,3 +8,4 @@ var changeBrushBox = function( event ) {
 }
 
 colorButton.addEventListener( "click", changeBrushBox );
+colorButton.addEventListener( "change", changeBrushBox );
