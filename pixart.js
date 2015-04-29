@@ -13,4 +13,9 @@ var brush = document.querySelector(".brush");
     brush.style.background = colorField.value;
 
   })
-  // isn't .click the same for enter ? It works for me.
+
+  setColor.addEventListener("keydown", function(event){
+    event.preventDefault();
+    brush.style.background = colorField.value;
+
+  })
