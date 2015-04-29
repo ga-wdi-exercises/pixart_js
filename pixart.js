@@ -29,7 +29,7 @@ var brush = document.querySelector(".brush")
 // (**Hint:**
 // You will need to use `event.preventDefault()` somewhere in your code.)
 
-colorSet.addEventListener("click", function(event){
+colorSet.addEventListener("mouseover", function(event){
   event.preventDefault();
     brush.style.background = colorField.value
 });
@@ -65,7 +65,7 @@ colorSet.addEventListener("click", function(event){
 // * Add functionality so that when I click on each "square",
 // it changes the color of that individual square to "green"
 
-  for(var div = 0; div < 20; div++){
+  for(var div = 0; div < 8000; div++){
     var squareClass = document.createElement("div");
       squareClass.className = "square";
         squareClass.addEventListener("mouseover", function(event){
@@ -75,7 +75,14 @@ colorSet.addEventListener("click", function(event){
 }
 
 // ###Commit 5
-//
+// ***** See above ***
 // * Modify your code so that when I click on each "square",
 // it changes to the color I set using my input
 // instead of "green" every time.
+
+// ###Commit 6
+//
+// * Modify the CSS so that the "square" class has a height and width of 10px and a margin of 0.
+// * Modify your code so that you are creating 8000 divs instead of 20.
+// * Change the event that changes your box colors from 'click' to 'mouseover'
+// * Paint a picture!
