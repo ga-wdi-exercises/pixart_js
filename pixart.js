@@ -5,7 +5,7 @@
   document.getElementById("set-color").addEventListener("click", function(evt) {
     evt.preventDefault();
     console.log(color.value);
-    brush.style.backgroundColor = color.value
+    brush.style.backgroundColor = color.value;
   })
 
   function createSquares () {
@@ -13,6 +13,9 @@
       var newDiv = document.createElement("div");
       newDiv.className = "square";
       document.body.appendChild(newDiv);
+      newDiv.addEventListener("click", function(){
+        this.style.backgroundColor = "green";
+      })
     }
   }
 
