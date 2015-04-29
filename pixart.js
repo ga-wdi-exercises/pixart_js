@@ -68,8 +68,14 @@ colorSet.addEventListener("click", function(event){
   for(var div = 0; div < 20; div++){
     var squareClass = document.createElement("div");
       squareClass.className = "square";
-        squareClass.addEventListener("click", function(event){
-          this.style.backgroundColor = "green";
+        squareClass.addEventListener("mouseover", function(event){
+          this.style.backgroundColor = colorField.value;
       })
             document.body.appendChild(squareClass);
 }
+
+// ###Commit 5
+//
+// * Modify your code so that when I click on each "square",
+// it changes to the color I set using my input
+// instead of "green" every time.
