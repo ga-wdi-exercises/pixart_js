@@ -13,3 +13,4 @@ var brush = document.querySelector(".brush");
     brush.style.background = colorField.value;
 
   })
+  // isn't .click the same for enter ? It works for me.
