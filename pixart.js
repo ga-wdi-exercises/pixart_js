@@ -28,3 +28,4 @@ function colorBoard(){
     document.querySelector(".square").appendChild(image);
   }
 }
+//* Add functionality so that when I click on each "square", it changes the color of that individual square to "green"
