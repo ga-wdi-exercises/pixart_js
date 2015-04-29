@@ -1,6 +1,6 @@
 function setBrushToInputColor(){
 	var brush = document.getElementsByClassName("brush")[0];
-	varcolor = document.getElementById("color-field").value;
+    color = document.getElementById("color-field").value;
 	brush.style.backgroundColor = color;
 }
 
