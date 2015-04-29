@@ -12,3 +12,10 @@ document.getElementById("set-color").addEventListener("click", function(evt){
     document.body.appendChild(addSquare);
     addSquare.className = "square";
   }
+
+document.getElementById("square").addEventListener("click", function(evt){
+  for (i = 0; i<=20; i++) {
+    var colorSquare = document.getElementsByClassName("square");
+    colorSquare.style.background = green.value;
+  }
+})
