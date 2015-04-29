@@ -17,6 +17,7 @@ document.getElementById("color-field").addEventListener("keydown", function(evt)
 
 function changeSquare(event){
     event.target.style.backgroundColor = 'green';
+    event.target.style.backgroundColor = color.value;
 }
 
 for(var i = 0; i < 20; i ++){
@@ -25,3 +26,4 @@ for(var i = 0; i < 20; i ++){
     square.addEventListener('click', changeSquare);
     document.body.appendChild(square);
 }
+
