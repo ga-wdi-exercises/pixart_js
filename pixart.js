@@ -25,7 +25,7 @@ var changeSquareColor = function() {
 
 
 // EXECUTE CODE
-createSquares( 20 );
+createSquares( 8000 );
 
 
 // EVENT LISTENERS
@@ -33,5 +33,5 @@ colorButton.addEventListener( "click", changeBrushBox );
 colorButton.addEventListener( "change", changeBrushBox );
 
 for ( var i=0; i < squares.length; i++ ) {
-  squares[i].addEventListener( "click", changeSquareColor );
+  squares[i].addEventListener( "mouseover", changeSquareColor );
 }
