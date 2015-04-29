@@ -1,7 +1,7 @@
 function setBrushToInputColor(){
 	var brush = document.getElementsByClassName("brush")[0];
-	newColor = document.getElementById("color-field").value;
-	brush.style.backgroundColor = newColor;
+	varcolor = document.getElementById("color-field").value;
+	brush.style.backgroundColor = color;
 }
 
 function addEvents(){
@@ -13,8 +13,8 @@ function addEvents(){
 		function(event){ var key = event.which; if (key === 13) {setBrushToInputColor;}});
 }
 
-function colorBackground(divId) {
-	document.getElementById(divId).style.backgroundColor = newColor;
+function colorSquare(divId) {
+	document.getElementById(divId).style.backgroundColor = color;
 }
 
 function appendDivs(divCount){
@@ -22,12 +22,14 @@ function appendDivs(divCount){
 		var div = document.createElement("DIV");
 		div.className = "square";
 		div.id = "div" + i;
-		div.addEventListener("click", function(event) {
-			colorBackground(event.srcElement.id);
+		div.addEventListener("mouseover", function(event) {
+			colorSquare(event.srcElement.id);
 		})
 		document.body.appendChild(div);
 	}
 }
 
+color = window.getComputedStyle(
+	document.getElementsByClassName("brush")[0])["background-color"];
 addEvents();
-appendDivs(20);
+appendDivs(8000);
