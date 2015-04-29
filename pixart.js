@@ -2,8 +2,6 @@ var inputs = []
 var color;
 
 
-
-
 function changeBackground() {                                //this function changes the background color to whatever the user have entered
 
   event.preventDefault();
@@ -19,6 +17,7 @@ function changeBackground() {                                //this function cha
 }
 
 
+
 document.getElementById("set-color").addEventListener("click", changeBackground); //within the document, look for the element "set-color". add an event listener to listen for "click" and run the "changeBackground" funciton
 
 for (i = 0; i < 8000; i++) {
@@ -29,9 +28,6 @@ for (i = 0; i < 8000; i++) {
   })
   document.body.appendChild(square);                        //within the document, looks in the body, apendeds to the bottom, and what it appends is square
 
+}
 
-// for (i = 0; i < 3; i++) {                                  // the commended code was scheduled to be used for the bonus
-//   var swatch = document.createElement('div')
-//   swatch.className = "brush";
-//   document.body.firstElementChild.appendChild(swatch);
-// }
+ 
