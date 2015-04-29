@@ -41,3 +41,7 @@ h1 {
 body {
   background-image: url('ps_neutral.png');
 }
+
+p{
+  font-family: 'helvetica neue', sans-serif;
+}
