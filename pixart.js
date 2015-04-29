@@ -30,6 +30,23 @@ var brush = document.querySelector(".brush")
 // You will need to use `event.preventDefault()` somewhere in your code.)
 
 colorSet.addEventListener("click", function(event){
-event.preventDefault();
-brush.style.background = colorField.value
+  event.preventDefault();
+    brush.style.background = colorField.value
 });
+
+// ###Commit 2
+//
+// * The same thing should happen when I press the enter key from inside the input field
+// ***Successful with code above ***
+
+// ###Commit 3
+// className-HTMLElementObject.className=class
+// * Using JavaScript, create 20 divs of the "square" class
+ // and append them to the body
+ // var squareClass = document.createElement("div")
+
+ for(var div = 0; div < 20; div++){
+   var squareClass = document.createElement("div");
+     squareClass.className = "square";
+       document.body.appendChild(squareClass);
+}
