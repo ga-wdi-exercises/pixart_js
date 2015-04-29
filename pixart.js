@@ -20,7 +20,7 @@ var createSquares = function( number ) {
 }
 
 var changeSquareColor = function() {
-  this.style.backgroundColor = "green";
+  this.style.backgroundColor = colorInput.value;
 }
 
 
