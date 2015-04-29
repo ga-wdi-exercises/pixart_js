@@ -1,6 +1,6 @@
 function setBrushToInputColor(){
 	var brush = document.getElementsByClassName("brush")[0];
-	var newColor = document.getElementById("color-field").value;
+	newColor = document.getElementById("color-field").value;
 	brush.style.backgroundColor = newColor;
 }
 
@@ -14,7 +14,7 @@ function addEvents(){
 }
 
 function colorBackground(divId) {
-	document.getElementById(divId).style.backgroundColor = "green";
+	document.getElementById(divId).style.backgroundColor = newColor;
 }
 
 function appendDivs(divCount){
