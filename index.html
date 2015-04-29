@@ -7,12 +7,18 @@
 </head>
 <body>
   <h1>Pixel Art!</h1>
+  <div id="swatch">
+    <div id="1"></div>
+    <div id="2"></div>
+    <div id="3"></div>
+  </div>
   <div class="controls">
     <form id="form">
-      <input type="text" id="color-field"></input>
+      <input type="text" id="color-field" onkeypress="changeBoxColor"></input>
       <button id="set-color">Set Color</button>
     </form>
     <div class="brush"></div>
+
   </div>
   <script src="pixart.js"></script>
 </body>
