@@ -15,3 +15,13 @@ setColor.addEventListener("click", preventDef);
 setColor.addEventListener("click", colorChange);
 
 //commit 2: This already works with both clicking the submit button and pressing the enter key. Was I supposed to do something else?
+
+function makeDivs(){
+  for(var x = 0; x < 20; x++){
+    var square = document.createElement("DIV");
+    square.className = "square";
+    document.querySelector("body").appendChild(square);
+  }
+}
+
+makeDivs();
