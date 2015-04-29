@@ -9,11 +9,11 @@
   })
 
   function createSquares () {
-    for (var i = 0; i < 21; i++) {
+    for (var i = 0; i < 8001; i++) {
       var newDiv = document.createElement("div");
       newDiv.className = "square";
       document.body.appendChild(newDiv);
-      newDiv.addEventListener("click", function(){
+      newDiv.addEventListener("mouseover", function(){
         this.style.backgroundColor = color.value;
       })
     }
