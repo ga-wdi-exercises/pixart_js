@@ -17,7 +17,7 @@ var boxWrapper = document.createElement("div")
 boxWrapper.className = "littleBoxes"
 document.body.appendChild( boxWrapper )
 
-for(var i = 1; i < 26; i++){
+for(var i = 1; i < 8000; i++){
   var div = document.createElement("div")
   div.className = "square"
   document.body.appendChild( div )
@@ -37,8 +37,8 @@ for(var i = 1; i < 26; i++){
 //     squares[i].style.backgroundColor = "green"
 //   }
 // event.target.className
-for (var j = 0; j < 25; j++){
-  document.querySelectorAll(".square")[j].addEventListener('click', function( event ){
+for (var j = 0; j < 8000; j++){
+  document.querySelectorAll(".square")[j].addEventListener('mouseover', function( event ){
     this.style.backgroundColor = field.value
 })
 }
