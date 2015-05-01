@@ -16,9 +16,9 @@ function setColor(event){
 
 button.on("click", setColor);
 
-for(var pixel = 0; pixel < 21; pixel++){
+for(var pixel = 0; pixel < 8001; pixel++){
   var squareDiv = $("<div></div>").addClass("square");
-  squareDiv.on("click", function() {
+  squareDiv.on("mouseover", function() {
     $(this).css("background-color", color)
     });
   $("body").append(squareDiv);
