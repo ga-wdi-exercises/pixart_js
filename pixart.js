@@ -18,17 +18,16 @@ function setColor(event){
 button.on("click", setColor);
 
 // * Using JavaScript, create 20 divs of the "square" class and append them to the body
+// * Add functionality so that when I click on each "square", it changes the color of that individual square to "green"
 
 for(var pixel = 0; pixel < 21; pixel++){
   var squareDiv = $("<div></div>").addClass("square");
+  squareDiv.on("click", function() {
+    $(this).css("background-color", "green")
+    });
   $("body").append(squareDiv);
 }
 
-// // * Add functionality so that when I click on each "square", it changes the color of that individual square to "green"
-// var pixel = document.querySelector(".square")
-// pixel.addEventListener("click", function(event){
-//   event.preventDefault();
-//
 })
 
 // })
