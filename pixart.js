@@ -7,3 +7,9 @@ setColor.addEventListener('click', function (event){
   $('.brush').css('background-color', $('#color-field').val());
 
 })
+
+// colorField.addEventListener('submit', function (event){
+//   event.preventDefault();
+//   $('.brush').css('background-color', $('#color-field').val());
+//
+// })
