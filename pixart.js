@@ -13,7 +13,6 @@ function setColor() {
   event.preventDefault();
   //get value from input field
   newColor = document.getElementById("color-field").value;
-  console.log(newColor)
   $(".brush").css("background-color", newColor)
 }
 
@@ -23,5 +22,5 @@ for(var i = 0; i < 20; i++){
   }
 
 document.body.addEventListener("click", function(event){
-  $(event.target).css("background-color", "green")
+  $(event.target).css("background-color", newColor)
 })
