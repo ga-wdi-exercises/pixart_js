@@ -16,3 +16,8 @@ function setColor() {
   console.log(newColor)
   $(".brush").css("background-color", newColor)
 }
+
+//Create 20 divs of the "square" class and append them to the body
+for(var i = 0; i < 20; i++){
+  $("body").append("<div class='square'></div>");
+}
