@@ -4,14 +4,15 @@ $(document).ready();
 // I specify in the input field. (Hint: You will need to use event.preventDefault() somewhere in your code.)
 // Use jQuery to select the element, and addEventListener to handle clicks
 // $("body")[0].addEventListener...
-$("#set-color").on("click",function(){
+function changeSquareColor(){
   event.preventDefault();
   $(".brush").css("background","red");
-});
+};
+
+$("#set-color").on("click",changeSquareColor);
 // Commit 2
 // The same thing should happen when I press the enter key from inside the input field
-
-
+$("#set-color").keypress(changeSquareColor);
 
 // Commit 3
 // Create 20 divs of the "square" class and append them to the body
