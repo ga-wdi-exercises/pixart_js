@@ -13,3 +13,9 @@ setColor.addEventListener('click', function (event){
 //   $('.brush').css('background-color', $('#color-field').val());
 //
 // })
+
+var boxObject = $('.square')
+
+for (i = 0; i < 20; i++) {
+  $('body').append("<div class='square'></div>");
+}
