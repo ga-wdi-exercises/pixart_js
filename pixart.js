@@ -1,7 +1,9 @@
-$("#set-color").on("click", function(){
+$("#set-color").on("click", setNewBackground);
+$("#set-color").on("submit", setNewBackground);
+
+function setNewBackground(){
     var newBackground = document.getElementById('color-field').value;
-//    console.log(newBackground);
     event.preventDefault();
     $(".brush").css("background-color", newBackground);
 
-});
+}
