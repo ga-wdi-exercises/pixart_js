@@ -4,11 +4,22 @@ $(document).ready(function(){
 
     $(".brush").css("background-color", $("#color-field").val());
 
-//$("body").append(" <div class='square'> -- </div>.<br>");
-
-for(i=0;i<20; i++){
-    $("body").append("<div>_</div>");
-}
-//$("p").append(" <b>Appended text</b>.");
     });
 });
+
+
+
+for(i=0;i<8000; i++){
+  $("body").append("<div class='square'></div>");
+
+}
+
+
+$(".square").on("click", function(){
+    //console.log("hi")
+
+  // $(".square").css("background-color",$("#color-field").val());
+   $(this).css("background-color",$("#color-field").val());
+
+  })
+    //$( "div:nth-child(2)" )
