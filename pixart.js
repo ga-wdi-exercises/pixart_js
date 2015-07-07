@@ -20,4 +20,8 @@ function setColor() {
 //Create 20 divs of the "square" class and append them to the body
 for(var i = 0; i < 20; i++){
   $("body").append("<div class='square'></div>");
-}
+  }
+
+document.body.addEventListener("click", function(event){
+  $(event.target).css("background-color", "green")
+})
