@@ -11,6 +11,20 @@ var pixelArt = {
 	brushBox : $( ".brush" ) ,
 	inputField : document.getElementById( "color-field" ) ,
 
+/*
+Create 20 divs of the "square" class and append them to the body
+Hint: use .append()
+*/
+	canvas : function() {
+		var self = this ; 
+
+		for ( var i = 0; i < 20; i++ ) {
+			$( "<div>Blah I'm a div</div>" ).appendTo( "body" ) ;
+
+		}
+		console.log( "create!") ;
+	} ,
+
 
 	eventListener : function() {
 		var self = this;
@@ -22,6 +36,7 @@ var pixelArt = {
 			console.log( self.brushBox.css( "background-color" ) ) ;
 			self.brushBox.css( "background-color", self.color.val() ) ; 
 		}) , 
+
 		self.inputField.addEventListener( "submit", function() {
 			event.preventDefault() ; 
 			// console.log( self.color.val() ) ; 
@@ -33,6 +48,7 @@ var pixelArt = {
 
 }
 
+pixelArt.canvas() ;
 pixelArt.eventListener() ; 
 
 /*
