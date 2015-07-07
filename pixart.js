@@ -9,3 +9,7 @@ function changeColor(){ //Why don't I need to pass event as an argument?
   console.log(color);
   $(".brush").css("background", color);
 }
+
+for (var i = 0; i < 20; i++){
+  $( "body" ).append( "<div class='square'></div>");
+}
