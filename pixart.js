@@ -15,7 +15,6 @@ for (var i=1;i<21;i++){
     }
 
 function changeBackground(){
-    var newBackground = document.getElementById('color-field').value;
     $(this).css("background-color", newBackground);
     }
 //
