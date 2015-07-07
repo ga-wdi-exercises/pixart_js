@@ -18,4 +18,11 @@ var boxObject = $('.square')
 
 for (i = 0; i < 20; i++) {
   $('body').append("<div class='square'></div>");
+
+  $('body').click(function(event) {
+      if (event.target.className === 'square') {
+          $(event.target).css('background-color', $('#color-field').val());
+      }
+
+  });
 }
