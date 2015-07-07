@@ -5,22 +5,30 @@ $("body")[0].addEventListener...
 	*/
 
 var pixelArt = {
-	clickMe : document.getElementById( "set-color"),
+	clickMe : document.getElementById( "set-color") ,
 	color : $( "input" ) ,
 	myText : $( "span" ) ,
 	brushBox : $( ".brush" ) ,
+	inputField : document.getElementById( "color-field" ) ,
+
 
 	eventListener : function() {
 		var self = this;
 
 		self.clickMe.addEventListener( "click", function() {
 			event.preventDefault() ; 
-			console.log( "event Listener" ) ; 
-			console.log( self.color.val() ) ; 
+			// console.log( self.color.val() ) ; 
 			self.myText.text( self.color.val() );
 			console.log( self.brushBox.css( "background-color" ) ) ;
 			self.brushBox.css( "background-color", self.color.val() ) ; 
-		})
+		}) , 
+		self.inputField.addEventListener( "submit", function() {
+			event.preventDefault() ; 
+			// console.log( self.color.val() ) ; 
+			self.myText.text( self.color.val() );
+			console.log( self.brushBox.css( "background-color" ) ) ;
+			self.brushBox.css( "background-color", self.color.val() ) ; 
+		} )
 	}
 
 }
