@@ -15,7 +15,7 @@ for(i=0;i<8000; i++){
 }
 
 
-$(".square").on("click", function(){
+$(".square").mouseover("click", function(){
     //console.log("hi")
 
   // $(".square").css("background-color",$("#color-field").val());
