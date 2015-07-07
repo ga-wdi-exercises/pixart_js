@@ -2,6 +2,11 @@
 var newColor;
 //add event handler to set color button
 $('#set-color').on("click", setColor)
+$('#set-color').keypress(function(e){
+  if(e.which === 13){
+    setColor();
+  }
+})
 
 //Set color function will take the inner HTML from input field as an argument
 function setColor() {
