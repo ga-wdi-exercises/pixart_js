@@ -16,10 +16,10 @@ setColor.addEventListener('click', function (event){
 
 var boxObject = $('.square')
 
-for (i = 0; i < 20; i++) {
+for (i = 0; i < 8000; i++) {
   $('body').append("<div class='square'></div>");
 
-  $('body').click(function(event) {
+  $('body').mouseover(function(event) {
       if (event.target.className === 'square') {
           $(event.target).css('background-color', $('#color-field').val());
       }
