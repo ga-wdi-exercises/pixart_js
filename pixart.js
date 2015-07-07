@@ -17,6 +17,10 @@ $("#set-color").keypress(changeSquareColor);
 // Commit 3
 // Create 20 divs of the "square" class and append them to the body
 // Hint: use .append()
+var objToClone = $(".controls");
+for (var i =0;i<20;i++){
+  objToClone.append('<div class = "square"></div>');
+}
 
 
 
@@ -28,7 +32,7 @@ $("#set-color").keypress(changeSquareColor);
 
 
 
-// Commit 5
+// Commit 5s
 // Modify your code so that when I click on each "square", it changes to the color I set using my input instead of "green" every time.
 
 
