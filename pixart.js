@@ -1,12 +1,19 @@
 $(document).ready();
+var colorInput;
 // Commit 1
 // When I click the "Set Color" button, it should change the color of the "brush" box to the color
 // I specify in the input field. (Hint: You will need to use event.preventDefault() somewhere in your code.)
 // Use jQuery to select the element, and addEventListener to handle clicks
 // $("body")[0].addEventListener...
+function changeColor(){
+  this.style.backgroundColor = colorInput;
+};
+
 function changeSquareColor(){
   event.preventDefault();
-  $(".brush").css("background","red");
+  colorInput =$("input").val();
+  $(".brush").css("background",colorInput);
+
 };
 
 $("#set-color").on("click",changeSquareColor);
@@ -21,8 +28,8 @@ var objToClone = $(".controls");
 
 for (var i =0;i<20;i++){
   objToClone.append('<div class = "square"></div>');
-
-  $(".square").click(function(event){ event.target.css("backgorund","green")});
+  document.getElementsByClassName("square")[i].addEventListener("mouseover",changeColor);
+  console.log(i);
   }; // note that issue with it in terms of it going through it.
 
 
