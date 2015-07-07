@@ -18,16 +18,20 @@ $("#set-color").keypress(changeSquareColor);
 // Create 20 divs of the "square" class and append them to the body
 // Hint: use .append()
 var objToClone = $(".controls");
+
 for (var i =0;i<20;i++){
   objToClone.append('<div class = "square"></div>');
-}
+
+  $(".square").click(function(event){ event.target.css("backgorund","green")});
+  }; // note that issue with it in terms of it going through it.
 
 
-
-
-// Commit 4
-// Add functionality so that when I click on each "square", it changes the color of that individual square to "green"
-// Hint: either add the event listener while creating the squares, or listen for events on the body element
+// // Commit 4
+// // Add functionality so that when I click on each "square",
+//  it changes the color of that individual square to "green"
+//
+// // Hint: either add the event listener while creating the
+//  squares, or listen for events on the body element
 
 
 
