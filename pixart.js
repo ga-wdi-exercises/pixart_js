@@ -4,7 +4,15 @@
 
 $( "#set-color" )[0].addEventListener( "click", function(event) {
   event.preventDefault();
-  var color = $(" #color-field").val();
-  $( ".brush" ).css("background-color", color);
-
+  var color = $(" #color-field" ).val();
+  $( ".brush" ).css( "background-color" , color);
 })
+
+function appendDiv() {
+
+  for(var i = 0; i < 20; i++) {
+    $( "body" ).append( "<div class='square'></div>" );
+  }
+}
+
+appendDiv();
