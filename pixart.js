@@ -14,11 +14,11 @@ var color;
 var colorFieldBox= $("#text").html()
 var brush=  document.getElementsByClassName("brush");
 
-//-et color inserted and submitted in in put field
-var colorInput= setColorButton.addEventListener("click",function(){
+//-et color inserted and submitted in input field
+var colorInput= setColorButton.addEventListener("submit",function(){
   $("#text").html()
       console.log("yeaa");
-      event.preventDefault();
+    
 })
 
 //change color of square to color in the input field
