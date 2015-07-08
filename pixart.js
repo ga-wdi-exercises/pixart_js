@@ -52,7 +52,7 @@ $(document).ready(function() {
 	});
 
 	// Create 20 DIVs of the "square" class. 
-	for (var i = 0; i < 20; i++) {
+	for (var i = 0; i < 8000; i++) {
 		// On the append, use <div /> instead of </div> tag.
 		$("body").append($("<div class='square'/>"));
 	};
