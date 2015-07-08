@@ -1,23 +1,30 @@
-$("document").ready(function() {
+$("document").ready( function activatePixelArt() {
 
-  function setBrushColor() {
-    $("#set-color").on("click", function() {
+
+  $("#set-color").on("click", function(event) {
       event.preventDefault();
       $(".brush").css("background-color", $("input").val());
+      $("input").val("");
     });
-  }
 
-  function makePaintableCanvas () {
-    for (var i = 1; i <= 8000; i++) {
+  $('#set-color').keypress(function (e) {
+    var key = e.which;
+    if(key == 13) {
+      $(".brush").css("background-color", $("input").val());
+    }
+    $("input").val("");
+  });
+
+  for (var i = 1; i <= 8000; i++) {
       $("<div class='square'></div>").appendTo($("body")).on("mouseover", function () {
         $(this).css("background-color", $("input").val());
       })
     };
-  }
+  })
 
-  setBrushColor();
-  makePaintableCanvas();
-})
+//   setBrushColor();
+//   makePaintableCanvas();
+// })
 
 // ###Commit 2
 // * The same thing should happen when I press the enter key from inside the input field
