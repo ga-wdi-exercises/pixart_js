@@ -19,7 +19,13 @@ for( var i = 0; i < 20; i++ ) {
   $( "body" ).append( "<div class = 'square'></div>");
 }
 //When user clicks a 'square', the color of the individual sqaure turns to green.
-$( "#set-color" ).click(function() {
+$( ".square" ).click(function() {
   event.preventDefault();
-  $( ".square" ).css( "background-color" , $( "green"));
+  $(this).css( "background-color" , $( "green"));
+  //console.log("working");
+})
+//When user clicks on a square, color changes to whatever value they entered in the input box, rather than to green.
+$( ".square" ).click(function() {
+  event.preventDefault();
+  $(this).css( "background-color" , $( "#color-field").val());
 })
