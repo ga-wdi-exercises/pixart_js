@@ -1,1 +1,6 @@
-
+$("#set-color").on("click", function(event) {
+  event.preventDefault();
+  console.log("set color clicked");
+  var inputColor = $("input").val()
+  $(".brush").css("background", inputColor)
+});
