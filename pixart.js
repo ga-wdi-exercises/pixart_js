@@ -14,3 +14,12 @@ submitButton.click('click', function(event){
 
     brushBox.css("background-color", colorChoice);
 });
+
+function squareMaker (){
+    for (var i = 0; i < 20; i++){
+        var twentySquares = $("body").after($('<div></>').addClass(".square"));
+    }
+    return twentySquares;
+}
+
+squareMaker();
