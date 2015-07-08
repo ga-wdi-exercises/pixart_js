@@ -4,6 +4,7 @@ $("#set-color, #color-field").on("click", function(event){
   var userInput = $("input").val();
   $(".brush").css("background-color", userInput);
   currentColorChoice = $(".brush").css("background-color");
+  $("input").val("");
 })
 for(var i = 0; i < 8000; i++) {
   $("body").append("<div class='square'></div>");
