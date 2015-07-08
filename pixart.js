@@ -13,6 +13,6 @@ for(var i = 0; i < 20; i++) {
 
 document.body.addEventListener("click", function () {
   if(event.target.classList.contains("square")) {
-    $(event.target).css("background", "green");
+    $(event.target).css("background", (document.getElementById("color-field")).value);
   };
 });
