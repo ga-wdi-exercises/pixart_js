@@ -18,5 +18,16 @@ function setColor(){
   event.preventDefault();
   //needs to understand the value of the color input.
   colorInput = $("#color-field").value;
-  $(".brush").css("background-color", colorInput)
+  var brushBox = $(".brush").css("background-color");
+  function changeBrushBox() {
+    brushBox = $(".brush").css("background-color", colorInput);
+  }
 }
+
+function copyBrushBox(brushBox) {
+  for (var i = 1; i <=20; i++) {
+    $(".brush").append($(".brush"))
+  }
+}
+
+copyBrushBox(20);
