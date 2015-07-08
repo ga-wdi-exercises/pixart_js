@@ -17,10 +17,10 @@ function setColor() {
 }
 
 //Create 20 divs of the "square" class and append them to the body
-for(var i = 0; i < 20; i++){
+for(var i = 0; i < 8000; i++){
   $("body").append("<div class='square'></div>");
   }
 
-document.body.addEventListener("click", function(event){
+$(".square").on("mouseover", function(event){
   $(event.target).css("background-color", newColor)
 })
