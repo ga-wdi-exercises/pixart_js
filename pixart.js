@@ -1,26 +1,24 @@
 
-var clickMe = document.getElementById( "set-color") ;
 var color = $( "input" ) ;
 var brushBox = $( ".brush" ) ;
-var inputField = document.getElementById( "color-field" ) ;
 
 function canvas() {
 	for ( var i = 0; i < 8000; i++ ) {
-		$( "<div></div>" ).addClass('square').appendTo( "body" ).hover(function() {
+		$( "<div></div>" ).addClass('square').appendTo( "body" ).hover( function() {
 			$(this).css("background", color.val()) ;
 		}) ;
 	} 
 } ;
 
-clickMe.addEventListener( "click", function() {
+$( "#form").submit( function( event ) {
 	event.preventDefault() ; 
 	brushBox.css( "background-color", color.val() ) ;
 } );
 
-inputField.addEventListener( "submit", function() {
-	event.preventDefault() ; 
-	brushBox.css( "background-color", color.val() ) ;
-} ) ; 
+// inputField.submit( function( event ) {
+// 	event.preventDefault() ; 
+// 	brushBox.css( "background-color", color.val() ) ;
+// } ) ; 
 
 canvas() ;
 
