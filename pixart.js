@@ -9,10 +9,10 @@ $('#set-color').click(function(){
 
 
 for (var i = 0; i<20; i++)
-  $('body').append('<div class square>');
+  $('body').append('<div class = "square"></div>');
 
 $('.square').click(function(){
-  $('.square').css('background' , 'green')
+  $(this).css('background' , 'green')
 })
 
 // $('.square').addClass().each(function(){
