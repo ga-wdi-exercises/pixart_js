@@ -11,5 +11,5 @@ getElementByClassName("square").append("body")
 
 function turnGreen(square) {
   document.getElementByClassName("square").append("body")
-  $("#square").css("background-color", "green")
+  $("#square").css("background-color", brushColor)
 }
