@@ -15,16 +15,15 @@ function setBrushColor() {
 $("#set-color").on("click", setBrushColor);
 // ###Commit 2
 // * The same thing should happen when I press the enter key from inside the input field
-// document.querySelector("input").addEventListener("keypress", function (){
-//   event.preventDefault();
-//   $(".brush").css("background-color", $("input").val());
-// });
+//{$("input").on("keyup", setBrushColor);}
+//if((event.keyCode || event.which) == 13)
 
 // ###Commit 3
-//
 // * Create 20 divs of the "square" class and append them to the body
 //   * **Hint**: use `.append()`
-//
+for (var i = 1; i <= 20; i++) {
+$("body").append("<div class='square'></div>")
+}
 // ###Commit 4
 //
 // * Add functionality so that when I click on each "square", it changes the color of that individual square to "green"
