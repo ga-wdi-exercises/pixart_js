@@ -8,3 +8,6 @@ button.addEventListener("submit", function(event){
     brushBox.css("background",$("#color-field").value())
 })
 //code doesn't work. I get an uncaught type error - button.listener isn't a function
+
+.append()("div").eq2)
+//commit 3
