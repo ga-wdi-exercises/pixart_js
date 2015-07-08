@@ -26,7 +26,7 @@ function setColor(){
 
 function copyBrushBox(brushBox) {
   for (var i = 1; i <=20; i++) {
-    $(".brush").append($(".brush"))
+    $("body").append($(".brush"))
   }
 }
 
