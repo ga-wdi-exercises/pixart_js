@@ -31,8 +31,7 @@ $("#set-color").on("click", function(){
     $(".brush").eq(0).css("background-color", $("#color-field").eq(0).val());
 });
 
-
-for(var i; i < 20; i++) {
-  console.log("it worked again");
-  $("body").append("<div class='square'></div>");
-}
+  for(var i = 0; i < 8000; i++) {
+    console.log("it worked again");
+    $("body").after($("<div></div>").addClass('square'));
+  }
