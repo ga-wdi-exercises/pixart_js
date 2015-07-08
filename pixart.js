@@ -3,15 +3,23 @@ $("document").ready(function() {
 // ###Commit 1
 // * When I click the "Set Color" button, it should change the color of the "brush" box to the color I specify in the input field. (**Hint:** You will need to use `event.preventDefault()` somewhere in your code.)
 // * Use jQuery to select the element, and `addEventListener` to handle clicks
-//   * `$("body")[0].addEventListener...`
-document.getElementById("set-color").addEventListener("click", function (){
+// document.getElementById("set-color").addEventListener("click", function (){
+//   event.preventDefault();
+//   $(".brush").css("background-color", $("input").val());
+// });
+function setBrushColor() {
   event.preventDefault();
-$(".brush").css("background-color", $("input").val());
-})
+  $(".brush").css("background-color", $("input").val());
+}
+
+$("#set-color").on("click", setBrushColor);
 // ###Commit 2
-//
 // * The same thing should happen when I press the enter key from inside the input field
-//
+// document.querySelector("input").addEventListener("keypress", function (){
+//   event.preventDefault();
+//   $(".brush").css("background-color", $("input").val());
+// });
+
 // ###Commit 3
 //
 // * Create 20 divs of the "square" class and append them to the body
