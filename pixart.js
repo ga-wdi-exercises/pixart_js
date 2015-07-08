@@ -9,8 +9,11 @@ $('#set-color').click(function(){
 
 
 for (var i = 0; i<20; i++)
-  $('body').append('<square>');
+  $('body').append('<div class square>');
 
+$('.square').click(function(){
+  $('.square').css('background' , 'green')
+})
 
 // $('.square').addClass().each(function(){
 //   $(this).append();
