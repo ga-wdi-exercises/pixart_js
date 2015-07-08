@@ -83,10 +83,13 @@ function addSwatch() {
 $(".color-switcher").on("click", function() {
     // created variable to hold the background color value of "this" i.e. whatever square was clicked on
     var switchBackground = $(this).css("background-color");
-    // change the background color of .brush to that color
+    // change the background color of .brush to the clicked color, and set the first box to the most recent background
+    $("#0").css("background-color", newBackground);
     $(".brush").css("background-color", switchBackground);
     // change the background color of the tiny squares to that color
     $(".square").on('mouseover', changeBackgroundOfTinySquares);
+    //reset the newBackground value
+    newBackground = $(".brush").css("background-color");
     clickCounter++;
 }
 );
