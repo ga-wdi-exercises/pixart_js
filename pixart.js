@@ -17,9 +17,18 @@ submitButton.click('click', function(event){
 
 function squareMaker (){
     for (var i = 0; i < 20; i++){
-        var twentySquares = $("body").after($('<div></>').addClass(".square"));
+        var twentySquares = $("body").after($('<div></>').addClass("square"));
     }
     return twentySquares;
 }
 
 squareMaker();
+
+$('body').click('click', function(event){
+    event.preventDefault();
+
+    var colorChoice = $("#color-field").val();
+    console.log(colorChoice);
+    $(".square").css("background-color", "green");
+});
+
