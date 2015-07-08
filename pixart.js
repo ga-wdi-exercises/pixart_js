@@ -8,3 +8,8 @@ $( "#set-color" ).click(function() {
   $( ".brush" ).css( "background-color" , $( "#color-field" ).val());
   //console.log("working");
 })
+//Same as above using enter key (.keypress)
+$( "#set-color" ).keypress(function() {
+  event.preventDefault();
+  $( ".brush" ).css( "background-color" , $( "#color-field" ).val());
+})
