@@ -39,6 +39,12 @@ setColorField.addEventListener("onsubmit", function(event){
 // * Create 20 divs of the "square" class and append them to the body
 //   * **Hint**: use `.append()`
 
+var body = $("body");
+console.log(body);
+
+for(var i = 0; i < 20; i++){
+  body.append('<div class="square">')
+}
 
 // ###Commit 4
 //
