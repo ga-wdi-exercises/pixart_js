@@ -20,20 +20,19 @@
 
 */
 
-$(document).ready(function() {
-  // when I click setColorBtn:
-  $("#set-color").on("click", function(){
-    // prevent this event from refreshing the page
-    event.preventDefault();
-    // check to see if this works
-    console.log("it worked");
-    //select the box:
-      // set css to the val of the input
+// when I click setColorBtn:
+$("#set-color").on("click", function(){
+  // prevent this event from refreshing the page
+  event.preventDefault();
+  // check to see if this works
+  console.log("it worked");
+  //select the box:
+    // set css to the val of the input
     $(".brush").eq(0).css("background-color", $("#color-field").eq(0).val());
-  });
-
-  for(var i; i < 20; i++) {
-    $("body").append("<div class='square'></div>");
-  }
-
 });
+
+
+for(var i; i < 20; i++) {
+  console.log("it worked again");
+  $("body").append("<div class='square'></div>");
+}
