@@ -1,13 +1,19 @@
-//commit 1
-  //use event.preventDefault
-  //when use clickes on "set color" button:
-    //change the color of the "brush" box to the color specified in the input field
-    //get value of input
-    //brush box: set background
 $(document).ready( function(){
-  $("#set-color").on("click", function(){//(event)?
+//commit 1
+  //when user clicks on "set color" button:
+    //change the color of the "brush" box to the color specified in the input field
+  $("#set-color").on("click", function(){
     event.preventDefault();
-    var colorVal = $("#color-field").val();
+    //get value of input
+    colorVal = $("#color-field").val();
+    //brush box: set background
     $( ".brush").css( "background-color", colorVal);
+  })
+//commit 2
+  //when user hits enter key: same as above
+  $("#set-color").keyup(function(e){
+    if (e.keyCode == 13){
+      $( ".brush").css( "background-color", colorVal);
+    }
   })
 })
