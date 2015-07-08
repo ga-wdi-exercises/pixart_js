@@ -29,6 +29,6 @@ $('body').click('click', function(event){
 
     var colorChoice = $("#color-field").val();
     console.log(colorChoice);
-    $(".square").css("background-color", "green");
+    $(".square").css("background-color", colorChoice);
 });
 
