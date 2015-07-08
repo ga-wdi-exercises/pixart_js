@@ -7,3 +7,10 @@ $("#set-color").click(function(){
   event.preventDefault();
   $(".brush").css("background", colorinput)
 })
+
+$("#color-field").keyup(function(e){
+  if(e.which === 13){
+  var colorinput = $("#color-field").val()
+  event.preventDefault();
+  $(".brush").css("background", colorinput)
+}})
