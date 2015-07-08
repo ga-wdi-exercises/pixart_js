@@ -12,6 +12,10 @@ function setBrushColor() {
   $(".brush").css("background-color", $("input").val());
 }
 
+function setPixelColor() {
+  $(this).css("background-color", $("input").val());
+}
+
 $("#set-color").on("click", setBrushColor);
 // ###Commit 2
 // * The same thing should happen when I press the enter key from inside the input field
@@ -25,10 +29,14 @@ for (var i = 1; i <= 20; i++) {
 $("body").append("<div class='square'></div>")
 }
 // ###Commit 4
-//
 // * Add functionality so that when I click on each "square", it changes the color of that individual square to "green"
 //   * **Hint**: either add the event listener while creating the squares, or listen for events on the `body` element
-//
+function makeCanvas () {
+  for (var i = 1; i <= 20; i++) {
+    $("<div class='square'></div>").appendTo($("body")).on("click", function(){$(this).css("background-color", "green")})
+  };
+}
+makeCanvas();
 // ###Commit 5
 //
 // * Modify your code so that when I click on each "square", it changes to the color I set using my input instead of "green" every time.
