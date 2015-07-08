@@ -13,3 +13,7 @@ $( "#set-color" ).keypress(function() {
   event.preventDefault();
   $( ".brush" ).css( "background-color" , $( "#color-field" ).val());
 })
+//Create 20 divs of the "square" class and append them to the body using .append()
+for( var i = 0; i < 20; i++ ){
+  $( "body" ).append( "div class='square'></div>" );
+}
