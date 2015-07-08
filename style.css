@@ -21,6 +21,19 @@ h1 {
   text-align: center;
 }
 
+#swatch-wrap {
+  clear: both;
+  overflow: hidden;
+  width: 100px;
+  margin: 10px auto;
+}
+.swatch {
+  float: left;
+  width: 15px;
+  height: 15px;
+  margin: 0 5px 0 0;
+}
+
 .controls {
   text-align: center;
 }
