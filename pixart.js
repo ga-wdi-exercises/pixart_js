@@ -16,15 +16,17 @@ $(document).ready( function(){
       $( ".brush").css( "background-color", colorVal);
     }
   })
-//commit 3 & 4
+//commit 3 & 4 & 5
   //create 20 divs with class "square" and append to body
   //when user clicks on 'square' it changes color to green
+  //when user clicks on 'square' it changes color to input if defined
   var $newDiv;
   for (var i=0; i<20; i++) {
     $newDiv = $("<div class='square' />").on("click", function(){
-      $(this).css("background-color", "green");
+      if (typeof colorVal != 'undefined'){
+        $(this).css("background-color", colorVal);
+      }
     })
     $("body").append($newDiv);
   }
-
 })
