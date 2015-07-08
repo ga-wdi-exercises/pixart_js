@@ -18,8 +18,19 @@ var brush=  document.getElementsByClassName("brush");
 var colorInput= setColorButton.addEventListener("submit",function(){
   $("#text").html()
       console.log("yeaa");
-    
+
 })
 
 //change color of square to color in the input field
   $(".square").css("background", "colorInput");
+
+//Create 20 divs of the "square" class and append them to the body
+
+var div= "squares"
+var i=document.createElement("div");
+              for(var i = 0; div < 20; i++){
+                  document.body.appendChild(div[i]);
+                  i.className="squares";
+
+$("body").append(div);
+}
