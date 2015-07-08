@@ -22,23 +22,15 @@ $("#set-color").on("click", setBrushColor);
 //{$("input").on("keyup", setBrushColor);}
 //if((event.keyCode || event.which) == 13)
 
-// ###Commit 3
-// * Create 20 divs of the "square" class and append them to the body
-//   * **Hint**: use `.append()`
-for (var i = 1; i <= 20; i++) {
-$("body").append("<div class='square'></div>")
-}
-// ###Commit 4
-// * Add functionality so that when I click on each "square", it changes the color of that individual square to "green"
-//   * **Hint**: either add the event listener while creating the squares, or listen for events on the `body` element
+
+
+// ###Commit 5
 function makeCanvas () {
   for (var i = 1; i <= 20; i++) {
-    $("<div class='square'></div>").appendTo($("body")).on("click", function(){$(this).css("background-color", "green")})
+    $("<div class='square'></div>").appendTo($("body")).on("click", setPixelColor)
   };
 }
 makeCanvas();
-// ###Commit 5
-//
 // * Modify your code so that when I click on each "square", it changes to the color I set using my input instead of "green" every time.
 //
 // ###Commit 6
