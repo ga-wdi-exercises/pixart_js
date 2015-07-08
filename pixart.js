@@ -7,7 +7,11 @@ var colorInput;
 //funtion to understand form input value?
 
 $("#set-color").on("click", setColor) //when the button is clicked, do function setColor
-$("#set-color").on("")
+$("#set-color").keypress(function(e) {
+  if(e.which === 13) {
+    setColor();
+  }
+});
 
 //when the button is clicked, the box should change color to match value of input field
 function setColor(){
