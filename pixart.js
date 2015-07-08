@@ -2,7 +2,8 @@
 
 var getColorBtn = $('#set-color');
 var brushBox = $('.brush');
-var nextColor;
+var nextColor, startX, startY;
+  nextColor = $("#color-field").val();
 
 // click  "Set Color" button => change "brush" box color to input field value
 $("#set-color").on('click', function(event){
@@ -14,20 +15,21 @@ $("#set-color").on('click', function(event){
 // same as above for enter key press (from inside the input field)
 $('#color-field').keydown(function (event){
     if(event.keyCode == 13){
-        console.log('you pressed enter ^_^');
+      nextColor = $("#color-field").val();
+      $('.brush').css('background-color', nextColor);
+      console.log('ENTER pressed');
     }
 });
 
 // Create 20 divs of the "square" class and append them to the body (.append())
-var startX = 100;
-var startY = 100;
+startX = 100;
+startY = 100;
 for (var i = 0; i < 20; i++) {
   startX = startX + 20;
   startY = startY + 20;
   var newDiv = document.createElement("div");
-  newDivId = 'newDiv' + i;
   $(newDiv).addClass("square");
-  $(newDiv).attr("id", newDivId);;
+  $(newDiv).attr("id", 'newDiv' + i);;
   $(newDiv).width(20);
   $(newDiv).height(20);
   $(newDiv).css({
@@ -38,12 +40,14 @@ for (var i = 0; i < 20; i++) {
   })
   $("body").append(newDiv);
 
+// click on each "square", it changes the color of that individual square to "green"
   $(newDiv).on( "click", function(event) {
     console.log("newDiv was clicked!");
-    $(event.target).css({ backgroundColor: 'green' });
+    nextColor = $("#color-field").val();
+    // $(event.target).css({ backgroundColor: 'green' });
+    $(event.target).css({ backgroundColor: nextColor });
   });
 }
-
 
 $("body").mousemove(function(event) {
   var paintTrail = document.createElement("div");
@@ -62,7 +66,6 @@ $("body").mousemove(function(event) {
 });
 
 
-// click on each "square", it changes the color of that individual square to "green"
 // Hint: add event listener while creating squares, or listen for events on the body element
 
 // modify: changes to the color I set using my input instead of "green" every time.
