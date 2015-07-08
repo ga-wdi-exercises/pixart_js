@@ -9,10 +9,15 @@ $( "#set-color" )[0].addEventListener( "click", function(event) {
 })
 
 function appendDiv() {
-
   for(var i = 0; i < 20; i++) {
     $( "body" ).append( "<div class='square'></div>" );
   }
+
 }
 
 appendDiv();
+
+$ ( "body div.square" ).click(function(){
+
+  $( this ).css( "background-color" , "green" );
+});
