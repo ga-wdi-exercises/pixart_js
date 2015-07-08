@@ -16,4 +16,12 @@ $(document).ready( function(){
       $( ".brush").css( "background-color", colorVal);
     }
   })
+//commit 3
+  //create 20 divs with class "square" and append to body
+  var $newDiv;
+  for (var i=0; i<20; i++) {
+    $newDiv = $("<div class='square' />")
+    $("body").append($newDiv);
+  }
+  $('body').append('<div>');
 })
