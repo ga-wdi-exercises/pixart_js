@@ -28,9 +28,9 @@ $("#color-field").keyup(function(e){
 // Modify your code so that when I click on each "square", it changes to the color I set using my input instead of "green" every time.
 
 $(function()
-  {for (var i = 1; i <= 20; i++)
+  {for (var i = 1; i <= 8000; i++)
 {  $("body").append("<div class = 'square'></div>");
-    $(".square").last().click(function(){
+    $(".square").last().mouseover(function(){
       $(this).css("background", colorinput)})}})
 
 // Modify the CSS so that the "square" class has a height and width of 10px and a margin of 0.
