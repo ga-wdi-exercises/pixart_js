@@ -1,9 +1,4 @@
-// add event listener to set color button
-// button auto refreshes page...use preventDefault
-// save color from input field to a variable userInput
-// change color of brush box to value of userInput variable
-// clear text box
-
+// commit 1
 var userInput = $("#color-field");
 $("#set-color")[0].addEventListener("click", function(){
   event.preventDefault();
@@ -12,3 +7,13 @@ $("#set-color")[0].addEventListener("click", function(){
   $(".brush").css("background", userInput.val());
   userInput.val("");
 })
+
+// commit 2
+// find jquery event for enter key
+$("set-color").keypress(function (e) {
+ var key = e.which;
+ if(key == 13)  {
+    $(".brush").css("background", userInput.val());
+    userInput.val("");
+  }
+});
