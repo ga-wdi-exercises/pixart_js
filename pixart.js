@@ -9,5 +9,9 @@ button.addEventListener("submit", function(event){
 })
 //code doesn't work. I get an uncaught type error - button.listener isn't a function
 
-.append()("div").eq2)
+$("body").append($("div").eq2)
 //commit 3
+
+$("div").eq2).addEventListener("click", function(){
+
+}
