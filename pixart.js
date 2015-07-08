@@ -9,3 +9,8 @@ $("button").on("click", function(event){
   $(".brush").css("background-color", newColor);
 
 })
+
+//create 20 divs of square class and add to body
+for (var i = 0; i <= 20; i++) {
+  $("body").append("<div class='square'></div>")
+}
