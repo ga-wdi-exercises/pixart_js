@@ -23,7 +23,7 @@ $("#set-color").on("click", function(event){
 //  ###Commit 2
 
 //  * The same thing should happen when I press the enter key from inside the input field
-
+// RETURN FUNCTIONALITY BUILT IN SOMEHOW, whether it is jquery OR vanilla...
 //  ###Commit 3
 
 //  * Create 20 divs of the "square" class and append them to the body
