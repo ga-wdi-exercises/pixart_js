@@ -3,5 +3,5 @@ var brushColor = document.getElementsByClassName("brush").value;
 
 setColor.addEventListener("click", function() {
   event.preventDefault()
-  $("body").css("background", brushColor)
+  $("#brush").css("background", brushColor)
 })
