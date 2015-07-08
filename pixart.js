@@ -5,8 +5,14 @@ function changeColor() {
 
 $("button")[0].addEventListener("click", changeColor);
 
-for(i = 0; i < 20; i++) {
+for(var i = 0; i < 20; i++) {
   var colorSq = document.createElement("colorSq");
   colorSq.classList.add("square");
   document.body.appendChild(colorSq);
 };
+
+document.body.addEventListener("click", function () {
+  if(event.target.classList.contains("square")) {
+    $(event.target).css("background", "green");
+  };
+});
