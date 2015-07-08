@@ -28,6 +28,15 @@ for (i=0; i<20; i++) {
 // Add functionality so that when I click on each "square", it changes the color of that individual square to "green"
 // Hint: either add the event listener while creating the squares, or listen for events on the body element
 
+// var colorChange = document.getElementsByClassName("square")
+//   $(".square").addEventListener("click", colorChange)
+//
+// function colorChange {
+//   $(".square").css("background-color", $("#color-field").val())
+// }
+document.body.addEventListener("click", function(event){
+    $(event.target).css("background-color", "green")
+})
 
 
 // Commit 5
