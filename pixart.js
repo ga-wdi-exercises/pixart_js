@@ -15,17 +15,17 @@ $( "#set-color" ).keypress(function() {
 })
 //Create 20 divs of the "square" class and append them to the body using .append()
 //function appendSquares() {
-for( var i = 0; i < 20; i++ ) {
+for( var i = 0; i < 8000; i++ ) {
   $( "body" ).append( "<div class = 'square'></div>");
 }
 //When user clicks a 'square', the color of the individual sqaure turns to green.
-$( ".square" ).click(function() {
+$( ".square" ).mouseover(function() {
   event.preventDefault();
   $(this).css( "background-color" , $( "green"));
   //console.log("working");
 })
 //When user clicks on a square, color changes to whatever value they entered in the input box, rather than to green.
-$( ".square" ).click(function() {
+$( ".square" ).mouseover(function() {
   event.preventDefault();
   $(this).css( "background-color" , $( "#color-field").val());
 })
