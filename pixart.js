@@ -35,3 +35,8 @@ $("#set-color").on("click", function(){
     console.log("it worked again");
     $("body").after($("<div></div>").addClass('square'));
   }
+
+$(".square").on("mouseover", function(){
+  event.preventDefault();
+  $(event.target).css("background-color", $("#color-field").eq(0).val())
+})
