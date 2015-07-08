@@ -20,17 +20,14 @@ $("#color-field").keyup(function(e){
 
 // Create 20 divs of the "square" class and append them to the body
 
-$(function()
-  {
-    for (var i = 1; i <= 20; i++)
-{
-      $("body").append("<div class = 'square'></div>")
-}
-})
-
 // Add functionality so that when I click on each "square", it changes the color of that individual square to "green"
 // Hint: either add the event listener while creating the squares, or listen for events on the body element
 
+$(function()
+  {for (var i = 1; i <= 20; i++)
+{  $("body").append("<div class = 'square'></div>");
+    $(".square").last().click(function(){
+      $(this).css("background", "green")})}})
 
 
 // Modify your code so that when I click on each "square", it changes to the color I set using my input instead of "green" every time.
