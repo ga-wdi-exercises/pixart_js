@@ -6,21 +6,17 @@
 
 $("#set-color").on("click", function(event){
   event.preventDefault();
-  $(".brush").css("background-color", $("#color-field").val());
+  $(".brush").css("background-color", $("#color-field").val())
 })
 
 // Commit 2
 // The same thing should happen when I press the enter key from inside the input field
-$("#set-color").on("submit", function(event){
-  event.preventDefault();
-  $(".brush").css("background-color", $("#color-field").val())
-})
 
 // Commit 3
 // Create 20 divs of the "square" class and append them to the body
 // Hint: use .append()
 
-for (i=0; i<20; i++) {
+for (i=0; i<8000; i++) {
   $("body").append("<div class='square'></div>")
 }
 
@@ -34,8 +30,8 @@ for (i=0; i<20; i++) {
 // function colorChange {
 //   $(".square").css("background-color", $("#color-field").val())
 // }
-document.body.addEventListener("click", function(event){
-    $(event.target).css("background-color", $("color-field").val())
+$(".square").on("mouseover", function(event){
+    $(event.target).css("background-color", $("#color-field").val())
 })
 
 // Commit 5
