@@ -16,13 +16,14 @@ $(document).ready( function(){
       $( ".brush").css( "background-color", colorVal);
     }
   })
-//commit 3 & 4 & 5
+//commit 3 & 4 & 5 & 6
   //create 20 divs with class "square" and append to body
   //when user clicks on 'square' it changes color to green
   //when user clicks on 'square' it changes color to input if defined
+  //change divs to 8000, change 'click' to 'mouseover'
   var $newDiv;
-  for (var i=0; i<20; i++) {
-    $newDiv = $("<div class='square' />").on("click", function(){
+  for (var i=0; i<8000; i++) {
+    $newDiv = $("<div class='square' />").on("mouseover", function(){
       if (typeof colorVal != 'undefined'){
         $(this).css("background-color", colorVal);
       }
