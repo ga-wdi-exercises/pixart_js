@@ -32,5 +32,8 @@ $(document).ready(function() {
     $(".brush").eq(0).css("background-color", $("#color-field").eq(0).val());
   });
 
-  $("body").append("<div class='square'></div>");
+  for(var i; i < 20; i++) {
+    $("body").append("<div class='square'></div>");
+  }
+
 });
