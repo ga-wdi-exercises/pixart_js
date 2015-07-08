@@ -1,8 +1,33 @@
-	/*
-	When I click the "Set Color" button, it should change the color of the "brush" box to the color I specify in the input field. (Hint: You will need to use event.preventDefault() somewhere in your code.)
-Use jQuery to select the element, and addEventListener to handle clicks
-$("body")[0].addEventListener...
-	*/
+
+var clickMe = document.getElementById( "set-color") ;
+var color = $( "input" ) ;
+var brushBox = $( ".brush" ) ;
+var inputField = document.getElementById( "color-field" ) ;
+
+function canvas() {
+	for ( var i = 0; i < 8000; i++ ) {
+		$( "<div></div>" ).addClass('square').appendTo( "body" ).hover(function() {
+			$(this).css("background", color.val()) ;
+		}) ;
+	} 
+} ;
+
+clickMe.addEventListener( "click", function() {
+	event.preventDefault() ; 
+	brushBox.css( "background-color", color.val() ) ;
+} );
+
+inputField.addEventListener( "submit", function() {
+	event.preventDefault() ; 
+	brushBox.css( "background-color", color.val() ) ;
+} ) ; 
+
+canvas() ;
+
+
+
+
+/*
 
 var pixelArt = {
 	clickMe : document.getElementById( "set-color") ,
@@ -10,40 +35,37 @@ var pixelArt = {
 	myText : $( "span" ) ,
 	brushBox : $( ".brush" ) ,
 	inputField : document.getElementById( "color-field" ) ,
+	body : document.body ,
 
-/*
-Create 20 divs of the "square" class and append them to the body
-Hint: use .append()
-*/
+	// changeColor : function() {
+	// 	.css( "background-color", "red" ) ; 
+	// } ,
+
+	changeColor : function() {
+			document.getElementsByClassName( "square" ).css("background-color", "red" ) ;
+		} , 
+
 	canvas : function() {
 		var self = this ; 
 
-		for ( var i = 0; i < 20; i++ ) {
-			$( "<div>Blah I'm a div</div>" ).appendTo( "body" ) ;
-
-		}
-		console.log( "create!") ;
-	} ,
-
+		for ( var i = 0; i < 8000; i++ ) {
+			$( "<div></div>" ).addClass('square').appendTo( "body" ) ;
+			document.getElementsByClassName( "square" ).addEventListener( "mouseover", this.changeColor ) ;
+			} 
+		} ,
 
 	eventListener : function() {
 		var self = this;
 
 		self.clickMe.addEventListener( "click", function() {
 			event.preventDefault() ; 
-			// console.log( self.color.val() ) ; 
-			self.myText.text( self.color.val() );
-			console.log( self.brushBox.css( "background-color" ) ) ;
-			self.brushBox.css( "background-color", self.color.val() ) ; 
-		}) , 
+			self.brushBox.css( "background-color", self.color.val() ) ;
+		} ) , 
 
 		self.inputField.addEventListener( "submit", function() {
 			event.preventDefault() ; 
-			// console.log( self.color.val() ) ; 
-			self.myText.text( self.color.val() );
-			console.log( self.brushBox.css( "background-color" ) ) ;
-			self.brushBox.css( "background-color", self.color.val() ) ; 
-		} )
+			self.brushBox.css( "background-color", self.color.val() ) ;
+		} ) 
 	}
 
 }
