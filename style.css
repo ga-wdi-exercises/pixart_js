@@ -25,6 +25,17 @@ h1 {
   text-align: center;
 }
 
+.swatches {
+  margin-top: 10px ;
+}
+.swatch {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: #E7E5DB;
+  margin: 2px;
+}
+
 body {
   background-image: url('ps_neutral.png');
 }
