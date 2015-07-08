@@ -23,9 +23,9 @@ $("set-color").keypress(function (e) {
 $("window").load(appendSquares());
 
 function appendSquares(){
-  for (var i = 0; i < 20; i++) {
-    console.log("window has loaded");
-    $("body").append( $("<div></div>").addClass("square").click(function(){
+  for (var i = 0; i < 8000; i++) {
+//    console.log("window has loaded");
+    $("body").append( $("<div></div>").addClass("square").mouseover(function(){
       $(this).css("background-color",$(".brush").css("background-color"));
     }));
   }
