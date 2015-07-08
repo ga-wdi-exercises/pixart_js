@@ -8,3 +8,8 @@ $( setColor ).click(function() {
   $( ".brush" ).css( "background", applyColor ); // Set Color Value
   console.log("click listener is working")
 });
+
+// Create 20 divs of the "square" class and append them to the body
+for( var i = 0; i < 20; i++){
+  $("body").append("<div class=square></div>"); // this adds the div as the last child of body with .square
+}
