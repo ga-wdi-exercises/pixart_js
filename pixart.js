@@ -12,11 +12,13 @@ $("button").on("click", function(event){
 })
 
 //create 20 divs of square class and add to body
-for (var i = 0; i <= 20; i++) {
+for (var i = 0; i <= 8000; i++) {
   $("body").append("<div class='square'></div>")
 }
 
 //change square color when clicked. add listener to squares
-$(".square").on("click", function(event) {
+$(".square").on("mouseover", function(event) {
    $(this).css("background-color", newColor);
 });
+
+//
