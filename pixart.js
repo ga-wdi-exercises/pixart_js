@@ -9,7 +9,6 @@ $("#set-color")[0].addEventListener("click", function(){
 })
 
 // commit 2
-// find jquery event for enter key
 $("set-color").keypress(function (e) {
  var key = e.which;
  if(key == 13)  {
@@ -17,3 +16,15 @@ $("set-color").keypress(function (e) {
     userInput.val("");
   }
 });
+
+// commit 3
+// create 20 divs, class square
+// append divs to body
+$("window").load(appendSquares());
+
+function appendSquares(){
+  for (var i = 0; i < 20; i++) {
+    console.log("window has loaded");
+    $("body").append( $("<div></div>").addClass("square"));
+  }
+}
