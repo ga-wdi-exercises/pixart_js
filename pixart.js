@@ -21,7 +21,18 @@ setColorButton.addEventListener("click", function(event){
 //
 // * The same thing should happen when I press the enter key from inside the input field
 
+var setColorField = $("#color-field")[0];
+console.log(setColorField);
 
+setColorField.addEventListener("onsubmit", function(event){
+  event.preventDefault();
+  var colorInput = $("#color-field").eq(0).val();
+  console.log(colorInput);
+  $(".brush").css({
+    "background-color" : colorInput
+  })
+
+})
 
 // ###Commit 3
 //
