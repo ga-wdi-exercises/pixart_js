@@ -17,14 +17,15 @@ $("set-color").keypress(function (e) {
   }
 });
 
-// commit 3
-// create 20 divs, class square
-// append divs to body
+// commit 3 - append 20 divs
+// commit 4 - add click event listener and change to green
 $("window").load(appendSquares());
 
 function appendSquares(){
   for (var i = 0; i < 20; i++) {
     console.log("window has loaded");
-    $("body").append( $("<div></div>").addClass("square"));
+    $("body").append( $("<div></div>").addClass("square").click(function(){
+      $(this).css("background-color", "green");
+    }));
   }
 }
