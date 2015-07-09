@@ -4,7 +4,13 @@ $("#set-color")[0].addEventListener("click", function(){
   event.preventDefault();
 //  console.log("button clicked");
 //  console.log(userInput.val());
-  $(".brush").css("background-color", userInput.val());
+  if($("#brushOne").css("background-color") === "rgb(231, 229, 219)") {
+    $("#brushOne").css("background-color", userInput.val());
+  } else {
+    $("#brushThree").css("background-color", $("#brushTwo").css("background-color"));
+    $("#brushTwo").css("background-color", $("#brushOne").css("background-color"));
+    $("#brushOne").css("background-color", userInput.val());
+  }
   userInput.val("");
 })
 
