@@ -1,9 +1,7 @@
 // commit 1
 var userInput = $("#color-field");
-$("#set-color")[0].addEventListener("click", function(){
-  event.preventDefault();
-//  console.log("button clicked");
-//  console.log(userInput.val());
+
+function setPaintSwatches(){
   if($("#brushOne").css("background-color") === "rgb(231, 229, 219)") {
     $("#brushOne").css("background-color", userInput.val());
   } else {
@@ -12,27 +10,37 @@ $("#set-color")[0].addEventListener("click", function(){
     $("#brushOne").css("background-color", userInput.val());
   }
   userInput.val("");
+}
+$("#set-color")[0].addEventListener("click", function(){
+  event.preventDefault();
+  setPaintSwatches();
 })
 
 // commit 2
 $("set-color").keypress(function (e) {
  var key = e.which;
  if(key == 13)  {
-    $(".brush").css("background", userInput.val());
-    userInput.val("");
+   setPaintSwatches();
   }
 });
 
-// commit 3 - append 20 divs
-// commit 4 - add click event listener and change to green
-// commit 5 - change green to color of brush background
+$("#brushTwo").on("click", function(){
+  userInput.val($("#brushTwo").css("background-color"));
+  setPaintSwatches();
+})
+
+$("#brushThree").on("click", function(){
+  userInput.val($("#brushThree").css("background-color"));
+  setPaintSwatches();
+})
+
+
 $("window").load(appendSquares());
 
 function appendSquares(){
   for (var i = 0; i < 8000; i++) {
-//    console.log("window has loaded");
     $("body").append( $("<div></div>").addClass("square").mouseover(function(){
-      $(this).css("background-color",$(".brush").css("background-color"));
+      $(this).css("background-color",$("#brushOne").css("background-color"));
     }));
   }
 }
