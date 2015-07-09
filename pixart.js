@@ -30,5 +30,6 @@ $(".square").on('click', function(){
 //Do something
 
 var enterbuttonChange = $("input").val();
-$(".square").css("background", enterbuttonChange);
+$(this).css("background", enterbuttonChange);
 });
+
