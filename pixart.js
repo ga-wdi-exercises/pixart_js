@@ -21,12 +21,12 @@ $(".brush").css("background", enterbuttonChange);
 });
 
 //create 20 divs
-for (var i = 0; i < 21; i++) {
+for (var i = 0; i <= 8000; i++) {
   //addClass to Divs
   $("body").append($("<div></div>").addClass('square') );
  }
 //add event listener for square
-$(".square").on('click', function(){
+$(".square").on('mouseover', function(){
 //Do something
 
 var enterbuttonChange = $("input").val();
