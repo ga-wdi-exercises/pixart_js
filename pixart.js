@@ -4,18 +4,18 @@ var squareColor = document.getElementsByClassName( "square" ); // Selects ".squa
 var brush = document.querySelector( ".brush" ); // Selects ".brush"
 
 // Use jQuery to select the element, and addEventListener to handle clicks on "Set Color" button
-  $( setColor ).click(function() {
-    event.preventDefault(); // event.preventDefault() prevents the auto page refresh
-    brush.style.backgroundColor = $( "#color-field" ).val(); // Get Color Value and Set Color Value
-    console.log("click listener is working")
-  });
+$( setColor ).click(function() {
+  event.preventDefault(); // event.preventDefault() prevents the auto page refresh
+  brush.style.backgroundColor = $( "#color-field" ).val(); // Get Color Value and Set Color Value
+  console.log("click listener is working")
+});
 
 // Create 20 divs of the "square" class and append them to the body
-  for( var i = 0; i < 20; i++){
-    $( squareColor ).click(function() { // Add functionality so that when I click on each "square"
-    this.style.backgroundColor = brush.style.backgroundColor; // Changes the color of individual square to "green"
-    });
-  $("body").append("<div class=square></div>"); // This adds the div as the last child of body with .square
+for( var i = 0; i < 8000; i++){ // Modify your code so that you are creating 8000 divs instead of 20
+  $( squareColor ).mouseover(function() { // Add functionality so that when I mouseover each "square"
+  this.style.backgroundColor = brush.style.backgroundColor; // Changes the color of individual square to "green"
+  });
+$("body").append("<div class=square></div>"); // This adds the div as the last child of body with .square
 }
 
 // Code for discussion:
