@@ -22,6 +22,7 @@ function userPickedAColor(event) {
     "display": "inline-block"
     })
     numberOfUserPicksTally++;
+    startBrushThree();
   }
   if(numberOfUserPicksTally < 1) {
     $(".controls").append("<div class='brush2'></div>");
@@ -34,6 +35,7 @@ function userPickedAColor(event) {
       "display": "inline-block"
     })
   }
+  startBrushTwo();
 }
 $("#set-color").on("click", userPickedAColor);
 $("#color-field").on("submit", userPickedAColor);
@@ -42,18 +44,21 @@ $(".brush").on("click", function(event){
   console.log("user clicked!");
   currentColorChoice = $(".brush").css("background-color");
 });
-if(numberOfUserPicksTally < 1){
+function startBrushTwo() {
   $(".brush2").on("click", function(event){
     event.preventDefault();
     console.log("user clicked!");
-    currentColorChoice = $(".brush2").css("background-color");
+    currentColorChoice = $(this).css("background-color");
+  })
+}
+function startBrushThree() {
+  $(".brush3").on("click", function(event){
+    event.preventDefault();
+    console.log("user clicked!");
+    currentColorChoice = $(this).css("background-color");
   });
 }
-$(".brush3").on("click", function(event){
-  event.preventDefault();
-  console.log("user clicked!");
-  currentColorChoice = $(".brush3").css("background-color");
-});
+
 for(var i = 0; i < 8000; i++) {
   $("body").append("<div class='square'></div>");
 }
