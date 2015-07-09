@@ -11,7 +11,6 @@ $("#set-color").click(function(){
   $("#0").css("background", ($("#1").css("background")));
   $("#1").css("background", ($("#2").css("background")));
   $("#2").css("background", colorinput);
-  console.log("working")
 })
 
 // The same thing should happen when I press the enter key from inside the input field
@@ -46,11 +45,24 @@ $(function()
 
 // Add a color swatch. You should have 3 boxes with the most recent 3 colors used. When you click on each of those boxes, it should set the current brush color back to that color.
 
-$(function()
-  {for (var i=0; i<=2; i++)
+for (var i=0; i<=2; i++)
 {$("form").append("<div id = " + i + " class = 'square''></div>");
-$(this).click(function(){
+}
+
+$("#0").click(function(){
   event.preventDefault();
   $(".brush").css("background", $(this).css("background"));
-})}}
-)
+  colorinput = $(this).css("background");
+})
+
+$("#1").click(function(){
+  event.preventDefault();
+  $(".brush").css("background", $(this).css("background"));
+  colorinput = $(this).css("background");
+})
+
+$("#2").click(function(){
+  event.preventDefault();
+  $(".brush").css("background", $(this).css("background"));
+  colorinput = $(this).css("background");
+})
