@@ -28,7 +28,7 @@ $("#set-color").on("click", function(event){
 
 //  * Create 20 divs of the "square" class and append them to the body
 //    * **Hint**: use `.append()`
-for (i = 0; i <= 20; i++) {
+for (i = 0; i <= 8000; i++) {
   $("body").append("<div class='square'></div>");
 }
 //  ###Commit 4
@@ -43,7 +43,7 @@ for (i = 0; i <= 20; i++) {
 
 //  * Modify your code so that when I click on each "square", it changes to the color I set using my input instead of "green" every time.
 
-$(".square").on("click", function(){
+$(".square").on("mouseover", function(){
     $(this).css("background", colorInput)
 })
 
@@ -53,6 +53,10 @@ $(".square").on("click", function(){
 //  * Modify your code so that you are creating 8000 divs instead of 20.
 //  * Change the event that changes your box colors from 'click' to 'mouseover'
 //  * Paint a picture!
+$(".square").css("height", "10px");
+$(".square").css("margin", "0");
+
+
 
 //  ## Bonus
 
