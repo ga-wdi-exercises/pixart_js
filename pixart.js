@@ -9,13 +9,13 @@ $(document).ready (function (){
   //- When you're finished, push to your fork and issue a **pull request**.
 
   //###Commit 1
-
+var colorInput;
   //* When I click the "Set Color" button, it should change the color of the "brush" box to the color I specify in the input field.
   //(**Hint:** You will need to use `event.preventDefault()` somewhere in your code.)
 //  * Use jQuery to select the element, and `addEventListener` to handle clicks
 $("#set-color").on("click", function(event){
   event.preventDefault();
-  var colorInput = $("#color-field").val();
+  colorInput = $("#color-field").val();
   $(".brush").css("background", colorInput);
   $("input").val("");
 })
@@ -35,13 +35,17 @@ for (i = 0; i <= 20; i++) {
 
 //  * Add functionality so that when I click on each "square", it changes the color of that individual square to "green"
 //    * **Hint**: either add the event listener while creating the squares, or listen for events on the `body` element
-$(".square").on("click", function(){
-    $(this).css("background", "green")
-})
+// $(".square").on("click", function(){
+//     $(this).css("background", "green")
+// })
 
 //  ###Commit 5
 
 //  * Modify your code so that when I click on each "square", it changes to the color I set using my input instead of "green" every time.
+
+$(".square").on("click", function(){
+    $(this).css("background", colorInput)
+})
 
 //  ###Commit 6
 
