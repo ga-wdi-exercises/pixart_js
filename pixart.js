@@ -26,7 +26,9 @@ $("set-color").keypress(function (e) {
 
 $("#brushTwo").on("click", function(){
   userInput.val($("#brushTwo").css("background-color"));
-  setPaintSwatches();
+  $("#brushTwo").css("background-color", $("#brushOne").css("background-color"));
+  $("#brushOne").css("background-color", userInput.val());
+  userInput.val(""); 
 })
 
 $("#brushThree").on("click", function(){
