@@ -3,8 +3,15 @@
 .brush {
   width: 100px;
   height: 100px;
-  background: #1B4370;
+  background: #E7E5DB;
+  /*changed color to match palette so you have to input a color to start painting*/
   margin: 15px auto;
+  display: inline-block;
+}
+
+#brushTwo{
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .square {
