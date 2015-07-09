@@ -12,7 +12,7 @@ i++;
 var squares = $("div.square");
 for(var x = 0; x < squares.length; x++){
 squares.eq(x).on("click", function(){
-  $(this).css("background-color", "green");
+  $(this).css("background-color", $("#color-field").val());
 })
 }
 
