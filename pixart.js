@@ -29,3 +29,5 @@ $(document).ready( function() {
     $(this).css("background-color", $("#color-field").val());
   })
 })
+
+// added color-field selection at once
