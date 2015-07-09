@@ -5,3 +5,11 @@ $("#set-color").on("click", function() {
   var color = $("#color-field").val();
   $(".brush")[0].style.background=color;
 })
+
+//The same thing should happen when I press the enter key from inside the input field
+
+$("#set-color").keydown(function(event){
+  if (event.keyCode==13) {
+    $("#set-color").trigger("click");
+  }
+})
