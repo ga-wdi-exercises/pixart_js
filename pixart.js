@@ -14,7 +14,21 @@ t.preventDefault();
 
 
 // same thing should happen upon hitting enter
-$("input").keypress(function(){
-  var enterChangeColor = $("input").val();
-  $(".brush").css("background", enterChangeColor);
+$("input").keypress(function(event){
+  //event.preventDefault();
+  var enterbuttonChange = $("input").val();
+$(".brush").css("background", enterbuttonChange);
+});
+
+//create 20 divs
+for (var i = 0; i < 21; i++) {
+  //addClass to Divs
+  $("body").append($("<div></div>").addClass('square') );
+ }
+//add event listener for square
+$(".square").on('click', function(){
+//Do something
+
+var enterbuttonChange = $("input").val();
+$(".square").css("background", enterbuttonChange);
 });
