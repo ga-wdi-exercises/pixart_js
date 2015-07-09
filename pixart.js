@@ -8,6 +8,12 @@ $(".brush").css({
 function userPickedAColor(event) {
   event.preventDefault();
   var userInput = $("input").val();
+  //if(numberOfUserPicksTally ===3){
+    var moveBrushOneColorToBrushTwo = $(".brush").css("background-color");
+    var moveBrushTwoColorToBrushThree = $(".brush2").css("background-color");
+    $(".brush2").css("background-color", moveBrushOneColorToBrushTwo);
+    $(".brush3").css("background-color", moveBrushTwoColorToBrushThree);
+  //}
   $(".brush").css("background-color", userInput);
   currentColorChoice = $(".brush").css("background-color");
   $("input").val("");
@@ -21,6 +27,9 @@ function userPickedAColor(event) {
     "margin": "15px 15px",
     "display": "inline-block"
     })
+    $(".controls").append("<div class='secondary_instructions'>Click Old Colors To Quickly Switch Back!</div>");
+    //$(".controls").append("<button id='reset'>Reset</button>");
+    //Alternate to above two lines: display: none to display: block.
     numberOfUserPicksTally++;
     startBrushThree();
   }
