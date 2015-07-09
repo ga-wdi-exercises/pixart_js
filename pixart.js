@@ -1,7 +1,5 @@
 $("document").ready( function() {
 
-
-
   $("#set-color").on("click", function(event) {
       event.preventDefault();
       $(".brush").css("background-color", $("input").val());
@@ -10,11 +8,6 @@ $("document").ready( function() {
         $(".history").eq(0).remove();
       };
     });
-
-
-    //console.log($(this).css("background-color"));
-    //$(".brush").css("background-color", $(this).css("background-color"))
-  //});
 
   $('#set-color').keypress(function (e) {
     var key = e.which;
