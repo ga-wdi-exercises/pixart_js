@@ -15,6 +15,12 @@
   margin: 0;
 }
 
+.history {
+  width: 50px;
+  height: 50px;
+  margin: 15px auto;
+  display: inline-block;
+}
 h1 {
   font-family: Monoton;
   font-size: 48px;
