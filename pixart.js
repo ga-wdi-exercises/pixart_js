@@ -1,31 +1,18 @@
 $("document").ready( function() {
 
-  function setBrushColor() {
+$("#set-color").on("click", function(event) {
     event.preventDefault();
     $(".brush").css("background-color", $("input").val());
+    //Below adds boxes for color swatch per Bonus. No functionality yet.
     $("<div class='history'></div>").appendTo($(".controls")).css("background-color", $("input").val());
     if ($(".history").length > 3){
       $(".history").eq(0).remove();
     };
-  };
-
-  $("#set-color").on("click", function(event) {
-      event.preventDefault();
-      setBrushColor();
-    });
-
-  $("#set-color").on("keypress", function(e) {
-    if(e.which == 13) {
-      setBrushColor();
-      };
   });
-
+//My testing showed that Chrome, Safari, and Firefox all interpret pressing entre on the input as clicking submit, so I felt comfortable omitting the code making that behavior explicit.
   for (var i = 1; i <= 8000; i++) {
       $("<div class='square'></div>").appendTo($("body")).on("mouseover", function () {
         $(this).css("background-color", $("input").val());
       })
     };
   })
-
-// ## Bonus
-// * Add a color swatch. You should have 3 boxes with the most recent 3 colors used. When you click on each of those boxes, it should set the current brush color back to that color.
