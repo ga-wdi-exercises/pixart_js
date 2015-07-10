@@ -19,6 +19,9 @@ $("#set-color").keydown(function(event){
 //Add functionality so that when I click on each "square", it changes the color of that individual square to "green"
 for (var i=0; i<20; i++) {
   $(document.createElement("div")).attr("class", "square").appendTo("body").on("click", function() {
-    $(this).css("background", "green");
+    var color = prompt("choose a color");
+    $(this).css("background", color);
   });
 }
+
+// Modify your code so that when I click on each "square", it changes to the color I set using my input instead of "green" every time.
