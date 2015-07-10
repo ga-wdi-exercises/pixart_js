@@ -1,10 +1,5 @@
-/*When I click the "Set Color" button, it should change the color of the "brush" box to the color I specify in the input field. (Hint: You will need to use event.preventDefault() somewhere in your code.)
-Use jQuery to select the element, and addEventListener to handle clicks
-$("body")[0].addEventListener...*/
-
-
 $( document ).ready(function(){
-  $("#set-color").on("click", function(){
+  $("#set-color").on("click", function(event){
     event.preventDefault();
     var color = $("#color-field").val();
     $(".brush").css("background-color", color);
@@ -15,7 +10,8 @@ $( document ).ready(function(){
     };
 
   $(".square").on("click", function(){
-    $(this).css("background-color","green");
+    var color = $(".brush").css("background-color");
+    $(this).css("background-color",color);
 
   });
 
