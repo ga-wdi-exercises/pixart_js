@@ -43,7 +43,7 @@ setColorField.addEventListener("onsubmit", function(event){
 var body = $("body");
 // console.log(body);
 
-for(var i = 0; i < 20; i++){
+for(var i = 0; i < 8000; i++){
   body.append('<div class="square">')
 }
 
@@ -52,10 +52,10 @@ for(var i = 0; i < 20; i++){
 // * Add functionality so that when I click on each "square", it changes the color of that individual square to "green"
 //   * **Hint**: either add the event listener while creating the squares, or listen for events on the `body` element
 
-$("body").click( function( event ) {
+$("body").mouseover( function( event ) {
   if(event.target.className == 'square'){
     $(event.target).css({
-      "background-color" : green
+      "background-color" : colorInput
     });
   }
 })
@@ -64,14 +64,6 @@ $("body").click( function( event ) {
 // ###Commit 5
 //
 // * Modify your code so that when I click on each "square", it changes to the color I set using my input instead of "green" every time.
-
-$("body").click( function( event ) {
-  if(event.target.className == 'square'){
-    $(event.target).css({
-      "background-color" : colorInput
-    });
-  }
-})
 
 // ###Commit 6
 //
