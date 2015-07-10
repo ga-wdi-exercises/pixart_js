@@ -18,8 +18,8 @@ $("#set-color").keydown(function(event){
 //Create 20 divs of the "square" class and append them to the body
 
 //Add functionality so that when I click on each "square", it changes the color of that individual square to "green"
-for (var i=0; i<20; i++) {
-  $(document.createElement("div")).attr("class", "square").appendTo("body").on("click", function() {
+for (var i=0; i<8000; i++) {
+  $(document.createElement("div")).attr("class", "square").css("height", "10px").css("width", "10px").css("margin", "auto").appendTo("body").on("mouseover", function() {
     $(this).css("background", color);
   });
 }
