@@ -1,13 +1,19 @@
 
 $("button").on("click", function(event){
- // console.log(this);
  event.preventDefault();
  var userColorChoice = $("input").val();
- // alert(userColorChoice);
  $(".brush").css("background-color", userColorChoice);
 });
 
-// DRAFTS  
+$("button").keypress(function(event){
+ event.preventDefault();
+ var userColorChoice = $("input").val();
+ $(".brush").css("background-color", userColorChoice);
+});
+
+
+
+// DRAFTS
 //event listener. "this" refers to what was clicked
 //refers to the first div only
 
