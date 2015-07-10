@@ -13,3 +13,7 @@ $("#set-color").keydown(function(event){
     $("#set-color").trigger("click");
   }
 })
+
+for (var i=0; i<20; i++) {
+  $(document.createElement("div")).attr("class", "square").appendTo("body");
+}
