@@ -3,8 +3,9 @@
 Use the starter code and commit each step of the exercise.
 
 - Fork and clone this repo.
+- Checkout a new branch called '**YOUR NAME**-solution'
 - Work in small steps and commit frequently.
-- When you're finished, push to your fork and issue a **pull request**.
+- When you're finished, push your solution branch your fork (`git push origin <branch-name>`) and issue a **pull request**.
 
 ###Commit 1
 
