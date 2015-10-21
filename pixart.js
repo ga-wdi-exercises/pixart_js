@@ -2,14 +2,13 @@ $(document).ready(function(){
 
   $('button').on('click', function(e){
     e.preventDefault();
-    var color = $('input').val()
+    color = $('input').val()
     $('.brush').css('background', color);
   })
 
   $('#color-field').on('keyup', function(e){
     if(e.keyCode === 13){
       e.preventDefault();
-      var color = $('input').val()
       $('.brush').css('background', color);
     }
   })
@@ -22,7 +21,7 @@ $(document).ready(function(){
 
   $('.square').each(function(){
     $(this).on('click', function(e){
-      $(this).css('background', 'green')
+      $(this).css('background', color)
     })
   })
 
