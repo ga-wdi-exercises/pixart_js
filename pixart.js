@@ -13,19 +13,20 @@ $(document).ready(function(){
     }
   });
 
-  for (i = 0; i < 20; i++) {
+  for (i = 0; i < 8000; i++) {
     $("<div></div>").attr("class", "square").appendTo($("body"));
 }
-$(".square").on("click", function(){
+
+
+    // $(".square").css({
+    //   "width": "10px",
+    //   "height": "10px",
+    //   "margin": "0",
+    // });
+
+$(".square").on("mouseover", function(){
   $(this).css("background", $("input").val());
 });
-
-    // $(".square"+[i]).css({
-    //   "width": "30px",
-    //   "height": "30px",
-    //   "margin": "0",
-    //   "float": "left"
-    // });
     // $(".square"+[i]).on("click", function(){
     //   $(".square"+[i]).css({
     //     "background": "green",
