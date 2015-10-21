@@ -11,8 +11,7 @@ var pixArtPainter = {
   },
   setUpCanvas: function(pixelCount){
     for (var i =0; i < pixelCount; i++){
-      var newPixel = $("<div class = 'square'></div>")
-      $("body").append(newPixel);
+      $("body").append("<div class = 'square'></div>");
     }
   },
   addCanvasListeners: function() {
@@ -23,7 +22,7 @@ var pixArtPainter = {
     })
   },
   launchPaint: function() {
-    this.setUpCanvas(pixArtPainter.numPixels);
+    this.setUpCanvas(this.numPixels);
     this.addCanvasListeners();
     this.setUpBrushListener();
   }
