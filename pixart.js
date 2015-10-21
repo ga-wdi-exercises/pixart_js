@@ -21,3 +21,6 @@ $(document).ready(function(){
   $(".square").css({"height": "10px","width":"10px","margin":"0"});
 
 })
+
+
+// git checkout test
