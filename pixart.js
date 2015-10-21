@@ -16,7 +16,13 @@ $("#set-color").bind("keypress", function (evt){
 })
 
 for (var i = 1; i <=20; i++) {
-  var newSquare = document.createElement('class')
+  var newSquare = document.createElement('div')
   newSquare.setAttribute('class', 'square')
   document.body.appendChild(newSquare);
-}
+};
+
+$(".square").on("click", function (evt){
+  $(".square").css({
+    background: "green"
+});
+})
