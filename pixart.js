@@ -11,8 +11,14 @@ $(document).ready(function(){
       event.preventDefault();
     $(".brush").css("background", $("input").val());
     }
-
   });
+
+  for (i = 0; i < 20; i++) {
+    $("body").append("<div></div>");
+    $("body div").attr("class", "square");
+
+
+  }
 
   //
 
