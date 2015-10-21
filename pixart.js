@@ -8,13 +8,13 @@ $(document).ready(function(){
 
   var divSearch = [];
 
-  for (i = 0; i < 20; i++) {
+  for (i = 0; i < 8000; i++) {
     divSearch.push('<div class="square"></div>');
   }
 
   $("body").append( divSearch );
 
-  $('.square').on('click', function() {
+  $('.square').on('mouseover', function() {
     var input = $('#color-field').val();
 
     $(this).css('background', input);
