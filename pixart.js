@@ -5,3 +5,12 @@ $("#set-color").on("click", function (evt){
     background: userInput
   });
 })
+
+$("#set-color").bind("keypress", function (evt){
+  if (evt.keyCode == 13) {
+  var userInput = $("#color-field").val();
+  var brushBox = $(".brush").css({
+    background: userInput
+  });
+  };
+})
