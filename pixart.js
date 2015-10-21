@@ -21,14 +21,15 @@ var pixArtPainter = {
       $("body").append(newPixel);
     }
   },
-  addListeners: function(){
-    for (var i=0; i < this.numPixels; i++){
-      $("div.square")[i].on("click", function(){
-        $("div.square")[i].css("background-color", $(".brush").css("background-color"));
-      })
-
-    }
-  }
+                  // addListeners: function(){
+                  //   for (var i=0; i < this.numPixels; i++){
+                  //     $("div.square")[i].on("click", function(){
+                  //       $("div.square")[i].css("background-color", $(".brush").css("background-color"));
+                  //     })
+                  //
+                  //   }
+                  // }
 }
 pixArtPainter.setUpCanvas(pixArtPainter.numPixels);
 pixArtPainter.setUpListener();
+//pixArtPainter.addListeners();
