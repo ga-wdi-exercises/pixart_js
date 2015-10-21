@@ -4,19 +4,19 @@ $(document).ready(function() {
     colorSelected = $("input:text").val(); //This is correct.
     console.log("User input is: " + colorSelected);
     $(".brush").css("background-color", colorSelected);
-    $("input:text").val("");
+    //$("input:text").val("");
   })
 });
 //Divs are showing up... oddly. ?
 $(document).ready(function() {
-  for (var i = 0; i < 20; console.log("made div " + i, i++)) {
+  for (var i = 0; i < 8000; i++) {
     $(".controls").after($('<div />', {
-      "class": "square",
-      click: function(e) {
+      mouseover: function(e) {
+        var colorSelected2 = $("input:text").val();
         e.preventDefault;
-        //colorSelected2 = $("input:text").val();
-        $(".square").css("background-color", "green");
+        $(this).css("background-color", colorSelected2);
       },
-    }));
+      "class": "square",
+      }));
   }
 });
