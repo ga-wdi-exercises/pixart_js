@@ -1,35 +1,31 @@
+
 var pixArtPainter = {
   clickButton: $("#set-color"),
-  numPixels: 20,
-  currentColor: null,
+  numPixels: 4000,
   pickColor: function(event) {
     event.preventDefault();
-    $(".brush").css("background-color",$("#color-field").val());
-    pixArtPainter.currentColor = $("#color-field").val();
-    //console.log(pixArtPainter.currentColor);
+    $(".brush").css("background",$("#color-field").val());
   },
-  setUpListener: function (){
-    //event.preventDefault();
+  setUpBrushListener: function (){
     this.clickButton.bind("click", this.pickColor);
   },
   setUpCanvas: function(pixelCount){
     for (var i =0; i < pixelCount; i++){
       var newPixel = $("<div class = 'square'></div>")
-      newPixel.on("click", function(){
-        newPixel.css("background-color", $(".brush").css("background-color"));
-      })
       $("body").append(newPixel);
     }
   },
-                  // addListeners: function(){
-                  //   for (var i=0; i < this.numPixels; i++){
-                  //     $("div.square")[i].on("click", function(){
-                  //       $("div.square")[i].css("background-color", $(".brush").css("background-color"));
-                  //     })
-                  //
-                  //   }
-                  // }
+  addCanvasListeners: function() {
+    $(".square").each(function(index){
+      $(this).on("mouseover", function(){
+        $(this).css("background", $(".brush").css("background"))
+      })
+    })
+  },
+  launchPaint: function() {
+    this.setUpCanvas(pixArtPainter.numPixels);
+    this.addCanvasListeners();
+    this.setUpBrushListener();
+  }
 }
-pixArtPainter.setUpCanvas(pixArtPainter.numPixels);
-pixArtPainter.setUpListener();
-//pixArtPainter.addListeners();
+pixArtPainter.launchPaint();
