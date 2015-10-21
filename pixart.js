@@ -5,25 +5,24 @@ $(document).ready(function() {
     console.log("the button works...");
     console.log("User input is: " + colorSelected);
     $(".brush").css("background-color", colorSelected);
+    $("input:text").val("");
   })
 });
-//There is an open loop somewhere in here?!!?
+//The following is not creating the divs....
 
-function build20divs() {
+$(document).ready(function() {
   for (var i = 1; i < 20; i++) {
-    $(document).ready(function() {
-      $('<div />', {
-        "class": "square",
-        click: function(e) {
-          e.preventDefault;
-          //colorSelected2 = $("input:text").val();
-          $("square").css("background-color", green);
-        },
-      });
-      var square = $(".square");
-      $("body").append(square);
-      //CANNOT USE VANILLA JS WITH jQuery!
+    $("div", {
+      "class": "square",
+      "style": "width = 200px;",
+      "style": "height = 200px;",
+      click: function(e) {
+        e.preventDefault;
+        //colorSelected2 = $("input:text").val();
+        $(".square").css("background-color", "green");
+      },
     });
+    var square = $(".square");
+    $("body").append(square);
   }
-}
-build20divs();
+});
