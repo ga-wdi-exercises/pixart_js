@@ -7,3 +7,8 @@ function updateC(evt)
 }
 var buttonNode=$('#set-color');
 buttonNode.click( updateC);
+
+//commit 2
+for(var i=0; i<20; i++){
+  $('body').append('<div class="square"> </div>');
+}
