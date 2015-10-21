@@ -15,10 +15,10 @@ $(document).ready(function(){
     $(".brush").css('background',color);
   }
 
-  for (var i=0;i<20;i++){
+  for (var i=0;i<8000;i++){
     var div = document.createElement('div');
     div.className = 'square';
-    div.addEventListener('click', function(){
+    div.addEventListener('mouseover', function(){
       this.style.background = color;
     })
     $("body").append(div);
