@@ -14,21 +14,33 @@ $("button#set-color").on("click", function setColor(event) {
 // Commit 2
 // The same thing should happen when I press the enter key from inside the input field
 
+$("input#color-field").keydown(function(event) {
+	if (event.code === 13) {
+		setColor(event);
+	}
+})
 
 // Commit 3
 // Create 20 divs of the "square" class and append them to the body. Hint: use .append()
 
+// $("body").append("<div class='square'></div><div class='square'></div><div class='square'></div><div class='square'></div><div class='square'></div><div class='square'></div><div class='square'></div><div class='square'></div><div class='square'></div><div class='square'></div><div class='square'></div><div class='square'></div><div class='square'></div><div class='square'></div><div class='square'></div><div class='square'></div><div class='square'></div><div class='square'></div><div class='square'></div><div class='square'></div>");
 
 // Commit 4
 // Add functionality so that when I click on each "square", it changes the color of that individual 
 // square to "green" Hint: either add the event listener while creating the squares, or listen 
 // for events on the body element
 
+// $("div.square").on("click", function turnGreen() {		// This worked though? I think
+// 	$(this).css("background", "green");
+// })
 
 // Commit 5
 // Modify your code so that when I click on each "square", it changes to the color I set using my 
 // input instead of "green" every time.
 
+// $("div.square").on("click", function setColor(event) {	
+// 	$(this).css("background", $("input#color-field").val());
+// })
 
 // Commit 6
 // Modify the CSS so that the "square" class has a height and width of 10px and a margin of 0.
@@ -36,7 +48,15 @@ $("button#set-color").on("click", function setColor(event) {
 // Change the event that changes your box colors from 'click' to 'mouseover'
 // Paint a picture!
 
+$("div.square").css("height", "10px").css("width", "10px").css("margin", "0");
 
+while ( $("div.square").length < 8000) {
+	$("body").append("<div class='square'></div>");
+}
+
+$("div.square").on("mouseover", function setColor(event) {	
+	$(this).css("background", $("input#color-field").val());
+})
 
 
 })
