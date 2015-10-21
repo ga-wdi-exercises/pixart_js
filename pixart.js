@@ -13,16 +13,16 @@ function build20divs() {
   for (var i = 1; i < 20; i++) {
     $(document).ready(function() {
       $('<div />', {
-        "class": 'square',
+        "class": "square",
         click: function(e) {
           e.preventDefault;
           //colorSelected2 = $("input:text").val();
           $("square").css("background-color", green);
         },
       });
+      var square = $(".square");
+      $("body").append(square);
       //CANNOT USE VANILLA JS WITH jQuery!
-      /*var myElement = document.getElementsByClassName("square");
-      document.body.appendChild(myElement); /*
     });
   }
 }
