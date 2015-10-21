@@ -1,7 +1,6 @@
 
 //event listener for return key and click
 $('#form').on('submit', function(evt) {
-  console.log('Return Key');
   //stop link from going to google - interrupt
   evt.preventDefault();
   //chosen color
@@ -15,3 +14,8 @@ $('#form').on('submit', function(evt) {
 for (i=0; i<20; i++) {
   $('body').append('<div class="square"></div>')
 };
+
+//change color of each individual square to 'green' when clicked
+$('.square').on('click', function(evt) {
+  $(this).css('background', 'green')
+});
