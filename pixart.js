@@ -13,3 +13,10 @@ setColor.on("click", function(evt) {
     evt.preventDefault();
     console.log("change color");
   });
+
+// The same thing should happen when I press the enter key from inside the input field
+setColor.on("keypress", function(evt) {
+   evt.preventDefault();
+   console.log("change color");
+   $(".brush").css( "background", $("#color-field").val() );
+  });
