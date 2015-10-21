@@ -6,16 +6,18 @@ $(document).ready(function(){
     $(".brush").css("background", colorText);
   })
 
-  for (var i=0; i<=20; i++){
+  for (var i=0; i<=1000; i++){
     $( "body" ).append( "<div class = 'square'></div>" );
 
     // $( ".square" ).eq(i).attr( "name","sqr"+[i]);
     $(".square").each(function(index){
-      $(this).on("click", function(){
+      $(this).on("mouseover", function(){
         colorText = $("#color-field").val();
         $(".square").eq(index).css("background", colorText);
       })
     });
   }
+
+  $(".square").css({"height": "10px","width":"10px","margin":"0"});
 
 })
