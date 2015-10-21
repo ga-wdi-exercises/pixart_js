@@ -22,11 +22,8 @@ function setColor(evt) {
 function createCanvas(num) {
   for(var i = 0; i < num; i++) {
     var $div = $('<div></div>');
-    // $body.append(div);
-    // $div = $('div:last-of-type');
-    // console.log($div);
     $div.toggleClass('square');
-    $div.on('click', function(evt){
+    $div.on('mouseover', function(evt){
       console.log(evt);
       var $targetDiv = $(evt.target);
       $targetDiv.css({
@@ -37,4 +34,4 @@ function createCanvas(num) {
   }
 }
 
-createCanvas(20);
+createCanvas(8000);
