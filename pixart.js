@@ -14,3 +14,9 @@ $("#set-color").bind("keypress", function (evt){
   });
   };
 })
+
+for (var i = 1; i <=20; i++) {
+  var newSquare = document.createElement('class')
+  newSquare.setAttribute('class', 'square')
+  document.body.appendChild(newSquare);
+}
