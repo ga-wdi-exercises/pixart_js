@@ -12,11 +12,15 @@ for (i=0;i<3;i++){
 
 var setColor = function(evt){
   evt.preventDefault();
+  var startColor = $(".brush").eq(0).css("background-color")
   var colorSelect = $(":text").val();
-  swatchArray.unshift(colorSelect);
   $(".brush").eq(0).css("background-color", colorSelect);
-  for(i=1;i<4;i++){
-    $(".brush").eq(i).css("background-color",swatchArray[i])
+  var newColor = $(".brush").eq(0).css("background-color")
+  if(startColor != newColor){
+    swatchArray.unshift(colorSelect)
+    for(i=1;i<4;i++){
+      $(".brush").eq(i).css("background-color",swatchArray[i])
+    }
   }
 }
 
