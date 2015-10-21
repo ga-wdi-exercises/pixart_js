@@ -1,4 +1,5 @@
 $(document).ready(function(){
+  var color;
   $("#set-color").on("click",function(evt){
     evt.preventDefault();
     setColor();
@@ -7,16 +8,19 @@ $(document).ready(function(){
     if (evt.keyCode === 13){
       setColor();
     }
-  })
+  });
 
   function setColor(){
-    var color = $("#color-field").val();
+    color = $("#color-field").val();
     $(".brush").css('background',color);
   }
 
   for (var i=0;i<20;i++){
     var div = document.createElement('div');
     div.className = 'square';
+    div.addEventListener('click', function(){
+      this.style.background = 'green';
+    })
     $("body").append(div);
   }
 
