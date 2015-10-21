@@ -15,7 +15,7 @@ for (i=0; i<20; i++) {
   $('body').append('<div class="square"></div>')
 };
 
-//change color of each individual square to 'green' when clicked
+//change color of each individual square to brushColor when clicked
 $('.square').on('click', function(evt) {
-  $(this).css('background', 'green')
+  $(this).css('background', brushColor)
 });
