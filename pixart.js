@@ -1,1 +1,12 @@
+$(document).ready(function (){
 
+
+
+
+
+
+
+
+
+
+});
