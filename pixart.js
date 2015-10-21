@@ -1,8 +1,8 @@
 var $setColor = $('#set-color');
 var $input = $('input');
-var color;
 var $brush = $('.brush');
 var $body = $('body');
+var color = $brush.css('background');
 
 $setColor.on('click', setColor);
 $input.on('keyup', function(evt) {
@@ -30,7 +30,7 @@ function createCanvas(num) {
       console.log(evt);
       var $targetDiv = $(evt.target);
       $targetDiv.css({
-        'background': 'green'
+        'background': color
       });
     });
     $body.append($div);
