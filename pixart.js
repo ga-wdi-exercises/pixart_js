@@ -2,6 +2,11 @@
 function clickSquare(){
       $(this).css("background", "green");
     }
+
+function chooseMyC(){
+  var matchC=$('#color-field').val();
+  $(this).css("background", matchC);
+}
 //commit 1
 function updateC(evt)
 {
@@ -22,3 +27,6 @@ for(var i=0; i<20; i++){
 // commit 3
 var squareNode=$('div.square');
 squareNode.click(clickSquare);
+
+//commit 4
+squareNode.click(chooseMyC);
