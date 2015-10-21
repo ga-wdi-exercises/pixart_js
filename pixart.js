@@ -14,7 +14,11 @@ $(document).ready(function(){
 
   $("body").append( divSearch );
 
+  $('.square').on('click', function() {
 
+    $(this).css('background', 'green');
+
+  })
 
 
 
