@@ -19,12 +19,21 @@ function setColor(evt) {
   });
 }
 
-var div = document.createElement('div');
-
 function createCanvas(num) {
   for(var i = 0; i < num; i++) {
-    var div = document.createElement('div');
-    $body.append(div);
+    var $div = $('<div></div>');
+    // $body.append(div);
+    // $div = $('div:last-of-type');
+    // console.log($div);
+    $div.toggleClass('square');
+    $div.on('click', function(evt){
+      console.log(evt);
+      var $targetDiv = $(evt.target);
+      $targetDiv.css({
+        'background': 'green'
+      });
+    });
+    $body.append($div);
   }
 }
 
