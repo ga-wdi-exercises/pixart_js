@@ -17,7 +17,14 @@ $(document).ready(function() {
     }
   });
   for (var i = 0; i < 20; i++) {
-    $("body").append("<div class='square'></div>");  
+    $("body").append("<div class='square'></div>");
   }
+
+  var brushColor = "";
+
+  $(".square").on("click", function() {
+    brushColor = $(".brush").css("background-color");
+    $(this).css("background", brushColor);
+  });
 
 });
