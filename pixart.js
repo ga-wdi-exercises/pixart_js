@@ -10,12 +10,15 @@ $('#form').on('submit', function(evt) {
   $('h1').html('Trippy Pixel Art!')
 });
 
-//create 20 divs of .square and append to body
-for (i=0; i<20; i++) {
+//create 8000 divs of .square and append to body
+for (i=0; i<8000; i++) {
   $('body').append('<div class="square"></div>')
 };
 
-//change color of each individual square to brushColor when clicked
-$('.square').on('click', function(evt) {
+//change color of each individual square to brushColor when mouseOver
+$('.square').on('mouseover', function(evt) {
   $(this).css('background', brushColor)
 });
+
+//modify .square dimension values
+$('.square').css('height', 10).css('width', 10).css('margin', 0)
