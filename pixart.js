@@ -14,4 +14,10 @@ $(document).ready(function(){
     $(".brush").css('background',color);
   }
 
+  for (var i=0;i<20;i++){
+    var div = document.createElement('div');
+    div.className = 'square';
+    $("body").append(div);
+  }
+
 });
