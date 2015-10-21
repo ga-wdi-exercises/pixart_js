@@ -1,7 +1,9 @@
 // alert("js works!")
 
 var button = $("#set-color");
-var colorInput = $("#color-field")
+//var colorInput = $('input:text').val();
+
+
 // Commit #1
 // Event listener on "Set Color" button
 //   changes color of the brush box to a color specified in the input field
@@ -11,7 +13,7 @@ var colorInput = $("#color-field")
 function changeBrushColor () {
   button.on("click", function(evt){
     evt.preventDefault()
-    $(".brush").css("background","lemonchiffon")
+    $(".brush").css("background", $('input:text').val())
   })
 }
 
