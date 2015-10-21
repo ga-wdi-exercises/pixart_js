@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
 
-  $("#set-color").click(function(){
+  $("#set-color").on("click", function(){
     event.preventDefault();
     $(".brush").css("background", $("input").val());
   });
@@ -14,12 +14,28 @@ $(document).ready(function(){
   });
 
   for (i = 0; i < 20; i++) {
-    $("body").append("<div></div>");
-    $("body div").attr("class", "square");
+    $("<div></div>").attr("class", "square").appendTo($("body"));
+}
+$(".square").on("click", function(){
+  $(this).css("background", "green");
+});
+
+    // $(".square"+[i]).css({
+    //   "width": "30px",
+    //   "height": "30px",
+    //   "margin": "0",
+    //   "float": "left"
+    // });
+    // $(".square"+[i]).on("click", function(){
+    //   $(".square"+[i]).css({
+    //     "background": "green",
+    //   });
+    // });
 
 
-  }
 
-  //
+
+
+
 
 });
