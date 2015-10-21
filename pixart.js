@@ -19,7 +19,7 @@ $(document).ready(function(){
     var div = document.createElement('div');
     div.className = 'square';
     div.addEventListener('click', function(){
-      this.style.background = 'green';
+      this.style.background = color;
     })
     $("body").append(div);
   }
