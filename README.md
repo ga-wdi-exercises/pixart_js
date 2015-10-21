@@ -6,6 +6,7 @@ Use the starter code and commit each step of the exercise.
 - Checkout a new branch called '**YOUR-NAME**-solution'
 - Work in small steps and commit frequently.
 - When you're finished, push your solution branch to your fork (`git push origin <branch-name>`) and issue a **pull request**.
+- Feel free to use jQuery.
 
 ###Commit 1
 
