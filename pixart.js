@@ -4,7 +4,7 @@ $(document).ready(function(){
     evt.preventDefault();
     setColor();
   });
-  $("#color-field")[0].addEventListener('keyup', function(evt){
+  $("#color-field").on('keyup', function(evt){
     if (evt.keyCode === 13){
       setColor();
     }
@@ -18,7 +18,7 @@ $(document).ready(function(){
   for (var i=0;i<8000;i++){
     var div = document.createElement('div');
     div.className = 'square';
-    div.addEventListener('mouseover', function(){
+    $(div).on('mouseover', function(){
       this.style.background = color;
     })
     $("body").append(div);
