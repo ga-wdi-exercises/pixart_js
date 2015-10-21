@@ -15,15 +15,21 @@ $("#set-color").bind("keypress", function (evt){
   };
 })
 
-for (var i = 1; i <=20; i++) {
+for (var i = 1; i <=8000; i++) {
   var newSquare = document.createElement('div')
   newSquare.setAttribute('class', 'square')
   document.body.appendChild(newSquare);
 };
 
-$(".square").on("click", function (evt){
+$(".square").css({
+  "height": "10px",
+  "width": "10px",
+  "margin": 0
+})
+
+$(".square").on("mouseover", function (evt){
   var userInput = $("#color-field").val();
-  $(".square").css({
+  $(this).css({
     background: userInput
 });
 })
