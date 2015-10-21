@@ -11,8 +11,8 @@ for(var a=0;a<8000;a++){
   $('body').append("<div class='square'></div>");
 }
 
-$('.square').on('click',function(evt){
+$('.square').on('mouseover',function(evt){
   console.log('div clicked');
-  console.log(evt);
-  evt.toElement.style.color='red';
+  console.log(evt.target);
+  $(evt.target).css('background', inputSelector.val());
 });
