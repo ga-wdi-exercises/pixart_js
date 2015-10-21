@@ -10,3 +10,8 @@ $('#form').on('submit', function(evt) {
   $('.brush').css('background', brushColor);
   $('h1').html('Trippy Pixel Art!')
 });
+
+//create 20 divs of .square and append to body
+for (i=0; i<20; i++) {
+  $('body').append('<div class="square"></div>')
+};
