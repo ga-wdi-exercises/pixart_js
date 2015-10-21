@@ -17,7 +17,7 @@ $(document).ready(function(){
     $("<div></div>").attr("class", "square").appendTo($("body"));
 }
 $(".square").on("click", function(){
-  $(this).css("background", "green");
+  $(this).css("background", $("input").val());
 });
 
     // $(".square"+[i]).css({
