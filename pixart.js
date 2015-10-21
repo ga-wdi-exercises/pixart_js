@@ -22,7 +22,8 @@ for (var i = 1; i <=20; i++) {
 };
 
 $(".square").on("click", function (evt){
+  var userInput = $("#color-field").val();
   $(".square").css({
-    background: "green"
+    background: userInput
 });
 })
