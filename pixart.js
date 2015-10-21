@@ -9,4 +9,12 @@ $(document).ready(function() {
     event.preventDefault();
   });
 
+  $("input[name='input']").keypress(function(e) {
+    if (e.keyCode == 13) {
+      var color = $("#color-field").val();
+      $(".brush").css("background", color);
+      event.preventDefault();
+    }
+  });
+
 });
