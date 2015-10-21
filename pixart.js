@@ -1,13 +1,12 @@
 
 
-
-   $("button").click(function(event){
-     $(".brush").css("background" , "pink")
-     event.preventDefault()
+//1
+   $("button").click(function(event){ //gets button and sets function when clicked
+     $(".brush").css("background" , "pink") //gets brush and sets background color
+     event.preventDefault() //stops the blue default from showing
    })
 
-
-//  function whenClick() {
-// document.querySelector("#set-color").addEventListener("click", changeColor);
-//
-// };
+//2
+$("input[type='text']").keyup(function(event){
+  $(".brush").css("background" , "pink") //gets same background when enter is pushed in the input section
+})
