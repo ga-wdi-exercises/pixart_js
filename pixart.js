@@ -15,8 +15,9 @@ $(document).ready(function(){
   $("body").append( divSearch );
 
   $('.square').on('click', function() {
+    var input = $('#color-field').val();
 
-    $(this).css('background', 'green');
+    $(this).css('background', input);
 
   })
 
