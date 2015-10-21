@@ -6,6 +6,14 @@ $(document).ready(function(){
     $('.brush').css('background', input);
 });
 
+  var divSearch = [];
+
+  for (i = 0; i < 20; i++) {
+    divSearch.push('<div class="square"></div>');
+  }
+
+  $("body").append( divSearch );
+
 
 
 
