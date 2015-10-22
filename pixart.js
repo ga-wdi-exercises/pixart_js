@@ -21,6 +21,10 @@ $(document).ready(function() {
       "width": "25px",
       "margin": "5px",
     });
+    swatchColorSet();
+  }
+
+  var swatchColorSet = function() {
     $(".swatch").each(function(index){
       $(this).css("background-color", allLiveColors[index]);
     })
@@ -51,9 +55,7 @@ $(document).ready(function() {
   var rotatePalette = function() {
     allLiveColors.shift()
     allLiveColors.push(brushColor);
-    $(".swatch").each(function(index){
-      $(this).css("background-color", allLiveColors[index]);
-    })
+    swatchColorSet();
     brushColorBox.css("background-color", brushColor);
   }
 
