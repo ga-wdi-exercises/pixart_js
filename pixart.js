@@ -13,4 +13,9 @@ for(i = 0; i < 20; i++) {
   $("body").append("<div class ='square'></div>");
   }
 }
-divMaker()
+divMaker();
+//put a click event on each indivdual square
+// so that each square turns to green
+$(".square").on("click", function() {
+  $(this).css("background-color", "green");
+});
