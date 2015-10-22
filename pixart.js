@@ -7,7 +7,7 @@ var colorSwatchColors = [color];
 var colorSwatchDivs = [];
 var swatchSize = 3;
 // var $swatchContainer = $('.swatch-container');
-
+updateSwatch();
 $setColor.on('click', setColor);
 // $brush.on('click', function() {
 //   color = $brush.css('background-color');
@@ -40,7 +40,7 @@ function setColor(evt) {
 function createCanvas(num) {
   for(var i = 0; i < num; i++) {
     var $div = $('<div/>');
-    $div.toggleClass('square');
+    $div.toggleClass('square canvas');
     $div.on('mouseover', function(evt){
       $(this).css({
         'background': color
@@ -72,12 +72,13 @@ function updateColorSwatchColors() {
 }
 
 function updateSwatch() {
+  console.log('runns');
   if (colorSwatchDivs.length < 3){
     newRecentColor();
+    console.log('runs2');
   }
 
   for (var i = 0; i < colorSwatchDivs.length; i++) {
-    console.log(colorSwatchDivs[i]);
     colorSwatchDivs[i].css({
       'background-color': colorSwatchColors[i]
     });
