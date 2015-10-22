@@ -10,8 +10,10 @@ for (var i = 0; i <= 20; i++) {
   $("body").append("<div class = 'square'></div>")
 }
 
-// for EACH $(".square"): change color set in $("#color-field") on click -- not change ALL squares
+//when each $('.square') is clicked, change color to $(#color-field).val
 
 $(".square").on("click", function(){
-  $(this).css("background-color", "green")
+  $(this).css("background-color", $("#color-field").val())
 })
+//Uncaught TypeError: this.each is not a function
+//this.each is from the minified jquery CDN???
