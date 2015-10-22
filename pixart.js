@@ -52,11 +52,12 @@ $(document).ready(function() {
     $(".swatch").each(function(index){
       $(this).css("background-color", allLiveColors[index]);
     })
-    brushColorBox.css("background-color", allLiveColors[3]);
+    brushColorBox.css("background-color", brushColor);
   }
 
   //Test Color Function (Validates User Input)
   var testColor = function() {
+      $("#test").css("background-color", brushColor);
       var testThis = $("#color-field").val();
       $("#test").css("background-color", testThis);
       if ($("#test").css("background-color") != brushColorBox.css("background-color")) {
