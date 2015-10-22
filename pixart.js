@@ -20,7 +20,8 @@ for (var i = 1; i <= 20; i++) {
   var newDiv = $("<div class='square'></div>");
   $("body").append(newDiv);
   $(".square").on("click", function(){
-  $(this).css("background-color","green");
+  var colorChoice = $("#color-field").val()
+  $(this).css("background-color",colorChoice);
 })
 }
 
