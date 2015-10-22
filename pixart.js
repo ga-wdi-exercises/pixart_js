@@ -16,3 +16,4 @@ function createCanvas () {
     $('body').append(canvasBlock);
   }
 }
+ 
