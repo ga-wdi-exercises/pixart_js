@@ -1,9 +1,10 @@
+"use strict"
 $(document).ready(function() {
 
   // Append Canvas to Body
   var appendCanvas = function() {
     // Create Canvas
-    for (i = 0; i < 8000; i++) {
+    for (var i = 0; i < 8000; i++) {
       $("body").append("<div class='square'></div>");
     }
     // Create Test Div
@@ -12,7 +13,7 @@ $(document).ready(function() {
 
   // Create Color Swatch Palette
   var createSwatch = function() {
-    for (i = 0; i < 3; i++) {
+    for (var i = 0; i < 3; i++) {
       $(".controls").append("<div class='swatch'></div>");
     }
     $(".swatch").css({
