@@ -22,12 +22,13 @@ $('#form').submit(function(e){
       };
  });
 
-// Appending 20 div class = square divs to the document
-$(document).ready(function() {
-  for (var i = 0; i < 20; i++) {
+// Appending 8000 div class = square divs to the document
+// $(window).load(function() {
+  for (var i = 0; i < 8000; i++) {
     $('body').append($("<div></div>", {
       class: 'square'
     }));
+  };
 
 // And now make each square turn green when you click on that div square
 //     $(".square").on("click", function() {
@@ -37,9 +38,7 @@ $(document).ready(function() {
 // });
 
 // And now make it so instead of green, they turn to whatever is in the input field
-    $(".square").on("click", function() {
+    $(".square").on("mouseover", function() {
       var theColor = document.getElementById("color-field").value;
       $(this).css("background-color", theColor);
-    })
-  }
-});
+    });
