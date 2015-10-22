@@ -10,7 +10,7 @@ $(document).ready(function() {
       var color = $("#color-field").val();
       console.log("Set color to", color);
       if ( $("div.brush").css("background") != color ) {
-        $("div.brush").css("background", color);
+        $("div.brush").css("background", color).attr("title", color);
         this.brushColor = color;
       }
 
@@ -30,7 +30,7 @@ $(document).ready(function() {
       $("div.square").each( function() {
         $(this).on("mouseover", function (e) {
           e.preventDefault();
-          $(this).css("background", self.brushColor); // not ideal
+          $(this).css("background", self.brushColor);
         });
       });
 
