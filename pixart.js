@@ -1,15 +1,14 @@
 $( document ).ready(function() {
-    console.log( "ready!" );
     $('#set-color').click(function(){
     var getColor = $( "input" ).val();
-    event.preventDefault();
-    $(".brush").css("background-color", getColor);
+    event.preventDefault(); //cancels dafault event
+    $(".brush").css("background-color", getColor); // this changes brush background as user input value
   });
 });
 
 function addingDivs(){
 	for (var i=0; i<8000; i++) {
-    $("body").append('<div class="square" style = "width:100px; height:200px; margin:0"></div>');
+    $("body").append('<div class="square" style = "width:10px; height:20px; margin:0"></div>');
     }
 }
 addingDivs();
