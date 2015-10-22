@@ -3,7 +3,7 @@
 //---------------- Sets up the page
 
    //Sets default brush box value
-   $("#color-field").val("#22466E");
+   $("#color-field").val("#FF0000");
 
    //Appends canvas squares to body on load
    for(i = 0; i < 18000; i++){

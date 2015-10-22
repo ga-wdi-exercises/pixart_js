@@ -1,9 +1,26 @@
 @import url(http://fonts.googleapis.com/css?family=Oswald);
 
+a {
+  color: #CCFFFF;
+}
+
+a:hover {
+  color: #FFF;
+}
+
+a:visited {
+  color: #33CCFF;
+}
+
+button {
+  margin: 2px;
+}
+
 .brush {
-  width: 100px;
-  height: 100px;
-  background: #1B4370;
+  width: 30px;
+  height: 30px;
+  background: #FF0000;
+  border: 2px solid #FFF;
   margin: 15px auto;
 }
 
@@ -25,8 +42,9 @@ h1 {
 }
 
 .controls {
-  width: 600px;
-  margin: 10px auto 20px auto;
+  width: 400px;
+  margin: 10px auto 45px auto;
+  text-align: center;
   padding: 10px;
   background-color: rgba(0,0,0,0.2);
 }
