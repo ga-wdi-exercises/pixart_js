@@ -39,21 +39,22 @@ var pixArtPainter = {
       $("body").append("<div class = 'square'></div>");
     }
   },
-  //adds listeners to the pixels
-  addCanvasListeners: function() {
+  //adds a listener to the body element
+  addBodyListener: function() {
     var self = this;
-    $(".square").each(function(index){
-      $(this).on("mouseover", function(){
-        $(this).css("background", self.currentColor)
-      })
-    })
+    $("body").on("mouseover", function(event){
+      //if the event contains a pixel, then color the pixel
+      if(event.target.classList.contains("square")){
+        $(event.target).css("background", self.currentColor)
+      }
+    });
   },
   //launch everything
   launchPaint: function() {
     this.setUpBrushes();
     this.addBrushListeners();
     this.setUpCanvas(this.numPixels);
-    this.addCanvasListeners();
+    this.addBodyListener();
     this.setUpBrushListener();
   }
 }
