@@ -10,11 +10,6 @@ setColor.on("click", function(evt) {
 
   // Use jQuery to select the element, and `addEventListener` to handle clicks
 
-  $("body").on("click", function(evt){
-    evt.preventDefault();
-    console.log("change color");
-  });
-
 // The same thing should happen when I press the enter key from inside the input field
 setColor.on("keypress", function(evt) {
    evt.preventDefault();
@@ -26,6 +21,18 @@ setColor.on("keypress", function(evt) {
 var createCanvas = function(pixelCount) {
   for(var i=0; i<pixelCount; i++){
     $("body").append("<div class = 'square'></div>");
+    // $("body").on("click", function(event){
+    //   console.log("color change");
+    //   $(event).css("background", $(".brush").css("background") );
+    //
+    // });
   }
 };
 createCanvas(pixelCount);
+
+$(".square").each(function(index){
+  $(this).on("click", function(evt){
+    console.log("color-change");
+    $(this).css("background", $(".brush").css("background") );
+  });
+});
