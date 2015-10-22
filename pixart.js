@@ -16,8 +16,17 @@ $("#set-color").on('click',function(event){
 $('.previous-color').on('click',function(event){
   event.preventDefault();
   var colorSet = $(this).css('background');
+  var brushColor = $('.brush').css('background');
+  var colorSet4 = $('#second-last-color').css('background');
+  var colorSet3 = $('#last-color').css('background');
+  var colorSet2 = $('.brush').css('background');
+  $('#last-color').css('background',colorSet2);
+  $('#second-last-color').css('background',colorSet3);
+  $('#third-last-color').css('background',colorSet4);
+
   $('.brush').css('background',colorSet);
 })
+
 //make 20 squares
 for(var i = 0; i < 8000 ; i++){
 $('body').append($('<div class="square">'));
