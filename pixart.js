@@ -8,7 +8,7 @@ $(document).ready(function() {
     }
     // Add Event Listeners for divs
     $(".square").on("mouseover", function() {
-      $(this).css("background", brushColor);
+      $(this).css("background-color", brushColor);
     });
   }
 
@@ -23,38 +23,51 @@ $(document).ready(function() {
       "width": "25px",
       "margin": "5px",
     });
-    $(".swatch").eq(0).css("background", "darkcyan");
-    $(".swatch").eq(1).css("background", "rebeccapurple");
-    $(".swatch").eq(2).css("background", "palevioletred");
+    $(".swatch").each(function(index){
+      $(this).css("background-color", allLiveColors[index]);
+    })
   }
 
   // Set Brush Color Variables
   var setColorButton = $("#set-color");
   var brushColorBox = $(".brush");
   var brushColor = "#1B4370";
+  var allLiveColors = ["darkcyan", "rebeccapurple", "palevioletred", "#1B4370"];
 
   // User Input Set Color
   var setColor = function(evt) {
     evt.preventDefault();
-    rotatePalette();
-    brushColor = $("#color-field").val();
-    brushColorBox.css("background", brushColor);
+    if (testColor()) {
+      brushColor = $("#color-field").val();
+      rotatePalette();
+    }
   }
 
   // User Selects Color From Color Swatch Palette
   var setColorFromPalette = function() {
-    brushColor = $(this).css("background");
+    brushColor = $(this).css("background-color");
     rotatePalette();
-    brushColorBox.css("background", brushColor);
   }
 
   // Rotate Color Swatch Palette
   var rotatePalette = function() {
-    var swatch2 = $(".swatch").eq(1).css("background-color");
-    var swatch3 = $(".swatch").eq(2).css("background-color");
-    $(".swatch").eq(0).css("background", swatch2);
-    $(".swatch").eq(1).css("background", swatch3);
-    $(".swatch").eq(2).css("background", brushColor);
+    allLiveColors.shift()
+    allLiveColors.push(brushColor);
+    $(".swatch").each(function(index){
+      $(this).css("background-color", allLiveColors[index]);
+    })
+    brushColorBox.css("background-color", allLiveColors[3]);
+  }
+
+  //Test Color Function (Validates User Input)
+  var testColor = function() {
+      var testThis = $("#color-field").val();
+      $("#test").css("background-color", testThis);
+      if ($("#test").css("background-color") != brushColorBox.css("background-color")) {
+        return true;
+      } else {
+        return false;
+      }
   }
 
   // Set Square Class Items to New Parameters
@@ -72,5 +85,4 @@ $(document).ready(function() {
   // Event Listeners
   setColorButton.on("click", setColor);
   $(".swatch").on("click", setColorFromPalette);
-
 });
