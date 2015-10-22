@@ -8,8 +8,8 @@
 }
 
 .square {
-  float: left;
-  width: 10px;
+  /*float: center;*/
+  width: 100px;
   height: 10px;
   background: #E7E5DB;
   margin: 0;
