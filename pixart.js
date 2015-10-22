@@ -18,14 +18,17 @@ $(document).ready(function() {
     $("body").append(div);
     $(div).attr("class","square");
 }
+
+  // on "square" clicks, change the color of div to green
+  $("div.square").on("click", function (){
+    $(this).css("background", "green");
+  });
+
+
 });
 
 
 
-// Commit 3
-//
-// Create 20 divs of the "square" class and append them to the body
-// Hint: use .append()
 // Commit 4
 //
 // Add functionality so that when I click on each "square", it changes the color of that individual square to "green"
