@@ -19,23 +19,16 @@ $(document).ready(function() {
     $(div).attr("class","square");
 }
 
-  // on "square" clicks, change the color of div to green
+  // on "square" clicks, change the color of div to input value
   $("div.square").on("click", function (){
-    $(this).css("background", "green");
+    var input = $("#color-field").val();
+    $(this).css("background", input);
   });
 
 
 });
 
 
-
-// Commit 4
-//
-// Add functionality so that when I click on each "square", it changes the color of that individual square to "green"
-// Hint: either add the event listener while creating the squares, or listen for events on the body element
-// Commit 5
-//
-// Modify your code so that when I click on each "square", it changes to the color I set using my input instead of "green" every time.
 // Commit 6
 //
 // Modify the CSS so that the "square" class has a height and width of 10px and a margin of 0.
