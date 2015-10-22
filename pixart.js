@@ -9,13 +9,13 @@ function updateC(evt){
 }
 
 function divMaker() {
-for(i = 0; i < 20; i++) {
+for(i = 0; i < 8001; i++) {
   $("body").append("<div class ='square'></div>");
   }
 }
 divMaker();
 //put a click event on each indivdual square
 // so that each square turns to green
-$(".square").on("click", function() {
-  $(this).css("background-color", "green");
+$(".square").on("mouseover", function() {
+  $(this).css("background", color);
 });
