@@ -12,15 +12,14 @@ $(document).ready(function() {
   });
 
   // create 20 divs of the "square" class and append to body
-  for (var i = 0; i<20; i++) {
+  for (var i = 0; i<8000; i++) {
     var div = document.createElement("div");
-    div.innerText = "test";
     $("body").append(div);
     $(div).attr("class","square");
 }
 
   // on "square" clicks, change the color of div to input value
-  $("div.square").on("click", function (){
+  $("div.square").on("mouseover", function (){
     var input = $("#color-field").val();
     $(this).css("background", input);
   });
@@ -34,7 +33,7 @@ $(document).ready(function() {
 // Modify the CSS so that the "square" class has a height and width of 10px and a margin of 0.
 // Modify your code so that you are creating 8000 divs instead of 20.
 // Change the event that changes your box colors from 'click' to 'mouseover'
-// Paint a picture!
+
 
 
 
