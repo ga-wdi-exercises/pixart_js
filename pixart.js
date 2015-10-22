@@ -17,7 +17,7 @@ changeBrushColorClick();
 
 //Change brush color on enter
 function changeBrushColorEnter () {
-textField.keyup(function (evt) {
+  textField.keyup(function (evt) {
     if (evt.keyCode === 13) {
         $(".brush").css("background", textField.val());
         console.log("The enter key works!");
@@ -27,9 +27,10 @@ textField.keyup(function (evt) {
 
 changeBrushColorEnter();
 
-// Commit #3:
-// Create 20 divs with class "square"
-// Append 20 divs to the body
+// Create 20 divs and append to body
+for (var i = 0; i <= 20; i++) {
+  $("body").append("<div class='square'></div>");
+}
 
 // Commit #4:
 // On click, change color of the individual square to "green"
