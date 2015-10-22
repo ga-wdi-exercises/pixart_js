@@ -5,6 +5,7 @@
   height: 100px;
   background: #1B4370;
   margin: 15px auto;
+  border-radius: 100%;
 }
 
 .square {
@@ -15,14 +16,33 @@
   margin: 0;
 }
 
+.swatch {
+  float: left;
+  width: 20px;
+  height: 20px;
+  background: #E7E5DB;
+  margin: 0;
+}
+.container{
+  width: 30%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
 h1 {
   font-family: Monoton;
   font-size: 48px;
   text-align: center;
+  position: fixed;
+  top: 25%;
+  left: 40%;
 }
 
 .controls {
   text-align: center;
+  position: fixed;
+  top: 28%;
+  left: 3%;
 }
 
 body {
