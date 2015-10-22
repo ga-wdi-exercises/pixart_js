@@ -1,4 +1,5 @@
 $(document).ready(function(){
+  // Sets the color of the brush from the input feild
   $("#set-color").on("click", function(){
     event.preventDefault();
     var color = $("#color-field").val();
@@ -12,14 +13,17 @@ $(document).ready(function(){
   //   var color = $("#color-field").val();
   //   $(".brush").css("background", color);
   // });
+
+  // Creates canvas of squares to paint on
   i =0;
-  while (i < 20){
+  while (i < 8000){
     $(".controls").after("<div class='square'></div>");
     i++;
   }
 
+  // Listens for mouseover and changes the color of square the mouse is over
   $(".square").each(function(index){
-    $(this).on("click", function() {
+    $(this).on("mouseover", function() {
       var brush = $(".brush").css("background-color");
       console.log(brush);
       $(this).css("background", brush);
