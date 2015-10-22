@@ -1,7 +1,11 @@
+//add 2 more brushes
+$(".brush").attr("class", "brush 1");
+$(".controls").append("<div class='brush 2'></div>");
+$(".controls").append("<div class='brush 3'></div>");
+
 //change $(".brush").css("background-color") to $("#color-field").val() on click of $("#set-color")
 $("#set-color").on("click", function(e){
   e.preventDefault();
-  // console.log("click"); -- for testing
   $(".brush").css("background-color", $("#color-field").val())
 })
 
