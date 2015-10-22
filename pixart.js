@@ -11,8 +11,14 @@ $(document).ready(function(){
   }
 });
 
+// $(document).ready(function(){
+//   $(".square").click(function(event){
+//     $(this).css("background-color",'green')
+//   });
+// });
+
 $(document).ready(function(){
   $(".square").click(function(event){
-    $(this).css("background-color",'green')
+    $(this).css("background-color",$("input").val())
   });
 });
