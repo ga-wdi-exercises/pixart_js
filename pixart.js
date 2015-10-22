@@ -9,19 +9,19 @@ $("#set-color").on("click", function(event) {
   event.preventDefault();
 }); //end input on click event handler
 
-
-
 function divCreator() {
   for (i = 0; i < 20; i++) {
     $("body").append("<div class='square'></div>");
   } //ends for loop
 }
 divCreator();
+// grab divs with class of square
+// put a click event on each div with a class of square
+// when it is clicked, the background color is changed to green;
 
-// $("body").append("<div>Hi</div>");
-
-
-
+$(".square").on("click", function() {
+  $(this).css("background-color", "green");
+}) //ends click event for div of class square
 
 
 
