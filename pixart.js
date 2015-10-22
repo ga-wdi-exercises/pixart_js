@@ -2,8 +2,8 @@
 var pixArtPainter = {
   currentColor: "#1B4370", //this is the current color being drawn
   clickButton: $("#set-color"), //stores the button
-  numPixels: 4000, //number of pixels in the canvas
-  numExtraBrushes: 14, //number of extra brushes, if 0 there will still be 1 brush
+  numPixels: 8000, //number of pixels in the canvas
+  numExtraBrushes: 5, //number of extra brushes, if 0 there will still be 1 brush
   //sets up the extra brushes
   setUpBrushes: function() {
     for(var i=1; i <= this.numExtraBrushes; i++){
