@@ -2,8 +2,14 @@
 $( document ).ready( function () {
 $("button").on('click',function(event){
     event.preventDefault();
+    var colorSet4 = $('#second-last-color').css('background');
+    var colorSet3 = $('#last-color').css('background');
+    var colorSet2 = $('.brush').css('background');
     var colorSet = $('#color-field').val();
     $('.brush').css('background-color',colorSet);
+    $('#last-color').css('background',colorSet2);
+    $('#second-last-color').css('background',colorSet3);
+    $('#third-last-color').css('background',colorSet4);
   });
 //make 20 squares
 for(var i = 0; i < 8000 ; i++){
@@ -19,11 +25,6 @@ $('body').append($('<div class="square">'));
   $(".square").css('width','10px');
 
   //BONUS: Add most recently used colors
-
-
-
-
-
 
   //making it look nice
 $('.previous-color').css('height','50px');
