@@ -4,7 +4,7 @@
    $("#color-field").val("#22466E");
 
    //Appends canvas squares to body on load
-   for(i = 0; i < 20; i++){
+   for(i = 0; i < 6000; i++){
      $("body").append("<div class=\"square\"></div>");
    }
 
@@ -25,9 +25,9 @@
     });
 
     //Changes canvas square color when clicked
-    $(".square").mousedown(function(){
+    $(".square").hover(function(){
       event.preventDefault();
-      $(".square").css("background-color", $("#color-field").val());
+      $(this).css("background-color", $("#color-field").val());
     });
 
 });
