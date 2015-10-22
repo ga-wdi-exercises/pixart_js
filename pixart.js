@@ -13,7 +13,7 @@ $("#set-color").on("click", function(event) {
 
 function divCreator() {
   for (i = 0; i < 20; i++) {
-    $("body").append("<div class='square'>Hi</div>");
+    $("body").append("<div class='square'></div>");
   } //ends for loop
 }
 divCreator();
