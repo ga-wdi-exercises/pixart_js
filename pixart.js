@@ -1,25 +1,31 @@
 // alert("js works!")
 
 var button = $("#set-color");
-//var colorInput = $('input:text').val();
+var textField = $('input:text');
 
+//Change brush color on click
 
-// Commit #1
-// Event listener on "Set Color" button
-//   changes color of the brush box to a color specified in the input field
-//   HINT: use evt.preventDefault()
-// Using jQuery, select element to add click
-
-function changeBrushColor () {
+function changeBrushColorClick () {
   button.on("click", function(evt){
     evt.preventDefault()
-    $(".brush").css("background", $('input:text').val())
+    $(".brush").css("background", $("#color-field").val())
+    console.log("Clicking the button works!")
   })
 }
 
-changeBrushColor();
-// Commit #2:
-// See commit one. Event should be on enter key from inside input field
+changeBrushColorClick();
+
+//Change brush color on enter
+function changeBrushColorEnter () {
+textField.keyup(function (evt) {
+    if (evt.keyCode === 13) {
+        $(".brush").css("background", textField.val());
+        console.log("The enter key works!");
+    }
+  })
+}
+
+changeBrushColorEnter();
 
 // Commit #3:
 // Create 20 divs with class "square"
