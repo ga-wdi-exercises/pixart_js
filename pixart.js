@@ -1,49 +1,45 @@
 $(document).ready(function(){
+  var textField = $('input:text');
+  var button = $("#set-color");
+  var brush = $(".brush")
 
-  //Change brush color on click
-  function changeBrushColorClick() {
-    var button = $("#set-color");
+  function changeBrushColorOnClick() {
     button.on("click", function(evt){
       evt.preventDefault()
-      $(".brush").css("background", $("#color-field").val());
-      console.log("You definitely clicked the button!");
+      var colorInput = text.val();
+      brush.css("background", colorInput);
     })
   }
-  changeBrushColorClick();
 
-  //Change brush color on enter
-  function changeBrushColorEnter() {
-    var textField = $('input:text');
+  function changeBrushColorOnEnter() {
     textField.keyup(function (evt) {
       if (evt.keyCode === 13) {
-          $(".brush").css("background", textField.val());
-          console.log("You definitely hit enter!");
+          brush.css("background", textField.val());
       }
     })
   }
-  changeBrushColorEnter();
 
-  // Create paintboard
-  for (var i = 0; i < 8000; i++) {
-    $("body").append("<div class='square'></div>");
+  function addPaintboard () {
+    for (var i = 0; i < 8000; i++) {
+      $("body").append("<div class='square'></div>");
+    }
   }
 
   // Event listener for .square
-  function squareEvents () {
-    $(".square").on("mouseover", squareColorUpdate)
+  function addSquareEvents () {
+    $(".square").on("mouseover", paintWithSquares)
   }
-  squareEvents()
 
   // Make the individual DIV change color
-  function squareColorUpdate(evt) {
+  function paintWithSquares(evt) {
     var target = $(evt.target);
     if (target.is(".square")) {
-    target.css({
-      "background" : $("#color-field").val(),
-      "height" : "10px",
-      "width" : "10px",
-      "margin" : "0"
-    })
+      target.css("background", brush.css("background"))
     }
   }
+
+  changeBrushColorOnClick();
+  changeBrushColorOnEnter();
+  addPaintboard();
+  addSquareEvents();
 })
