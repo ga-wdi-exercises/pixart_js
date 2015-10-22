@@ -16,4 +16,8 @@ addingDivs();
 
 $('.square').click(function(){
     $(this).css('background', 'green');
-  });
+});
+
+$('.square').click(function(){
+  $(".square").css("background-color", $( "input" ).val());
+});
