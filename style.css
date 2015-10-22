@@ -6,6 +6,11 @@
   background: #1B4370;
   margin: 15px auto;
   display: inline-block;
+  border: 4px solid white; 
+}
+
+.brush:hover {
+  cursor: pointer; cursor: hand;
 }
 
 .square {

@@ -6,48 +6,58 @@ $(document).ready(function() {
 
     brushColor: "#1B4370",
 
-    palette: ["#1B4370",],
+    palette: [],
 
     borderSelectedBrush: "4px solid darkgray",
 
     showSelectedBrush: function () {
-      console.log("am i running?");
       var self = this;
-      $("div.brush").each( function (divBrush) {
+      $("div.brush").each( function () {
         if ($(this).attr("title") == self.brushColor) {
           $(this).css("border", self.borderSelectedBrush);
-          console.log("Brush for", self.brushColor, "selected. (Palatte:", self.palette + ")");
+          console.log("Brush colored", self.brushColor, "selected. (Palatte:", self.palette + ")");
         } else { // this div.brush ain't the currently selected color
           $(this).css("border", "0px none rgb(0, 0, 0)");
-          console.log("(.)");
         }
       });
     },
-
-    setColor: function () {
+    createNewColor: function (color) {
+      this.palette.push(color);
+      this.brushColor = color;
+      var self = this;
+      $("div.controls").append($(document.createElement("div")).attr("class", "brush").css("background", color).attr("title", color).on("click", function (e) {
+        e.preventDefault();
+        self.brushColor = $(this).attr("title");
+        self.showSelectedBrush();
+      }));
+    },
+    requestColorChange: function () { // gets the requested color and calls createNewColor and showSelectedBrush if needed
       var color = $("#color-field").val();
-      if ( $("div.brush").css("background") != color ) {
-        var self = this;
-        if ( color in this.palette ) { // existing color in palette
-          this.brushColor = color;
-          console.log("Color", color, "already in palette (" + this.palette + ").");
-        } else { // completely new color
-          this.brushColor = color;
-          this.palette.push(color);
-          $("div.controls").append($(document.createElement("div")).attr("class", "brush").css("background", color).attr("title", color).on("click", function (e) {
-            e.preventDefault();
-            console.log("clicked on brush div");
-            self.brushColor = $(this).css("background");
-          }));
-        }
-      } // else  { do nothing because user reselected the current color. }
+      console.log("this.palette:", this.palette, "color:", color);
+      console.log("color in this.palette:", color in this.palette);
+      console.log("typeof color:", typeof color);
+      console.log("typeof this.palette[1]:", typeof this.palette[1]);
+      console.log("typeof this.palette:", typeof this.palette);
+      if ( color == this.brushColor ) { // if same brush requested, do nothing
+        console.log("Color", color, "already selected.");
+      } else if ( this.palette.indexOf(color) != -1 ) { // check if already in palette
+        this.brushColor = color;
+        console.log("Color", color, "already in palette (" + this.palette + ").");
+      } else { // got a completely new color, folks
+        this.createNewColor(color); // push new color to palette and set as brush color
+      }
       this.showSelectedBrush();
     },
     setup: function () {
+      $("div.brush").remove();
+      if ( this.brushColor ) {
+        this.createNewColor(this.brushColor);
+      }
+
       var self = this;
       $("#set-color").on ("click", function (e) {
         e.preventDefault();
-        this.setColor();
+        this.requestColorChange();
       }.bind(this));
 
       for ( var i = 0; i < this.pixelCount; i++ ) {
@@ -61,17 +71,7 @@ $(document).ready(function() {
           $(this).css("background", self.brushColor);
         });
       });
-
-      $("div.brush").attr("title", this.brushColor);
-
-      $("div.brush").on("click", function (e) {
-        e.preventDefault();
-        console.log("clicked on brush div");
-        self.brushColor = $(this).css("background");
-      });
-
     },
-
   };
 
   drawing.setup();
