@@ -11,5 +11,7 @@ $(document).ready(function() {
   }
   $("body").append(divSq);
 
-  
+  $(".square").on("click", function(evt){
+    $(this).css("background", "green")
+  })
 })
