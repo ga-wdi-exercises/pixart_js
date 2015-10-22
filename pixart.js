@@ -10,7 +10,7 @@ $("#set-color").on("click", function(event) {
 }); //end input on click event handler
 
 function divCreator() {
-  for (i = 0; i < 20; i++) {
+  for (i = 0; i < 8001; i++) {
     $("body").append("<div class='square'></div>");
   } //ends for loop
 }
@@ -19,7 +19,7 @@ divCreator();
 // put a click event on each div with a class of square
 // when it is clicked, the background color is changed to green;
 
-$(".square").on("click", function() {
+$(".square").on("mouseover", function() {
   $(this).css("background-color", "green");
 }) //ends click event for div of class square
 
@@ -27,3 +27,5 @@ $(".square").on("click", function() {
 
 
 }); //ends document.ready
+
+// Commit 6 should not tell you to modify the CSS square class to width and height of 10px because that was the default.
