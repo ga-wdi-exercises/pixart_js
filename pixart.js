@@ -1,7 +1,10 @@
-$(document).ready(function() {
-  // I decided to add the divs directly to the HTML because the client requested a specific number of brushes
-  // I should totaly do this with jQuery instead.
-});
+  // I decided to add the divs directly to the HTML because the client requested a specific number of brushes...
+  // I should totaly do this with JS instead... started something below.
+// for (var i = 0; i < 1; i++) {
+//   $(".brush").after($('<div />', {
+//     "class": "brush",
+//
+//   }))};
 var allBrushes = $(".brush");
 allBrushes.css("display", "inline-block");
 var clickCounter = 0;
@@ -18,17 +21,21 @@ $(document).ready(function() {
     };
   })
 });
-
+//Looks like I am not setting currentButton properly in here.
+// $(document).ready(function() {
+//   currentButton = $(".button")[0];
+//   $(".brush").on("click", currentButton = $(".brush")[this.index]);
+// });
 $(document).ready(function() {
-  var currentButton = $(".button")[0];
-  $(".brush").on("click", currentButton = $(".brush")[this])
   function addColor() {
     return function(e) {
-      var colorSelected2 = currentButton.style("background-color");
+      //Defining an alternative colorSelected2 because I FAILed the Bonus. At least you can still paint ;(
+      // var colorSelected2 = currentButton.css("background-color").val();
+      var colorSelected2 = $("input:text").val();
       e.preventDefault;
       $(this).css("background-color", colorSelected2);
     };
-  }
+  };
   for (var i = 0; i < 8000; i++) {
     $(".controls").after($('<div />', {
       mouseover: addColor(),
