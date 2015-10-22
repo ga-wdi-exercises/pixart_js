@@ -6,10 +6,6 @@ $(document).ready(function() {
     for (i = 0; i < 8000; i++) {
       $("body").append("<div class='square'></div>");
     }
-    // Add Event Listeners for divs
-    $(".square").on("mouseover", function() {
-      $(this).css("background-color", brushColor);
-    });
   }
 
   // Create Color Swatch Palette
@@ -85,4 +81,7 @@ $(document).ready(function() {
   // Event Listeners
   setColorButton.on("click", setColor);
   $(".swatch").on("click", setColorFromPalette);
+  $(".square").on("mouseover", function() {
+    $(this).css("background-color", brushColor);
+  });
 });
