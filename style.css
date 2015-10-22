@@ -13,7 +13,11 @@
   height: 10px;
   background: #E7E5DB;
   margin: 0;
+  border: 1px solid white;
+  margin-left: 50%;
+  margin-right: 50%;
 }
+
 
 h1 {
   font-family: Monoton;
