@@ -31,6 +31,7 @@ $(document).ready(function() {
     return function(e) {
       //Defining an alternative colorSelected2 because I FAILed the Bonus. At least you can still paint ;(
       // var colorSelected2 = currentButton.css("background-color").val();
+      //console.log(colorSelected2);
       var colorSelected2 = $("input:text").val();
       e.preventDefault;
       $(this).css("background-color", colorSelected2);
