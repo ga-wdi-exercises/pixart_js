@@ -5,18 +5,25 @@
 
 $(document).ready(function() {
 
-var setColorButton = $("#set-color");
+var setColor = $("#set-color");
 var brushColor = $(".brush");
 
 
-  var setColor=function(evt) {
+  var setColor = function(evt) {
     evt.preventDefault();
     var userInput = $("#color-field").val();
     brushColor.css("background", userInput);
   }
-setColor.on("click", setColor);
+$("#set-color").on("click", setColor);
 
+
+//create 20 divs .square append to body
+for (i = 0; i < 20; i++) {
++    $("body").append("<div class='square'></div>");
+}
 })
+
+
 
 // $(".awesome").on("click", function(){
 //   $(this).css("background-color", "red");
