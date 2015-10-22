@@ -6,7 +6,7 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
-  for(i = 0; i < 20; i++){
+  for(i = 0; i < 8000; i++){
   $("#new-squares").append("<div class='square'></div>")
   }
 });
@@ -18,7 +18,7 @@ $(document).ready(function(){
 // });
 
 $(document).ready(function(){
-  $(".square").click(function(event){
+  $(".square").mouseover(function(event){
     $(this).css("background-color",$("input").val())
   });
 });
