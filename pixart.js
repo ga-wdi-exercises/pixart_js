@@ -4,12 +4,19 @@ $(document).ready(function(){
 
 var pixArt = {
     setColorButton: $("#set-color"),
-    clickSetColorListener: function(){
+    setColorBox: $("#color-field"),
+    ColorListeners: function(){
       this.setColorButton.on("click", this.changeColorBrush);
+      this.setColorBox.on("keypress", function(e){
+        var key = e.which || e.keyCode;
+        if(key === 13){
+          this.changeColorBrush;
+        }
+      })
     },
-    changeColorBrush: function(event){
-      event.preventDefault();
+    changeColorBrush: function(e){
+      e.preventDefault();
       $(".brush").css("background-color",$("#color-field").val());
     },
 }
-pixArt.clickSetColorListener();
+pixArt.ColorListeners();
