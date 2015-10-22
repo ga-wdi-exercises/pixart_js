@@ -1,23 +1,44 @@
 //1)type color you want (hex code, rgb) in input-field ID = "#color-field", then hit "set-color", then have the box
 // "brush" change color to the one you specified
 
-$(document).ready(function(){
+//on click have the box "brush" change to color you specified in pickColor
 
-   // jQuery methods go here...
+$(document).ready(function() {
+
+var setColorButton = $("#set-color");
+var brushColor = $(".brush");
 
 
-//
-function pickColor() {
-  var color = $("color-field").val()
-    event.preventDefault();
+  var setColor=function(evt) {
+    evt.preventDefault();
+    var userInput = $("#color-field").val();
+    brushColor.css("background", userInput);
   }
+setColor.on("click", setColor);
 
-
-
-  //on click have the box "brush" change to color you specified in pickColor
-
-
-$("#set-color").on("click", function(){
-$(".brush").html("hey")
 })
-});
+
+// $(".awesome").on("click", function(){
+//   $(this).css("background-color", "red");
+// })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// });
