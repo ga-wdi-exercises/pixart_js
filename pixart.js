@@ -1,3 +1,4 @@
+$(document).ready(function () {
 
 function changeColor(color) {
   $(".brush").css("background-color",color)
@@ -14,3 +15,11 @@ $("#set-color")[0].addEventListener("keyDown", function(event){
   var colorChoice = $("#color-field").val();
   changeColor(colorChoice)
 });
+
+
+for (var i = 1; i <= 20; i++) {
+  var newDiv = $("<div class='square'></div>");
+  $("body").append(newDiv);
+}
+
+})
