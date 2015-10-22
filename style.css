@@ -21,6 +21,10 @@ h1 {
   text-align: center;
 }
 
+p {
+  font-family: Arial, sans-serif;
+}
+
 .controls {
   text-align: center;
 }
