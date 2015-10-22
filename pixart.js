@@ -1,32 +1,28 @@
 $(document).ready(function() {
 
-  // var buttonSetColor = $("#set-color");
-  // var divBrush = $("div.brush");
-  // var formInput = $("#form input");
-
   var drawing = {
 
-    pixelCount: 20,
+    pixelCount: 8000,
 
-    brushColor: "black",
+    brushColor: "#1B4370",
 
     setColor: function () {
       var color = $("#color-field").val();
       console.log("Set color to", color);
-      $("div.brush").css("background", color);
-      this.brushColor = color;
+      if ( $("div.brush").css("background") != color ) {
+        $("div.brush").css("background", color);
+        this.brushColor = color;
+      }
+
     },
     setup: function () {
+      var self = this;
       $("#set-color").on ("click", function (e) {
         e.preventDefault();
         this.setColor();
       }.bind(this));
 
       for ( var i = 0; i < this.pixelCount; i++ ) {
-        //var newSquare = document.createElement("div");
-        //newSquare.setAttribute("class", "square");
-        // newSquare.addEventListener("click")
-        //$("body").append(newSquare);
         $("body").append("<div class=\"square\"></div>");
       }
       console.log("Just created", this.pixelCount, "square divs.");
@@ -34,13 +30,7 @@ $(document).ready(function() {
       $("div.square").each( function() {
         $(this).on("mouseover", function (e) {
           e.preventDefault();
-          //console.log("hovering");
-          // $(this).css("background", color);
-          $(this).css("background", drawing.brushColor); // not ideal
-        });
-        $(this).on("click", function (e) {
-          e.preventDefault();
-          $(this).css("background", "green"); // per assign instructions for commit #4
+          $(this).css("background", self.brushColor); // not ideal
         });
       });
 
