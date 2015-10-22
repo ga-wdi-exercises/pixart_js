@@ -16,14 +16,15 @@ $("#set-color")[0].addEventListener("keyDown", function(event){
   changeColor(colorChoice)
 });
 
-for (var i = 1; i <= 20; i++) {
+for (var i = 1; i <= 8000; i++) {
   var newDiv = $("<div class='square'></div>");
   $("body").append(newDiv);
-  $(".square").on("click", function(){
-  var colorChoice = $("#color-field").val()
+}
+$(".square").css({"height":"10px", "width":"10px", "margin":"0"});
+
+$(".square").on("mouseover", function(){
+  var colorChoice = $("#color-field").val();
   $(this).css("background-color",colorChoice);
 })
-}
-
 
 })
