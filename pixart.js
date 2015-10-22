@@ -3,6 +3,7 @@ $( document ).ready(function() {
     $('#set-color').click(function(){
     var getColor = $( "input" ).val();
     event.preventDefault();
-    $(".brush").css("background-color", getColor); 
+    $(".brush").css("background-color", getColor);
+    
   });
 });
