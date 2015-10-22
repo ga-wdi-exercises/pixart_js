@@ -18,4 +18,8 @@ $(document).ready(function(){
 		$('body').append(pixBlocks);
 	}	
 
+	$(".square").on("click", function(){
+		$(this).css("background", color)
+	});
+
 })
