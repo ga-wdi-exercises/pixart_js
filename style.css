@@ -17,16 +17,29 @@
 
 h1 {
   font-family: "Oswald";
-  font-size: 48px;
+  font-size: 60px;
   text-align: center;
+  color: #FFF;
+  text-transform: uppercase;
+  letter-spacing: 3px;
 }
 
 .controls {
-  text-align: center;
+  width: 600px;
+  margin: 10px auto 20px auto;
+  padding: 10px;
+  background-color: rgba(0,0,0,0.2);
 }
 
 body {
-  background-image: url('ps_neutral.png');
+  background: rgba(56,79,168,1);
+  background: -moz-linear-gradient(top, rgba(56,79,168,1) 0%, rgba(56,79,168,1) 21%, rgba(47,58,121,1) 81%, rgba(47,58,121,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(56,79,168,1)), color-stop(21%, rgba(56,79,168,1)), color-stop(81%, rgba(47,58,121,1)), color-stop(100%, rgba(47,58,121,1)));
+  background: -webkit-linear-gradient(top, rgba(56,79,168,1) 0%, rgba(56,79,168,1) 21%, rgba(47,58,121,1) 81%, rgba(47,58,121,1) 100%);
+  background: -o-linear-gradient(top, rgba(56,79,168,1) 0%, rgba(56,79,168,1) 21%, rgba(47,58,121,1) 81%, rgba(47,58,121,1) 100%);
+  background: -ms-linear-gradient(top, rgba(56,79,168,1) 0%, rgba(56,79,168,1) 21%, rgba(47,58,121,1) 81%, rgba(47,58,121,1) 100%);
+  background: linear-gradient(to bottom, rgba(56,79,168,1) 0%, rgba(56,79,168,1) 21%, rgba(47,58,121,1) 81%, rgba(47,58,121,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#384fa8', endColorstr='#2f3a79', GradientType=0 );
 }
 
 .canvas {
