@@ -6,6 +6,8 @@ $(document).ready(function() {
     for (i = 0; i < 8000; i++) {
       $("body").append("<div class='square'></div>");
     }
+    // Create Test Div
+    $(".controls").append("<div id='test'></div>");
   }
 
   // Create Color Swatch Palette
