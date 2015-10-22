@@ -5,6 +5,7 @@
   height: 100px;
   background: #1B4370;
   margin: 15px auto;
+  display: inline-block;
 }
 
 .square {
