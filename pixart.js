@@ -8,16 +8,12 @@ $( document ).ready(function() {
 });
 
 function addingDivs(){
-	for (var i=0; i<20; i++) {
-    $("body").append('<div class="square"></div>');
+	for (var i=0; i<8000; i++) {
+    $("body").append('<div class="square" style = "width:100px; height:200px; margin:0"></div>');
     }
 }
 addingDivs();
 
-$('.square').click(function(){
-    $(this).css('background', 'green');
-});
-
-$('.square').click(function(){
-  $(".square").css("background-color", $( "input" ).val());
+$('.square').mouseover(function(){
+    $(this).css('background', $( "input" ).val());
 });
