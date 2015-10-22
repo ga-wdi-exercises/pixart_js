@@ -1,10 +1,8 @@
-  // I decided to add the divs directly to the HTML because the client requested a specific number of brushes...
-  // I should totaly do this with JS instead... started something below.
-// for (var i = 0; i < 1; i++) {
-//   $(".brush").after($('<div />', {
-//     "class": "brush",
-//
-//   }))};
+$(".brush").css("position", "<inline-block>");
+for (var i = 0; i < 3; i++) {
+  $("form").after($('<div />', {
+    "class": "brush",
+  }))};
 var allBrushes = $(".brush");
 allBrushes.css("display", "inline-block");
 var clickCounter = 0;
