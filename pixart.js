@@ -30,14 +30,10 @@ $(document).ready(function() {
         self.brushColor = $(this).attr("title");
         self.showSelectedBrush();
       }));
+      console.log("New brush colored", color, "created.");
     },
     requestColorChange: function () { // gets the requested color and calls createNewColor and showSelectedBrush if needed
       var color = $("#color-field").val();
-      console.log("this.palette:", this.palette, "color:", color);
-      console.log("color in this.palette:", color in this.palette);
-      console.log("typeof color:", typeof color);
-      console.log("typeof this.palette[1]:", typeof this.palette[1]);
-      console.log("typeof this.palette:", typeof this.palette);
       if ( color == this.brushColor ) { // if same brush requested, do nothing
         console.log("Color", color, "already selected.");
       } else if ( this.palette.indexOf(color) != -1 ) { // check if already in palette
