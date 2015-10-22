@@ -1,5 +1,7 @@
  $( document ).ready( function(){
 
+//---------------- Sets up the page
+
    //Sets default brush box value
    $("#color-field").val("#22466E");
 
@@ -8,7 +10,10 @@
      $("body").append("<div class=\"square\"></div>");
    }
 
+//---------------- Color selector
+
    //Fills brush box bg with hex color from input on Enter keydown
+   //@@@@ TODO: Fix this.
    $("color-field").keydown(function(){
       if(e.keyCode == 13){
         event.preventDefault();
@@ -24,10 +29,28 @@
       console.log("a click occurred");
     });
 
-    //Changes canvas square color when clicked
-    $(".square").hover(function(){
+//---------------- Drag to Draw
+
+    //Sets drag checker default state to off
+    var isDragging = false;
+
+    //Changes canvas square color when clicked & fires drag checker
+    $(".square").mousedown(function(){
       event.preventDefault();
       $(this).css("background-color", $("#color-field").val());
+      isDragging = true;
+    });
+
+    //Turns off drag checker on mouseup
+    $("body").mouseup(function(){
+      isDragging = false;
+    });
+
+    //Changes canvas square color on drag
+    $(".square").mouseenter(function(){
+        if (isDragging === true) {
+          $(this).css("background-color", $("#color-field").val());
+        }
     });
 
 });
