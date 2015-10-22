@@ -21,13 +21,13 @@ $(document).ready(function(){
   });
 
 //Create small squares
-  for(var i=0; i<20; i++){
+  for(var i=0; i<8000; i++){
     $('body').append('<div class="square"></div>');
   }
 //Add event handler to small squares
   $('.square').each(function(index){
 
-      $(this).on("click", function(){
+      $(this).hover(function(){
           setColor('.square',index);
       });
 
