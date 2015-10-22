@@ -7,16 +7,19 @@ $(document).ready(function() {
     //$("input:text").val("");
   })
 });
-//Divs are showing up... oddly. ?
+
+function addColor() {
+  return function(e) {
+    var colorSelected2 = $("input:text").val();
+    e.preventDefault;
+    $(this).css("background-color", colorSelected2);
+  };
+}
 $(document).ready(function() {
   for (var i = 0; i < 8000; i++) {
     $(".controls").after($('<div />', {
-      mouseover: function(e) {
-        var colorSelected2 = $("input:text").val();
-        e.preventDefault;
-        $(this).css("background-color", colorSelected2);
-      },
+      mouseover: addColor(),
       "class": "square",
-      }));
+    }));
   }
 });
