@@ -1,10 +1,17 @@
 $(document).ready(function() {
 
-  $("div.brush").css("background","red");
+
+
+  // set the swatch color to the value of input
   $("#set-color").on("click", function(){
     event.preventDefault();
-    $("div.brush").css("background","green");
+    // set a variable equal to the input value
+    var input = $("#color-field").val();
+    // set swatch to input
+    $("div.brush").css("background",input);
   });
+
+
 
 });
 
