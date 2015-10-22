@@ -9,22 +9,19 @@ $(document).ready(function() {
 var allBrushes = $(".brush");
 allBrushes.css("display", "inline-block");
 var clickCounter = 0;
-if (clickCounter > 2) {
-  clickCounter = 0;
-}
-var whichBrush = $(".brush")[clickCounter];
-
 $(document).ready(function() {
   $("button").on("click", function(evt) {
+    var whichBrush = $(".brush")[clickCounter];
       evt.preventDefault();
       colorSelected = $("input:text").val(); //This is correct.
       console.log("User input is: " + colorSelected);
-      $(".brush")[clickCounter].css("background-color", colorSelected);
-      clickCounter++;
-      //Issue is line 22 --> does not want to modify css or attr...
+      $(whichBrush).css("background-color", colorSelected);
+      clickCounter =  clickCounter + 1;
+      if (clickCounter >= 3) {
+        clickCounter = 0;
+      };
     })
 });
-
 function addColor() {
   return function(e) {
     var colorSelected2 = $("input:text").val();
