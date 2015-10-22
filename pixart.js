@@ -1,5 +1,4 @@
 $(document).ready(function(){
-  var colorID = $("input:text").val();
   $("#set-color").on("click", function(e){
     e.preventDefault();
     console.log("test!");
@@ -9,7 +8,7 @@ $(document).ready(function(){
       $("body").append("<div class = 'square'></div>");
     }
     $(".square").on("click", function(){
-      $(this).css("background-color", "green");
+      $(this).css("background-color", $("#color-field").val());
     });
 });
 
