@@ -13,3 +13,7 @@ function addingDivs(){
     }
 }
 addingDivs();
+
+$('.square').click(function(){
+    $(this).css('background', 'green');
+  });
