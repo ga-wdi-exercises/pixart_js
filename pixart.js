@@ -7,7 +7,23 @@ $("#set-color").on("click", function(event) {
   var userColor = $("#color-field").eq(0).val();
   $("div.brush").css("background-color", userColor);
   event.preventDefault();
-}); //end on event handler
+}); //end input on click event handler
+
+
+
+function divCreator() {
+  for (i = 0; i < 20; i++) {
+    $("body").append("<div class='square'>Hi</div>");
+  } //ends for loop
+}
+divCreator();
+
+// $("body").append("<div>Hi</div>");
+
+
+
+
+
 
 
 }); //ends document.ready
