@@ -19,8 +19,8 @@ $("button")[0].addEventListener("click", function(event) {
 
 //commit 3
 //Create 20 divs of the "square" class and append them to the body - use .append()
-for (i = 0; i < 20; i++) {
-  $(document.createElement("div")).attr("class", "square").appendTo('body').click( function () {
+for (i = 0; i < 8000; i++) {
+  $(document.createElement("div")).attr("class", "square").appendTo('body').mouseover( function () {
     $(this).css("background", color);
   });
 }
@@ -30,3 +30,9 @@ for (i = 0; i < 20; i++) {
 
 //commit 5
 //Modify your code so that when I click on each "square", it changes to the color I set using my input instead of "green" every time.
+
+//commit 6
+// * Modify the CSS so that the "square" class has a height and width of 10px and a margin of 0. **this is already what the stylesheet is set to!**
+// * Modify your code so that you are creating 8000 divs instead of 20.
+// * Change the event that changes your box colors from 'click' to 'mouseover'
+// * Paint a picture!
