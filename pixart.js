@@ -3,7 +3,7 @@ var pixArtPainter = {
   currentColor: "#1B4370", //this is the current color being drawn
   clickButton: $("#set-color"), //stores the button
   numPixels: 4000, //number of pixels in the canvas
-  numExtraBrushes: 2, //number of extra brushes, if 0 there will still be 1 brush
+  numExtraBrushes: 14, //number of extra brushes, if 0 there will still be 1 brush
   //sets up the extra brushes
   setUpBrushes: function() {
     for(var i=1; i <= this.numExtraBrushes; i++){
@@ -25,13 +25,16 @@ var pixArtPainter = {
   setUpBrushListener: function (){
     var self = this;
     this.clickButton.bind("click", function(event) {
-      event.preventDefault(); //cancels default event on click
-      for(var i=self.numExtraBrushes; i>=1; i-=1){
-        //changes each additional brush background
-        $(".brush").eq(i).css("background",$(".brush").eq(i-1).css("background"));
+        event.preventDefault(); //cancels default event on click
+        //tests to see if input is a valid color
+        if (self.isColor($("#color-field").val())) {
+          for(var i=self.numExtraBrushes; i>=1; i-=1){
+          //changes each additional brush background
+          $(".brush").eq(i).css("background",$(".brush").eq(i-1).css("background"));
+          }
+          $(".brush").eq(0).css("background",$("#color-field").val()); //changes primary brush background to the value entered in the input box
+          self.currentColor = $("#color-field").val(); //changes current color to the input box's value
       }
-      $(".brush").eq(0).css("background",$("#color-field").val()); //changes primary brush background to the value entered in the input box
-      self.currentColor = $("#color-field").val(); //changes current color to the input box's value
     });
   },
   setUpCanvas: function(pixelCount){
@@ -48,6 +51,15 @@ var pixArtPainter = {
         $(event.target).css("background", self.currentColor)
       }
     });
+  },
+  //function to test if input is a color or not.  depends on browser
+  isColor: function(inputVal) {
+    var testElement = $("<p class='test'></p").css("background", inputVal);;
+    if (testElement.css("background")){
+      return true;
+    }else{
+      return false;
+    }
   },
   //launch everything
   launchPaint: function() {
