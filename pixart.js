@@ -11,6 +11,10 @@ $('body').append($('<div class="square">'))
 }
 //change color of square that's clicked on
   $('.square').on('mouseover',function(){
-    $(this).css('background',$('#color-field').val())
-  })
+    var brushColor = $('.brush').css('background-color');
+    $(this).css('background',brushColor)
+  });
 })
+//change size of squares
+$(".square").css('height','10px')
+$(".square").css('width','10px')
