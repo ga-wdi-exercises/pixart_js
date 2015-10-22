@@ -10,3 +10,9 @@ $(document).ready(function(){
   $("#new-squares").append("<div class='square'></div>")
   }
 });
+
+$(document).ready(function(){
+  $(".square").click(function(event){
+    $(this).css("background-color",'green')
+  });
+});
