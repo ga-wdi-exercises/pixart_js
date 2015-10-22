@@ -12,18 +12,13 @@ $(document).ready(function () {
     console.log(userInput)
   })
 
-  // ###Commit 4
-  //
-  // * Add functionality so that when I click on each "square", it changes the color of that individual square to "green"
-  //   * **Hint**: either add the event listener while creating the squares, or listen for events on the `body` element
-
-  var amountSquareDivs = 20
+  var amountSquareDivs = 8000
   for (var i = 0; i < amountSquareDivs; i++) {
     $('body').append('<div class="square"></div>')
   }
 
   $('.square').each(function (evt) {
-    $(this).on('click', function (evt) {
+    $(this).on('mouseover', function (evt) {
       console.log($(this))
       $(this).css('background', userInput)
     })
