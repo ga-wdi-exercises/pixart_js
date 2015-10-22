@@ -1,6 +1,6 @@
-// assign color entered in input field to brush
+// assign color entered in input field to brush and make add last brush color to palette
 $( document ).ready( function () {
-$("button").on('click',function(event){
+$("#set-color").on('click',function(event){
     event.preventDefault();
     var colorSet4 = $('#second-last-color').css('background');
     var colorSet3 = $('#last-color').css('background');
@@ -11,6 +11,13 @@ $("button").on('click',function(event){
     $('#second-last-color').css('background',colorSet3);
     $('#third-last-color').css('background',colorSet4);
   });
+
+//if color on palette is clicked add that color to the brush
+$('.previous-color').on('click',function(event){
+  event.preventDefault();
+  var colorSet = $(this).css('background');
+  $('.brush').css('background',colorSet);
+})
 //make 20 squares
 for(var i = 0; i < 8000 ; i++){
 $('body').append($('<div class="square">'));
@@ -24,7 +31,6 @@ $('body').append($('<div class="square">'));
   $(".square").css('height','10px');
   $(".square").css('width','10px');
 
-  //BONUS: Add most recently used colors
 
   //making it look nice
 $('.previous-color').css('height','50px');
