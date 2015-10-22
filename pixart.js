@@ -1,6 +1,6 @@
 // When I clock "set color", it should change the color of the "brush" box to the color I specify in the input field.
 var setColor = $('#set-color');
-var pixelCount = 20;
+var pixelCount = 8000;
 // $('#set-color');
 setColor.on("click", function(evt) {
    evt.preventDefault();
@@ -31,7 +31,7 @@ var createCanvas = function(pixelCount) {
 createCanvas(pixelCount);
 
 $(".square").each(function(index){
-  $(this).on("click", function(evt){
+  $(this).on("mouseover", function(evt){
     console.log("color-change");
     $(this).css("background", $(".brush").css("background") );
   });
