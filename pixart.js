@@ -15,7 +15,11 @@ for (var i = 0; i < 20; i++ ) {
 $("body").append("<div class='square'></div>");
 }
 $(".square").each(function(index){
+  $(this).on("click", function(){
+  var brush = $(".brush").css("background-color");
+  $(this).css("background", brush);
 
+});
 });
 
 
