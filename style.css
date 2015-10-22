@@ -2,6 +2,12 @@
 
 a {
   color: #CCFFFF;
+  font-family: "Oswald";
+}
+
+p, h1 {
+  color: #FFF;
+  font-family: "Oswald";
 }
 
 a:hover {
@@ -21,7 +27,12 @@ button {
   height: 30px;
   background: #FF0000;
   border: 2px solid #FFF;
-  margin: 15px auto;
+  margin: 0 15px 0 15px;
+  display: inline-block;
+}
+
+.brushbox {
+  padding: 10px;
 }
 
 .square {
@@ -36,17 +47,18 @@ h1 {
   font-family: "Oswald";
   font-size: 60px;
   text-align: center;
-  color: #FFF;
   text-transform: uppercase;
   letter-spacing: 3px;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3), 0px 2px 15px rgba(0, 0, 0, 0.3);
 }
 
 .controls {
+  text-align: center;
   width: 400px;
   margin: 10px auto 45px auto;
-  text-align: center;
+  border: 2px solid rgba(0,0,0,0.1);
   padding: 10px;
-  background-color: rgba(0,0,0,0.2);
+  background-color: rgba(0,0,0,0.2)
 }
 
 body {
@@ -67,4 +79,11 @@ body {
   margin: 0 auto 30px auto;
   background-image: url("thedonald.jpg");
   background-size: cover;
+}
+
+.footer {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.2);
+  margin: 35px;
+  font-size: 15px;
 }

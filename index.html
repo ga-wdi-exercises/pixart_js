@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<--!
+<!--
 
 -->
   <link rel="stylesheet" href="style.css">
@@ -11,15 +11,26 @@
 <body>
   <h1>Draw on Donald Trump</h1>
   <div class="controls">
-    <form id="form">
-      <input type="text" id="color-field"></input>
-      <button id="set-color">Set Color</button>
+    <div class="brushbox">
+      <form id="form">
+        <input type="text" id="color-field"></input>
+        <button id="set-color">Set Color</button>
+        <a href="http://www.w3schools.com/tags/ref_colorpicker.asp" target="_blank">Color Picker</a>
+      </form>
+    </div>
+    <div class="brushbox">
       <button id="reset">Reset</button>
-      <a href="http://www.w3schools.com/tags/ref_colorpicker.asp" target="_blank">Color Picker</a>
-    </form>
-    <div class="brush"></div>
+      <button id="change">Change Photo</button>
+    </div>
+    <div class="brushbox">
+      <div class="brush brush1"></div>
+      <div class="brush brush2"></div>
+      <div class="brush brush3"></div>
+      <div style="clear:both;"></div>
+    </div>
   </div>
   <div class="canvas"></div>
+  <p class="footer">Built by Matt Popovich</p>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="pixart.js"></script>
 </body>
