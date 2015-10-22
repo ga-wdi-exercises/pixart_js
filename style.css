@@ -1,8 +1,8 @@
 @import url(http://fonts.googleapis.com/css?family=Monoton);
 
 .brush {
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   background: #1B4370;
   margin: 15px auto;
   border-radius: 100%;
@@ -18,13 +18,13 @@
 
 .swatch {
   float: left;
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
   background: #E7E5DB;
   margin: 0;
 }
 .container{
-  width: 30%;
+  width: 25%;
   position: fixed;
   top: 0;
   left: 0;
@@ -41,7 +41,7 @@ h1 {
 .controls {
   text-align: center;
   position: fixed;
-  top: 28%;
+  top: 40%;
   left: 3%;
 }
 

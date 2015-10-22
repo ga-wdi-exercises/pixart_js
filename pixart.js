@@ -6,7 +6,6 @@ var colorMenu = ["AliceBlue","AntiqueWhite","Aqua","Aquamarine","Azure","Beige",
 //Function that changes background color of any given element
   var setColor = function(target, index, color){
     $(target).eq(index).css('background', color);
-    $('.brush').css('background', color);
   };
 
 //Event Handler for Enter Key
@@ -47,7 +46,10 @@ $('body').prepend('<div class="container"></div>')
         var self = this;
         $(this).on('click',function(){
           input = $(self).css('background');
-          // $('.controls').hide();
+          colorName = $(self).attr('title');
+          $('h1').hide();
+          $('.brush').css('background', input);
+          $('#color-field').val(colorName);
       });
   })
 
