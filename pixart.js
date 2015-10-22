@@ -6,8 +6,8 @@
    $("#color-field").val("#22466E");
 
    //Appends canvas squares to body on load
-   for(i = 0; i < 6000; i++){
-     $("body").append("<div class=\"square\"></div>");
+   for(i = 0; i < 18000; i++){
+     $(".canvas").append("<div class=\"square\"></div>");
    }
 
 //---------------- Color selector
