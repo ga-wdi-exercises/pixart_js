@@ -1,13 +1,18 @@
 var $setColor = $('#set-color');
 var $input = $('input');
-var $brush = $('.brush');
+var $brush = $('.brush').eq(0);
 var $body = $('body');
 var color = $brush.css('background-color');
-var colorSwatchColors = [];
+var colorSwatchColors = [color];
 var colorSwatchDivs = [];
 var swatchSize = 3;
+// var $swatchContainer = $('.swatch-container');
 
 $setColor.on('click', setColor);
+// $brush.on('click', function() {
+//   color = $brush.css('background-color');
+// });
+// removed since chrome does by default
 // $input.on('keyup', function(evt) {
 //   evt.preventDefault();
 //   if(evt.keyCode === 13) {
@@ -17,12 +22,19 @@ $setColor.on('click', setColor);
 
 function setColor(evt) {
   evt.preventDefault();
-  updateColorSwatchColors();
-  color = $input.val();
-  $brush.css({
-    'background': color
-  });
-  updateSwatch();
+    if (color !== $input.val()){
+      color = $input.val();
+      var oldColor = $brush.css('background-color');
+      $brush.css({
+        'background-color': color
+      });
+      var newColor = $brush.css('background-color');
+      if (oldColor !== newColor) {
+        updateColorSwatchColors();
+        updateSwatch();
+      }
+    }
+  $input.val('');
 }
 
 function createCanvas(num) {
@@ -30,8 +42,7 @@ function createCanvas(num) {
     var $div = $('<div/>');
     $div.toggleClass('square');
     $div.on('mouseover', function(evt){
-      var $targetDiv = $(evt.target);
-      $targetDiv.css({
+      $(this).css({
         'background': color
       });
     });
@@ -42,14 +53,22 @@ function createCanvas(num) {
 createCanvas(8000);
 
 function updateColorSwatchColors() {
-  if (!colorSwatchColors) {
-    createSwatch();
-  }
-  var newLength = colorSwatchColors.push(color);
+  var isSame = false;
 
-  if(newLength > swatchSize) {
-    colorSwatchColors.shift();
+  for (var i = 0; i < colorSwatchColors.length; i++) {
+    if (color === colorSwatchColors[i]) {
+      console.log('not goin');
+      isSame = true;
+    }
   }
+
+  if (!isSame) {
+    var newLength = colorSwatchColors.push(color);
+
+    if(newLength > swatchSize) {
+        colorSwatchColors.shift();
+      }
+    }
 }
 
 function updateSwatch() {
@@ -57,7 +76,8 @@ function updateSwatch() {
     newRecentColor();
   }
 
-  for (var i = 0; i < colorSwatchColors.length; i++) {
+  for (var i = 0; i < colorSwatchDivs.length; i++) {
+    console.log(colorSwatchDivs[i]);
     colorSwatchDivs[i].css({
       'background-color': colorSwatchColors[i]
     });
@@ -66,30 +86,13 @@ function updateSwatch() {
 
 function newRecentColor() {
   var $swatch = $('<div/>');
-  $swatch.toggleClass('brush');
+  $swatch.toggleClass('swatch');
   $swatch.on('click', function(evt) {
-    var $targetDiv = $(evt.target);
-    color = $targetDiv.css('background-color');
+    color = $(this).css('background-color');
+    $brush.css({
+      'background': color
+    });
   });
   $brush.after($swatch);
   colorSwatchDivs.push($swatch);
 }
-// function createSwatch() {
-//   for (var i = 0; i < swatchSize; i++) {
-//       // if (colorSwatchColors[i]){
-//       var $swatch = $('<div/>');
-//       $swatch.css({
-//         'background': colorSwatchColors[i]
-//       });
-//       $swatch.toggleClass('brush');
-//       $swatch.on('click', function(evt) {
-//         var $targetDiv = $(evt.target);
-//         color = $targetDiv.css('background-color');
-//       });
-//       $brush.after($swatch);
-//       colorSwatchDivs.push($swatch);
-//     // }
-//   }
-// }
-
-// createSwatch();
