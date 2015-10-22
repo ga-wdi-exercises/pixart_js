@@ -38,6 +38,10 @@ $(document).ready(function() {
           // $(this).css("background", color);
           $(this).css("background", drawing.brushColor); // not ideal
         });
+        $(this).on("click", function (e) {
+          e.preventDefault();
+          $(this).css("background", "green"); // per assign instructions for commit #4
+        });
       });
 
     },
