@@ -7,7 +7,7 @@
 
    //Appends canvas squares to body on load
    for(i = 0; i < 18000; i++){
-     $(".canvas").append("<div class=\"square\"></div>");
+     $(".drawcanvas").append("<div class=\"square\"></div>");
    }
 
 //---------------- Color selector
