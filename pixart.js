@@ -88,11 +88,11 @@
         }
     });
 
-///---------------------- Reset button
+///---------------------- Reset button (Not working)
 
-  $("#reset").click(function(){
-    event.preventDefault();
-    $(".square").css("background-color", rgba(0,0,0,0));
-  });
+//  $("#reset").click(function(){
+//    event.preventDefault();
+//    $(".square").css("background-color", rgba(0,0,0,0));
+//  });
 
 });
