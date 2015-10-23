@@ -25,7 +25,6 @@ button {
 .brush {
   width: 30px;
   height: 30px;
-  background: #FF0000;
   border: 2px solid #273F77;
   margin: 0 5px 0 5px;
   display: inline-block;
@@ -33,26 +32,27 @@ button {
 
 .brush1 {
   border-color: #FFF;
+  background: #DB200A;
 }
 
 .brush2 {
-  background-color: #FF0000;
+  background-color: #DB200A;
 }
 
 .brush3 {
-  background-color: #0000FF;
+  background-color: #FEF8FF;
 }
 
 .brush4 {
-  background-color: #000000;
+  background-color: #FFCA3D;
 }
 
 .brush5 {
-  background-color: #FFFFFF;
+  background-color: #6386F4;
 }
 
 .brush6 {
-  background-color: #FFFF00;
+  background-color: #3AE852;
 }
 
 .brushbox {

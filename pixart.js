@@ -3,7 +3,7 @@
 //---------------- Sets up the page
 
    //Sets default brush box value
-   $("#color-field").val("#FF0000");
+   $("#color-field").val("#DB200A");
 
    //Appends canvas squares to body on load
    for(i = 0; i < 18000; i++){
@@ -32,36 +32,36 @@
     //Fills brush box bg with red on red box click
     $(".brush2").click(function(){
       event.preventDefault();
-      $(".brush1").css("background-color", "#FF0000");
-      $("#color-field").val("#FF0000");
+      $(".brush1").css("background-color", "#DB200A");
+      $("#color-field").val("#DB200A");
     });
 
     //Fills brush box bg with blue on blue box click
     $(".brush3").click(function(){
       event.preventDefault();
-      $(".brush1").css("background-color", "#0000FF");
-      $("#color-field").val("#0000FF");
+      $(".brush1").css("background-color", "#FEF8FF");
+      $("#color-field").val("#FEF8FF");
     });
 
     //Fills brush box bg with black on black box click
     $(".brush4").click(function(){
       event.preventDefault();
-      $(".brush1").css("background-color", "#000000");
-      $("#color-field").val("#000000");
+      $(".brush1").css("background-color", "#FFCA3D");
+      $("#color-field").val("#FFCA3D");
     });
 
     //Fills brush box bg with white on white box click
     $(".brush5").click(function(){
       event.preventDefault();
-      $(".brush1").css("background-color", "#FFFFFF");
-      $("#color-field").val("#FFFFFF");
+      $(".brush1").css("background-color", "#6386F4");
+      $("#color-field").val("#6386F4");
     });
 
     //Fills brush box bg with yellow on yellow box click
     $(".brush6").click(function(){
       event.preventDefault();
-      $(".brush1").css("background-color", "#FFFF00");
-      $("#color-field").val("#FFFF00");
+      $(".brush1").css("background-color", "#3AE852");
+      $("#color-field").val("#3AE852");
     });
 
 //---------------- Drag to Draw
