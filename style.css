@@ -35,6 +35,26 @@ button {
   border-color: #FFF;
 }
 
+.brush2 {
+  background-color: #FF0000;
+}
+
+.brush3 {
+  background-color: #0000FF;
+}
+
+.brush4 {
+  background-color: #000000;
+}
+
+.brush5 {
+  background-color: #FFFFFF;
+}
+
+.brush6 {
+  background-color: #FFFF00;
+}
+
 .brushbox {
   padding: 10px;
 }

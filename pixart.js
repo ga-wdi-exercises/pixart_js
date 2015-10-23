@@ -29,6 +29,41 @@
       console.log("a click occurred");
     });
 
+    //Fills brush box bg with red on red box click
+    $(".brush2").click(function(){
+      event.preventDefault();
+      $(".brush1").css("background-color", "#FF0000");
+      $("#color-field").val("#FF0000");
+    });
+
+    //Fills brush box bg with blue on blue box click
+    $(".brush3").click(function(){
+      event.preventDefault();
+      $(".brush1").css("background-color", "#0000FF");
+      $("#color-field").val("#0000FF");
+    });
+
+    //Fills brush box bg with black on black box click
+    $(".brush4").click(function(){
+      event.preventDefault();
+      $(".brush1").css("background-color", "#000000");
+      $("#color-field").val("#000000");
+    });
+
+    //Fills brush box bg with white on white box click
+    $(".brush5").click(function(){
+      event.preventDefault();
+      $(".brush1").css("background-color", "#FFFFFF");
+      $("#color-field").val("#FFFFFF");
+    });
+
+    //Fills brush box bg with yellow on yellow box click
+    $(".brush6").click(function(){
+      event.preventDefault();
+      $(".brush1").css("background-color", "#FFFF00");
+      $("#color-field").val("#FFFF00");
+    });
+
 //---------------- Drag to Draw
 
     //Sets drag checker default state to off
