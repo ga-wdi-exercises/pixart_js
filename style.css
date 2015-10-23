@@ -3,7 +3,7 @@
 .brush {
   width: 100px;
   height: 100px;
-  background: #1B4370;
+  background: lemonchiffon;
   margin: 15px auto;
 }
 
@@ -11,7 +11,7 @@
   float: left;
   width: 10px;
   height: 10px;
-  background: #E7E5DB;
+  background: #000000;
   margin: 0;
 }
 
