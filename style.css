@@ -77,8 +77,7 @@ body {
 }
 
 .canvas {
-  max-width: 900px;
-  min-width: 200px;
+  width: 900px;
   height: 500px;
   display: block;
   margin: 0 auto 30px auto;
