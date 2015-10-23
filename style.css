@@ -1,16 +1,17 @@
-@import url(http://fonts.googleapis.com/css?family=Monoton);
+
 
 .brush {
   width: 100px;
   height: 100px;
   background: #1B4370;
   margin: 15px auto;
+  display: inline-block;
 }
 
 .square {
   float: left;
-  width: 10px;
-  height: 10px;
+  width: 7px;
+  height: 7px;
   background: #E7E5DB;
   margin: 0;
 }
