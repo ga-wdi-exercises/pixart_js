@@ -33,3 +33,14 @@ function addBrushToHistory(brushColor) {
     brushList.children[0].remove();
   }
 }
+
+function  updateBrushFromHistory() {
+  color = this.style.backgroundColor;
+  brush.style.backgroundColor = color;
+}
+
+function paintSquare() {
+  if (this.mouseDown) {
+    event.target.style.backgroundColor = color;
+  }
+}
