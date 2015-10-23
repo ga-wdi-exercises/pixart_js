@@ -25,7 +25,7 @@
     //Fills brush box bg with hex color from input on button click
     $("#set-color").click(function(){
       event.preventDefault();
-      $(".brush").css("background-color", $("#color-field").val());
+      $(".brush1").css("background-color", $("#color-field").val());
       console.log("a click occurred");
     });
 
@@ -52,5 +52,12 @@
           $(this).css("background-color", $("#color-field").val());
         }
     });
+
+///---------------------- Reset button
+
+  $("#reset").click(function(){
+    event.preventDefault();
+    $(".square").css("background-color", rgba(0,0,0,0));
+  });
 
 });
