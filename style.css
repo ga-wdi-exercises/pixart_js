@@ -3,8 +3,24 @@
 .brush {
   width: 100px;
   height: 100px;
-  background: #1B4370;
   margin: 15px auto;
+  border: solid black 1px;
+  display:inline-block;
+}
+#brush1 {
+  background: #1B4370;
+}
+
+#brush2 {
+  background: #fff;
+}
+
+#brush3 {
+  background: #fff;
+}
+
+.clear {
+  margin: 10px;
 }
 
 .square {
@@ -15,10 +31,21 @@
   margin: 0;
 }
 
+.colorName { /*found on css-tricks*/
+  -webkit-text-stroke: 1px black;
+   color: white;
+}
+
 h1 {
   font-family: Monoton;
   font-size: 48px;
   text-align: center;
+}
+
+p {
+  font-family: 'Arial Black', sans-serif;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 
 .controls {
