@@ -19,10 +19,6 @@ $(document).ready(function(){
 
     $(this).css('background', input);
 
-  })
+  });
 
-
-
-
-
-})
+});
