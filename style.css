@@ -1,30 +1,115 @@
-@import url(http://fonts.googleapis.com/css?family=Monoton);
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+
+a {
+  color: #CCFFFF;
+  font-family: "Oswald";
+}
+
+p, h1 {
+  color: #FFF;
+  font-family: "Oswald";
+}
+
+a:hover {
+  color: #FFF;
+}
+
+a:visited {
+  color: #33CCFF;
+}
+
+button {
+  margin: 2px;
+}
 
 .brush {
-  width: 100px;
-  height: 100px;
-  background: #1B4370;
-  margin: 15px auto;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #273F77;
+  margin: 0 5px 0 5px;
+  display: inline-block;
+}
+
+.brush1 {
+  border-color: #FFF;
+  background: #DB200A;
+}
+
+.brush2 {
+  background-color: #DB200A;
+}
+
+.brush3 {
+  background-color: #FEF8FF;
+}
+
+.brush4 {
+  background-color: #FFCA3D;
+}
+
+.brush5 {
+  background-color: #6386F4;
+}
+
+.brush6 {
+  background-color: #3AE852;
+}
+
+.brushbox {
+  padding: 10px;
 }
 
 .square {
   float: left;
-  width: 10px;
-  height: 10px;
-  background: #E7E5DB;
+  width: 5px;
+  height: 5px;
+  background: rgba(0,0,0,0);
   margin: 0;
 }
 
 h1 {
-  font-family: Monoton;
-  font-size: 48px;
+  font-family: "Oswald";
+  font-size: 60px;
   text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3), 0px 2px 15px rgba(0, 0, 0, 0.3);
 }
 
 .controls {
   text-align: center;
+  width: 320px;
+  margin: 10px auto 45px auto;
+  border: 2px solid rgba(0,0,0,0.1);
+  padding: 6px;
+  background-color: rgba(0,0,0,0.2)
 }
 
 body {
-  background-image: url('ps_neutral.png');
+  background: rgba(56,79,168,1);
+  background: -moz-linear-gradient(top, rgba(56,79,168,1) 0%, rgba(56,79,168,1) 21%, rgba(47,58,121,1) 81%, rgba(47,58,121,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(56,79,168,1)), color-stop(21%, rgba(56,79,168,1)), color-stop(81%, rgba(47,58,121,1)), color-stop(100%, rgba(47,58,121,1)));
+  background: -webkit-linear-gradient(top, rgba(56,79,168,1) 0%, rgba(56,79,168,1) 21%, rgba(47,58,121,1) 81%, rgba(47,58,121,1) 100%);
+  background: -o-linear-gradient(top, rgba(56,79,168,1) 0%, rgba(56,79,168,1) 21%, rgba(47,58,121,1) 81%, rgba(47,58,121,1) 100%);
+  background: -ms-linear-gradient(top, rgba(56,79,168,1) 0%, rgba(56,79,168,1) 21%, rgba(47,58,121,1) 81%, rgba(47,58,121,1) 100%);
+  background: linear-gradient(to bottom, rgba(56,79,168,1) 0%, rgba(56,79,168,1) 21%, rgba(47,58,121,1) 81%, rgba(47,58,121,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#384fa8', endColorstr='#2f3a79', GradientType=0 );
+}
+
+.drawcanvas {
+  width: 900px;
+  height: 500px;
+  display: block;
+  margin: 0 auto 30px auto;
+  background-image: url("thedonald.jpg");
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3), 0px 2px 15px rgba(0, 0, 0, 0.3);
+}
+
+.footer {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.2);
+  margin: 60px;
+  font-size: 15px;
 }
