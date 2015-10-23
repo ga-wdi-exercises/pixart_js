@@ -6,11 +6,11 @@ $(document).ready(function(){
     console.log(color);
   });
 
-  for (var i = 0; i < 20; i++) {
+  for (var i = 0; i < 8000; i++) {
     $(".controls").after("<div class='square'></div>");
 
   }
-  $(".square").on("click", function(){
+  $(".square").on("mouseover", function(){
     var color = $("#color-field").val();
     $(this).css("background-color", color);
     console.log(color);
