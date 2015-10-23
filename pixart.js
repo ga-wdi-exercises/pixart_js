@@ -1,62 +1,19 @@
-$(document).ready(function(){
-  color = $('.brush').css('background')
-  var color_p = color
-  var color_pp = color
-  var color_ppp = color
+$(document).ready(function() {
+  color = $('.brush').css('background');
+  prior = [color];
 
-  $('button').on('click', function(e){
-    e.preventDefault();
-    color_ppp = color_pp
-    color_pp = color_p
-    color_p = color
-    color = $('input').val()
-    $('.brush').css('background', color);
-    $('#swatch1').css('background', color_p)
-    $('#swatch2').css('background', color_pp)
-    $('#swatch3').css('background', color_ppp)
-  })
-
-  // $('#color-field').on('keyup', function(e){
-  //   if(e.keyCode === 13){
-  //     e.preventDefault();
-  //     color_ppp = color_pp
-  //     color_pp = color_p
-  //     color_p = color
-  //     color = $('input').val()
-  //     $('.brush').css('background', color);
-  //     $('#swatch1').css('background', color_p)
-  //     $('#swatch2').css('background', color_pp)
-  //     $('#swatch3').css('background', color_ppp)
-  //   }
-  // })
-
-
-
-  for(i=1; i<=3; i++){
+  //create swatches
+  for (i = 1; i <= 3; i++) {
     $('.brush').append('<div></div>');
-    $('div').eq(i+1).attr('class', 'swatch');
-    $('div').eq(i+1).attr('id', 'swatch'+i);
+    $('div').eq(i + 1).attr('class', 'swatch');
+    $('div').eq(i + 1).attr('id', 'swatch' + i);
   }
 
   $('.swatch').css('height', '30px');
   $('.swatch').css('width', '30px');
-  $('.swatch').css('margin', '5px 5px 5px 130px')
+  $('.swatch').css('margin', '5px 5px 5px 130px');
 
-  $('.swatch').each(function(){
-    $(this).on('click', function(){
-        color_ppp = color_pp;
-        color_pp = color_p;
-        color_p = color;
-        color = color_pp;
-        $('.brush').css('background', color);
-        $('#swatch1').css('background', color_p);
-        $('#swatch2').css('background', color_pp);
-        $('#swatch3').css('background', color_ppp);
-      })
-  })
-
-
-
+  //create canvas
   for(i=1; i<=8000; i++){
     var divNum = i+4;
     $('body').append('<div></div>');
@@ -67,9 +24,57 @@ $(document).ready(function(){
   $('.square').css('width', '10px');
   $('.square').css('margin', '0');
 
-  $('.square').each(function(){
-    $(this).on('mouseover', function(e){
-      $(this).css('background', color)
+  //paint tiles on mouseover
+  $('.square').each(function() {
+    $(this).on('mouseover', function(e) {
+      $(this).css('background', color);
+    })
+  })
+
+  //take user input to get paint color, update swatches
+  $('button').on('click', function(e) {
+    e.preventDefault();
+    color = $('input').val();
+    if (prior.indexOf(color) === -1){
+      prior.unshift(color);
+    };
+    if (prior.length > 4) {
+      prior.pop();
+    };
+    console.log(prior);
+    $('.brush').css('background', color);
+    $('#swatch1').css('background', prior[1]);
+    $('#swatch2').css('background', prior[2]);
+    $('#swatch3').css('background', prior[3]);
+  })
+
+  //not including this because of return automatically simulates a click
+  // $('#color-field').on('keyup', function(e){
+  //   if(e.keyCode === 13){
+  //     e.preventDefault();
+  //     color_p = color
+  //     color = $('input').val()
+  //     if (prior.indexOf(color_p)===-1){
+  //       console.log(prior);
+  //       prior.unshift(color_p);
+  //     }
+  //     if (prior.length>3) prior.pop();
+  //     $('.brush').css('background', color);
+  //     $('#swatch1').css('background', prior[0])
+  //     $('#swatch2').css('background', prior[1])
+  //     $('#swatch3').css('background', prior[2])
+  //   }
+  // })
+
+  //use swatch to get paint color, update swatches
+  $('.swatch').each(function() {
+    $(this).on('click', function() {
+      color = prior[jQuery.inArray(this, $('.swatch'))+1];
+      prior.unshift(color);
+      $('.brush').css('background', color);
+      $('#swatch1').css('background', prior[1]);
+      $('#swatch2').css('background', prior[2]);
+      $('#swatch3').css('background', prior[3]);
     })
   })
 
