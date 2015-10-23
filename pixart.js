@@ -9,13 +9,13 @@ $(document).ready(function(){
     $(".brush").css("background", color)
   })
 
-  for(i = 0; i<20; i++) {
+  for(i = 0; i<8000; i++) {
     $("body").append($("<div class='square'></div>"))
   }
 
-  $(".square").on("click", function(){
-
-    $(this).css("background-color", green);
+  $(".square").on("mouseover", function(){
+    color = colorField.val()
+    $(this).css("background", color);
   })
 
 })
