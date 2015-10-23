@@ -14,3 +14,10 @@ function startPixart() {
   canvas.addEventListener("mouseup", function() { event.preventDefault(); this.mouseDown = false;})
   makeCanvas();
 }
+
+function setBrushColor(event) {
+  event.preventDefault();
+  color = colorField.value;
+  brush.style.backgroundColor = color;
+  addBrushToHistory(color);
+}
