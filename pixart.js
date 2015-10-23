@@ -44,3 +44,11 @@ function paintSquare() {
     event.target.style.backgroundColor = color;
   }
 }
+
+function makeCanvas() {
+  for(var i = 0; i < 10000; i++) {
+    var newDiv = document.createElement("div");
+    newDiv.classList.add("square");
+    canvas.appendChild(newDiv);
+  }
+}
