@@ -43,7 +43,9 @@ h1 {
 }
 
 p {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial Black', sans-serif;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 
 .controls {
