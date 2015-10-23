@@ -21,3 +21,15 @@ function setBrushColor(event) {
   brush.style.backgroundColor = color;
   addBrushToHistory(color);
 }
+
+function addBrushToHistory(brushColor) {
+  var newBrush = document.createElement("div")
+  newBrush.classList.add("past-brush");
+  newBrush.style.backgroundColor = brushColor;
+  newBrush.addEventListener("click", updateBrushFromHistory);
+
+  brushList.appendChild(newBrush);
+  if (brushList.querySelectorAll(".past-brush").length > 3) {
+    brushList.children[0].remove();
+  }
+}
