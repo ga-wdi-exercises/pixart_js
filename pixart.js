@@ -13,12 +13,12 @@ $(document).ready(function(){
 	      $(".brush").css("background", color);
 	}
 
-	for(x = 0; x < 20; x++){		
+	for(x = 0; x < 8000; x++){		
 		var pixBlocks = "<div class='square'></div>";
 		$('body').append(pixBlocks);
 	}	
 
-	$(".square").on("click", function(){
+	$(".square").on("mouseover", function(){
 		$(this).css("background", color)
 	});
 
