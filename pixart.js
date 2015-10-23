@@ -1,6 +1,5 @@
 var colorField = $("#color-field")
 var setColor = $("#set-color")
-var color
 
 $(document).ready(function(){
 
@@ -11,8 +10,12 @@ $(document).ready(function(){
   })
 
   for(i = 0; i<20; i++) {
-    $("body").append($("<div class='square'/>"))
+    $("body").append($("<div class='square'></div>"))
   }
 
+  $(".square").on("click", function(){
+
+    $(this).css("background-color", green);
+  })
 
 })
