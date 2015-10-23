@@ -19,7 +19,6 @@ $(document).ready(function() {
     var color = $("#color-field").val();
     $(".brush").eq(inputCounter).css("background", color);
     $(".square").on("mouseover", function() {
-      // brushColor = $(".brush").eq(inputCounter-1).css("background-color");
       $(this).css("background", color);
     });
     if (inputCounter<2) {
@@ -31,7 +30,6 @@ $(document).ready(function() {
     event.preventDefault();
   });
 
-
   $(".brush").on("click", function(e) {
     var brushColor = $(this).css("background-color");
     inputCounter = e.value;
@@ -41,10 +39,5 @@ $(document).ready(function() {
       $(this).css("background", brushColor);
     });
   });
-
-  // $(".square").on("mouseover", function() {
-  //   brushColor = $(".brush").eq(inputCounter-1).css("background-color");
-  //   $(this).css("background", brushColor);
-  // });
 
 });
