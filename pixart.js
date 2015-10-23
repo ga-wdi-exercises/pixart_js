@@ -35,23 +35,24 @@ var colorMenu = ["AliceBlue","AntiqueWhite","Aqua","Aquamarine","Azure","Beige",
   })
 
 //All Available Colors
-$('body').prepend('<div class="container"></div>')
   for(var i=0; i<colorMenu.length; i++){
       $('.container').append('<div class="swatch"></div>');
       $('.swatch').eq(i).css('background', colorMenu[i]);
       $('.swatch').eq(i).attr('title', colorMenu[i]);
       }
 
+//Add event handler to swatch squares
   $('.swatch').each(function(){
         var self = this;
         $(this).on('click',function(){
           input = $(self).css('background');
-          colorName = $(self).attr('title');
-          $('h1').fadeOut(1000);
-          $('.brush').css('background', input);
+          colorName = $(self).attr('title');          $('.brush').css('background', input);
           $('#color-field').val(colorName);
       });
   })
-
+  $("#menuKey").click(function(){
+    $("div").eq(0).toggleClass("showControls");
+    $('h1').fadeOut(1500);
+  });
 
 });

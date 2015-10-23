@@ -1,13 +1,15 @@
 @import url(http://fonts.googleapis.com/css?family=Monoton);
 
 .brush {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   background: #1B4370;
-  margin: 15px auto;
-  border-radius: 100%;
+  margin: 5px auto;
 }
-
+.container{
+  width: 176px;
+  margin: 0 auto;
+}
 .square {
   float: left;
   width: 10px;
@@ -15,19 +17,12 @@
   background: #E7E5DB;
   margin: 0;
 }
-
 .swatch {
   float: left;
   width: 22px;
   height: 22px;
   background: #E7E5DB;
   margin: 0;
-}
-.container{
-  width: 25%;
-  position: fixed;
-  top: 0;
-  left: 0;
 }
 h1 {
   font-family: Monoton;
@@ -37,14 +32,40 @@ h1 {
   top: 25%;
   left: 40%;
 }
-
 .controls {
-  text-align: center;
   position: fixed;
-  top: 40%;
-  left: 3%;
+  width:15%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);;
+  padding: 0;
+  margin: 0 0 0 0;
 }
-
+.showControls{
+  margin: 0 0 0 -12%;
+}
+#menuKey{
+  display:block;
+  text-align: center;
+  color:whitesmoke;
+  padding:.5em;
+  font-family: Monoton;
+  background-color: rgba(0, 0, 0, 0);
+}
+#color-field{
+  display: block;
+  margin: 5px auto;
+  height: 20px;
+  width: 90%;
+}
+button{
+  display: block;
+  margin: 0 auto;
+  border: 0;
+  border-radius: 3px;
+  background-color: DimGrey;
+  width:50%;
+}
 body {
   background-image: url('ps_neutral.png');
 }
