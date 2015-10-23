@@ -14,5 +14,5 @@ for(var i = 0; i < 20; i++){
 
 $('.square').on('click', function(evt) {
   evt.preventDefault();
-  $('.square').css('background', 'green');
+  $('.square').css('background', $('.input').val());
 })
