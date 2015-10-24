@@ -2,7 +2,7 @@ $(document).ready(createCanvas);
 
 function createCanvas () {
   // Create pixels contained within the div .canvas
-  for (var i = 0; i < 20; i++) {
+  for (var i = 0; i < 8000; i++) {
     $('.canvas').append("<div class=\"pixel\" id=\""+i+"pixel\"></div>");
   }
   // Click set color button to change the current color to the color input.
@@ -12,7 +12,7 @@ function createCanvas () {
     $('#brushColor').css('background-color', newColor);
   });
   // Click pixel to change color to green.
-  $('.pixel').on('click', function () {
+  $('.pixel').on('mouseover', function () {
     var newColor = $('#brushColor').css('background-color');
     $(this).css('background-color', newColor);
   });
