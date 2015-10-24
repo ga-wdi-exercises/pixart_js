@@ -11,6 +11,10 @@ function createCanvas () {
     var newColor = $('#colorInput').val()
     $('#brushColor').css('background', newColor);
   });
+  // Click pixel to change color to green.
+  $('.pixel').on('click', function () {
+    $(this).css('background', 'green');
+  });
 }
 
 
