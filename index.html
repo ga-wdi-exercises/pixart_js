@@ -5,17 +5,21 @@
   <link rel="stylesheet" href="style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="pixart.js"></script>
-  <title>Doodle Town!</title>
+  <title>Pixel Art!</title>
 </head>
 
 <body>
-  <h1>Doodle Town!</h1>
+  <h1>Pixel Art!</h1>
   <div class="controls">
     <form id="form">
       <input type="text" id="colorInput"></input>
       <button id="setColor">Set Color</button>
     </form>
-    <div id="brushColor"></div>
+    <div id="colorBoxes">
+      <div id="brushColor"></div>
+      <div id="lastColor1"></div>
+      <div id="lastColor2"></div>
+    </div>
   </div>
   <div class="canvas">
   </div>
