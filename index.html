@@ -3,18 +3,27 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="style.css">
-  <title>i &hearts; js</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="pixart.js"></script>
+  <title>Pixel Art!</title>
 </head>
+
 <body>
   <h1>Pixel Art!</h1>
   <div class="controls">
     <form id="form">
-      <input type="text" id="color-field"></input>
-      <button id="set-color">Set Color</button>
+      <input type="text" id="colorInput"></input>
+      <button id="setColor">Set Color</button>
     </form>
-    <div class="brush"></div>
+    <div id="colorBoxes">
+      <div id="brushColor"></div>
+      <div id="lastColor1"></div>
+      <div id="lastColor2"></div>
+    </div>
   </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script src="pixart.js"></script>
+  <div class="canvas">
+  </div>
+
 </body>
+
 </html>
