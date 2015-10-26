@@ -13,11 +13,15 @@ var pixArt = {
         if(key === 13){
           this.changeColorBrush;
         }
-      })
+      });
+      //this square changes to green
+      $(".square").on("click", function(){
+        $(this).css("background-color", "green");
+      });
     },
     changeColorBrush: function(e){
       e.preventDefault();
-      $(".brush").css("background-color",$("#color-field").val());
+      $(".brush").css("background-color", $("#color-field").val());
     },
     makeSquares: function(){
       for(var x = 0; x < this.numSquares; x++){
@@ -25,6 +29,9 @@ var pixArt = {
       }
     }
 }
+
+
+
 
 pixArt.makeSquares();
 pixArt.ColorListeners();
