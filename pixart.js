@@ -5,7 +5,7 @@ $(document).ready(function(){
 var pixArt = {
     setColorButton: $("#set-color"),
     setColorBox: $("#color-field"),
-    numSquares: 20,
+    numSquares: 16000,
     ColorListeners: function(){
       this.setColorButton.on("click", this.changeColorBrush);
       this.setColorBox.on("keypress", function(e){
@@ -14,9 +14,9 @@ var pixArt = {
           this.changeColorBrush;
         }
       });
-      //this square changes to green
-      $(".square").on("click", function(){
-        $(this).css("background-color", "green");
+      //mouseover and using color from color brush
+      $(".square").on("mouseover", function(){
+        $(this).css("background-color", $(".brush").css("background-color"));
       });
     },
     changeColorBrush: function(e){
