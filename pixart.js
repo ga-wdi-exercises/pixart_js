@@ -13,3 +13,21 @@ color_field.addEventListener("keypress", function(e){
    brush.style.background = color_field.value;
   }
 });
+
+
+
+
+function createDiv() {
+
+
+for (var i = 0; i < 21; i++) {
+  var newDiv = document.createElement("div");
+  newDiv.className = "square";
+  document.body.appendChild(newDiv);
+}
+}
+
+
+
+
+createDiv();
