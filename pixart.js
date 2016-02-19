@@ -18,16 +18,18 @@ color_field.addEventListener("keypress", function(e){
 
 
 function createDiv() {
-
-
-for (var i = 0; i < 21; i++) {
-  var newDiv = document.createElement("div");
-  newDiv.className = "square";
-  document.body.appendChild(newDiv);
+  for (var i = 0; i < 21; i++) {
+    var newDiv = document.createElement("div");
+    newDiv.className = "square";
+    document.body.appendChild(newDiv);
+  }
 }
-}
-
-
-
-
 createDiv();
+
+var squares = document.querySelector(".square");
+
+
+
+squares.addEventListener("click", function() {
+  squares.style.background = "green";
+});
