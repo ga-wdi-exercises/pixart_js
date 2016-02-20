@@ -7,3 +7,9 @@ setColorButton.addEventListener("click", function(evt) {
   // Why does the color reset without preventDefault() ??
   evt.preventDefault();
 });
+
+
+for (var i = 0; i < 20; i++) {
+  var newDiv = document.createElement("div");
+  document.body.appendChild(newDiv).setAttribute("class", "square");
+}
