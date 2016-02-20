@@ -2,20 +2,21 @@
 var button = document.querySelector("button");
 
 button.addEventListener("click", change);
-var color = document.querySelector("#color-field");
+//var color = document.querySelector("#color-field");
 
-//choose color box (dom) and change it (function)
+//append 20 divs (for loop)
+for(var i = 0; i<20; i++){
+  document.createElement("div");
+  $("body").append('<div class="square"></div>');
+}
 
+
+//change color
 function change(event){
-  //var brush = document.querySelector(".brush");
-  //for loop???
 
   event.preventDefault();
 
-  // if($(color).val() == "red"){
-  //    document.querySelector(".brush").style.backgroundColor = "red";
-  // }
-  switch($(color).val()){
+  switch($("#color-field").val()){
     case "red":
     document.querySelector(".brush").style.backgroundColor = "red";
     break;
@@ -61,6 +62,6 @@ function change(event){
     break;
 
     default:
-    alert("Sorry! " + $(color).val() + " is not supported. \n Please try again.");
+    alert("Sorry! " + $("#color-field").val() + " is not supported. \n Please try again.");
   }
 }
