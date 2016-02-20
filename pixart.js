@@ -9,10 +9,10 @@ setColorButton.addEventListener("click", function(evt) {
 });
 
 
-for (var i = 0; i < 20; i++) {
+for (var i = 0; i < 8000; i++) {
   var newDiv = document.createElement("div");
   document.body.appendChild(newDiv).setAttribute("class", "square");
-  newDiv.addEventListener("click", function() {
+  newDiv.addEventListener("mouseover", function() {
     this.style.background = userInput.value;
   });
 }
