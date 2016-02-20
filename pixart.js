@@ -35,6 +35,6 @@ var addsquares = document.querySelectorAll(".square")
 //document.body.addEventListener("click", changeBrushColor );
 
   function changeSquareColor() {
-    addsquares.style.color = "green";
+    addsquares.style.backgroundColor = "green";
     event.preventDefault()
   }
