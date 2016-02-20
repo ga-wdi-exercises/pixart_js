@@ -1,7 +1,7 @@
 
 // [x] target brush and create function to change background color
 // [x] capture user input and deliver to changeBrushColor, listen for 'set color' click
-// [] changeBrushColor executes upon hitting enter key
+// [x] changeBrushColor executes upon hitting enter key
 
 var brush = document.querySelector(".brush")
 var userInput = document.getElementById('color-field')
@@ -16,7 +16,16 @@ function changeBrushColor() {
 
 userInput.addEventListener('keypress', function (e) {
     var key = e.which || e.keyCode;
-    if (key === 13) { // 13 is enter
-      // code for enter
+    if (key === 13) {
     }
 });
+
+function appendSquare() {
+  newDiv = document.createElement("DIV")
+  squareDiv = $(newDiv).addClass("square")
+  $("body").append(squareDiv)
+}
+
+for (var i = 0; i < 20; i++){
+  appendSquare()
+}
