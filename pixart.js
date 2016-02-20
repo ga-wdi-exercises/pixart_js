@@ -1,6 +1,7 @@
 var setColorButton = document.getElementById("set-color");
 var brushBox = document.querySelector(".brush");
 var userInput = document.getElementById("color-field");
+var previousColors = document.getElementsByClassName("previous");
 
 setColorButton.addEventListener("click", function(evt) {
   brushBox.style.background = userInput.value;

@@ -1,5 +1,12 @@
 @import url(http://fonts.googleapis.com/css?family=Monoton);
 
+.previous {
+  display: inline-block;
+  height: 70px;
+  width: 70px;
+  background: grey;
+}
+
 .brush {
   width: 100px;
   height: 100px;
