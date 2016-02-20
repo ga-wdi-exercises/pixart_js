@@ -21,11 +21,20 @@ userInput.addEventListener('keypress', function (e) {
 });
 
 function appendSquare() {
-  newDiv = document.createElement("DIV")
-  squareDiv = $(newDiv).addClass("square")
-  $("body").append(squareDiv)
+  newDiv = document.createElement("DIV");
+  squareDiv = $(newDiv).addClass("square");
+  $("body").append(squareDiv);
+document.body.addEventListener("click", changeSquareColor );
 }
 
 for (var i = 0; i < 20; i++){
   appendSquare()
 }
+
+var addsquares = document.querySelectorAll(".square")
+//document.body.addEventListener("click", changeBrushColor );
+
+  function changeSquareColor() {
+    addsquares.style.color = "green";
+    event.preventDefault()
+  }
