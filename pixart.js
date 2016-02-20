@@ -15,7 +15,7 @@ color_field.addEventListener("keypress", function(e){
 });
 
 function createDivs() {
-  for (var i = 0; i < 21; i++) {
+  for (var i = 0; i < 8000; i++) {
     var newDiv = document.createElement("div");
     newDiv.className = "square";
     document.body.appendChild(newDiv);
@@ -25,7 +25,7 @@ function createDivs() {
 function colorOnClick (){
   var squares = document.querySelectorAll(".square");
     for (var i=0;i<squares.length;i++){
-        squares[i].addEventListener('click', function(){
+        squares[i].addEventListener('mouseover', function(){
           this.style.background = color_field.value;
         });
     }
