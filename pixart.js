@@ -14,22 +14,21 @@ color_field.addEventListener("keypress", function(e){
   }
 });
 
-
-
-
-function createDiv() {
+function createDivs() {
   for (var i = 0; i < 21; i++) {
     var newDiv = document.createElement("div");
     newDiv.className = "square";
     document.body.appendChild(newDiv);
   }
 }
-createDiv();
 
-var squares = document.querySelector(".square");
-
-
-
-squares.addEventListener("click", function() {
-  squares.style.background = "green";
-});
+function colorOnClick (){
+  var squares = document.querySelectorAll(".square");
+    for (var i=0;i<squares.length;i++){
+        squares[i].addEventListener('click', function(){
+          this.style.background = "green";
+        });
+    }
+}
+createDivs();
+colorOnClick();
