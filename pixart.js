@@ -20,21 +20,15 @@ userInput.addEventListener('keypress', function (e) {
     }
 });
 
-
 function appendSquare() {
-  newDiv = document.createElement("DIV");
-  squareDiv = $(newDiv).addClass("square");
-  $("body").append(squareDiv);
-  document.body.addEventListener("click", changeSquareColor );
+  newDiv = document.createElement('div');
+  newDiv.className = "square";
+  $("body").append(newDiv);
+  newDiv.addEventListener("mouseover", function() {
+    this.style.backgroundColor = userInput.value;
+  })
 }
 
-for (var i = 0; i < 20; i++){
+for (var i = 0; i < 8000; i++){
   appendSquare()
 }
-
-var addSquares = document.body.querySelectorAll(".square")
-
-  function changeSquareColor() {
-    addSquares.style.backgroundColor = userInput.value;
-    //event.preventDefault()
-  }
