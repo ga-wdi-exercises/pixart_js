@@ -10,7 +10,7 @@ for (var i = 2; i < 8000; i++) {
   var extraDiv = document.createElement('div');
   extraDiv.className = 'square'
   document.body.appendChild(extraDiv);
-  extraDiv.addEventListener('click', function() {
+  extraDiv.addEventListener('mouseover', function() {
     this.style.backgroundColor = colorInput.value;
   })
 }
