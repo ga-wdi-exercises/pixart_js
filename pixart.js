@@ -6,7 +6,7 @@ var colorInput = document.getElementById('color-field');
 var colorButton = document.getElementById('set-color');
 
 //create 20 div's with class .square and append them to document.body
-for (var i = 2; i < 20; i++) {
+for (var i = 2; i < 8000; i++) {
   var extraDiv = document.createElement('div');
   extraDiv.className = 'square'
   document.body.appendChild(extraDiv);
