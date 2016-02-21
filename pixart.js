@@ -11,7 +11,7 @@ for (var i = 2; i < 20; i++) {
   extraDiv.className = 'square'
   document.body.appendChild(extraDiv);
   extraDiv.addEventListener('click', function() {
-    this.style.backgroundColor = 'green';
+    this.style.backgroundColor = colorInput.value;
   })
 }
 
@@ -20,6 +20,7 @@ for (var i = 2; i < 20; i++) {
 //change brush box color when colorButton is clicked...
 colorButton.addEventListener('click', buttonTrigger)
 colorInput.addEventListener('keydown', keyTrigger)
+
 
 //event handler functions
 function keyTrigger(e) {
