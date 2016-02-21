@@ -10,6 +10,9 @@ for (var i = 2; i < 20; i++) {
   var extraDiv = document.createElement('div');
   extraDiv.className = 'square'
   document.body.appendChild(extraDiv);
+  extraDiv.addEventListener('click', function() {
+    this.style.backgroundColor = 'green';
+  })
 }
 
 
