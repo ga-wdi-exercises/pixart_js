@@ -29,15 +29,8 @@ function addSquares() {
 }
 
 // Add functionality so that when I click on each "square", it changes the color of that individual square to "green"
+// Modify your code so that when I click on each "square", it changes to the color I set using my input instead of "green" every time.
 function clickSquare(event) {
   event.preventDefault();
-  //color = "green";
-  event.target.style.backgroundColor = "green";
+  event.target.style.backgroundColor = color;
 }
-
-
-//Simple event to change square's color to green when buttoned is clicked.
-// button.addEventListener("click", function(event) {
-//   event.preventDefault();
-//   bigSquare.style.backgroundColor = "green";
-// });
