@@ -19,7 +19,7 @@ function setColor(event) {
   bigSquare.style.backgroundColor = color;
 }
 
-//Create 20 divs of the "square" class and append them to the body
+//Create 8000 divs of the "square" class and append them to the body
 function addSquares() {
   for (var i = 0; i < 8000; i++) {
     var newDiv = document.createElement("div");
