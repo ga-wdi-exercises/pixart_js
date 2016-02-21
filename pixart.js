@@ -5,11 +5,20 @@ var colorBox = document.querySelector('.brush');
 var colorInput = document.getElementById('color-field');
 var colorButton = document.getElementById('set-color');
 
+//create 20 div's with class .square and append them to document.body
+for (var i = 2; i < 20; i++) {
+  var extraDiv = document.createElement('div');
+  extraDiv.className = 'square'
+  document.body.appendChild(extraDiv);
+}
+
+
 //EVENT HANDLERS
 //change brush box color when colorButton is clicked...
 colorButton.addEventListener('click', buttonTrigger)
 colorInput.addEventListener('keydown', keyTrigger)
 
+//event handler functions
 function keyTrigger(e) {
   if(event.code == 'Enter') {
     e.preventDefault();
@@ -17,7 +26,6 @@ function keyTrigger(e) {
     console.log('enter key was pressed. color: ' + colorInput.value);
   }
 }
-
 function buttonTrigger(e) {
   e.preventDefault();
   //why doesn't this work as expected on click ...?:
