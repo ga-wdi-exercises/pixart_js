@@ -32,7 +32,7 @@ for (var i = 0; i < 20; i++){
 }
 
 var addsquares = document.querySelectorAll(".square")
-//document.body.addEventListener("click", changeBrushColor );
+document.body.addEventListener("click", changeSquareColor );
 
   function changeSquareColor() {
     addsquares.style.backgroundColor = "green";
