@@ -9,7 +9,7 @@ playPixart();
 function playPixart() {
   button.addEventListener("click", setColor); //This also works when "enter" is pressed on the keyboard. Why? Should I create a separate event to ensure this event happens for keying enter on any computer?
   addSquares();
-  pixels.addEventListener("click", clickSquare);
+  pixels.addEventListener("mouseover", clickSquare);
 }
 
 //When I click the "Set Color" button, it should change the color of the "brush" box to the color I specify in the input field.
@@ -21,7 +21,7 @@ function setColor(event) {
 
 //Create 20 divs of the "square" class and append them to the body
 function addSquares() {
-  for (var i = 0; i < 20; i++) {
+  for (var i = 0; i < 8000; i++) {
     var newDiv = document.createElement("div");
     newDiv.classList.add("square");
     pixels.appendChild(newDiv);
