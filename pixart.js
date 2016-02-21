@@ -5,11 +5,32 @@ button.addEventListener("click", change);
 //var color = document.querySelector("#color-field");
 
 //append 20 divs (for loop)
-for(var i = 0; i<20; i++){
+// for(var i = 0; i<20; i++){
+//   //var newness;
+//   document.createElement("div");
+//   $("body").append('<div class="square" id="div'+i+'"></div>');
+//   //var newness = document.getElementsByClassName("square");
+//   //newness[i].addEventListener("click", greenSquare);
+//
+//   //.addEventListener("click", greenSquare);
+// }
+
+
+for(var i = 0; i<=20; i++){
   document.createElement("div");
   $("body").append('<div class="square"></div>');
-}
 
+  //change square to .green when clicked
+  var index = document.querySelectorAll(".square");
+  for(var i=0; i< index.length; i++) {
+    (function(i) {
+      index[i].addEventListener("click", function() {
+        index[i].style.backgroundColor = "green";
+      });
+      //why is this (i) needed?
+    })(i);
+  }
+}
 
 //change color
 function change(event){
