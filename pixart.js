@@ -8,4 +8,7 @@ function setBrushBoxColor(event) {
 }
 
 setColor.addEventListener("click", setBrushBoxColor);
+colorField.addEventListener("keypress", function(event) {
+    if (event.keyCode === 13) setBrushBoxColor(event);
+});
 
