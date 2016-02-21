@@ -4,17 +4,17 @@ var colorInput = document.querySelector("#color-field");
 var color = "#1B4370";
 
 function startGame() {
-  button.addEventListener("click", setColor);
-  colorInput.addEventListener("keydown", enterColor);
-}
+  button.addEventListener("click", setColorButton);
+  colorInput.addEventListener("keydown", enterColorInput);
+};
 
-enterColor = function() {
+enterColorInput = function() {
   var color = colorInput.value;
 
   brush.style.backgroundColor = color;
-}
+};
 
-setColor = function() {
+setColorButton = function() {
   event.preventDefault();
 
   var color = colorInput.value;
@@ -22,4 +22,15 @@ setColor = function() {
   brush.style.backgroundColor = color;
 };
 
+createNewBrushes = function() {
+  for (var i=0; i<20; i++) {
+    var newBrush = document.createElement("div");
+
+    newBrush.className("square");
+
+    newBrush.appendChild(document.body);
+  };
+};
+
 startGame();
+createNewBrushes();
