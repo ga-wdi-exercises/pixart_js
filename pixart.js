@@ -35,6 +35,6 @@ for (var i = 0; i < 20; i++){
 var addSquares = document.body.querySelectorAll(".square")
 
   function changeSquareColor() {
-    addSquares.style.backgroundColor = "green";
+    addSquares.style.backgroundColor = userInput.value;
     //event.preventDefault()
   }
