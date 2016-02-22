@@ -6,7 +6,7 @@ var numPxls = 20;
 createGrid();
 
 colorField.addEventListener("keypress", checkKey);
-colorBtn.addEventListener("click",changeColor);
+colorBtn.addEventListener("click",changeBrshColor);
 
 function checkKey(event){
   if(event.keyCode == 13){
@@ -14,7 +14,7 @@ function checkKey(event){
   }
 }
 
-function changeColor(event){
+function changeBrshColor(event){
   event.preventDefault();
   brushBox.style = "background-color: " + colorField.value; +";";
   colorField.value = "";
@@ -26,6 +26,11 @@ function createGrid(){
     div = document.createElement('div');
     div.className = "square";
     document.body.appendChild(div);
+    div.addEventListener("click", changeColor);
   }
+}
+
+function changeColor(event){
+  event.target.style = "background-color: green;";
 
 }
