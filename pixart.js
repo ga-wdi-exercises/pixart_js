@@ -31,6 +31,6 @@ function createGrid(){
 }
 
 function changeColor(event){
-  event.target.style = "background-color: green;";
-
+  var color = window.getComputedStyle(brushBox).backgroundColor;
+  event.target.style = "background-color: " + color + ";";
 }
