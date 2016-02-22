@@ -15,4 +15,11 @@
     e.preventDefault();
     brushColor.style.backgroundColor = colorField.value;
 }
-// console.log('brushColor.backgroundColor');
+console.log('brushColor.backgroundColor');
+
+//create 20 square divs
+for (var i = 0; i<20; i++) {
+  divSquare = document.createElement('div');
+  divSquare.className = "square";
+  $('body').append(divSquare);
+}
