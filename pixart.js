@@ -30,7 +30,13 @@ createNewBrushes = function() {
     newBrush.classList.add("square");
 
     page.appendChild(newBrush);
+
+    newBrush.addEventListener("click", changeBoxColor);
   };
+};
+
+changeBoxColor = function() {
+  this.style.backgroundColor = "green";
 };
 
 startGame();
