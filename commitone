@@ -1,0 +1,15 @@
+
+var button = document.querySelector("#set_color");
+var brush = document.querySelector(".brush");
+var brushList = document.querySelector(".brush_list");
+var colorField = document.querySelector("#color_field");
+var color = "#1B4370";
+
+changeColor();
+
+function changeColor() {
+  document.addEventListener("click", setBrushColor); event.preventDefault();
+  document.addEventListener("mouseover", paintSquare); event.preventDefault();
+  document.addEventListener("mouseover", function() { event.preventDefault();
+
+}
