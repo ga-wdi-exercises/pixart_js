@@ -36,7 +36,7 @@ createNewBrushes = function() {
 };
 
 changeBoxColor = function() {
-  this.style.backgroundColor = "green";
+  this.style.backgroundColor = colorInput.value;
 };
 
 startGame();
