@@ -1,6 +1,6 @@
 var typedColor = document.querySelector("#color-field");
 var form = document.querySelector("#set-color");
-var previewBox = document.getElementsByClassName("brush");
+var previewBox = document.querySelector('.brush');
 var allSquares = document.querySelectorAll("square");
 
 function boxColor(){
@@ -8,13 +8,11 @@ function boxColor(){
     alert("Please type a color into the form field.");
     return false;
   }else{
-    var self = this;
-    for (var b = 0; b < previewBox.length; b++){
-      previewBox[b].style.backgroundColor = typedColor.value;
+      previewBox.style.backgroundColor = typedColor.value;
       event.preventDefault();
     }
   }
-}
+
 
 form.addEventListener("click",boxColor);
 
@@ -29,11 +27,11 @@ form.addEventListener("click",boxColor);
 // }
 
 for(var b = 0; b < 19; b++){
-  var newBox = $("<div class ='brush'/>");
+  var newBox = $("<div class='brush'/>");
   $("body").append(newBox);
   }
 
 $(".brush").click(function(){
-    this.style.backgroundColor = "green";
+    this.style.backgroundColor = typedColor.value;
     event.preventDefault();
   });
