@@ -23,7 +23,7 @@ setColorButton = function() {
 };
 
 createNewBrushes = function() {
-  for (var i=0; i<20; i++) {
+  for (var i=0; i<8000; i++) {
     var newBrush = document.createElement("div");
     var page = document.querySelector(".controls");
 
@@ -31,7 +31,7 @@ createNewBrushes = function() {
 
     page.appendChild(newBrush);
 
-    newBrush.addEventListener("click", changeBoxColor);
+    newBrush.addEventListener("mouseover", changeBoxColor);
   };
 };
 
