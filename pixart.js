@@ -7,10 +7,10 @@ $("#form")[0].addEventListener("submit", function(event){
   brush.style.backgroundColor = colorField.value;
 });
 
-for (var i = 0; i<20; i++) {
+for (var i = 0; i<8000; i++) {
   var divSquare = document.createElement("div");
   divSquare.classList.add("square");
-  divSquare.addEventListener("click", function(){
+  divSquare.addEventListener("mouseover", function(){
     this.style.backgroundColor = colorField.value;
   });
   $("body").append(divSquare);
