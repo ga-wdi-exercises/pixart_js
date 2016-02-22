@@ -21,7 +21,7 @@ var createDivs = function() {
     newDiv.setAttribute("class" , "square");
     document.body.appendChild(newDiv);
     newDiv.addEventListener("click" , function(evt){
-      evt.target.style.backgroundColor = "green";
+      evt.target.style.backgroundColor = colorInput.value;
     })
   }
 }
