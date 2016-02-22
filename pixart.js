@@ -25,10 +25,11 @@ setColorButton = function() {
 createNewBrushes = function() {
   for (var i=0; i<20; i++) {
     var newBrush = document.createElement("div");
+    var page = document.querySelector(".controls");
 
-    newBrush.className("square");
+    newBrush.classList.add("square");
 
-    newBrush.appendChild(document.body);
+    page.appendChild(newBrush);
   };
 };
 
