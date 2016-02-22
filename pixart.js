@@ -16,3 +16,12 @@ function grabInputInfo(){
   event.preventDefault();
   brush.style.background = color_field.value;
 }
+
+for(i=0; i<20; i++){
+  //create an element.
+  var div = document.createElement("div");
+  //put className to div
+  div.className = "square";
+  //append new element to body
+  document.body.appendChild(div);
+}
