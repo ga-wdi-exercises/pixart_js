@@ -1,7 +1,8 @@
 var form = document.getElementById('form');
+var color;
 
 form.addEventListener('submit', function(event){
-  var color =  form.querySelector('#color-field').value;
+  color =  form.querySelector('#color-field').value;
   document.querySelector('.brush').style.background = color;
   event.preventDefault();
 });
@@ -14,5 +15,5 @@ for(var i = 0; i < 20; i++){
 }
 
 function colorSquare(){
-  this.style.background = "green";
+  this.style.background = color;
 }
