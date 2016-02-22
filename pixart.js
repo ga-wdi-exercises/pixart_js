@@ -1,10 +1,14 @@
 var button = document.querySelector("button");
 var input = document.querySelector("input");
+var color_field = document.querySelector("#color-field");
+var brush = document.querySelector(".brush");
 
-$("button")[0].addEventListener("click", grabInputInfo);
+
+
+button.addEventListener("click", grabInputInfo);
 
 //I want to pull information from input.
 function grabInputInfo(){
-  console.log(input);
-  return input;
+  event.preventDefault();
+  brush.style.background = color_field.value;
 }
