@@ -1,7 +1,7 @@
 var brushBox = document.getElementsByClassName("brush")[0];
 var colorField = document.getElementById("color-field");
 var colorBtn = document.getElementById("set-color");
-var numPxls = 20;
+var numPxls = 8000;
 
 createGrid();
 
@@ -26,7 +26,7 @@ function createGrid(){
     div = document.createElement('div');
     div.className = "square";
     document.body.appendChild(div);
-    div.addEventListener("click", changeColor);
+    div.addEventListener("mouseover", changeColor);
   }
 }
 
