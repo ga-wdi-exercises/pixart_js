@@ -23,3 +23,20 @@ button.addEventListener("click", "keypress", function(event){
   brush.style.backgroundColor  = color;
 
 });
+
+for(i=0; i<20;i++) {
+    var square = $("<div class = 'square'/> ");
+    $("body").append(square);
+}
+//
+//     document.getElementById('board').appendChild(board);
+// }
+
+
+// function createSquares(num) {
+//   for (i = 0; i <= num; i++) {
+//  div = document.createElement("div");
+//  document.body.appendChild(div);
+//  div.className = "square";
+//  div.addEventListener("click", changeColor);
+//  }}
