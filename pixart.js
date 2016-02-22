@@ -11,7 +11,7 @@ var button = document.querySelector("#set-color");
 var brush = document.querySelector(".brush");
 
 
-button.addEventListener("click", "keypress", function(event){
+button.addEventListener("click", function(event){
   // stop the button from doing its default action
   // OR prevent it from doing its normal action
 
@@ -23,20 +23,8 @@ button.addEventListener("click", "keypress", function(event){
   brush.style.backgroundColor  = color;
 
 });
-
-for(i=0; i<20;i++) {
+//Code to get a div boxes to paint
+for(i=0; i<8000;i++) {
     var square = $("<div class = 'square'/> ");
     $("body").append(square);
 }
-//
-//     document.getElementById('board').appendChild(board);
-// }
-
-
-// function createSquares(num) {
-//   for (i = 0; i <= num; i++) {
-//  div = document.createElement("div");
-//  document.body.appendChild(div);
-//  div.className = "square";
-//  div.addEventListener("click", changeColor);
-//  }}
