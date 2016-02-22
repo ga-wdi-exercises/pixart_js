@@ -1,17 +1,47 @@
 @import url(http://fonts.googleapis.com/css?family=Monoton);
 
-.brush {
+.brush1 {
   width: 100px;
   height: 100px;
-  background: #1B4370;
-  margin: 15px auto;
+  background: gray;
+  margin: 15px;
 }
 
+.brush2 {
+  width: 100px;
+  height: 100px;
+  background: gray;
+  margin: 15px;
+}
+
+.brush3 {
+  width: 100px;
+  height: 100px;
+  background: gray;
+  margin: 15px;
+}
+
+.ulbox{
+  display:flex;
+  justify-content:center;
+}
+
+ul{
+  display: flex;
+  width: 500px;
+  margin: auto 0;
+  position: relative;
+  justify-content: center;
+}
+
+li {
+  list-style-type: none;
+}
 .square {
   float: left;
   width: 10px;
   height: 10px;
-  background: #E7E5DB;
+  background: black;
   margin: 0;
 }
 
