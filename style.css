@@ -8,11 +8,14 @@
 }
 
 .square {
-  float: left;
-  width: 10px;
-  height: 10px;
-  background: #E7E5DB;
+
+  width: 50px;
+  height: 50px;
+  background: red;
   margin: 0;
+  display: inline-block;
+  margin: 2px;
+  padding: 5px;
 }
 
 h1 {
