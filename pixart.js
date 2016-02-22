@@ -16,10 +16,8 @@ function changeBackgroundColor(event) {
 }
 
 //create 20 divs
-newDivs = function(){
-  for (var i=0; i < 20; i++){
+for (var i = 0; i < 20; i++){
     var newBrushes = document.createElement("div");
-    newBrushes.className("square");
+    newBrushes.className = (".brush");
     document.body.appendChild(newBrushes);
-  }
-};
+}
