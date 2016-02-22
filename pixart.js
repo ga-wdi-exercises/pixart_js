@@ -1,16 +1,18 @@
-  var colorField = document.getElementById("color-field").value;
+  var colorField = document.getElementById("color-field");
   var setColor = document.getElementById("set-color");
 
   var brushColor = document.querySelector(".brush");
 
-var pixart = {
+
   // store text input in a var and use it to manipulate square(brush) color when set-color button is clicked.
+  setColor.addEventListener('onClick', userColor); // throws errors on '.' in console
 
 // perfom function when button is clicked
-  setColor.addEventListener('click', userColor);
+  setColor.addEventListener('keydown', userColor);
 
 // function to set brush color to user input
-  userColor: function (){
+  function userColor() {
     e.preventDefault();
-    brushColor.backgroundColor = colorField;
+    brushColor.style.backgroundColor = colorField.value;
 }
+// console.log('brushColor.backgroundColor');
