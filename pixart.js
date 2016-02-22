@@ -11,7 +11,7 @@ for (var i = 0; i<20; i++) {
   var divSquare = document.createElement("div");
   divSquare.classList.add("square");
   divSquare.addEventListener("click", function(){
-    this.style.backgroundColor = "green";
+    this.style.backgroundColor = colorField.value;
   });
   $("body").append(divSquare);
 }
