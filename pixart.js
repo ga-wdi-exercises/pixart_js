@@ -18,11 +18,14 @@
 console.log('brushColor.backgroundColor');
 
 //create 20 square divs
-for (var i = 0; i<20; i++) {
+for (var i = 0; i<8000; i++) {
   divSquare = document.createElement('div');
   divSquare.className = "square";
   $("body").append(divSquare);
-  divSquare.addEventListener("onClick", function(){
+  divSquare.addEventListener("mouseover", function(){
     this.style.backgroundColor = colorField.value;
   })
+  // function squareSize(){
+  //   document.body.querySelector(.square)
+  // }
 }
