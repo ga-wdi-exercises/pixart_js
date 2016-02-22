@@ -26,10 +26,10 @@ colorField.addEventListener("keypress", function(event) {
 });
 
 
-var numSquares = 20, newSquare, i;
+var numSquares = 8000, newSquare, i;
 for (i = 0; i < numSquares; i++) {
     newSquare = createNewElement("div", "square");
-    newSquare.addEventListener("click", function(event) {
+    newSquare.addEventListener("mouseover", function(event) {
         setSquareColor(event);
     });
     document.body.appendChild(newSquare);
