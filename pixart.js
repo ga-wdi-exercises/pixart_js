@@ -2,7 +2,6 @@ var brush = document.querySelector(".brush");
 var button = document.querySelector("#set-color");
 var form = document.querySelector("#form");
 var body = document.querySelector("body");
-var div;
 
 function changeBrushButton(event) {
   event.preventDefault();
@@ -27,7 +26,7 @@ function createSquares(num) {
 }
 
 function changeColor(event) {
-    event.target.style.backgroundColor = "green";
+    event.target.style.backgroundColor = brush.style.backgroundColor;
 }
 
 button.addEventListener("click", changeBrushButton);
