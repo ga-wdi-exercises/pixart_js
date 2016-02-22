@@ -6,11 +6,13 @@ form.addEventListener('submit', function(event){
   event.preventDefault();
 });
 
-var squareDiv = document.createElement('div');
-squareDiv.setAttribute('class', '.square');
-
 for(var i = 0; i < 20; i++){
   var squareDiv = document.createElement('div');
-  squareDiv.setAttribute('class', '.square');
+  squareDiv.classList.add('square');
+  squareDiv.addEventListener('click', colorSquare);
   document.body.appendChild(squareDiv);
+}
+
+function colorSquare(){
+  this.style.background = "green";
 }
