@@ -1,0 +1,7 @@
+function makeCanvas() {
+  for(var i = 0; i < 10; i++) {
+    var xDiv = document.createElement("div");
+    newDiv.classList.add("square");
+    document.appendChild(x.Div);
+  }
+}
