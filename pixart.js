@@ -22,7 +22,7 @@ for (var i = 0; i<20; i++) {
   divSquare = document.createElement('div');
   divSquare.className = "square";
   $("body").append(divSquare);
-  divSquare.addEventListener("onClick", function{
-    this.style.backgroundColor = "green";
+  divSquare.addEventListener("onClick", function(){
+    this.style.backgroundColor = colorField.value;
   })
 }
