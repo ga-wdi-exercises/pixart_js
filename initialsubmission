@@ -1,0 +1,19 @@
+
+var button = document.querySelector("#set-color");
+var colorField = document.querySelector("#color-field");
+var brush = document.querySelector(".brush");
+var brushList = document.querySelector(".brush-list");
+var color = "#1B4370";
+
+
+
+function changeColor() {
+  document.addEventListener("click", setBrushColor); event.preventDefault();
+  document.addEventListener("mouseover", paintSquare); event.preventDefault();
+  document.addEventListener("mouseover", function() { event.preventDefault();
+
+}
+function setBrushColor(event) {
+  event.preventDefault();
+  color = colorField.value;
+  brush.style.backgroundColor = green;
