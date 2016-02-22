@@ -11,7 +11,7 @@ var button = document.querySelector("#set-color");
 var brush = document.querySelector(".brush");
 
 
-button.addEventListener("click", function(event){
+button.addEventListener("click", "keypress", function(event){
   // stop the button from doing its default action
   // OR prevent it from doing its normal action
 
