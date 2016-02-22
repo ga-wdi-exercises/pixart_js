@@ -1,7 +1,8 @@
 var brush = document.querySelector(".brush");
 var button = document.querySelector("#set-color");
 var form = document.querySelector("#form");
-
+var body = document.querySelector("body");
+var div;
 
 function changeBrushButton(event) {
   event.preventDefault();
@@ -18,10 +19,15 @@ function changeBrushKey(event) {
 
 function createSquares(num) {
   for (i = 0; i <= num; i++) {
-    var div = document.createElement("div");
+    div = document.createElement("div");
     document.body.appendChild(div);
     div.className = "square";
+    div.addEventListener("click", changeColor);
   }
+}
+
+function changeColor(event) {
+    event.target.style.backgroundColor = "green";
 }
 
 button.addEventListener("click", changeBrushButton);
