@@ -16,11 +16,11 @@ var setColorClick = function(){
 // If possible, additional explanation of `evt.target` would be appreciated!
 
 var createDivs = function() {
-  for (i = 0; i < 20; i++) {
+  for (i = 0; i < 8000; i++) {
     var newDiv = document.createElement("div");
     newDiv.setAttribute("class" , "square");
     document.body.appendChild(newDiv);
-    newDiv.addEventListener("click" , function(evt){
+    newDiv.addEventListener("mouseover" , function(evt){
       evt.target.style.backgroundColor = colorInput.value;
     })
   }
