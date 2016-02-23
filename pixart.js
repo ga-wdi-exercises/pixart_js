@@ -29,33 +29,16 @@ for(i=0; i<5000;i++) {
     square = document.createElement("div");
     document.body.appendChild(square);
     square.className = "square";
+    //code to paint div boxes green when i click them.
+    // * Add functionality so that when I click on each "square", it changes the color of that individual square to "green"
+    //   * **Hint**: either add the event listener while creating the squares, or listen for events on the `body` element
     square.addEventListener("click",  function (evt){
-    evt.target.style.backgroundColor = "green";
+    evt.target.style.backgroundColor = brush.style.backgroundColor;
   });
 }
 }
 createSquare();
 
-
-//      $("<div class = 'square'/> ");
-//     $("body").append(square);
+// ###Commit 5
 //
-// }
-
-
-
-
-
-//code to paint div boxes green when i click them.
-// * Add functionality so that when I click on each "square", it changes the color of that individual square to "green"
-//   * **Hint**: either add the event listener while creating the squares, or listen for events on the `body` element
-// var canvas = document.querySelectorAll(".square");
-//
-// function changeColor(evt){
-//   evt.target.style.backgroundColor = "green";
-// }
-  // preventDefault();
-  // var color = colorField.value;
-  // square.style.backgroundColor = green;
-
-// });
+// * Modify your code so that when I click on each "square", it changes to the color I set using my input instead of "green" every time.
