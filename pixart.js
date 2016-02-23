@@ -1,4 +1,4 @@
-var form = document.getElementById('form');
+var form = document.querySelector('form');
 var input = document.querySelector('#color-field');
 var brush = document.querySelector('.brush');
 
