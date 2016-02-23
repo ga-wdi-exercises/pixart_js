@@ -10,21 +10,52 @@ var colorField = document.querySelector("#color-field");
 var button = document.querySelector("#set-color");
 var brush = document.querySelector(".brush");
 
-
-button.addEventListener("click", function(event){
   // stop the button from doing its default action
   // OR prevent it from doing its normal action
 
   //get color from the colorField
   // and assign it as the color on the brush
+  button.addEventListener("click", function(event){
   event.preventDefault();
   var color = colorField.value;
   console.log(color);
   brush.style.backgroundColor  = color;
-
 });
-//Code to get a div boxes to paint
-for(i=0; i<8000;i++) {
-    var square = $("<div class = 'square'/> ");
-    $("body").append(square);
+
+//Code to get a div boxes
+//Create 20 divs of the "square" class and append them to the body
+function createSquare() {
+for(i=0; i<5000;i++) {
+    square = document.createElement("div");
+    document.body.appendChild(square);
+    square.className = "square";
+    square.addEventListener("click",  function (evt){
+    evt.target.style.backgroundColor = "green";
+  });
 }
+}
+createSquare();
+
+
+//      $("<div class = 'square'/> ");
+//     $("body").append(square);
+//
+// }
+
+
+
+
+
+//code to paint div boxes green when i click them.
+// * Add functionality so that when I click on each "square", it changes the color of that individual square to "green"
+//   * **Hint**: either add the event listener while creating the squares, or listen for events on the `body` element
+// var canvas = document.querySelectorAll(".square");
+//
+// function changeColor(evt){
+//   evt.target.style.backgroundColor = "green";
+// }
+  // preventDefault();
+  // var color = colorField.value;
+  // square.style.backgroundColor = green;
+
+// });
