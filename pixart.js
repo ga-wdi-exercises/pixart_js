@@ -7,10 +7,10 @@ form.addEventListener('submit', function(event){
   event.preventDefault();
 });
 
-for(var i = 0; i < 20; i++){
+for(var i = 0; i < 8000; i++){
   var squareDiv = document.createElement('div');
   squareDiv.classList.add('square');
-  squareDiv.addEventListener('click', colorSquare);
+  squareDiv.addEventListener('mouseover', colorSquare);
   document.body.appendChild(squareDiv);
 }
 
