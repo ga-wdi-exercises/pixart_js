@@ -1,10 +1,15 @@
+var button = document.getElementById("set-color");
+var userColor = document.getElementById("color-field");
 
-var setColor = document.querySelector("#set-color");
-console.log(setColor);
+var brush = document.querySelector("brush");
 
-setColor.addEventListener("click", function(){
-      UserColorChoice
-      document.brush.style.background = UserColorChoice = (input);
-      console.log(UserColorChoice);
-    })
-//* okay... i really know that this doesn't work but I'm still kinda proud of it because something happens in the console log... I have to google that whole (event)default thing... brb. <--commit#1 
+var setColor = function(){
+  button.addEventListener("click", function(event){
+    event.preventDefault(); //googled this - not sure exactly what it is doing still.
+    document.brush.style.backgroundColor = userColor.value;
+    console.log(setColor)
+  });
+};
+============
+
+//great now nothing works. Back to the drawing board... 
