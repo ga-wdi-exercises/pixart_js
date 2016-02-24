@@ -9,10 +9,10 @@ color = form.querySelector('#color-field').value
 });
 
 
-for(var i = 0; i < 20; i++){
+for(var i = 0; i < 8000; i++){
   var squareDiv = document.createElement('div');
   squareDiv.classList.add('square');
-  squareDiv.addEventListener('click', colorSqure);
+  squareDiv.addEventListener('mouseover', colorSqure);
   document.body.appendChild(squareDiv);
 }
 function colorSqure(){
