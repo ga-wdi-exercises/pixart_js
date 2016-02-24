@@ -5,7 +5,7 @@ $("button")[0].addEventListener("click", function() {
   document.body.querySelector("input").value;
 });
 
-//appends 20 div squares using loop, woohoo! Thanks Stack Overflow!
+//appends 8000 div squares using loop, woohoo! Thanks Stack Overflow!
 for (var i = 0; i < 8000; i++) {
   var newDiv = document.createElement("div");
   newDiv.setAttribute("class", "square");
