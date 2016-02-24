@@ -20,9 +20,9 @@ function enterButtonColor() {
 //CREATE 20 NEW DIVS of class "square"//
 function createDivs() {
   for (var i=0; i<20; i++) {
-  var newDivs = document.createElement("div");
+  var newDiv = document.createElement("div");
   div.className = "square";
-  document.body.appendElement(div);
+  document.body.appendChild(newDiv);
 };
 }
 
