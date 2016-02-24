@@ -15,3 +15,6 @@ for(var i = 0; i<20; i++){
   squareDiv.setAttribute('class', '.square');
   document.body.appendChild(squareDiv);
 }
+function colorSquare() {
+  this.style.background = "green";
+}
