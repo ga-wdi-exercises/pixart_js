@@ -4,7 +4,8 @@ var brush = document.querySelector(".brush");
 var colorField = document.querySelector("#color-field");
 var color = "#1B4370"
 
-
+button.addEventListener("click", changeColor);
+colorField.addEventListener("keypress", enterButtonColor);
 
 function changeColor(event){
       event.preventDefault();
@@ -19,14 +20,17 @@ function enterButtonColor() {
 
 //CREATE 20 NEW DIVS of class "square"//
 function createDivs() {
-  for (var i=0; i<20; i++) {
+  for (var i= 0; i<20; i++) {
   var newDiv = document.createElement("div");
-  div.className = "square";
+  newDiv.className = "square";
   document.body.appendChild(newDiv);
+  newDiv.addEventListener("click", changeDivColor);
 };
 }
 
-
+function changeDivColor(){
+  newDiv.style.background = color.value;
+};
 
 ///function to start the whole game
 function startGame(){
