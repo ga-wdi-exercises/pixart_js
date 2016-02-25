@@ -1,5 +1,10 @@
-var colors =document.querySelector(".color");
-var square =document.querySelector(".square");
+var setColors =document.querySelector(".color");
+var colorField =document.querySelector(".square");
 var brush = document.querySelector(".brush");
 
-$("body")[0].addEventlistener("clicks", handleClickEvent);
+$("button")[0].addEventlistener("clicks", handleClickEvent);
+$("colorField")[0].addEventlistener("clicks", handleClickEvent);
+
+for (var i = 0; i < 20; i ++){
+  div= div.getElementById("colorField");
+}
