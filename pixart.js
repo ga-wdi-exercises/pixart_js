@@ -37,9 +37,15 @@ createDivs();
 var square = document.getElementsByClassName("square");
 
 var paintSquare = function() {
-  square.style.backgroundColor = input.value;   //Background color is undefined.  
+  square.style.backgroundColor = input.value;   //Background color is undefined.
 };
 
-  for (var i = 0; i < square.length; i++) {
-  square[i].addEventListener("mouseover", paintSquare);
-  }
+  //for (var i = 0; i < square.length; i++) {
+  //square[i].addEventListener("mouseover", paintSquare);
+  //}
+
+//Commit #5 - Click on squares
+
+for (var i = 0; i < square.length; i++) {
+square[i].addEventListener("click", paintSquare);     //Background color is undefined.
+}
