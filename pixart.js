@@ -23,7 +23,7 @@ button.addEventListener("onkeypress", changeColor);
 //Commit #3 - Create 20 divs
 
 var createDivs = function() {
-  for (var i = 0; i < 20; i ++) {
+  for (var i = 0; i < 8000; i ++) {
     var newDiv = document.createElement("div");
     newDiv.setAttribute("class", "square");
     document.body.appendChild(newDiv);
