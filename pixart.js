@@ -1,17 +1,26 @@
 //enter text
 
-//var textColor = document.getElementByID("color-field");
-var brush = document.getElementsByClassName(".brush");
+var textColor = document.getElementById("color-field");
+var brush = document.querySelector(".brush");
+var button = document.getElementById("set-color");
+var input = document.querySelector("#color-field"); //Can you put IDs in a query selector?
+var clickButton = document.querySelector("button");
+console.log(button);
 
-//click button and apply change of event to click.
+//Commit #1 - click button and apply change of event to click.
 
-var button = document.querySelector("button");
-var handleClickEvent = function() {
-  document.getElementsByClassName(div.brush).background = textColor;
+  //When "set color" button is clicked,  .brush class background color changes to the color word typed in input element.documentQuerySelector()
+var changeColor = function() {
+  brush.style.backgroundColor = input.value;  //I had to look at the answer to to get the correct syntax "brush.style.backgroundColor" and "input.value". Still, I cannot get it to work.
 };
-button.addEventListener("click", handleClickEvent);
 
-///Create 20 divs
+button.addEventListener("click", changeColor);
+
+//Commit #2 - enter key
+
+button.addEventListener("onkeypress", changeColor);
+
+//Commit #3 - Create 20 divs
 
 var createDivs = function() {
   for (var i = 0; i < 20; i ++) {
@@ -20,5 +29,3 @@ var createDivs = function() {
     document.body.appendChild(newDiv);
   }
 };
-
-createDivs();
