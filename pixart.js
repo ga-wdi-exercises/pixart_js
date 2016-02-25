@@ -5,12 +5,12 @@ $("form").submit(function(event){
 });
 
 output = "";
-for (var i = 0; i<20 ; i++){
-  board += '<div class = "square"> </div>'
+for (var i = 0; i<8000 ; i++){
+  output += '<div class = "square"> </div>'
 }
-document.getElementsByTagName("body")[0].innerHTML = output;
-$("body").mouseover(function(){
-
-
-
+document.getElementById("brush").innerHTML = output;
+$(".brush").mouseover(function(event){
+  if(event.target.classList.contains("square")){
+    $(event.target).css("background",$("#color-field").val())
+  }
 });
