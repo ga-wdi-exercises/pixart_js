@@ -7,6 +7,13 @@
   margin: 15px auto;
 }
 
+.palette {
+  width: 25px;
+  height: 25px;
+  background: #1B4370;
+  margin: 15px auto;
+}
+
 .square {
   float: left;
   width: 10px;
