@@ -3,3 +3,9 @@ var square = document.querySelector(".square");
 var form = document.querySelector(".form");
 var input = document.querySelector(".set-color");
 var controls = document.querySelector(".controls");
+
+input.addEventListener("click", changeColor);
+
+function color () {
+input.innerHTML = brush;
+}
