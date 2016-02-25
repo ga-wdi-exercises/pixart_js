@@ -6,5 +6,11 @@ $("button")[0].addEventlistener("clicks", handleClickEvent);
 $("colorField")[0].addEventlistener("clicks", handleClickEvent);
 
 for (var i = 0; i < 20; i ++){
-  div= div.getElementById("colorField");
+  var = div.createElement("div");
+}
+
+// function to click and change color
+function colorChange(){
+  document.getElementById('change').onclick = colorChange;
+
 }
