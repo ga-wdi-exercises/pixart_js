@@ -15,7 +15,9 @@ var setColorClick = function(){
      var newDiv = document.createElement("div");
      newDiv.setAttribute("class" , "square");
      document.body.appendChild(newDiv);
-   }
- }
- setColorClick();
- createDivs();
+     newDiv.addEventListener("click" , function(evt){
+       evt.target.style.backgroundColor = "green";
+     })
+    }}
+  }}
+// does lines 20-22 even make sense doing it this way? or is it just something you get use to seeing after reading code a lot more?
