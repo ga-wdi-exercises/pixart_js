@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+	
+		<title></title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<link rel="stylesheet" type="text/css" href="http://ryanwaite28.github.io/my-cdn/css/bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+		<link rel="stylesheet" type="text/css" media="only screen and (max-width: 785px)" href="mobile-style.css">
+		<link rel="icon" type="image/" href=""/>
+		<script src="http://ryanwaite28.github.io/my-cdn/js/angular.js"></script>
+		<script src="http://ryanwaite28.github.io/my-cdn/js/jquery.js"></script>
+		<script src="script.js"></script>
+		
+	</head>
+	
+	<body ng-app="App" ng-controller="masterCtrl">
+	
+		<div class = "container">
+		<header class="row">
+		<div class="col-xs-12">
+		<h1 class="text-center">Daily News</h1>
+		<h3>{{search}}</h3>
+		</div>
+		</header>
+		
+		<section class="row">
+		<div class="col-xs-4">
+		<h2>News Search Query</h2>
+		
+		<input id="query" type="text" placeholder="Query"/><br>
+		<input ng-model="used" id="querys" type="text" placeholder="Filter"/><br>
+		<button type="sumbit" ng-click="loadnews()">Submit</button>
+		</div>
+		<div class="col-xs-8">
+		<ul>
+		<li ng-repeat="dreams in access | filter: {headline: used}">
+		<h1>{{dreams.headline}}</h1>
+		<p>{{dreams.snippet}}</p>
+		<p>{{dreams.date}}</p>
+		<a href="{{dreams.url}}">Link to site</a>
+		
+		</li>
+		</ul>
+		</div>
+		</section>
+		
+		</div>
+		
+	</body>
+
+</html>
