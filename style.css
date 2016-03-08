@@ -26,5 +26,8 @@ h1 {
 }
 
 body {
-  background-image: url('Pixart Homework.png');
+  background-color: yellow;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
