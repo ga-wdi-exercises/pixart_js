@@ -5,7 +5,11 @@ console.log("clicked");
 $(".brush").css("background-color", color)
 })
 
-
+for (var i =0; i < 20; i++) {
+var div = $("<div class=square></div>")
+console.log(div)
+$("body").append(div)
+}
 
 
 // var brush = $(".brush");
