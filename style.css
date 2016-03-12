@@ -8,11 +8,11 @@
 }
 
 .square {
-  position: absolute;
   width: 10px;
   height: 10px;
-  background: yellow;
+  background: white;
   margin: 0;
+  float: left;
 }
 
 h1 {
@@ -26,7 +26,7 @@ h1 {
 }
 
 body {
-  background-color: yellow;
+  background-color: white;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
