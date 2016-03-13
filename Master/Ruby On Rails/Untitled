@@ -1,0 +1,7 @@
+class Create Artist < ActiveRecord::Migration
+def change
+create_table :artist do |t|
+t.string
+end
+end
+end

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<title></title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<link rel="stylesheet" type="text/css" href="http://ryanwaite28.github.io/my-cdn/css/bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+		<link rel="icon" type="image/" href=""/>
+		<script src="http://ryanwaite28.github.io/my-cdn/js/angular.js"></script>
+		<script src="http://ryanwaite28.github.io/my-cdn/js/jquery.js"></script>
+		<script src="script.js"></script>
+
+	</head>
+
+	<body ng-app="App" ng-controller="masterCtrl"> <!-- Creates angular functions within body of webpage -->
+
+		<div class="container-fluid">
+		<header class="row">
+		<div class="col-xs-12">
+		<h1>Zappy News<span><img class="nytlogo" src="http://static01.nyt.com/images/icons/t_logo_291_black.png" width="50" height="50"/></span></h1>
+		</div>
+		</header>
+
+		<section class="row">
+		<div class="col-xs-12 col-md-4">
+		<h2>News Search Query</h2>
+		
+
+		<input id="query" type="text" placeholder="Search Topic" /><br>
+
+		<input ng-model="used" id="querys" type="text" placeholder="Filter Headline"/><br>
+
+		<button type="sumbit" ng-click="loadnews()">Submit</button>
+		</div>
+
+		<div class="col-md-8 col-xs-12">
+		<ul>
+		<li ng-repeat="dreams in journal | filter: {headline: used}">
+		<h1>{{dreams.headline}}</h1>
+		<p>{{dreams.snippet}}</p>
+		<p>{{dreams.date}}</p>
+		<p>{{dreams.source}}</p>
+		<a href="{{dreams.url}}">Link to site</a>
+<hr>
+		</li>
+		</ul>
+		</div>
+		</section>
+
+		</div>
+
+	</body>
+
+</html>

@@ -1,0 +1,25 @@
+*{
+font-family: 'Libre Baskerville', serif;
+}
+header{
+  border-bottom: 1px solid black;
+}
+h1{
+  padding-top: 20px;
+}
+#info{
+  display: inline-flex;
+  padding: 50px;
+}
+#nyronimg{
+  border-radius: 50px;
+  padding-left: 5px;
+}
+section{
+  margin-top: 5%;
+}
+#description{
+  padding-top: 50px;
+  line-height: 200%;
+  font-size: 15px;
+}

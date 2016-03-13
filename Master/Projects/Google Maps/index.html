@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<title>Location Search</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<link rel="stylesheet" type="text/css" href="http://ryanwaite28.github.io/my-cdn/css/bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+		<link rel="stylesheet" type="text/css" media="only screen and (max-width: 785px)" href="mobile-style.css">
+		<link rel="icon" type="image/" href=""/>
+		<script src="http://ryanwaite28.github.io/my-cdn/js/angular.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtf-sIjNW9AIIuTARItAzr-JWIIq8ElC4&callback=initMap"
+   	async defer></script>
+		<script src="http://ryanwaite28.github.io/my-cdn/js/jquery.js"></script>
+		<script src="script.js"></script>
+
+	</head>
+
+	<body ng-app="myApp" ng-controller="masterCtrl">
+
+		<div class="top-bar">
+
+			<img id="search-icon" src="http://i.imgur.com/Y1ST6Kv.png"/>
+
+			<h2 class="t-text text-center"><b>Google Maps</b></h2>
+
+			<img id="map-icon" src="http://i.imgur.com/IIfm7Gr.png"/>
+
+		</div>
+
+		<div class="grand-container">
+
+			<div class="container-fluid">
+
+				<div style="margin-top: 20px;" class="row">
+
+					<div class="col-md-12">
+
+						<div class="search-div">
+
+							<h3 style="padding: 15px; border-bottom: 1px solid black;" class="text-center">Search</h3><br>
+							<input type="text" id="query" placeholder="Search a Location"/><br>
+							<input type="button" ng-click="loadlocation()" id="s-btn" value="Submit"/><br>
+							<p class="text-center" id="message"></p>
+
+						</div>
+
+					</div>
+
+				</div>
+
+				<br>
+
+				<div class="row">
+
+					<div class="col-md-4">
+
+						<div id="img-div" class="brd-1 img-div">
+							<h3 style="padding: 15px; border-bottom: 1px solid black;" class="text-center">Google StreetView Image</h3>
+							<img id="g-img" src="{{img}}"/>
+						</div>
+
+						<div id="news-div" class="brd-1 news-div">
+
+							<h3 style="padding: 15px; border-bottom: 1px solid black;" class="text-center">News Articles</h3>
+
+						</div>
+
+					</div>
+
+					<div class="col-md-8">
+
+						<div id="mapdiv" class="brd-1 mapdiv">
+
+							<h3 style="padding: 15px; border-bottom: 1px solid black;" class="text-center">Google Maps</h3>
+							<div class="map-div" id="map-div">
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+				<br>
+
+			</div>
+
+		</div>
+
+	</body>
+
+</html>
