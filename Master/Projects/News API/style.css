@@ -1,0 +1,39 @@
+header{
+  background-color: rgba(0, 0, 255, 0.6);
+  text-align: center;
+  color: white;
+  padding: 5px;
+}
+header:hover{
+
+  padding: 20px;
+  background-color: rgba(0, 10 , 210, 0.4);
+  font-size: 60px;
+  font-weight: bolder;
+
+}
+.nytlogo{
+  margin-left: 20px;
+}
+h1{
+  font-size: 30px;
+}
+h2{
+  color: gray;
+}
+section{
+  margin-top: 60px;
+}
+
+
+
+
+
+
+@media only screen and (max-width: 885px) {
+
+section{
+  text-align: center;
+}
+
+}

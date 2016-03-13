@@ -1,0 +1,380 @@
+Ruby Functionality
+
+
+
+
+#  IF, ELSIF, ELSE  #
+
+red = 1
+blue = 2
+green = 3
+
+if red < blue
+  print red
+  end
+  elsif red > blue
+  print blue
+  else
+  print "cool"
+end
+
+#  IF, ELSIF, ELSE  #
+
+
+
+
+
+
+
+
+
+
+
+#   FUNCTIONS
+
+
+def numbers(one)
+   two = one * 3
+   return two
+end
+numbers(6)   |  numbers = 18
+
+
+      Food = "Pizza"
+      Food2 = "Fries"
+
+      def Eat (type)
+          puts "Good" + type
+          end
+      Eat(" "Food) = "Good Pizza"
+      Eat(" "Food2) = "Good Fries"
+
+
+#   FUNCTIONS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#   ARRAYS
+
+ELEMENTS = ["EARTH" , "WIND" , "FIRE"]  |   NUMBERS = [3 , 8 , 7]
+
+    Access array value:      ELEMENTS[2] = FIRE
+    Combine arrays:          COMBINE = ELEMENTS + NUMBERS | ["EARTH" , "WIND" , "FIRE" , 3 , 8 , 7]
+    Remove back index:       ELEMENTS.POP = ["EARTH" , "WIND"]
+    Add to an array:         ELEMENTS.push / << ("AIR") | ["EARTH" , "WIND" , "FIRE" , "AIR"]
+    Change array index:      ELEMENTS[1] = "ICE" | ["EARTH" , "ICE" , "FIRE"]
+    delete array index:      ELEMENTS.delete("EARTH") | ["ICE" , "FIRE"]
+    array length:            Elements.length | 3
+    join array values:       Elements.join(" ")
+       sort numbers:         Num.sort = [3 , 7 , 8]
+       clear array:          num.clear = []
+
+#   ARRAYS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#   HASHES
+
+wdi = {
+   teacher: "John" ,
+   students: [ "Yacko", "Wacko", "Dot" ],
+   schedule: {
+     morning: "Ruby Basics",
+     afternoon: "Enumerables"
+   }
+ }
+
+ Access key:              wdi[:teacher] = "John"
+ Access array key:        wdi[:students] =  [ "Yacko", "Wacko", "Dot" ]
+ Change value pair:       wdi[:teacher] = "Robert"
+ Return all keys:         wdi.keys | returns all keys in Hash
+
+#   HASHES
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#   CONDITIONALS
+
+
+
+
+if(1 > 1)
+    puts "A"
+    elsif(1 == 1)
+    puts "B"
+    else
+    puts"C"
+
+end
+
+         numbers = [ 1, 2, 3, 4, 5 ]
+         numbers.each do |number|
+           puts number * 2
+         end
+         this will print the result:
+         2
+         4
+         6
+         8
+         10
+
+
+#   CONDITIONALS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#   LOOPS
+
+FOR:
+fruits = ["apple", "banana", "cherry"]
+  for fruit in fruits
+    puts fruit
+end
+
+This will produce the following result:
+apple
+banana
+cherry
+
+
+
+
+
+WHILE:
+
+      $i = 0
+      $num = 5
+
+      while $i < $num  do
+         puts("Inside the loop i = #$i" )
+         $i +=2
+      end
+
+      This will produce the following result:
+
+      Inside the loop i = 0
+      Inside the loop i = 2
+      Inside the loop i = 4
+
+
+
+UNTIL:
+
+until $i > $num  do
+     puts("Inside the loop i = #$i" )
+     $i +=1;
+end
+
+
+This will produce the following result:
+
+Inside the loop i = 0
+Inside the loop i = 1
+Inside the loop i = 2
+Inside the loop i = 3
+Inside the loop i = 4
+Inside the loop i = 5
+
+
+TIMES:
+
+10.times do |i|
+  if i == 5
+    break
+  end
+  puts i
+end
+
+This will produce the following result:
+0
+1
+2
+3
+4
+
+
+#   LOOPS
+
+
+
+
+
+
+
+
+
+
+
+
+#   EXTRA
+
+/#{VARIABLE}: ALLOWS TO CONCATENATE NUMBERS WITH STRINGS
+
+EX:
+
+CLASS_NUMBER = 984
+# => 984
+PUTS "I AM TEACHING WDI #{CLASS_NUMBER}"
+
+# I AM TEACHING WDI 984
+
+
+#   EXTRA
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#   Exercises
+
+Get everyone 18 and over in the Club
+if the club has more than 8 people close the Club
+
+
+
+admitted = [ ]
+
+people = [
+  { name: "Jack",  age: 16 },
+  { name: "Sam",   age: 21 },
+  { name: "Jill",  age: 23 },
+  { name: "Paul",  age: 20 },
+  { name: "Mike",  age: 16 },
+  { name: "Stan",  age: 70 },
+  { name: "Chris", age: 17 },
+  { name: "Julie", age: 45 },
+  { name: "Suzy",  age: 65 },
+  { name: "Eli",   age: 28 },
+  { name: "Katie", age: 50 },
+  { name: "Ben",   age: 33 }
+]
+
+
+for person in people do
+  if person[:age] > 18
+      admitted.push(person)
+  end
+  break if admitted.length == 8
+end
+puts admitted
+
+
+for loop to get info on every person in this situation
+and when you get that info for every person over 18
+push to empty admitted array
+and break it if it has past 8 people in length to array
+end it and console.log it to the terminal
+
+
+
+
+names = ["Donald", "Daisy", "Huey", "Duey", "Luey"]
+names.each do |name|
+puts "hello" + name
+end
+
+this is the result:
+
+helloDonald
+helloDaisy
+helloHuey
+helloDuey
+helloLuey
+
+
+
+
+first_names = [ "Donald", "Daisy", "Daffy" ]
+
+ducknames = first_names.map do |name|
+  name + "Duck"
+end
+puts ducknames
+
+Result:
+
+[ "DonaldDuck", "DaisyDuck", "DaffyDuck" ]
+
+
+
+#   Exercises
