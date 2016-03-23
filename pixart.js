@@ -6,4 +6,4 @@ function changeColor(){
   brushDiv.style.background = color
 }
 setColorButton.addEventListener("click", changeColor)
-// setColorButton.addEventListener("")
+setColorButton.addEventListener("compositionend", changeColor)
