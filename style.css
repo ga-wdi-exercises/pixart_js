@@ -1,10 +1,22 @@
 @import url(http://fonts.googleapis.com/css?family=Monoton);
 
 .brush {
-  width: 100px;
-  height: 100px;
+  position:fixed;
+  width: 10px;
+  height: 10px;
   background: #1B4370;
-  margin: 15px auto;
+  margin: 0;
+}
+
+.box {
+  width: 10px;
+  height: 10px;
+  background: #1B4370;
+  margin: 0;
+}
+
+.greenbackGround {
+  background: green;
 }
 
 .square {
