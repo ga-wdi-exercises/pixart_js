@@ -11,9 +11,9 @@ function changeBrushColor(){
 setColorButton.addEventListener("click" || "compositionend", changeBrushColor);
 
 function changeSquareColor(){
-  //var color = document.getElementById("color-field").value;
+  var color = document.getElementById("color-field").value;
   event.preventDefault();
-  this.style.background = "green";
+  this.style.background = color;
 };
 
 for (i=0; i<=20; i++){
