@@ -1,19 +1,25 @@
 var setColorButton = document.querySelector("#set-color");
 var brushDiv = document.querySelector("div.brush");
 
-function changeColor(){
+function changeBrushColor(){
   var color = document.getElementById("color-field").value;
   event.preventDefault();
   brushDiv.style.background = color;
   console.log("pizza")
 };
 
-setColorButton.addEventListener("click" || "compositionend", changeColor);
+setColorButton.addEventListener("click" || "compositionend", changeBrushColor);
+
+function changeSquareColor(){
+  //var color = document.getElementById("color-field").value;
+  event.preventDefault();
+  this.style.background = "green";
+};
 
 for (i=0; i<=20; i++){
 var newDiv = document.createElement("div");
 newDiv.className = 'square';
 newDiv.innerHTML = "";
 document.body.appendChild(newDiv);
-newDiv.addEventListener("click", changeColor)
+newDiv.addEventListener("click", changeSquareColor)
 }
