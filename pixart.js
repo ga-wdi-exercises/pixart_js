@@ -7,3 +7,9 @@ form.addEventListener("submit", function(event) {
   event.preventDefault();
   pBrush.style.backgroundColor = newColor.value;
 });
+
+for (var i = 0; i < 20; i ++){
+  var div = document.createElement("div");
+  div.classList.add(".square");
+  document.querySelector("body").appendChild(div);
+}
