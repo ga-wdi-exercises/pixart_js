@@ -13,15 +13,12 @@ form.addEventListener('onkeydown', function(event){
   brush.style.backgroundColor = input.value;
 });
 
-// function changeColor(event) {
-//   event.preventDefault()
-//   if ( == "red") {
-//     brush.style.background = "red"
-//   }
-//   else if (input == "white") {
-//     brush.style.background = "white"
-//   }
-//   else if (input == "black") {
-//     brush.style.background = "black"
-//   }
-// };
+
+
+// for(x = 0; x < 1000; x++) {
+//     var board = document.createElement('div');
+//     board.className = "square";
+//
+//     document.body.appendChild(board);
+//
+//   };
