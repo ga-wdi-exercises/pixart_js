@@ -11,18 +11,19 @@ function setColor(event) {
   brush.style.backgroundColor = colorField.value;
 }
 
-function pixArt() {
+
   for (var i = 0; i < 8000; i ++) {
     var div = document.createElement("div");
     div.classList.add("square");
-    div.addEventListener("mouseover", paint);
+    div.addEventListener("mouseover", function(){
+      this.style.backgroundColor = colorField.value
+    });
     body.appendChild(div);
   }
-}
 
-function paint() {
-  this.style.backgroundColor = brush.style.backgroundColor;
-}
+// function paint() {
+//   this.style.backgroundColor = brush.style.backgroundColor;
+// }
 
 
 
