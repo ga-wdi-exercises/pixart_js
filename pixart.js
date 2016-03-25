@@ -15,10 +15,10 @@ function setBrush() {
   brushElement.style.backgroundColor=inputField.value;
 }
 
-for (i=0; i < 20; i++){
+for (i=0; i < 8000; i++){
   bunchaSquaresMaaan[i]=document.body.appendChild(document.createElement("div"));
   bunchaSquaresMaaan[i].className="square";
-  bunchaSquaresMaaan[i].addEventListener("click", setSquareColor)
+  bunchaSquaresMaaan[i].addEventListener("mouseover", setSquareColor)
 }
 
 function setSquareColor () {
