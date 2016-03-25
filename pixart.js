@@ -16,10 +16,10 @@ function changeSquareColor(){
   this.style.background = color;
 };
 
-for (i=0; i<=20; i++){
+for (i=0; i<=8000; i++){
 var newDiv = document.createElement("div");
 newDiv.className = 'square';
 newDiv.innerHTML = "";
 document.body.appendChild(newDiv);
-newDiv.addEventListener("click", changeSquareColor)
+newDiv.addEventListener("mouseover", changeSquareColor)
 }
