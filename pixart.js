@@ -8,11 +8,11 @@ form.addEventListener("submit", function(event) {
   pBrush.style.background = newColor.value;
 });
 
-for (var i = 0; i < 20; i ++){
+for (var i = 0; i < 8000; i ++){
   var div = document.createElement("div");
   div.classList.add("square");
   document.querySelector("body").appendChild(div);
-  div.addEventListener("click", function() {
+  div.addEventListener("mouseover", function() {
     this.style.background = pBrush.style.background;
   })
 }
