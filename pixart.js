@@ -24,3 +24,4 @@ function setColor (){
   brushBox.style.backgroundColor = input.value;
 }
 setColorButton.addEventListener("click", setColor);
+setColorButton.addEventListener("keyDown", setColor);
