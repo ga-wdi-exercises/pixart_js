@@ -25,3 +25,9 @@ function setColor (){
 }
 setColorButton.addEventListener("click", setColor);
 setColorButton.addEventListener("keyDown", setColor);
+
+function addSquares (){
+  var i = 0;
+  forEach(i < 20, i++)
+    document.body.append("#square")  
+}
