@@ -10,13 +10,14 @@ function setColor() {
 
 
 function makeSquares() {
-  for(var i = 0; i < 20; i++) {
+  for(var i = 0; i < 8000; i++) {
     var $div = $("<div>", {class: "square"});
     $("body").append($div);
   }
-  $(".square").click(squareColor);
+  $(".square").mouseover(squareColor);
 }
 makeSquares();
+
 
 function squareColor() {
   $(this).css("background-color", $userInput);
