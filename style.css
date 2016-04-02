@@ -1,10 +1,24 @@
 @import url(http://fonts.googleapis.com/css?family=Monoton);
 
 .brush {
+  display: inline-block;
   width: 100px;
   height: 100px;
   background: #1B4370;
   margin: 15px auto;
+}
+
+.swatch {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background: #1B4370;
+  margin: 5px;
+}
+
+.divider {
+  display: block;
+  width: 1px;
 }
 
 .square {
