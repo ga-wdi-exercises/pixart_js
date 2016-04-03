@@ -18,6 +18,11 @@ function getColor(event){
 // * Use jQuery to select the element, and `addEventListener` to handle clicks
 //   * `$("body")[0].addEventListener...`
 
+// ###Commit 2
+//
+// * The same thing should happen when I press the enter key from inside the input field
+
+
 // Modifying what little code I had from before:
 
 // var setColorButton = $("#set-color");
