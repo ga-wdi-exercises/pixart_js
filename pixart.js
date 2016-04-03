@@ -3,7 +3,7 @@ console.log("script is ready");
 var drawColor;
 
 $("button").on("click", getColor);
-
+// Commits 1 and 2:
 function getColor(event){
   drawColor = $("#color-field").val();
   event.preventDefault();
@@ -11,6 +11,14 @@ function getColor(event){
   $(".brush").css("backgroundColor", drawColor);
   return drawColor;
 }
+
+// Commit 3: append twenty squares to the body
+function addSquares(){
+    for (i=0; i<=20; i++){
+      $("body").append("<div class='square'></div>");
+    }
+};
+addSquares();
 
 //From the README:
 // FIRST COMMIT:
@@ -22,6 +30,10 @@ function getColor(event){
 //
 // * The same thing should happen when I press the enter key from inside the input field
 
+// ###Commit 3
+//
+// * Create 20 divs of the "square" class and append them to the body
+//   * **Hint**: use `.append()`
 
 // Modifying what little code I had from before:
 
@@ -36,8 +48,8 @@ function getColor(event){
 // setColorButton.addEventListener("click", setColor);
 // setColorButton.addEventListener("keyDown", setColor);
 
-function addSquares (){
-  var i = 0;
-  forEach(i < 20, i++)
-    document.body.append(".square")
-}
+// function addSquares (){
+//   var i = 0;
+//   forEach(i < 20, i++)
+//     document.body.append(".square")
+// }
