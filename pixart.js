@@ -3,3 +3,9 @@ $("#set-color").on("click", function(){
   $(".brush").css("backgroundColor", $("#color-field").val());
   console.log("heya")
 })
+
+$("#set-color").on("keypress", function(){
+  event.preventDefault();
+  $(".brush").css("backgroundColor", $("#color-field").val());
+  console.log("heya")
+})
