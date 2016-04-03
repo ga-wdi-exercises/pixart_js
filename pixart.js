@@ -2,6 +2,13 @@ console.log("script is ready");
 
 var drawColor;
 
+// ###Commit 1:
+//* When I click the "Set Color" button, it should change the color of the "brush" box to the color I specify in the input field. (**Hint:** You will need to use `event.preventDefault()` somewhere in your code.)
+// * Use jQuery to select the element, and `addEventListener` to handle clicks
+//   * `$("body")[0].addEventListener...`
+// ###Commit 2
+//
+// * The same thing should happen when I press the enter key from inside the input field
 $("button").on("click", getColor);
 // Commits 1 and 2:
 function getColor(event){
@@ -12,7 +19,10 @@ function getColor(event){
   return drawColor;
 }
 
-// Commit 3: append twenty squares to the body
+// ###Commit 3
+//
+// * Create 20 divs of the "square" class and append them to the body
+//   * **Hint**: use `.append()`
 function addSquares(){
     for (i=0; i<=20; i++){
       $("body").append("<div class='square'></div>");
@@ -20,20 +30,12 @@ function addSquares(){
 };
 addSquares();
 
+
+
+
 //From the README:
-// FIRST COMMIT:
-//* When I click the "Set Color" button, it should change the color of the "brush" box to the color I specify in the input field. (**Hint:** You will need to use `event.preventDefault()` somewhere in your code.)
-// * Use jQuery to select the element, and `addEventListener` to handle clicks
-//   * `$("body")[0].addEventListener...`
 
-// ###Commit 2
-//
-// * The same thing should happen when I press the enter key from inside the input field
 
-// ###Commit 3
-//
-// * Create 20 divs of the "square" class and append them to the body
-//   * **Hint**: use `.append()`
 
 // Modifying what little code I had from before:
 
