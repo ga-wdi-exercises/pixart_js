@@ -36,10 +36,19 @@ addSquares();
 //   color of that individual square to "green"
 //   * **Hint**: either add the event listener while creating the squares, or
 //     listen for events on the `body` element
+// 
+// $(".square").on("click", changeColor)
+// function changeColor(event){
+//   $(this).css("backgroundColor", "green");
+// }
+
+// ###Commit 5
+//
+// * Modify your code so that when I click on each "square", it changes to the color I set using my input instead of "green" every time.
 
 $(".square").on("click", changeColor)
 function changeColor(event){
-  $(this).css("backgroundColor", "green");
+  $(this).css("backgroundColor", drawColor);
 }
 
 //From the README:
