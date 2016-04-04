@@ -63,8 +63,11 @@ function changeColor(event){
   $(this).css("backgroundColor", drawColor);
 }
 
-//From the README:
 
+
+// ## Bonus
+//
+// * Add a color swatch. You should have 3 boxes with the most recent 3 colors used. When you click on each of those boxes, it should set the current brush color back to that color.
 
 
 // Modifying what little code I had from before:
