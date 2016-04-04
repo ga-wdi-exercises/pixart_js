@@ -14,10 +14,10 @@ function changeSquareColor(){
 $('#set-color').on("click", changeBrushColor);
 $('#set-color').on("submit", changeBrushColor);
 
-for (i=0; i<=20; i++){
+for (i=0; i<=8000; i++){
   $('<div></div>').appendTo('body').addClass('square');
 }
 
-$('div.square').on("click", changeSquareColor);
+$('div.square').on("mouseover", changeSquareColor);
 
 }); //ends document.ready
