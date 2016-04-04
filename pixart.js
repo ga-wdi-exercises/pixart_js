@@ -8,4 +8,9 @@ function changeBrushColor(){
 
 $('#set-color').on("click", changeBrushColor);
 $('#set-color').on("submit", changeBrushColor);
+
+for (i=0; i<=20; i++){
+  $('<div></div>').appendTo('body').addClass('square');
+}
+
 }); //ends document.ready
