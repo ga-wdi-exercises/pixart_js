@@ -12,13 +12,12 @@ $("#form").on("submit", function(){
 
 
 for(x = 0; x < 10000; x++) {
-  var div = $("body").append($("<div class='square'/>"))
+  var div = $("<div>", {class: "square"});
+  $("body").append(div);
+
 };
 
-('body').classList.add('square')
-div.on('mouseover', function() {
-$(this).css("backgroundColor", brush.css("backgroundColor")
-  )})
-
-
+$(".square").on('mouseover', function() {
+$(this).css("backgroundColor", input.val());
+})
 });
