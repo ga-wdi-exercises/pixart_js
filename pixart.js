@@ -13,4 +13,7 @@ for (i=0; i<=20; i++){
   $('<div></div>').appendTo('body').addClass('square');
 }
 
+$('div.square').on("click", function(){
+  $(this).css("background-color", "green");
+});
 }); //ends document.ready
