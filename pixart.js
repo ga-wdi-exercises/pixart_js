@@ -7,5 +7,5 @@ function changeBrushColor(){
 }
 
 $('#set-color').on("click", changeBrushColor);
-
+$('#set-color').on("submit", changeBrushColor);
 }); //ends document.ready
