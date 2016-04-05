@@ -23,7 +23,7 @@
 //   box.innerHTML=submitForm;
 // }
 
-
+//set up variables
 var form = $("form");
 var input = document.querySelector('#color-field');
 var brush = document.querySelector('.brush');
