@@ -21,8 +21,14 @@ function setColor() {
   brushBox.css("background", inputBox.val())
 
 // $("#color-field").val(function())
-
 }
+
 setColorButton.on("click", setColor)
+setColorButton.keypress(function(e){
+  if(e.which==13){
+    event.preventDefault();
+  }
+    setColor;
+  })
 
 });
