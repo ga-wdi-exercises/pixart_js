@@ -13,23 +13,16 @@ function setColor() {
   console.log("button clicked")
 
 //get value of input box
-var colorName = (inputBox.val())
-console.log(colorName)
+  var colorName = (inputBox.val())
+  console.log(colorName)
 
 //set value to change color of brushbox
 //brushBox.css("background", "colorName");
-brushBox.css("background", inputBox.val())
+  brushBox.css("background", inputBox.val())
 
 // $("#color-field").val(function())
 
-//
-//
-
-
-
 }
 setColorButton.on("click", setColor)
-
-
 
 });
