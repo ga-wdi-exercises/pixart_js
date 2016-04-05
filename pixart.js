@@ -1,21 +1,35 @@
-var brushBox = document.querySelector(".brush");
-var inputBox = document.innerHTML.querySelector("#color-field").value;
-var colorButton = document.querySelector("#set-color")/
+$("document").ready(function(){
+
+var brushBox = $(".brush");
+var inputBox= $("#color-field");
+var setColorButton = $("#set-color");
+var inputForm = $("#form");
+var colorName = "#1B4370";
 
 function setColor() {
-  document.body.style.background = "#1B4370";
-  document.body.style.background = ('inputBox').value
-};
+  inputForm.on("submit", function(e){
+  e.preventDefault();
+  });
+  console.log("button clicked")
 
-function inputBox() {
-  document.body.innerHTML('input[text]')
-};
+//get value of input box
+var colorName = (inputBox.val())
+console.log(colorName)
 
-brushBox.addEventListener ("click", setColor);
-inputBox.addEventListener ("click", inputBox);
+//set value to change color of brushbox
+//brushBox.css("background", "colorName");
+brushBox.css("background", inputBox.val())
+
+// $("#color-field").val(function())
+
+//
+//
 
 
-// function changeRed() {
-//  document.body.style.backgroundColor = "red";
-//  document.body.style.color = "white";
-// };
+
+}
+setColorButton.on("click", setColor)
+
+
+
+});
