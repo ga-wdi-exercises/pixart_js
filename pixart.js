@@ -28,10 +28,19 @@ var form = $("form");
 var input = document.querySelector('#color-field');
 var brush = document.querySelector('.brush');
 
+
 $("form").click(function(event){
     event.preventDefault();
   brush.style.backgroundColor = input.value;
 });
+
+
+for (i=1; i<=20; i++) {
+  var div = document.createElement("div");
+  div.classList.add("square");
+  document.querySelector("body").appendChild(div);
+}
+
 
 // for( var i = 0; i < 8000; i++){
 //   var div = document.createElement('div');
