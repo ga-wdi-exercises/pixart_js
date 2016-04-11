@@ -35,11 +35,11 @@ $("form").click(function(event){
 });
 
 
-for (var i = 1; i<=20; i++) {
+for (var i = 1; i<=8000; i++) {
   var newDiv = document.createElement("div");
   newDiv.classList.add("square");
   document.querySelector("body").appendChild(newDiv);
-  newDiv.addEventListener("click",updateDivColor);
+  newDiv.addEventListener("mouseover",updateDivColor);
 }
 
 function updateDivColor() {
