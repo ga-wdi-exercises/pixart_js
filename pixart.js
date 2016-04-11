@@ -35,10 +35,15 @@ $("form").click(function(event){
 });
 
 
-for (i=1; i<=20; i++) {
-  var div = document.createElement("div");
-  div.classList.add("square");
-  document.querySelector("body").appendChild(div);
+for (var i = 1; i<=20; i++) {
+  var newDiv = document.createElement("div");
+  newDiv.classList.add("square");
+  document.querySelector("body").appendChild(newDiv);
+  newDiv.addEventListener("click",updateDivColor);
+}
+
+function updateDivColor() {
+  this.style.backgroundColor="green";
 }
 
 
