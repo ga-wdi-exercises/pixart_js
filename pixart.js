@@ -43,7 +43,7 @@ for (var i = 1; i<=20; i++) {
 }
 
 function updateDivColor() {
-  this.style.backgroundColor="green";
+  this.style.backgroundColor= input.value;
 }
 
 
