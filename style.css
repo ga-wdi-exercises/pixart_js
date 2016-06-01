@@ -28,3 +28,16 @@ h1 {
 body {
   background-image: url('ps_neutral.png');
 }
+
+.swatches {
+  display: inline-block;
+  margin: 0 auto;
+  width: auto;
+  height: auto;
+}
+.swatches li {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #666;
+}
