@@ -54,14 +54,14 @@ while(counter > 0){
 //   * **Hint**: either add the event listener while creating the squares, or
 // listen for events on the `body` element
 
-$(".square").on("click",
-
-
-function(){
-
-      $(this).css("background-color","green");
-
-});
+// $(".square").on("click",
+//
+//
+// function(){
+//
+//       $(this).css("background-color","green");
+//
+// });
 
 
 //
@@ -70,6 +70,14 @@ function(){
 // * Modify your code so that when I click on each "square", it changes to the
 // color I set using my input instead of "green" every time.
 
+$(".square").on("click",
+
+
+function(){
+
+      $(this).css("background-color", colorInputField.val());
+
+});
 
 //
 // ###Commit 6
@@ -79,6 +87,7 @@ function(){
 // * Change the event that changes your box colors from 'click' to 'mouseover'
 // * Paint a picture!
 //
+
 // ## Bonus
 //
 // * Add a color swatch. You should have 3 boxes with the most recent 3 colors used. When you click on each of those boxes, it should set the current brush color back to that color.
