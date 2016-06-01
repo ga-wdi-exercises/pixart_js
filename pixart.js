@@ -37,11 +37,11 @@ setColorButton.on("click",function(event){
 // * Create 20 divs of the "square" class and append them to the body
 //   * **Hint**: use `.append()`
 //
-
+var body = $("body");
 var counter = 20;
 while(counter > 0){
 
-  $("body").append("<div class='square'></div>");
+  body.append("<div class='square'></div>");
   counter -=1;
 
 }
@@ -49,12 +49,28 @@ while(counter > 0){
 
 // ###Commit 4
 //
-// * Add functionality so that when I click on each "square", it changes the color of that individual square to "green"
-//   * **Hint**: either add the event listener while creating the squares, or listen for events on the `body` element
+// * Add functionality so that when I click on each "square", it changes the
+// color of that individual square to "green"
+//   * **Hint**: either add the event listener while creating the squares, or
+// listen for events on the `body` element
+
+$(".square").on("click",
+
+
+function(){
+
+      $(this).css("background-color","green");
+
+});
+
+
 //
 // ###Commit 5
 //
-// * Modify your code so that when I click on each "square", it changes to the color I set using my input instead of "green" every time.
+// * Modify your code so that when I click on each "square", it changes to the
+// color I set using my input instead of "green" every time.
+
+
 //
 // ###Commit 6
 //
