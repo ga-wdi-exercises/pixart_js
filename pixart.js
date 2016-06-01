@@ -1,14 +1,3 @@
-/*
-<h1>Pixel Art!</h1>
-<div class="controls">
-  <form id="form">
-    <input type="text" id="color-field"></input>
-    <button id="set-color">Set Color</button>
-  </form>
-  <div class="brush"></div>
-</div>
- */
-
 function initPixelArt() {
 
   // Constants
@@ -35,25 +24,23 @@ function initPixelArt() {
     }
   });
 
-  /**
-   * Modify your code so that when I click on each "square", it changes to the color I set using my input instead of "green" every time.
-   */
-  // Listen for click on each "square".
-  $( 'body' ).on( 'click', function( evt ) {
+  // Listen for hover(mouseover) on each "square".
+  $( 'body' ).on( 'mouseover', function( evt ) {
     if ( $( evt.target ).attr( 'class' ) === 'square' ) {
-      // Change the color of that individual square to the specified one.
+      // Change the color of that individual square to the specified color.
       $( evt.target ).css( 'background', getColorName() );
     }
   });
 
   addTwentySquaresToBody();
+  modiefySquareCSS();
 
   /**
-   * Creates 20 divs of the "square" class and appends them to the body.
+   * Creates 8000 divs of the "square" class and appends them to the body.
    */
   function addTwentySquaresToBody() {
     var index = 0;
-    for (; index < 20; index++ ) {
+    for (; index < 8000; index++ ) {
       var $squareElem = $( "<div>", { class: "square" } );
       $( 'body' ).append( $squareElem );
     }
@@ -66,8 +53,19 @@ function initPixelArt() {
     return $colorField.val() ? $colorField.val() : DEFAULT_COLOR;
   }
 
+  /**
+   * Modify the CSS of the "square" class.
+   */
+  function modiefySquareCSS() {
+    // height and width of 10px and a margin of 0.
+    $( '.square' ).css( 'width', '10' )
+                  .css( 'height', '10' )
+                  .css( 'margin', '0' );
+  }
 } // end initPixelArt
 
+
+// Start the app code when document is loaded.
 $( document ).ready( function(){
   initPixelArt();
 });
