@@ -15,3 +15,9 @@ for (var i =1 ; i < 20; i++) {
   $("body").append("<div class='square'></div>");
 
 }
+
+//commit 4
+$(".square").on("click", colorChange);
+function colorChange() {
+  $(this).css("background-color", "green");
+}
