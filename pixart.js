@@ -18,8 +18,8 @@ while(counter < 8001){
   counter++
 }
 
-$(".square").on("click", function(){
-  $(this).css("background", "green");
+$(".square").on("mouseover", function(){
+  $(this).css("background", colorInput.val());
 })
 
 
