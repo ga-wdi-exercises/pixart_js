@@ -8,15 +8,15 @@ $(document).ready(function(){
     })
 
 
-      for (a = 0; a < 21; a++){
+      for (a = 0; a < 8000; a++){
         $('body').append("<div class='square'></div>")
       }
-  
 
 
 
 
-    $(".square").on("click", function(){
+
+    $(".square").on("mouseover", function(){
       var color = $("#color-field").val();
       $(this).css("background",color);
     })
