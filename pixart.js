@@ -16,9 +16,8 @@ function initPixelArt() {
   var $button     = $( '#set-color' );
   var $brush      = $( '.brush' );
 
-  // Add click listener on the "Set Color" button.
+  // Listen for click on the "Set Color" button.
   $button.on( 'click', function( evt ) {
-
     // Disable the button's default behavior.
     evt.preventDefault();
 
@@ -28,9 +27,16 @@ function initPixelArt() {
 
   // Simulate mouse click when the enter key is pressed from inside the input field.
   $colorField.on( 'keyup', function( evt ) {
-    if ( evt.keyCode == 13 ) {
-      // Simulate clicking on the submit button.
-      $button.trigger( 'click' );
+    if ( evt.keyCode == 13 ) {     // Enter click.
+      $button.trigger( 'click' );  // Simulate mouse click.
+    }
+  });
+
+  // Listen for click on each "square".
+  $( 'body' ).on( 'click', function( evt ) {
+    if ( $( evt.target ).attr( 'class' ) === 'square' ) {
+      // Change the color of that individual square to "green".
+      $( evt.target ).css( 'background', 'green' );
     }
   });
 
@@ -46,10 +52,8 @@ function initPixelArt() {
       $( 'body' ).append( $squareElem );
     }
   }
-
 } // end initPixelArt
 
 $( document ).ready( function(){
   initPixelArt();
-
 });
