@@ -1,22 +1,18 @@
 var userColor;
 
 function addOn() {
-    for (i=0; i<20; i++) {
+    for (i=0; i<8000; i++) {
         $("body").append("<div class='square'></div>");
-        $(".square").on("click", function() {
-            $(this).css("background-color", userColor);
-        });
     }
+    $(".square").on("mouseover", function(){
+        $(this).css("background-color", userColor);
+    });
 }
 
 $("#set-color").on("click", function(){
     userColor = $('#color-field').val();
-    addOn();
+    $(".brush").css("background-color",userColor);
     event.preventDefault();
-});
+    addOn();
 
-$("#color-field").on("keydown", function(event){
-    if(event.keyCode == 13){
-        $("#set-color").click();
-    }
 });
