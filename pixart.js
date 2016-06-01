@@ -16,7 +16,7 @@ for (var i =1 ; i < 800; i++) {
 
 }
 
-//commit 4
+//commit 4 and 5
 $(".square").on("mouseover", colorChange);
 function colorChange() {
   $(this).css("background-color", colorInput.val());
