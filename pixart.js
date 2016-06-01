@@ -19,5 +19,5 @@ for (var i =1 ; i < 20; i++) {
 //commit 4
 $(".square").on("click", colorChange);
 function colorChange() {
-  $(this).css("background-color", "green");
+  $(this).css("background-color", colorInput.val());
 }
