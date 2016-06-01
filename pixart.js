@@ -26,17 +26,30 @@ function initPixelArt() {
     $brush.css( 'background', $colorField.val() );
   });
 
-
-  // The same thing should happen when I press the enter key from inside the input field
-  // Listen for the enter key press.
-  $( 'body' ).on( 'keyup', function( evt ) {
+  // Simulate mouse click when the enter key is pressed from inside the input field.
+  $colorField.on( 'keyup', function( evt ) {
     if ( evt.keyCode == 13 ) {
       // Simulate clicking on the submit button.
       $button.trigger( 'click' );
     }
   });
-}
+
+  addTwentySquaresToBody();
+
+  /**
+   * Creates 20 divs of the "square" class and appends them to the body.
+   */
+  function addTwentySquaresToBody() {
+    var index = 0;
+    for (; index < 20; index++ ) {
+      var $squareElem = $( "<div>", { class: "square" } );
+      $( 'body' ).append( $squareElem );
+    }
+  }
+
+} // end initPixelArt
 
 $( document ).ready( function(){
   initPixelArt();
+
 });
