@@ -30,11 +30,23 @@ setColorButton.on("click",function(event){
 // * The same thing should happen when I press the enter key from inside the input field
 //How do I apply an Event listener to the INPUT box???
 
+// SEE COMMIT #1
+
 // ###Commit 3
 //
 // * Create 20 divs of the "square" class and append them to the body
 //   * **Hint**: use `.append()`
 //
+
+var counter = 20;
+while(counter > 0){
+
+  $("body").append("<div class='square'></div>");
+  counter -=1;
+
+}
+
+
 // ###Commit 4
 //
 // * Add functionality so that when I click on each "square", it changes the color of that individual square to "green"
