@@ -19,11 +19,11 @@ function enterKey(){
   };
 }
 
-for(var i =0; i < 20; i++){
+for(var i =0; i < 8000; i++){
   $("body").append('<div class= "square"/>');
 }
 
-$(".square").click(function(e){
+$(".square").mouseover(function(e){
   var color = $("#color-field").val();
   $(e.target).css("background-color", color);
 })
