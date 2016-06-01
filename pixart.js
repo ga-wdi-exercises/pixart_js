@@ -4,7 +4,7 @@ function addOn() {
     for (i=0; i<20; i++) {
         $("body").append("<div class='square'></div>");
         $(".square").on("click", function() {
-            $(this).css("background-color", "green");
+            $(this).css("background-color", userColor);
         });
     }
 }
