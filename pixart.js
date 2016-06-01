@@ -18,3 +18,8 @@ function enterKey(){
     return true
   };
 }
+// var div = $(document.createElement('div'))
+//   .addClass('square');
+for(var i =0; i < 20; i++){
+  $('body').append('<div class= "square"/>');
+}
