@@ -10,14 +10,14 @@ function changeColor() {
 
 
 //creating divs and appending them
-for (var i =1 ; i < 20; i++) {
+for (var i =1 ; i < 800; i++) {
 
   $("body").append("<div class='square'></div>");
 
 }
 
 //commit 4
-$(".square").on("click", colorChange);
+$(".square").on("mouseover", colorChange);
 function colorChange() {
   $(this).css("background-color", colorInput.val());
 }
