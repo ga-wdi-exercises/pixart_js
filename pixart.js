@@ -5,6 +5,28 @@ $("button").click(function(e){
   brush.css("background-color", color)
 });
 
+// var colors = []
+//
+// $("#set-color").on("click", setColor)
+//
+// function setColor(){
+//  e.preventDefault();
+//  var colorInput = $("#color-field").val();
+//
+//  colors.push($("#color-field").val());
+//  console.log(colors);
+//
+//  $("#brush0").css("background-color", colors[colors.length-1]);
+//  $("#brush1").css("background-color", colors[colors.length-2]);
+//  $("#brush2").css("background-color", colors[colors.length-3]);
+//
+// }
+$('.brush').attr('id', 'brush0');
+
+for (i=1; i<3; i++){
+  $('.controls').append('<div class="brush" id="brush' + i + '"/>');
+}
+
 $("#form").keypress(function(e){
   enterKey;
 })
