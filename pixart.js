@@ -38,7 +38,7 @@ setColorButton.on("click",function(event){
 //   * **Hint**: use `.append()`
 //
 var body = $("body");
-var counter = 20;
+var counter = 8000;
 while(counter > 0){
 
   body.append("<div class='square'></div>");
@@ -70,7 +70,7 @@ while(counter > 0){
 // * Modify your code so that when I click on each "square", it changes to the
 // color I set using my input instead of "green" every time.
 
-$(".square").on("click",
+$(".square").on("mouseover",
 
 
 function(){
