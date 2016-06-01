@@ -14,12 +14,12 @@ function setColor(){
 }
 
 
-for(i = 0; i < 20; i++) {
+for(i = 0; i < 8000; i++) {
   $("body").append('<div class="square"/>');
 }
 
 
-$(".square").on("click",function(){
+$(".square").on("mouseover",function(){
   var colorInput = $("#color-field").val();
 
   $(event.target).css("background-color", colorInput);
