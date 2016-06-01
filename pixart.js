@@ -25,6 +25,16 @@ function initPixelArt() {
     // Set the colot of "brush" box to the color that is specified in the input field.
     $brush.css( 'background', $colorField.val() );
   });
+
+
+  // The same thing should happen when I press the enter key from inside the input field
+  // Listen for the enter key press.
+  $( 'body' ).on( 'keyup', function( evt ) {
+    if ( evt.keyCode == 13 ) {
+      // Simulate clicking on the submit button.
+      $button.trigger( 'click' );
+    }
+  });
 }
 
 $( document ).ready( function(){
