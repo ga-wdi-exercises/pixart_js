@@ -4,7 +4,8 @@
   width: 100px;
   height: 100px;
   background: #1B4370;
-  margin: 15px auto;
+  margin: 10px;
+  display: inline-block;
 }
 
 .square {
