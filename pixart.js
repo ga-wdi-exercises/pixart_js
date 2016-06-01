@@ -20,9 +20,10 @@ function enterKey(){
 }
 
 for(var i =0; i < 20; i++){
-  $('body').append('<div class= "square"/>');
+  $("body").append('<div class= "square"/>');
 }
-$('body').click(function(e){
-  // var color = $('#color_input').val();
-  $(e.target).css('background-color', "green");
+
+$(".square").click(function(e){
+  var color = $("#color-field").val();
+  $(e.target).css("background-color", color);
 })
