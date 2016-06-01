@@ -8,11 +8,11 @@ $('form').on('click', function(){                   //Gives the form variable fu
   brush.style.backgroundColor = input.value;        //Gives the brush variable a background color from any input (e.g. the value from the "set color" form)
 });
 
-for( var i = 0; i < 20; i++){                       //Loops var i 20 times
+for( var i = 0; i < 8000; i++){                     //Loops var i 8000 times
   var div = document.createElement('div');          //Sets all divs as a variable
   div.classList.add('square');                      //Gives all those divs the attribute value's set from the square's css
-  div.addEventListener('click', function(){         //Gives the divs functionality when clicked
-    $(this).css("backgroundColor", "green");        //Gives whatever clicked div the background color of green
+  div.addEventListener('mouseover', function(){     //Gives the divs functionality when the mouse move over them
+    this.style.backgroundColor = brush.style.backgroundColor; //Gives whatever mouseovered div the background color set from the brush variable
   });
   canvas.appendChild(div);                          //Adds one div node after another in the canvas div
 }
