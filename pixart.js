@@ -1,16 +1,29 @@
 
 var body = $("body");
+var colors = []
+
+
 
 $("#set-color").on("click", setColor)
 
 function setColor(){
   event.preventDefault();
   var colorInput = $("#color-field").val();
-  $(".brush").css("background-color", colorInput);
+
+
+  colors.push($("#color-field").val());
+  console.log(colors);
+
+  $("#brush0").css("background-color", colors[colors.length-1]);
+  $("#brush1").css("background-color", colors[colors.length-2]);
+  $("#brush2").css("background-color", colors[colors.length-3]);
+
 }
 
-for (i=0; i<2; i++){
-  $(".controls").append('<div class="brush"/>');
+$(".brush").attr('id', 'brush0');
+
+for (i=1; i<3; i++){
+  $(".controls").append('<div class="brush" id="brush' + i + '"/>');
 }
 
 for(i = 0; i < 8000; i++) {
@@ -20,13 +33,23 @@ for(i = 0; i < 8000; i++) {
 
 $(".square").on("mouseover",function(){
   var colorInput = $("#color-field").val();
-
-  $(event.target).css("background-color", colorInput);
+  $(this).css("background-color", colorInput);
 });
 
 
 
+//
+//
+//
+//
+// var inputs = new Array();
+//  $("input").each(function(){
+//      inputs.push($(this).val());
+//  })
+//
+//  console.log(inputs);
 
-// * Add a color swatch. You should have 3 boxes with the most recent 3 colors used. When you click on each of those boxes, it should set the current brush color back to that color.
+
+// you should have 3 boxes with the most recent 3 colors used. When you click on each of those boxes, it should set the current brush color back to that color.
 //
 // append 2 more .brush divs
