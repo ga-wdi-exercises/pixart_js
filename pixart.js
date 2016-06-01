@@ -6,11 +6,12 @@ $("#set-color").on("click",function(){
 })
 
 var counter = 0
-while(counter < 21){
+while(counter < 8001){
   var square = "<div class = 'square'></div>"
   $("body").append(square)
   counter++
 }
-  $(".square").on("click",function(){
-    $(this).css("background-color","green")
+  $(".square").on("mouseover",function(){
+    var color = $("#color-field").val();
+    $(this).css("background-color",color)
 })
