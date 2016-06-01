@@ -11,6 +11,9 @@
 
 function initPixelArt() {
 
+  // Constants
+  var DEFAULT_COLOR = "#1B4370";
+
   // Get references to the elements.
   var $colorField = $( '#color-field' );
   var $button     = $( '#set-color' );
@@ -22,7 +25,7 @@ function initPixelArt() {
     evt.preventDefault();
 
     // Set the colot of "brush" box to the color that is specified in the input field.
-    $brush.css( 'background', $colorField.val() );
+    $brush.css( 'background', getColorName() );
   });
 
   // Simulate mouse click when the enter key is pressed from inside the input field.
@@ -32,11 +35,14 @@ function initPixelArt() {
     }
   });
 
+  /**
+   * Modify your code so that when I click on each "square", it changes to the color I set using my input instead of "green" every time.
+   */
   // Listen for click on each "square".
   $( 'body' ).on( 'click', function( evt ) {
     if ( $( evt.target ).attr( 'class' ) === 'square' ) {
-      // Change the color of that individual square to "green".
-      $( evt.target ).css( 'background', 'green' );
+      // Change the color of that individual square to the specified one.
+      $( evt.target ).css( 'background', getColorName() );
     }
   });
 
@@ -52,6 +58,14 @@ function initPixelArt() {
       $( 'body' ).append( $squareElem );
     }
   }
+
+  /**
+   * @return {[String]} a color name that is specified in the color input field if any.
+   */
+  function getColorName() {
+    return $colorField.val() ? $colorField.val() : DEFAULT_COLOR;
+  }
+
 } // end initPixelArt
 
 $( document ).ready( function(){
