@@ -1,7 +1,5 @@
 
-
-
-
+var body = $("body");
 
 
 
@@ -16,23 +14,6 @@ function setColor(){
 }
 
 
-
-
-
-//
-//
-// * When I click the "Set Color" button, it should change the color of the "brush" box to the color I specify in the input field. (**Hint:** You will need to use `event.preventDefault()` somewhere in your code.)
-
-
-//
-// $( "a" ).click(function( event ) {
-//   event.preventDefault();
-//   $( "<div>" )
-//     .append( "default " + event.type + " prevented" )
-//     .appendTo( "#log" );
-// });
-//
-//
-// $("#button").click(function(){
-//  $("go").css("background-color","yellow");
-//  });
+for(i = 0; i < 20; i++) {
+  $("body").append('<div class="square"/>');
+}
