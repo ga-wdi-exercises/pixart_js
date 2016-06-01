@@ -11,5 +11,16 @@ form.on("submit", function(form){
   brush.css("background", colorInput.val());
 })
 
+var counter = 0
+while(counter < 8001){
+  var square = "<div class='square'></div>"
+  $("body").append(square)
+  counter++
+}
+
+$(".square").on("click", function(){
+  $(this).css("background", "green");
+})
+
 
 })
