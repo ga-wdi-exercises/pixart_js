@@ -11,5 +11,8 @@ $('form').on('click', function(){                   //Gives the form variable fu
 for( var i = 0; i < 20; i++){                       //Loops var i 20 times
   var div = document.createElement('div');          //Sets all divs as a variable
   div.classList.add('square');                      //Gives all those divs the attribute value's set from the square's css
+  div.addEventListener('click', function(){         //Gives the divs functionality when clicked
+    $(this).css("backgroundColor", "green");        //Gives whatever clicked div the background color of green
+  });
   canvas.appendChild(div);                          //Adds one div node after another in the canvas div
 }
