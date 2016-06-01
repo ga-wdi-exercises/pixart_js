@@ -7,3 +7,9 @@ $('form').on('click', function(){                   //Gives the form variable fu
   event.preventDefault();                           //Prevents the function from performing a default event
   brush.style.backgroundColor = input.value;        //Gives the brush variable a background color from any input (e.g. the value from the "set color" form)
 });
+
+for( var i = 0; i < 20; i++){                       //Loops var i 20 times
+  var div = document.createElement('div');          //Sets all divs as a variable
+  div.classList.add('square');                      //Gives all those divs the attribute value's set from the square's css
+  canvas.appendChild(div);                          //Adds one div node after another in the canvas div
+}
