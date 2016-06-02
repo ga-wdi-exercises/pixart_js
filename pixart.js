@@ -1,3 +1,6 @@
+/**
+ * Initialize the application.
+ */
 function initPixelArt() {
 
   // Constants
@@ -14,15 +17,29 @@ function initPixelArt() {
   ];
 
   // Remember recently used colors.
-  var recentlyUsedColors = [];
+  var swatches = [];
 
   // Some modification to HTML/CSS.
   addTwentySquaresToBody();
   modiefySquareCSS();
 
+
+  //---
+  // Event listeners
+  //---
+
+
   // Listen for click on the "Set Color" button.
   $button.on( 'click', function( evt ) {
-    setBrushColor( getColorName() );
+    evt.preventDefault();
+
+    // Process it only if color name is present.
+    if ( $colorField.val() ) {
+      var colorName = getColorName();
+      pushColorToSwatches( colorName );
+      setBrushColor( colorName );
+    }
+
     return false;
   });
 
@@ -36,15 +53,23 @@ function initPixelArt() {
 
   // Listen for hover(mouseover) on each "square".
   $( 'body' ).on( 'mouseover', function( evt ) {
+
+    // If class name is 'square'...
     if ( $( evt.target ).attr( 'class' ) === 'square' ) {
       // Change the color of that individual square to the specified color.
-      $( evt.target ).css( 'background', getColorName() );
+      $( evt.target ).css( 'background-color', colorName );
     }
     return false;
   });
 
   // Listen for click on recently used colors.
-  addClickListenerToRecentlyUsedColors();
+  addClickListenerOnSwatches();
+
+
+  //---
+  // Private methods
+  //---
+
 
   /**
    * Creates 8000 divs of the "square" class and appends them to the body.
@@ -78,57 +103,55 @@ function initPixelArt() {
    * Set the colot of "brush" box to the color that is specified in the input field.
    */
   function setBrushColor( color ) {
-    $brush.css( 'background', color );
-    pushColorToList( color );
-    setRecentlyUsedColors();
+    $brush.css( 'background-color', color );
+    // pushColorToSwatches( color );
+    updateSwatches();
     $colorField.val("");
   }
 
   /**
    * @param  {[String]} color
    */
-  function pushColorToList( color ) {
+  function pushColorToSwatches( color ) {
 
     // If the list is full, remove the oldest color.
-    if ( recentlyUsedColors.length === 3 ) {
-      recentlyUsedColors.shift();
+    if ( swatches.length === 3 ) {
+      swatches.shift();
     }
 
     // Reject if the color is recently used.
     var index = 0;
     for ( ; index < 3; index++ ) {
-      if ( color === recentlyUsedColors[ index ] ) return;
+      if ( color === swatches[ index ] ) return;
     }
 
     // Add the specified color to the list.
-    recentlyUsedColors.push( color );
+    swatches.push( color );
   }
 
   /**
    * Set background colors on color swatches according to recently used colors.
    */
-  function setRecentlyUsedColors() {
+  function updateSwatches() {
     var index = 0;
     for ( ; index < 3; index++ ) {
-      $swatchElems[ index ].css( 'background', recentlyUsedColors[ index ] );
+      $swatchElems[ index ].css( 'background-color', swatches[ index ] );
     }
   }
 
-  /*
-  Add a color swatch. You should have 3 boxes with the most recent 3 colors used.
-  When you click on each of those boxes, it should set the current brush color back to that color.
-   */
-
   /**
-   * TODO
+   * Utility function to set a click listener on all the swatches.
    */
-  function addClickListenerToRecentlyUsedColors() {
+  function addClickListenerOnSwatches() {
     var index = 0;
     for ( ; index < 3; index++ ) {
       $swatchElems[ index ].on( 'click', function() {
-        // TODO: Set color the brush color.
+        // Obtain the rgb background-color of the swatch that was clicked.
         var rgb = $( this ).css( 'background-color' );
+
+        // Convert the rgb to an hex color string.
         var hex = rgb2hex( rgb );
+
         setBrushColor( $brush.css( 'background-color', hex ) );
       });
     }
@@ -136,13 +159,13 @@ function initPixelArt() {
 
   /**
    * http://stackoverflow.com/a/3627747/3837223
-   * @param  {[String]} rgb  e.g., rgb(255, 0, 0)
-   * @return {[String]}      e.g., #ff0000
+   * @param  {[String]} rgb  an rgb color string, e.g., rgb(255, 0, 0)
+   * @return {[String]}      an hex color string, e.g., #ff0000
    */
   function rgb2hex( rgb ) {
-      rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+      rgb = rgb.match( /^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/ );
       function hex(x) {
-          return ("0" + parseInt(x).toString(16)).slice(-2);
+          return ( "0" + parseInt(x).toString(16) ).slice(-2);
       }
       return "#" + hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3]);
  }
