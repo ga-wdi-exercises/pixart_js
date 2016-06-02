@@ -16,5 +16,16 @@
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="pixart.js"></script>
+<script>
+  (function canvas(){
+      var innerhtml = "";
+      for(var a = 0; a < 5000; a++){
+        innerhtml = innerhtml + "<div class='square'></div>";
+
+      }
+          $("body").append(innerhtml);
+        }());
+
+  </script>
 </body>
 </html>
