@@ -13,7 +13,7 @@ $(document).ready(function() {
     $(this).css("background",$("#color-field").val());
   });
 });
-
+  //
   // JapanPro answer http://stackoverflow.com/questions/3741157/change-background-color-on-mouseover-and-remove-it-after-mouseout
   // $(function() { <-- this serves the same purpose as $(document).ready(function() {})
   //http://stackoverflow.com/questions/3528509/document-readyfunction-vs-function
