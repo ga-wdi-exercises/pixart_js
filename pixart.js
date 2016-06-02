@@ -18,5 +18,5 @@ while i <=20 {
   }
 
 body.addEventListener("click", function() {
-    this.("background-color", "green")
+    this.getElementById("set-color").text
 });
