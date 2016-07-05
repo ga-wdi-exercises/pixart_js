@@ -26,14 +26,14 @@ var square = $('.square');
 
 function changeColor(evt)
 {
-  console.log("not green");
+  // console.log("not green");
   var input = $("input");
 
   evt.preventDefault();
 
   var color = input.val();
   // console.log(color);
-  $('.square').css("background-color", color);
+  $(this).css("background-color", color);
   // console.log("its green");
 }
 square.on("mouseover", changeColor);
