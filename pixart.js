@@ -14,7 +14,7 @@ $(document).ready(function(){
   for (i = 0; i < 20; i++) {
     $("body").append("<div class='square'></div>");
     $(".square").eq(i).click( function(){
-      $(this).css("backgroundColor", "green");
+      $(this).css("backgroundColor", $("input").val());
     });
   }
 
