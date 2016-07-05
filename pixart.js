@@ -8,7 +8,7 @@ $(document).ready(function() {
     $(".brush").css("background", color);
     }
 
-  for (var i = 0; i <= 20; i++) {
+  for (var i = 0; i <= 8000; i++) {
     $("body").append("<div class='square'></div>")
   }
 
@@ -19,14 +19,11 @@ $(document).ready(function() {
   // }
 
 
-  $(".square").on("click", changeToCustom);
+  $(".square").on("mouseover", changeToCustom);
 
   function changeToCustom() {
   var color = $("input").val();
   $(this).css("background", color);
   }
-
-
-
 
 })
