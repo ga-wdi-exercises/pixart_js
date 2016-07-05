@@ -4,7 +4,7 @@ $(document).ready(function(){
     var button = $("button");
 
     button.on("click", changeColorBox);
-    button.on("keypress", changeColorBox)''
+    button.on("keypress", changeColorBox);
 });
     function changeColorBox(evt){
       //Define input within the function to avoid error
@@ -16,4 +16,10 @@ $(document).ready(function(){
       console.log(color);
 
       $(".brush").css("background", color)
+    }
+
+
+    for( var i = 0; i <=20; i++ ){
+      $("body").append($("<div class='square'/>"))
+      console.log("hi")
     }
