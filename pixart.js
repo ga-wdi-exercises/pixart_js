@@ -13,4 +13,8 @@ $(document).on("ready", function(){
     brushBox.css("background", field.val());
   }
 
+  var divHtml = '<div class="square"></div>';
+  for (var i = 0; i < 20; i++) {
+    $("body").append(divHtml);
+  }
 });
