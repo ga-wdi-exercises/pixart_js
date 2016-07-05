@@ -1,24 +1,30 @@
-var button = $('button');
-var brushBox = $('.brush');
-var inputField = $('#color-field');
-
-
-/*this has both onClick and enter functionality in chrome for some reason if it doesn't work for the other browsers I'd create my own call back function starting with the function in line seven and feed that into the button.on selector listening for both click and enter*/
 $(document).ready(function() {
+    var button = $('button');
+    var brushBox = $('.brush');
+    var inputField = $('#color-field');
+
+    /*this has both onClick and enter functionality in chrome for some reason if it     doesn't work for the other browsers I'd create my own call back function starting   with the function in line seven and feed that into the button.on selector listening for both click and enter*/
     button.on({
-        click: mainColorEvent,
-        onKeyDown: mainColorEvent,
+        click: colorSelect,
+        onKeyDown: colorSelect,
     })
 
-    function mainColorEvent(event) {
+    // changes the selected color to the text input
+    function colorSelect(event) {
         event.preventDefault();
         function changeColor(){
             brushBox.css('background-color', inputField.val());
         }
         changeColor();
     };
-    var div = "<div class='square'></div>"
-    for (i=1;i<21;i++){
-        $('body').append(div)
+
+    //creates static div elements for the site with the onClick color change
+    for(i=1;i<20; i++ ){
+      $("body").append($("<div class='square'/>"))
+      $('.square').on('click',function(event) {
+          event.preventDefault();
+          $(this).css('background-color', 'green');
+      });
     }
+
 });
