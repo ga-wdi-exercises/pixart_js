@@ -3,6 +3,8 @@ $(document).ready(function() {
 
   var button = $('button');
   button.on("click", changeColorBox);
+  button.on("keypress", changeColorBox);
+
 });
 
 function changeColorBox(evt) {
