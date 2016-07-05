@@ -28,12 +28,16 @@ $(document).ready(function(){
 	})
 
 	$(".square").click(function() {
-  		var color = $(this).css("background");
-  		set(color);
+  		set_color = $(this).css("background");
+  		set(set_color);
+  		$(".brush").css("background", set_color);
+  		$(".brush").css("background", ($('input#color-field').val(set_color)));
 	});
 	$(".pix").click(function() {
-  		var color = $(this).css("background");
-  		set(color);
+  		set_color = $(this).css("background");
+  		set(set_color);
+  		$(".brush").css("background", set_color);
+  		$(".brush").css("background", ($('input#color-field').val(set_color)));
 	});
 
 
