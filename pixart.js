@@ -1,7 +1,6 @@
 $( document ).ready(function() {
+console.log("Ready!");
 
-$("button").on("click", event.preventDefault());
-  
 
 
 
