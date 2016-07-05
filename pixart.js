@@ -11,7 +11,7 @@ $(document).ready(function(){
     $(".brush").css("backgroundColor", colorIn);
   });
 
-  for (i = 0; i < 20; i++) {
+  for (i = 0; i < 8000; i++) {
     $("body").append("<div class='square'></div>");
     $(".square").eq(i).click( function(){
       $(this).css("backgroundColor", $("input").val());
