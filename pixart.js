@@ -6,4 +6,8 @@ $(document).ready(function(){
 		$("body").css("background", ($('input#color-field').val()));
  	});
 
+	for (var i = 0; i < 20; i++) {
+		$("body").append("<div class='square'></div>");
+	}
+	
 });
