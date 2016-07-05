@@ -23,3 +23,13 @@ for(var i=0; i<=20; i++) {
   $('body').append('<div class="square"></div>');
   console.log("WTF");
 }
+
+
+
+var square = $('.square');
+square.on("click", changeColorGreen);
+
+function changeColorGreen() {
+  console.log("Green Color");
+  $('.square').css("background", "green");
+}
