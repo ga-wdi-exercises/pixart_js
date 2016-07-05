@@ -4,5 +4,6 @@ $(document).ready(function(){
 	set_color.click(function(e) {
 		e.preventDefault();
 		$("body").css("background", ($('input#color-field').val()));
-  });
+ 	});
+
 });
