@@ -20,7 +20,8 @@ function changeColorBox(evt) {
 }
 
 //Commit 3
-for(var i=0; i<=20; i++) {
+//Commit 6 changes 20 to 8000
+for(var i=0; i<=8000; i++) {
   $('body').append('<div class="square"></div>');
   console.log("WTF");
 }
@@ -32,8 +33,8 @@ square.on("click", changeColorNotGreen);
 //Commit 4 (continued)
 /*
 function changeColorGreen() {
-  console.log("Green Color");
-  $('.square').css("background", "green");
+console.log("Green Color");
+$(this).css("background", "green");
 }
 */
 
@@ -47,5 +48,12 @@ function changeColorNotGreen(evt) {
   evt.preventDefault();
   //.val() is for input fields
   var color = input.val();
-  $('.square').css("background", color);
+  $(this).css("background", color);
 }
+
+//Commit 6
+$('.square').height(10);
+$('.square').width(10);
+$('.square').css("margin", 0);
+
+square.on("mouseover", changeColorNotGreen);
