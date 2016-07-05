@@ -12,4 +12,13 @@ $(document).ready(function() {
     $("body").append("<div class='square'></div>")
   }
 
+  $(".square").on("click", changeToGreen)
+
+  function changeToGreen() {
+    $(this).css("background", "green");
+  }
+
+
+
+
 })
