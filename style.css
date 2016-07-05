@@ -28,3 +28,18 @@ h1 {
 body {
   background-image: url('ps_neutral.png');
 }
+
+.color_box {
+  float: left;
+  width: 5em;
+  height: 5em;
+  border-radius: 5px;
+  border: 3px black solid;
+  margin: 0 1em;
+}
+
+.one {}
+
+.two {}
+
+.three {}
