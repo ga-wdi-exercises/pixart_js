@@ -1,10 +1,17 @@
 $(document).on("ready", function() {
-    console.log('jquery ready broh');
+  // console.log('jquery ready broh');
 
-    $('button').on("click", getInput);
+  $('button').on("click", getColor);
+
+  var square = $('<div class="square"></div>');
+
+  for (var i=0; i<20; i++){
+    $('body').append(square.clone());
+    console.log('so square broh');
+  }
 })
 
-function getInput(evt) {
+function getColor(evt) {
   // console.log('button clicked broh');
   evt.preventDefault();
   var colorName = $('#color-field').val();
