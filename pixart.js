@@ -26,6 +26,9 @@ $(document).on("ready", function(){
       swatches[0] = field.val();
     }
     console.log(swatches);
+    $("#swatch0").css("background", swatches[0]);
+    $("#swatch1").css("background", swatches[1]);
+    $("#swatch2").css("background", swatches[2]);
   }
 
   var divHtml = '<div class="square"></div>';
