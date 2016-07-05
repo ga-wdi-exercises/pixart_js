@@ -22,7 +22,7 @@ $(document).on("ready", function(){
   divs.on("click", setToBrush);
 
   function setToBrush(){
-    $(this).css("background", "green");
+    $(this).css("background", brushBox.css("background"));
   }
 
 });
