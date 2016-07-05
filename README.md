@@ -8,19 +8,6 @@ Use the starter code and commit each step of the exercise.
 - When you're finished, push your solution branch to your fork (`git push origin <branch-name>`) and issue a **pull request**.
 - Feel free to use jQuery.
 
-###Commit 1
-
-
-
-
-
-
-
-###Commit 4
-
-* Add functionality so that when I click on each "square", it changes the color of that individual square to "green"
-  * **Hint**: either add the event listener while creating the squares, or listen for events on the `body` element
-
 ###Commit 5
 
 * Modify your code so that when I click on each "square", it changes to the color I set using my input instead of "green" every time.
