@@ -12,7 +12,7 @@ $(document).ready(function(){
 
 	$(".square").click(function(e) {
 		e.preventDefault();
-		$(this).css("background", "green");
+		$(this).css("background", ($('input#color-field').val()));
 	})
 
 });
