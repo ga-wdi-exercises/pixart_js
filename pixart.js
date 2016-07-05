@@ -3,6 +3,7 @@ $(document).on("ready", function(){
   var field = $("#color-field")
   var button = $("#set-color");
   var brushBox = $(".brush");
+  var swatches = [];
 
   button.on("click", setColor);
   $("#form").on("submit", setColor);
@@ -11,6 +12,15 @@ $(document).on("ready", function(){
     e.preventDefault();
     // console.log("clicked");
     brushBox.css("background", field.val());
+    if (swatches.length < 3){
+      swatches.unshift(field.val());
+    }
+    else {
+      swatches[2] = swatches[1];
+      swatches[1] = swatches[0];
+      swatches[0] = field.val();
+    }
+    console.log(swatches);
   }
 
   var divHtml = '<div class="square"></div>';
