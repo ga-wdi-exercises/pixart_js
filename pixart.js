@@ -14,13 +14,15 @@ $(document).ready(function(){
     var new_div = $('<div></div>').addClass("square");
     $('body').append(new_div);
     count--;
-    console.log(count);
   };
-  // $('.square').on("click", function(){
+  // $('.square').click(function(){
   //   this.style.backgroundColor = 'green';
   // });
+  $(".square").on("click", handleClickEvent);
+  function handleClickEvent() {
+    $(this).css("background", "green");
+  }
 });
-
 
 
 
