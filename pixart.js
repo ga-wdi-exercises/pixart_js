@@ -14,12 +14,12 @@ $(document).on("ready", function(){
   }
 
   var divHtml = '<div class="square"></div>';
-  for (var i = 0; i < 20; i++) {
+  for (var i = 0; i < 8000; i++) {
     $("body").append(divHtml);
   }
 
   var divs = $("div.square");
-  divs.on("click", setToBrush);
+  divs.on("mouseover", setToBrush);
 
   function setToBrush(){
     $(this).css("background", brushBox.css("background"));
