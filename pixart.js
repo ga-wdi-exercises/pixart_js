@@ -23,10 +23,17 @@ for(var i=20; i>=0; i--)
   $("body").append('<div class="square"></div>');
 }
 var square = $('.square');
-square.on("click", changeColorToGreen);
 
-function changeColorToGreen()
+function changeColor(evt)
 {
-  $('.square').css("background-color", "green");
+  console.log("not green");
+  var input = $("input");
+
+  evt.preventDefault();
+
+  var color = input.val();
+  // console.log(color);
+  $('.square').css("background-color", color);
   // console.log("its green");
 }
+square.on("click", changeColor);
