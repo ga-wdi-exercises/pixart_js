@@ -16,13 +16,15 @@ $(document).on("ready", function() {
 function getColor(evt) {
   // console.log('button clicked broh');
   evt.preventDefault();
-  var colorName = $('#color-field').val();
+  var brushColor = $('#color-field').val();
   // console.log(colorName);
-  $('.brush').css("background-color", colorName);
+  $('.brush').css("background-color", brushColor);
   // console.log($('.brush').css("background-color"));
 }
 
 function changeSquare() {
   // console.log(this);
-  $(this).css("background-color", "green");
+  var squareColor = $('#color-field').val();
+  $(this).css("background-color", squareColor);
+  console.log(squareColor + " squares broh");
 }
