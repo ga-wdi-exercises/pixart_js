@@ -5,11 +5,19 @@ $(document).ready(function(){
   //  var inputText = $("input").val();
   //  console.log(inputText);
 
-
   $("#set-color").click( function(){
     event.preventDefault();
     var colorIn = $("input").val();
     $(".brush").css("backgroundColor", colorIn);
   });
+
+  for (i = 0; i < 20; i++) {
+    $("body").append("<div class='square'></div>");
+    $(".square").eq(i).click( function(){
+      $(this).css("backgroundColor", "green");
+    });
+  }
+
+
 
 });
