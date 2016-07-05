@@ -15,18 +15,32 @@ $(document).ready(function(){
       var color = input.val();
       console.log(color);
 
-      $(".brush").css("background", color)
+      $(".brush").css("background", color);
     }
 
 
     for( var i = 0; i <=20; i++ ){
-      $("body").append($("<div class='square'/>"))
+      $("body").append("<div class='square'/>");
       console.log("hi")
     }
 
     var square=$(".square");
-    square.on("click", changeToGreen);
+    // square.on("click", changeToGreen);
+    //
+    // function changeToGreen(){
+    //   $('.square').css("background","green");
+    // }
+    console.log('hello')
 
-    function changeToGreen(){
-      $('.square').css("background","green");
+
+    function changeSmallBox(evt){
+      //Define input within the function to avoid error
+      var input = $("input");
+
+      evt.preventDefault();
+      //.val() is for input fields
+      var color = input.val();
+      $('.square').css("background", color);
+
     }
+    square.on("click", changeSmallBox)
