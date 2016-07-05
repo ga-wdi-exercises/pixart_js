@@ -17,4 +17,12 @@ $(document).on("ready", function(){
   for (var i = 0; i < 20; i++) {
     $("body").append(divHtml);
   }
+
+  var divs = $("div.square");
+  divs.on("click", setToBrush);
+
+  function setToBrush(){
+    $(this).css("background", "green");
+  }
+
 });
