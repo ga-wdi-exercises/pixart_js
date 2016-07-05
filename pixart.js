@@ -5,10 +5,11 @@ $(document).on("ready", function(){
   var brushBox = $(".brush");
 
   button.on("click", setColor);
+  $("#form").on("submit", setColor);
 
   function setColor(e){
     e.preventDefault();
-    console.log("clicked");
+    // console.log("clicked");
     brushBox.css("background", field.val());
   }
 
