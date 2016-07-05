@@ -3,7 +3,12 @@ $(document).on("ready", function(){
   var field = $("#color-field")
   var button = $("#set-color");
   var brushBox = $(".brush");
-  var swatches = [];
+  var swatches = ["#1b4370"];
+  var Board = $("div.controls");
+
+  for (i = 0; i < 3; i++) {
+  Board.append('<div class="swatch" id="swatch'+ i.toString() +'"></div>');
+  }
 
   button.on("click", setColor);
   $("#form").on("submit", setColor);
