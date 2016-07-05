@@ -1,6 +1,6 @@
 var square = $('<div class="square"></div>');
 
-for (var i=0; i<20; i++){
+for (var i=0; i<8000; i++){
   $('body').append(square.clone());
   // console.log('so square broh');
 }
@@ -9,7 +9,7 @@ $(document).on("ready", function() {
   // console.log('jquery ready broh');
 
   $('button').on("click", getColor);
-  $('.square').on("click", changeSquare);
+  $('.square').on("mouseover", changeSquare);
 
 })
 
