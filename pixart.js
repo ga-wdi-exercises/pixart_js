@@ -12,10 +12,18 @@ $(document).ready(function() {
     $("body").append("<div class='square'></div>")
   }
 
-  $(".square").on("click", changeToGreen)
+  // $(".square").on("click", changeToGreen)
+  //
+  // function changeToGreen() {
+  //   $(this).css("background", color);
+  // }
 
-  function changeToGreen() {
-    $(this).css("background", "green");
+
+  $(".square").on("click", changeToCustom);
+
+  function changeToCustom() {
+  var color = $("input").val();
+  $(this).css("background", color);
   }
 
 
