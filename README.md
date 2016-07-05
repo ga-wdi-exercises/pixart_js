@@ -11,8 +11,7 @@ Use the starter code and commit each step of the exercise.
 ###Commit 1
 
 * When I click the "Set Color" button, it should change the color of the "brush" box to the color I specify in the input field. (**Hint:** You will need to use `event.preventDefault()` somewhere in your code.)
-* Use jQuery to select the element, and `addEventListener` to handle clicks
-  * `$("body")[0].addEventListener...`
+* Use jQuery to select the element and add an event listener
 
 ###Commit 2
 
