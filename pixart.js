@@ -17,4 +17,8 @@ $(document).ready(function() {
         }
         changeColor();
     };
+    var div = "<div class='square'></div>"
+    for (i=1;i<21;i++){
+        $('body').append(div)
+    }
 });
