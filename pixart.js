@@ -19,12 +19,12 @@ $(document).ready(function() {
     };
 
     //creates static div elements for the site with the onClick color change
-    for(i=1;i<20; i++ ){
+    for(i=1;i<8000; i++ ){
       $("body").append($("<div class='square'/>"))
-      $('.square').on('click',function(event) {
-          event.preventDefault();
-          $(this).css('background-color', inputField.val());
-      });
     }
+    $('.square').on('mouseover',function(event) {
+        event.preventDefault();
+        $(this).css('background-color', inputField.val());
+    });
 
 });
