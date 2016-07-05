@@ -18,7 +18,7 @@ function changeColorBox(evt)
   $('.brush').css('background',color);
 }
 
-for(var i=20; i>=0; i--)
+for(var i=8000; i>=0; i--)
 {
   $("body").append('<div class="square"></div>');
 }
@@ -36,4 +36,4 @@ function changeColor(evt)
   $('.square').css("background-color", color);
   // console.log("its green");
 }
-square.on("click", changeColor);
+square.on("mouseover", changeColor);
