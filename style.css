@@ -8,11 +8,11 @@
 }
 
 .square {
-  float: left;
   width: 10px;
   height: 10px;
-  background: #E7E5DB;
+  background: white;
   margin: 0;
+  float: left;
 }
 
 h1 {
@@ -26,5 +26,8 @@ h1 {
 }
 
 body {
-  background-image: url('ps_neutral.png');
+  background-color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
