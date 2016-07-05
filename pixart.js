@@ -23,3 +23,10 @@ $(document).ready(function(){
       $("body").append($("<div class='square'/>"))
       console.log("hi")
     }
+
+    var square=$(".square");
+    square.on("click", changeToGreen);
+
+    function changeToGreen(){
+      $('.square').css("background","green");
+    }
