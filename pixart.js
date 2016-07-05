@@ -17,3 +17,16 @@ function changeColorBox(evt)
 
   $('.brush').css('background',color);
 }
+
+for(var i=20; i>=0; i--)
+{
+  $("body").append('<div class="square"></div>');
+}
+var square = $('.square');
+square.on("click", changeColorToGreen);
+
+function changeColorToGreen()
+{
+  $('.square').css("background-color", "green");
+  // console.log("its green");
+}
