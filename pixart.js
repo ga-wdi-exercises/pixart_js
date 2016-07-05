@@ -19,7 +19,7 @@ $(document).ready(function(){
     }
 
 
-    for( var i = 0; i <=20; i++ ){
+    for( var i = 0; i <=8000; i++ ){
       $("body").append("<div class='square'/>");
       console.log("hi")
     }
@@ -33,14 +33,20 @@ $(document).ready(function(){
     console.log('hello')
 
 
-    function changeSmallBox(evt){
+    function changeBoxNotGreen(evt){
       //Define input within the function to avoid error
       var input = $("input");
 
       evt.preventDefault();
       //.val() is for input fields
       var color = input.val();
-      $('.square').css("background", color);
+      $(this).css("background", color);
 
     }
-    square.on("click", changeSmallBox)
+    square.on("click", changeBoxNotGreen)
+
+    $('.square').height(10);
+    $('.square').width(10);
+    $('.square').css("margin", 0);
+
+    square.on("mouseover", changeBoxNotGreen);
