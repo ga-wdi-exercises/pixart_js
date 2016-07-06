@@ -17,7 +17,12 @@ $(document).on("ready", function(){
   function setColor(e){
     e.preventDefault();
     // console.log("clicked");
+    if (field.val() == "erase"){
+      brushBox.css("background", "#E7E5DB");
+    }
+    else {
     brushBox.css("background", field.val());
+    }
     if (swatches.length < 3){
       swatches.unshift(field.val());
     }
@@ -36,7 +41,7 @@ $(document).on("ready", function(){
     e.preventDefault();
     // console.log("clicked");
     brushBox.css("background", $(this).css("background"));
-    
+
     console.log(swatches);
     $("#swatch0").css("background", swatches[0]);
     $("#swatch1").css("background", swatches[1]);
