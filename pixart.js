@@ -19,10 +19,10 @@ $(document).ready(function(){
   }
 
 
-  for ( var i = 0; i < 20; i++) {
+  for ( var i = 0; i < 8000; i++) {
     $("body").append("<div class='square'></div>");
   };
-  $(".square").click(function(evt) {
+  $(".square").mouseover(function(evt) {
     evt.preventDefault();
     $(this).css("background", ($('input#color-field').val()));
 
