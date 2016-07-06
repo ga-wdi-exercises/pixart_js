@@ -1,17 +1,23 @@
-$( document ).ready(function() {
+$(document).ready(function() {
   console.log("Ready!");
 
-  var colorDiv = $(".brush");
-  var buttonClick = $("#set-color");
-  var inputColor = $("#color-field");
+  //var colorDiv = $(".brush");
+  //var buttonClick = $("#set-color");
+  //var inputColor = $("#color-field");
 
 
-  buttonClick.on("click", inputColorClick)
+  $("#set-color").on("click", inputColorClick);
 
-  function inputColorClick(event) {
-    event.preventDefault();
+  function inputColorClick(e) {
+    e.preventDefault();
+    $(".brush").css("background", colorFieldSelection);
 
+    function colorFieldSelection() {
+      $("#color-field").text($(this).val());
+
+    }
   }
+
 
 
 
