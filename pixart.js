@@ -1,8 +1,8 @@
 
 $(document).ready(function(){
 
-var button = $("button");
-var input = $("input");
+  var button = $("button");
+  var input = $("input");
 
 
 
@@ -15,12 +15,17 @@ var input = $("input");
 
 
     var newColor = input.val();
-  $(".brush").css("background", newColor);
-}
+    $(".brush").css("background", newColor);
+  }
 
 
   for ( var i = 0; i < 20; i++) {
     $("body").append("<div class='square'></div>");
-};
+  };
+  $(".square").click(function(evt) {
+    evt.preventDefault();
+    $(this).css("background", "green");
+
+  })
 
 });
