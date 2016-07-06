@@ -13,6 +13,6 @@ button.on("click", changeColor);
 //this also works when I press enter from the input field
 
 //append 20 divs
-for(var i = 0; i < 21; i++){
-  $("body").append(<div class="brush"></div>);
+for (i=0; i<21; i++){
+  $("body").append($("<div class='brush'/>"));
 }
