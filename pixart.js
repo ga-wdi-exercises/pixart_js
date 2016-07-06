@@ -24,7 +24,7 @@ $(document).ready(function(){
   };
   $(".square").click(function(evt) {
     evt.preventDefault();
-    $(this).css("background", "green");
+    $(this).css("background", ($('input#color-field').val()));
 
   })
 
