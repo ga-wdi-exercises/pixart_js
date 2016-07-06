@@ -1,11 +1,9 @@
-+$(document).ready(function() {
- +
+$(document).ready(function() {
+  $("button").on("click", colorBrush);
 
- +$("button").on("click", colorBrush);
- +
- +  function colorBrush() {
- +    $(".brush").css("background", $("input").val());
- +    event.preventDefault();
- +  }
- +
- +});
+  function colorBrush(e) {
+    $(".brush").css("background", $("input").val());
+    e.preventDefault();
+  }
+
+});
