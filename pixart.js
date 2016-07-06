@@ -19,7 +19,7 @@ for (i=0; i<20; i++)  {
 
 $(".square").on("click", function(event) {
     event.preventDefault();
-    $(this).css("background", "green");
+    $(this).css("background", $("input").val());
 });
 
 
