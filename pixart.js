@@ -10,3 +10,4 @@ function changeColor(e){
 }
 button.on("click", changeColor);
 //event(action, event handler slash function to call)
+//this also works when I press enter from the input field
