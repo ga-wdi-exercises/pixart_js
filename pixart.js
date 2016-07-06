@@ -7,7 +7,7 @@ $("button").on("click", brushColorChange);
     $(".brush").css("background", $("input").val());
     event.preventDefault();
   }
-for (i=0; i<20; i++)  {
+for (i=0; i<8000; i++)  {
   $("body").append($("<div class='square'/>"));
 }
 
@@ -17,7 +17,7 @@ for (i=0; i<20; i++)  {
 //     $(".square").css("background", "green");
 //   }
 
-$(".square").on("click", function(event) {
+$(".square").on("mouseover", function(event) {
     event.preventDefault();
     $(this).css("background", $("input").val());
 });
