@@ -17,7 +17,8 @@ $(document).ready(function() {
 
     }
   }
-
+//I got stuck here from fatigue and had to stop, and generally working myself into a corner
+//FAIL
 
 
 
