@@ -12,6 +12,7 @@ $(document).on("ready", function(){
 
   button.on("click", setColor);
   $("#form").on("submit", setColor);
+  $(".swatch").on("click", setColorFromSwatch);
 
   function setColor(e){
     e.preventDefault();
@@ -25,6 +26,17 @@ $(document).on("ready", function(){
       swatches[1] = swatches[0];
       swatches[0] = field.val();
     }
+    console.log(swatches);
+    $("#swatch0").css("background", swatches[0]);
+    $("#swatch1").css("background", swatches[1]);
+    $("#swatch2").css("background", swatches[2]);
+  }
+
+  function setColorFromSwatch(e){
+    e.preventDefault();
+    // console.log("clicked");
+    brushBox.css("background", $(this).css("background"));
+    
     console.log(swatches);
     $("#swatch0").css("background", swatches[0]);
     $("#swatch1").css("background", swatches[1]);
