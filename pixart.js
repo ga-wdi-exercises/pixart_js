@@ -23,3 +23,8 @@ function squareColor(){
   console.log( $(this) );
 }
 $(".square").on("click", squareColor);
+
+// modify squares
+function changeSize(){
+  $(".square").css("height", "10 px")
+}
