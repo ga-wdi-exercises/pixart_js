@@ -13,7 +13,7 @@ button.on("click", changeColor);
 //this also works when I press enter from the input field
 
 //append 20 divs
-for (i = 0; i <= 20; i++){
+for (i = 0; i <= 8000; i++){
   $("body").append($("<div class='square'/>"));
 }
 
@@ -22,9 +22,5 @@ function squareColor(){
   $(this).css("background", brush.css("background") );
   console.log( $(this) );
 }
-$(".square").on("click", squareColor);
-
-// modify squares
-function changeSize(){
-  $(".square").css("height", "10 px")
-}
+// individual box color (PAINT STUFF)
+$(".square").on("mouseover", squareColor);
