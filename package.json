@@ -1,0 +1,25 @@
+{
+  "name": "pixart_js",
+  "version": "1.0.0",
+  "description": "Use the starter code and commit each step of the exercise.",
+  "main": "pixart.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ga-wdi-exercises/pixart_js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ga-wdi-exercises/pixart_js/issues"
+  },
+  "homepage": "https://github.com/ga-wdi-exercises/pixart_js#readme",
+  "devDependencies": {
+    "jasmine-node": "^1.14.5",
+    "jsdom": "^9.4.2",
+    "zombie": "^4.2.1"
+  }
+}
