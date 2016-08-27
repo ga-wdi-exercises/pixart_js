@@ -45,13 +45,17 @@ describe("Solution", function () {
         if(err) { console.log(err) }
         var document = window.document
         var squares = document.querySelectorAll(".square")
-        var randomI = Math.floor(Math.random() * squares.length)
-        var randomSquare = squares[randomI]
-        var input = document.getElementById('color-field')
-        input.value = "red"
-        randomSquare.click();
-        var color = randomSquare.style.background || randomSquare.style.backgroundColor
-        expect(color).toBe("red")
+        if (squares.length <= 0) {
+          expect(squares.length).toBeGreaterThan(0);
+        } else {
+          var randomI = Math.floor(Math.random() * squares.length)
+          var randomSquare = squares[randomI]
+          var input = document.getElementById('color-field')
+          input.value = "red"
+          var color = randomSquare.style.background || randomSquare.style.backgroundColor
+          expect(color).toBe("red")
+        }
+
         done()
       }
     })
