@@ -4,7 +4,7 @@ var markup = fs.readFileSync("index.html", "utf8")
 
 describe("Solution", function () {
 
-  it("set's the brush box's background color when clicked", function (done) {
+  it("sets the brush box's background color when clicked", function (done) {
     jsdom.env({
       html: markup,
       scripts: "pixart.js",
@@ -23,7 +23,7 @@ describe("Solution", function () {
     })
   })
 
-  it("Has 8000 .square divs", function (done) {
+  it("has 8000 .square divs", function (done) {
     jsdom.env({
       html: markup,
       scripts: "pixart.js",
@@ -37,7 +37,7 @@ describe("Solution", function () {
     })
   });
 
-  it("when you click on a div with a class of square, that square's background changes color", function (done) {
+  it("supports changing a square's background by clicking on it", function (done) {
     jsdom.env({
       html: markup,
       scripts: "pixart.js",
@@ -55,7 +55,6 @@ describe("Solution", function () {
           var color = randomSquare.style.background || randomSquare.style.backgroundColor
           expect(color).toBe("red")
         }
-
         done()
       }
     })
