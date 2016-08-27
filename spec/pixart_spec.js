@@ -1,6 +1,6 @@
-const fs = require('fs')
-const jsdom = require('jsdom')
-const markup = fs.readFileSync("index.html", "utf8")
+var fs = require('fs')
+var jsdom = require('jsdom')
+var markup = fs.readFileSync("index.html", "utf8")
 
 describe("Solution", function () {
 
@@ -10,13 +10,13 @@ describe("Solution", function () {
       scripts: "pixart.js",
       done: function (err, window) {
         if(err) console.log(err)
-        let document = window.document
-        let btn = document.getElementById('set-color')
-        let input = document.getElementById('color-field')
-        let box = document.querySelector(".brush")
+        var document = window.document
+        var btn = document.getElementById('set-color')
+        var input = document.getElementById('color-field')
+        var box = document.querySelector(".brush")
         input.value = "red"
         btn.click()
-        let color = box.style.background || box.style.backgroundColor
+        var color = box.style.background || box.style.backgroundColor
         expect(color).toBe("red")
         done()
       }
@@ -29,8 +29,8 @@ describe("Solution", function () {
       scripts: "pixart.js",
       done: function (err, window) {
         if(err) console.log(err)
-        let document = window.document
-        let squares = document.querySelectorAll(".square")
+        var document = window.document
+        var squares = document.querySelectorAll(".square")
         expect(squares.length).toBe(8000)
         done()
       }
@@ -43,14 +43,14 @@ describe("Solution", function () {
       scripts: "pixart.js",
       done: function (err, window) {
         if(err) { console.log(err) }
-        let document = window.document
-        let squares = document.querySelectorAll(".square")
-        let randomI = Math.floor(Math.random() * squares.length)
-        let randomSquare = squares[randomI]
-        let input = document.getElementById('color-field')
+        var document = window.document
+        var squares = document.querySelectorAll(".square")
+        var randomI = Math.floor(Math.random() * squares.length)
+        var randomSquare = squares[randomI]
+        var input = document.getElementById('color-field')
         input.value = "red"
         randomSquare.click();
-        let color = randomSquare.style.background || randomSquare.style.backgroundColor
+        var color = randomSquare.style.background || randomSquare.style.backgroundColor
         expect(color).toBe("red")
         done()
       }
