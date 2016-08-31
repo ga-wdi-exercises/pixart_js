@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>ActiveStorage</title>
+  <title>Pixart</title>
   <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-1.17.1.css">
 </head>
 <body>
@@ -23,7 +23,7 @@
     var ael = EventTarget.prototype.addEventListener
     var listeners = []
     EventTarget.prototype.addEventListener = function (eventName, cb) {
-      listeners.push({ eventName, cb, target: this })
+      listeners.push({ eventName: eventName, cb: cb, target: this })
       this.setAttribute("data-listener-id", listeners.length - 1)
       ael.apply(null, [ eventName, cb ])
     }
