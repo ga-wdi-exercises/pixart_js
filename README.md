@@ -29,7 +29,7 @@ Use the starter code and commit each step of the exercise.
 
 ### Commit 5
 
-* Modify your code so that when I click on each "square", it changes to the color I set using my input instead of "green" every time.
+* Modify your code so that when I hover over a "square", it changes to the color I set using my input instead of "green" every time.
 
 ### Commit 6
 
