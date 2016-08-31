@@ -18,8 +18,11 @@
   },
   "homepage": "https://github.com/ga-wdi-exercises/pixart_js#readme",
   "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-qunit": "^1.4.0",
     "jasmine-node": "^1.14.5",
     "jsdom": "^9.4.2",
+    "node-qunit-phantomjs": "^1.4.0",
     "zombie": "^4.2.1"
   }
 }
