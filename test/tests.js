@@ -1,11 +1,8 @@
 (function(){
   test("when I click set color button, the box changes color", function( assert ){
-    $("#color-field").val("red")
     var form = $("#form")[0]
-    var listener = listeners[form.getAttribute("data-listener-id")]
-    if(listener) {
-      listener.cb(new Event("Hi"))
-    }
+    $("#color-field").val("red")
+    form.dispatchEvent(new Event('submit'))
     var color = $(".brush").css("background-color")
     assert.equal( color, "rgb(255, 0, 0)");
   });
@@ -17,28 +14,12 @@
   test("when I hover over a square, the square's background changes color", function (assert) {
     $("#color-field").val("red")
     var squares = document.querySelectorAll(".square")
-    var listener;
-    if($("body").attr("data-listener-id")) {
-      var id = $("body").attr("data-listener-id")
-      listener = listeners[id]
-      var customEvent = $.Event("mouseover")
-      customEvent.target = squares[0]
-      if(listener){
-        listener.cb(customEvent)
-      }
-      assert.equal($(squares[0]).css("background-color"), "rgb(255, 0, 0)")
+    var randomI = Math.floor(Math.random() * squares.length)
+    var randomSquare = squares[randomI]
+    if(randomSquare){
+      randomSquare.dispatchEvent(new Event('mouseover'))
     }
-    if($(".square").attr("data-listener-id")) {
-      var id = $(".square").attr("data-listener-id")
-      listener = listeners[id]
-      var customEvent = $.Event("mouseover")
-      customEvent.target = squares[0]
-      if(listener){
-        listener.cb(customEvent)
-      }
-      assert.equal($(squares[0]).css("background-color"), "rgb(255, 0, 0)")
-    } else {
-      assert.equal($(squares[0]).css("background-color"), "rgb(255, 0, 0)")
-    }
+    var color = $(randomSquare).css("background-color")
+    assert.equal(color, "rgb(255, 0, 0)")
   })
 })()

@@ -19,15 +19,6 @@
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="./vendor/qunit-1.17.1.js"></script>
-  <script type="text/javascript">
-    var ael = EventTarget.prototype.addEventListener
-    var listeners = []
-    EventTarget.prototype.addEventListener = function (eventName, cb) {
-      listeners.push({ eventName: eventName, cb: cb, target: this })
-      this.setAttribute("data-listener-id", listeners.length - 1)
-      ael.apply(null, [ eventName, cb ])
-    }
-  </script>
   <script src="../pixart.js"></script>
   <script src="./tests.js"></script>
 </body>
