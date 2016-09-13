@@ -8,7 +8,6 @@ $('#set-color').on('click', function(evt){
   evt.preventDefault();
 })
 
-
 $('#set-color').on('keypress', 'enter', function(evt){
   var color = $('input').val()
   $('.brush').css('background', color)
