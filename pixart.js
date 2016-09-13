@@ -19,3 +19,7 @@ for(i = 0; i < 20; i++){
   var div = $('<div></div>').addClass('square')
   $('body').append(div)
 }
+
+$('.square').on('click', function(){
+  $(this).css('background', 'green')
+})
