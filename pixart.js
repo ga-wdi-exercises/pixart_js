@@ -13,3 +13,9 @@ $('#set-color').on('keypress', 'enter', function(evt){
   $('.brush').css('background', color)
   evt.preventDefault();
 })
+
+
+for(i = 0; i < 20; i++){
+  var div = $('<div></div>').addClass('square')
+  $('body').append(div)
+}
