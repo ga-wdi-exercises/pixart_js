@@ -15,12 +15,12 @@ $('#set-color').on('keypress', 'enter', function(evt){
 })
 
 
-for(i = 0; i < 20; i++){
+for(i = 0; i < 8000; i++){
   var div = $('<div></div>').addClass('square')
   $('body').append(div)
 }
 
-$('.square').on('click', function(){
+$('.square').on('mouseover', function(){
   var color = $('input').val()
   $(this).css('background', color)
 })
