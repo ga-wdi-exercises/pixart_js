@@ -1,3 +1,4 @@
+
  var inputColor = $("#color-field");
  var button = $("#set-color");
  var brush = $(".brush");
