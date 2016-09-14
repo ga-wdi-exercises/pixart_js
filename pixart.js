@@ -10,6 +10,10 @@ $("#set-color").on("click", function(e) {
   console.log(e);
 });
 
+// append div 20 times using .append()
+for (i=0; i <= 20; i++) {
+  $("body").append("<div class='square'></div>");
+}
 
 
 
