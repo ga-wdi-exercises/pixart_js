@@ -10,5 +10,6 @@ for (i = 0; i <= 20; i++) {
 };
 
 $('.controls ~ *').on('click',function() {
-  $(this).css('background', 'green');
+  var brushColor = $('.brush').css('background');
+  $(this).css('background', brushColor);
 })
