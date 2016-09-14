@@ -3,6 +3,7 @@ var button = $("#set-color");
 var brush = $(".brush");
 var form = $("#form");
 var body = $("body");
+var squares = $(".square");
 var color;
 
 var y = function(){
@@ -11,9 +12,9 @@ var y = function(){
 
 var z = function(){
   brush.css("background",color);
-  for (var i = 0; i < 20; i++) {
+  for (var i = 0; i < 8000; i++) {
     newSquare = $("<div class='square'></div>");
-    newSquare.on("click",y);
+    newSquare.on("mouseover",y);
     body.append(newSquare);
   }
 }
@@ -28,3 +29,5 @@ form.submit(function(e) {
 });
 
 button.on("click",x);
+
+squares.css("margin","0").css("height","10px").css("width","10px");
