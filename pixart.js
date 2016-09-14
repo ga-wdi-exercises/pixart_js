@@ -5,7 +5,7 @@ var color = '#1B4370';
 $setColorButton.on('click',setColor);
 addSquares();
 
-$body.on('click', '.square', paint);
+$body.on('mouseover', '.square', paint);
 
 function setColor(e) {
   e.preventDefault();
@@ -19,7 +19,7 @@ function addSquares(){
   var square = "<div class='square'></div>";
   var squares = '';
   // this feels SO sloppy, but I can't think of a better way just yet...
-  for (i = 0; i < 20; i++) {
+  for (i = 0; i < 8000; i++) {
     squares += square;
   }
   var $squares = $(squares);
