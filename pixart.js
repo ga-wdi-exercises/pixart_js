@@ -1,12 +1,16 @@
 
 var $setColorButton = $('#set-color');
+var $body = $('body');
+var color = '#1B4370';
 $setColorButton.on('click',setColor);
 addSquares();
+
+$body.on('click', '.square', paint);
 
 function setColor(e) {
   e.preventDefault();
   var $colorField = $('#color-field');
-  var color = $colorField.val();
+  color = $colorField.val();
   $('.brush').css('background', color);
   $colorField.val('');
 }
@@ -18,8 +22,10 @@ function addSquares(){
   for (i = 0; i < 20; i++) {
     squares += square;
   }
-  console.log(squares);
   var $squares = $(squares);
-  var $body = $('body');
   $body.append($squares);
+}
+
+function paint(){
+  $(this).css('background', color);
 }
