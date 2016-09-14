@@ -1,8 +1,8 @@
 
-var anyColor = $("#set-color")
+var setColor = $("#set-color")
 function changeColor() {
   var color = $("#color-field").val();
   $(".brush").css("background-color", color);
   e.preventDefault();
 }
-anyColor.on("click", changeColor);
+setColor.on("click", changeColor);
