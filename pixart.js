@@ -20,12 +20,12 @@ $('#set-color').keypress(function(e) {
 })
 
 // Create 20 .square divs
-for (var i = 0; i < 20; i++) {
+for (var i = 0; i < 8000; i++) {
 	$('body').append('<div class="square"></div>');
 }
 
 // Click listener for .square
-$('body .square').on('click', function(e) {
+$('body .square').on('mouseover', function(e) {
 	e.preventDefault();
 	$(this).css('background', $('#color-field').val());
 })
