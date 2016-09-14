@@ -1,4 +1,3 @@
-var updateColor = $(":input")
 var setColor = $('#set-color')
 
 
