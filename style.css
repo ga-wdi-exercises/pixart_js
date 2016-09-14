@@ -4,7 +4,15 @@
   width: 100px;
   height: 100px;
   background: #1B4370;
-  margin: 15px auto;
+  margin: 30px auto;
+}
+
+.swatch {
+	display: inline-block;
+	width: 80px;
+	height: 80px;
+	background: #E7E5DB;
+	margin: 0 25px 30px 25px;
 }
 
 .square {
