@@ -8,10 +8,10 @@ function changeColor (e){
 }
 setColor.on("click", changeColor)
 
-for (i=0; i<20; i++){
+for (i=0; i<8000; i++){
   $("body").append("<div class='square'></div>");
 }
-$(".square").on("click", function(){
+$(".square").on("mouseover", function(){
   var color = $('#color-field').val()
   $(this).css("background", color);
 
