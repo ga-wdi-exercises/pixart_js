@@ -27,5 +27,5 @@ for (var i = 0; i < 20; i++) {
 // Click listener for .square
 $('body .square').on('click', function(e) {
 	e.preventDefault();
-	$(this).css('background', 'green');
+	$(this).css('background', $('#color-field').val());
 })
