@@ -8,3 +8,7 @@ $(".brush").css("background", color);
 event.preventDefault()
 }
 // setColor.on("click",changeBackground);
+for (i = 0; i <21; i+=1){
+  var addDiv = $("<div class='square'></div>");
+  $("body").append(addDiv);
+};
