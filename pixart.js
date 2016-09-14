@@ -15,6 +15,17 @@ for (i=0; i <= 20; i++) {
   $("body").append("<div class='square'></div>");
 }
 
+$(".square").on("click", function() {
+  console.log($(this));
+  $(this).css("background", "#00FF00");
+});
+
+// function green () {
+//   $(".square").css("blackground", "green");
+// }
+//
+//
+
 
 
 // var nameOfObject = {
