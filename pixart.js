@@ -18,5 +18,6 @@ for (i=0;i<21; i++){
 
 
 $(".square").on("click", function () {
-  $(this).css("background", "green")
+  var colorSel = $("#color-field").val()
+  $(this).css("background", colorSel)
 })
