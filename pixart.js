@@ -1,9 +1,11 @@
 
 const CR = 0x0d; /* Ascii carriage Return Character */
 
+
 function getAndSetColor() {
   var color = $("#color-field").val();
   $(".brush").css("background",color);
+  lastColor=color;  /* remember last color to set boxes */
   event.preventDefault();
 }
 
@@ -46,5 +48,8 @@ for(var i=0;i<20;i++) {
 /* commit 4 */
 function setDivColorGrn(){
   console.log("body div click");
-  $(this).css("background-color","green");
+  var color = $(".brush").css("background-color"); /* commit 5 */
+  console.log("setting box to ",color," color");
+
+  $(this).css("background-color",color);
 }
