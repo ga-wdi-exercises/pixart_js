@@ -5,3 +5,6 @@ function setColor(e) {
 };
 
 $('button').on('click', setColor)
+for (i=0; i <=20; i++) {
+$('body').append($('<div class="square"></div>'))
+};
