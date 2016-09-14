@@ -12,12 +12,12 @@ function change(e) {
 }
 button.on("click", change)
 
-for (i=0;i<21; i++){
+for (i=0;i<8001; i++){
   $("body").append("<div class='square'></div>")
 }
 
 
-$(".square").on("click", function () {
+$(".square").on("mouseover", function () {
   var colorSel = $("#color-field").val()
   $(this).css("background", colorSel)
 })
