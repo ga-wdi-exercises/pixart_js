@@ -18,8 +18,9 @@ for (i=0;i<=20;i++){
 $( "body" ).append( "<div class='square'></div>" );
 }
 
-//Click to change square to green//
+//Click to change square to input color//
 
 $(".square").on("click", function(){
-  $(this).css("background","green");
+  var inputColor = $("#color-field").val();
+  $(this).css("background",inputColor);
 })
