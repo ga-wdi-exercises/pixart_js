@@ -10,3 +10,10 @@ function getAndSetColor(){
 }
 
 clickColor.on("click", getAndSetColor);
+
+
+//append 20 divs//
+
+for (i=0;i<=20;i++){
+$( "body" ).append( "<div class='square'></div>" );
+}
