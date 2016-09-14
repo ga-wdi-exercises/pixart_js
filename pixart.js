@@ -1,3 +1,4 @@
+// no changes needed for commit 2
 var input = $("#color-field");
 var button = $("#set-color");
 var brush = $(".brush");
