@@ -17,3 +17,9 @@ clickColor.on("click", getAndSetColor);
 for (i=0;i<=20;i++){
 $( "body" ).append( "<div class='square'></div>" );
 }
+
+//Click to change square to green//
+
+$(".square").on("click", function(){
+  $(this).css("background","green");
+})
