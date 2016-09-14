@@ -3,6 +3,7 @@
  var button = $("#set-color");
  var brush = $(".brush");
  var form = $("#form");
+ var body = $("body");
 
  var x = function(){
    color = inputColor.val();
@@ -13,3 +14,7 @@ form.submit(function(e) {
 });
 
 button.on("click", x);
+for (var i = 0; i < 20; i++) {
+  newSquare = $("<div class = 'square', <<div></div>")
+  body.append(newSquare);
+}
