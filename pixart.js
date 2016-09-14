@@ -9,6 +9,7 @@ for (i=0; i <=20; i++) {
 $('body').append($('<div class="square"></div>'))
 };
 
-$('.controls ~ *').on('click',function() {
-  $(this).css('background', 'green');
+$('.controls ~ *').on('click', function() {
+  var brushColor = $('.brush').css('background');
+  $(this).css('background', brushColor);
   })
