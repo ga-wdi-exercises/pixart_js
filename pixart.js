@@ -5,11 +5,11 @@ function setColor(e) {
 };
 
 $('button').on('click', setColor);
-for (i = 0; i <= 20; i++) {
+for (i = 0; i <= 8000; i++) {
   $('body').append($('<div class="square"></div>'))
 };
 
-$('.controls ~ *').on('click',function() {
+$('.controls ~ *').on('mouseover',function() {
   var brushColor = $('.brush').css('background');
   $(this).css('background', brushColor);
 })
