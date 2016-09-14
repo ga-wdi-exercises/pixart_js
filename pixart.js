@@ -1,5 +1,5 @@
 var setColor = $('#set-color')
-
+// var color = $('#color-field').val()
 
 function changeColor(){
   var color = $('#color-field').val()
@@ -18,7 +18,8 @@ $("body").append(addDiv);
 };
 
 $('.square').on("click",function() {
-$(this).css("background","green")
+var color = $('#color-field').val()
+$(this).css("background",color)
 })
 
 
