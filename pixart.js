@@ -19,8 +19,14 @@ for (i=0; i <21; i++) {
 //   $(".square").on("click", $(".square").css("background-color", "green"))
 // }
 
-$(".square").on("click", colorDiv)
+$(".square").on("click", changeColorDiv)
 
 function colorDiv(){
   $(this).css("background", "green")
+}
+function changeColorDiv(){
+  var color = colorField.val()
+  // $(".brush").css("background", color);
+  $(this).css("background", color)
+  event.preventDefault()
 }
