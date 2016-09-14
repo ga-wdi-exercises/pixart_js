@@ -17,4 +17,9 @@ $("body").append(addDiv);
 
 };
 
+$('.square').on("click",function() {
+$(this).css("background","green")
+})
+
+
 //.val
