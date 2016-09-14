@@ -38,4 +38,13 @@ textBox.on('keydown', '#color-field', handleKeyboardPress);
 /* commit 3*/
 for(var i=0;i<20;i++) {
   $("body").append("<div class='square'></div>")
+  /* commit 4 */
+  var div=$("div.square")
+  div.on( "click", setDivColorGrn );
+}
+
+/* commit 4 */
+function setDivColorGrn(){
+  console.log("body div click");
+  $(this).css("background-color","green");
 }
