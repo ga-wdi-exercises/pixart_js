@@ -12,15 +12,15 @@ function getAndSetColor(){
 clickColor.on("click", getAndSetColor);
 
 
-//append 20 divs//
+//append 8000 divs//
 
-for (i=0;i<=20;i++){
+for (i=0;i<=8000;i++){
 $( "body" ).append( "<div class='square'></div>" );
 }
 
-//Click to change square to input color//
+//Mouseover to change square to input color//
 
-$(".square").on("click", function(){
+$(".square").on("mouseover", function(){
   var inputColor = $("#color-field").val();
   $(this).css("background",inputColor);
 })
