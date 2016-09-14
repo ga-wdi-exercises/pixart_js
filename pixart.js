@@ -13,4 +13,14 @@ button.on("click", changeColor);
 for (i=0; i <21; i++) {
   var square = $("<div class = square>square</div");
   $("body").append(square)
+};
+
+// function() {
+//   $(".square").on("click", $(".square").css("background-color", "green"))
+// }
+
+$(".square").on("click", colorDiv)
+
+function colorDiv(){
+  $(this).css("background", "green")
 }
