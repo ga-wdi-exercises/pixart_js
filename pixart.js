@@ -11,11 +11,11 @@ $("#set-color").on("click", function(e) {
 });
 
 // append div 20 times using .append()
-for (i=0; i <= 20; i++) {
+for (i=0; i <= 8000; i++) {
   $("body").append("<div class='square'></div>");
 }
 
-$(".square").on("click", function() {
+$(".square").on("mouseover", function() {
   console.log($(this));
   var color2 = $("#color-field").val();
   // $(this).css("background", "green");
