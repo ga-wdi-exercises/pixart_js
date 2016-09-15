@@ -19,6 +19,12 @@ for (i=0; i < 21; i++){
 }
 
 //Turn individually clicked square divs green
-$(".square").on("click",function(change){
+/*$(".square").on("click",function(change){
   $(this).css("background","green")
+})*/
+
+//Modified code for individual squares to be same color as input box when clicked
+$(".square").on("click",function(change){
+  var color = $("input").val()
+  $(this).css("background",color)
 })
