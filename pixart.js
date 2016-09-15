@@ -12,7 +12,7 @@ function changeColor(){
 
 button.on("click", changeColor)
 
-for(var i = 0; i < 21; i++){
+for(var i = 0; i < 8000; i++){
   var square = $("<div class=square></div>")
   $("body").append(square);
 
@@ -23,4 +23,4 @@ function colorDiv(){
 
 }
 
-$(".square").on("click", colorDiv)
+$(".square").on("mouseover", colorDiv)
