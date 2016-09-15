@@ -1,5 +1,5 @@
 function createDivSquares() {
-  for (i=1;i<21;i++) {
+  for (i=1;i<8001;i++) {
     $("body").append('<div class="square"></div>')
   }
 }
@@ -24,4 +24,4 @@ function stopReload(evt) {
 
 button.on('click', updateColor)
 
-newDivs.on('click', divToBrush)
+newDivs.on('mouseover', divToBrush)
