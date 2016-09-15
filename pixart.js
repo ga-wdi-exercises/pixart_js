@@ -13,7 +13,8 @@ $("#set-color").on("keypress","enter",function(epd){
 })
 
 //Appended 20 Divs to body with square class
-for (i=0; i < 21; i++){
+//Modified code for 8000 divs instead of 20
+for (i=0; i < 8001; i++){
   var div = $("<div></div>").addClass("square");
   $("body").append(div);
 }
@@ -24,7 +25,8 @@ for (i=0; i < 21; i++){
 })*/
 
 //Modified code for individual squares to be same color as input box when clicked
-$(".square").on("click",function(change){
+//Changed event from click to mouseover and painted scribbles
+$(".square").on("mouseover",function(change){
   var color = $("input").val()
   $(this).css("background",color)
 })
