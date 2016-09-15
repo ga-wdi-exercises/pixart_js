@@ -7,6 +7,7 @@ function getAndSetColor() {
   $(".brush").css("background",color);
   lastColor=color;  /* remember last color to set boxes */
   event.preventDefault();
+  console.log("in getAndSetColor");
 }
 
 /* commit 2*/
@@ -37,19 +38,18 @@ button.on( "click", getAndSetColor );
 var textBox=$('#form');
 textBox.on('keydown', '#color-field', handleKeyboardPress);
 
-/* commit 3*/
-for(var i=0;i<20;i++) {
+/* commit 3*/ /* commit 6 */
+for(var i=0;i<8000;i++) {
   $("body").append("<div class='square'></div>")
   /* commit 4 */
-  var div=$("div.square")
-  div.on( "click", setDivColorGrn );
 }
+var div=$("div.square")
+div.on( "mouseover", setDivColorGrn );
 
 /* commit 4 */
 function setDivColorGrn(){
-  console.log("body div click");
+  // console.log("body div click");
   var color = $(".brush").css("background-color"); /* commit 5 */
-  console.log("setting box to ",color," color");
-
+  // console.log("setting box to ",color," color");
   $(this).css("background-color",color);
 }
