@@ -23,3 +23,9 @@ $( ".square" ).on( "click", function() {
 //$(this) selector refers or stands for the current selected object in a loop or event.
 //For example, if you have an unordered list <ul> with five list items <li> inside and you run a click event for each list item,
 //when you click on a single item,  $(this) selector will refer exactly to that clicked item.
+
+$( ".square" ).click(function(event) {
+  event.preventDefault();
+  var boxColor = $("input").val()
+  $(this).css("background", boxColor)
+  });
