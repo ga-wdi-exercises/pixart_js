@@ -2,6 +2,7 @@ var button = $("#set-color");
 var brush = $(".brush");
 var form = $("#form");
 var colorField = $("#color-field")
+var square = $(".square")
 
 function changeColor(){
   var color = colorField.val()
@@ -9,9 +10,17 @@ function changeColor(){
   event.preventDefault();
 }
 
-button.on("click" , changeColor)
+button.on("click", changeColor)
 
-for(var i = 0; i < 20; i++){
-  var newDiv = $("<div class='square'></div>")
-  $("body").append(newDiv);
+for(var i = 0; i < 21; i++){
+  var square = $("<div class=square></div>")
+  $("body").append(square);
+
 }
+
+function colorDiv(){
+ $(this).css("background", "green")
+
+}
+
+$(".square").on("click", colorDiv)
