@@ -14,8 +14,8 @@ var updateColor = function(e) {
   colorBox.css("background", $("input").val())
 }
 
-var divToGreen = function() {
-  $(this).css("background", "green")
+var divToBrush = function() {
+  $(this).css("background", $("input").val())
 }
 
 function stopReload(evt) {
@@ -24,4 +24,4 @@ function stopReload(evt) {
 
 button.on('click', updateColor)
 
-newDivs.on('click', divToGreen)
+newDivs.on('click', divToBrush)
