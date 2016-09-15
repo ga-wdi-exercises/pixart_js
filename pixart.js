@@ -11,3 +11,9 @@ $("#set-color").on("keypress","enter",function(epd){
   $(".brush").css("background",color)
   epd.preventDefault();
 })
+
+//Appended 20 Divs to body with square class
+for (i=0; i < 21; i++){
+  var div = $("<div></div>").addClass("square");
+  $("body").append(div);
+}
