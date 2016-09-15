@@ -11,3 +11,7 @@ var addDiv = $("<div class='square'></div>")
 for (var i = 0; i < 21; i++){
   $("body").append("<div class='square'></div>");
 }
+
+$('.square').on("click",function() {
+  $(this).css("background","green")
+})
