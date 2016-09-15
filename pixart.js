@@ -14,8 +14,8 @@ $( "form" ).submit(function( event ) {
 });
 
 function createPixart() {
-  var numSquares = 20
-  for (var i = 0; i < 21; i++) {
+  var numSquares = 8000
+  for (var i = 0; i < 8001; i++) {
     var Div = $("<div>").addClass("square");
     Div.appendTo("body");
     Div.on("mouseover", function() {
