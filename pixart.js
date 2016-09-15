@@ -17,3 +17,8 @@ for (i=0; i < 21; i++){
   var div = $("<div></div>").addClass("square");
   $("body").append(div);
 }
+
+//Turn individually clicked square divs green
+$(".square").on("click",function(change){
+  $(this).css("background","green")
+})
