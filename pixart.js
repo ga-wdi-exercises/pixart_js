@@ -19,7 +19,7 @@ for(var i = 0; i < 21; i++){
 }
 
 function colorDiv(){
- $(this).css("background", "green")
+ $(this).css("background", colorField.val())
 
 }
 
