@@ -14,6 +14,6 @@ $(document).ready(function(){
   }
 
   $(".square").on("click", function(){
-    $(this).css("background", "green");
+    $(this).css("background", $('#color-field').val());
   })
 });
