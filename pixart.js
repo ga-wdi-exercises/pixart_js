@@ -5,8 +5,8 @@ $("#set-color").on("click", function(){
     $('.brush').css('background-color', x);
 }).preventDefault();
 
-// $('#usersSearch').keypress(function(e){
-//   event.preventDefault();
-//   var x = $('#color-field').select().val();
-//     $('.brush').css('background-color', x);
-// }).preventDefault();
+$('#usersSearch').keypress(function(e){
+  event.preventDefault();
+  var x = $('#color-field').select().val();
+    $('.brush').css('background-color', x);
+}).preventDefault();
