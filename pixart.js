@@ -9,12 +9,7 @@ $(document).ready(function(){
     $(".brush").css("background", $('#color-field').val());
     event.preventDefault();
   }
-
-  colorfield.on('keyup', function(e){
-    if (e.keyCode == 13){
-      $(".brush").css("background", $('#color-field').val());
-      event.preventDefault();
-    }
-  });
-
+  for (var i = 0; i < 20; i++){
+  $("body").append("<div class=square></div>");
+  }
 });
