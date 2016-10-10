@@ -3,9 +3,13 @@
 .brush {
   width: 100px;
   height: 100px;
-  background: #1B4370;
+  background: white;
   margin: 15px auto;
+  display: inline-block;
+  border: 2px solid black;
+
 }
+
 
 .square {
   float: left;
