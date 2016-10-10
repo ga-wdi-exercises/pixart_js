@@ -15,3 +15,4 @@ function preventReset() {
   event.preventDefault();
 
 }
+//enter key automatically works
