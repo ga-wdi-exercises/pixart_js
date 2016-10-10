@@ -15,4 +15,14 @@ function preventReset() {
   event.preventDefault();
 
 }
+
+var pageLimit=20;
+
+$(document).ready(function () {
+         for (var i = 1; i <= pageLimit; i++) {
+             $('body').append('<div class= "square"></div>');
+         }
+     });
+
+
 //enter key automatically works
