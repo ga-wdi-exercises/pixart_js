@@ -19,8 +19,8 @@ $(document).ready(function() {
       alert('Please enter a valid color name, hex value, or rgb value');
     }
     else {
-      $('.brush').css('background-color', color);
       changeColor();
+      //$('.brush').css('background-color', color);
     }
   });
 
@@ -36,13 +36,15 @@ $(document).ready(function() {
     $('#brush1').css('background-color', storedColors[0]);
     $('#brush2').css('background-color', storedColors[1]);
     $('#brush3').css('background-color', storedColors[2]);
+
   }
 
   //Commit 2
   $('#usersSearch').keypress(function(e){
     event.preventDefault();
     color = $('#color-field').select().val();
-      $('.brush').css('background-color', color);
+      changeColor();
+      //$('.brush').css('background-color', color);
   });
 
   //Commit 3/6
@@ -53,7 +55,7 @@ $(document).ready(function() {
   //Commit 4/5
   $('.square').mouseover(function () {
     event.preventDefault();
-    color = $('#color-field').select().val();
+    color = storedColors[0];
 
     if (color === ""){
       $(this).css('background-color', '#E7E5DB');
