@@ -4,8 +4,8 @@ $(document).ready(function(){
     var colorInput = $("#color-field").val();
 
     function changeColor (){
-    $(".brush").css("background-color", $("#color-field").val());
-    event.preventDefault();
+      $(".brush").css("background-color", $("#color-field").val());
+      event.preventDefault();
     }
 
     function updateColor (){
@@ -13,5 +13,10 @@ $(document).ready(function(){
 
     }
 
-    $("#set-color").on("click", changeColor)
+    $("#set-color").on("click", changeColor);
+
+    for (i=0; i<8000; i++) {
+      
+       $("body").append("<div class='square'></div>");
+     }
 })
