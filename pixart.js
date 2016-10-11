@@ -32,13 +32,14 @@ function changeGreen() {
   $(this).css("background", $( "input" ).val());
 }
 
+$("body").on("mouseover", ".square", changeGreen);
+
 
 var i = 0;
 do {
   $("body").append('<div class="square"></div>');
-  $(".square").on("click", changeGreen);
   i++;}
-  while (i < 20);
+  while (i < 8000);
 
 
 
