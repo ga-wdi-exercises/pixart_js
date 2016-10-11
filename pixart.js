@@ -10,6 +10,8 @@ $(document).ready(function() {
 
   var input = $("input"); //enter key on keyboard
 
+  var squareBox = $(".square"); //square box in css
+
   function handleClickEvent () {
     $("brushBox").addClass("colorField");
     event.preventDefault();
@@ -27,6 +29,11 @@ $(document).ready(function() {
   for (var i = 20; i > 0, i -- ) {
     $("body").append("<div> .square </div>")
   }
+
+  $("squareBox").on("click", function() {
+    $(this).css("background-color", "#00FF00");
+    
+  });
 
   $("setColor").on("click", handleClickEvent);
   // input.on("keydown", handleKeyboardEvent);
