@@ -11,3 +11,7 @@ $("#set-color").on("click", function(){
       var x = $('#color-field').select().val();
         $('.brush').css('background-color', x);
     });
+
+for (i=0; i<20; i++) {
+$("body").append("<div class = 'square'></div>");
+}
