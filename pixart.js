@@ -1,6 +1,5 @@
 var button = $("#set-color");
 
-
 button.on("click", colorCheck);
 button.on("click", preventReset);
 
@@ -15,14 +14,21 @@ function preventReset() {
   event.preventDefault();
 
 }
-
+.
 var pageLimit=20;
 
 $(document).ready(function () {
-         for (var i = 1; i <= pageLimit; i++) {
+         for (var i = 0; i < pageLimit; i++) {
              $('body').append('<div class= "square"></div>');
          }
      });
+
+
+$(".square").on("click", function () {
+$(this).css("background", "green");
+})
+
+
 
 
 //enter key automatically works
