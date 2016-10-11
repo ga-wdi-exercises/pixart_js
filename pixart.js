@@ -12,19 +12,17 @@ function changeColor() {
 
 button.on("click", changeColor);
 
-/* commit 3 */
+/* commit 3 and 6 */
 
-for (i=0; i < 21; i++) {
+for (i=0; i < 801; i++) {
   body.append("<p class=square></div>");
 }
 
-/* commit 4 */
+/* commit 4 and 5 */
 
 function changeToInput() {
   $(this).css("background", input.val());
   event.preventDefault();
 }
 
-$(".square").on("click", changeToInput);
-
-/* commit 5 */
+$(".square").on("mouseover", changeToInput);
