@@ -16,11 +16,11 @@ $(document).ready(function(){
 
     button.on("click", changeColor);
 
-    for (i=0; i<20; i++) {
+    for (i=0; i<8000; i++) {
       body.append("<div class='square'></div>");
      }
 
-     $(".square").click(function() {
+     $(".square").mouseover(function() {
        $(this).css("background-color", $("#color-field").val());
      })
 })
