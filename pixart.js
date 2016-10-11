@@ -9,5 +9,6 @@ setColor.on("click", changeColor);
 function changeColor (){
   brush.css("background", colorField.val());
   event.preventDefault();
-  }
+}
+  colorField.on("keyup", changeColor);
 });
