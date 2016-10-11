@@ -11,6 +11,7 @@ $(document).ready(function(){ //To start a document
   }
 
 
+
 for(i = 0; i < 8000; i++){
 $("body").append("<div class=square></div>");
 }
