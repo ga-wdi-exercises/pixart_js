@@ -8,12 +8,23 @@ $(document).ready(function() {
 
   var brushBox = $(".brush") //brush box
 
+  var input = $("input"); //enter key on keyboard
+
   function handleClickEvent () {
     $("brushBox").addClass("colorField");
     event.preventDefault();
 
   }
 
+  $("colorField").keypress(function(event){
+      var keycode = (event.keyCode ? event.keyCode : event.which);
+      if(keycode == '13'){
+        $("brushBox").addClass("colorField");
+        event.preventDefault();
+      }
+  });
+
   $("setColor").on("click", handleClickEvent);
+  // input.on("keydown", handleKeyboardEvent);
 
 })
