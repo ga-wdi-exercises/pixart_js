@@ -8,34 +8,35 @@ $(document).ready(function() {
 
   var brushBox = $(".brush") //brush box
 
-  var input = $("input"); //enter key on keyboard
-
   var squareBox = $(".square"); //square box in css
 
   function handleClickEvent () {
-    $("brushBox").addClass("colorField");
+    $("brushBox").css("background-color", "colorField");
     event.preventDefault();
 
   }
 
+  //enter key being pressed
   $("colorField").keypress(function(event){
       var keycode = (event.keyCode ? event.keyCode : event.which);
       if(keycode == '13'){
-        $("brushBox").addClass("colorField");
+        $("brushBox").css("background-color", "colorField");
         event.preventDefault();
       }
   });
 
-  for (var i = 20; i > 0, i -- ) {
-    $("body").append("<div> .square </div>")
+  function count() {
+    for (var i = 8000; i > 0; i -- ) {
+    $("body").append("<div class=square></div>");
+    }
   }
 
-  $("squareBox").on("click", function() {
-    $(this).css("background-color", "#00FF00");
-    
+  $("squareBox").on("mouseover", function() {
+    $(this).css("background-color", "colorField");
+
   });
 
   $("setColor").on("click", handleClickEvent);
-  // input.on("keydown", handleKeyboardEvent);
+  count();
 
 })
