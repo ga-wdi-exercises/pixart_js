@@ -12,7 +12,8 @@ $(document).ready(function() {
 
   function greenSquare(event) {
     //event.target.css({"background-color":"green"});
-    $(this).css({"background-color":"green"});
+    var inputColor = textField.val();
+    $(this).css({"background-color":inputColor});
   }
 
   function setColorKeyboard(event) {
