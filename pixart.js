@@ -3,6 +3,7 @@ $( document ).ready(function() {
 
 
 $("#set-color").on("click", changeColor);
+$("#set-color").keyup(changeColor);
 
 function changeColor() {
         event.preventDefault();
@@ -15,5 +16,5 @@ function changeColor() {
           alert("Please submit a valid response.");
         }
       };
-      
+
 });
