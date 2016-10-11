@@ -1,15 +1,19 @@
-var Button = $("#set-color");
+$(document).ready(function(){ //To start a document
+ var setColor = $("#set-color");
 
- Button.on("click", changeRed);
+ setColor.on("click", changeColor);
 
-function changeRed() {
- $(".brush").css("background", $("input").val());
- event.preventDefault();
+ function changeColor(){
+   $(".brush").css("background", $("#color-field").val());
+   event.preventDefault();
+ }
+
+
+for(i = 0; i < 8000; i++){
+$("body").append("<div class=square></div>");
 }
-//Enter key works automatically - commit #2
-var stopCounting = 20;
-$(document).ready(function () {
-  for (var i = 1; i <= stopCounting; i++) {
-    $('body').append('<div class ="square"></div>');
-  }
+
+$(".square").on("mouseover", function(){
+$(this).css("background", $("#color-field").val());
+});
 });
