@@ -17,3 +17,14 @@ button.on("click", changeColor);
 for (i=0; i < 21; i++) {
   body.append("<p class=square></div>");
 }
+
+/* commit 4 */
+
+function changeToGreen() {
+  $(this).css("background", "green");
+  event.preventDefault();
+}
+
+$(".square").on("click", changeToGreen);
+
+/* commit 5 */
