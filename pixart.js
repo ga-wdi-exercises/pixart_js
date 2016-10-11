@@ -29,7 +29,7 @@ button.on("click", function(e) {
   })
 
 function changeGreen() {
-  $(this).css("background", "green");
+  $(this).css("background", $( "input" ).val());
 }
 
 
