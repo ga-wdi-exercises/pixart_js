@@ -7,7 +7,7 @@ $("#set-color").on("click",function(pd){
 //enter key already works from inside the input field
 
 function createDivs () {
-  for ( i=0; i <= 8000; i++) {
+  for ( i = 0; i < 8000; i++) {
     var div = $("<div></div>").addClass("square");
     $("body").append(div);
   }
