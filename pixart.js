@@ -5,7 +5,8 @@ var form = $("#color-field");
 var square = $(".square");
 
 var squareColor = function() {
-  $(this).css("background", "green");
+  var colorInput = $("#color-field").val();
+  $(this).css("background", colorInput);
 };
 
 var colorSet= function() {
