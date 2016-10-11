@@ -8,7 +8,7 @@ $(document).ready(function() {
 
   spawnSquares();
 
-  $('.square').on("click", greenSquare);
+  $('.square').on("mouseover", greenSquare);
 
   function greenSquare(event) {
     //event.target.css({"background-color":"green"});
@@ -34,7 +34,7 @@ $(document).ready(function() {
   function spawnSquares() {
     body = $("body");
     div = '<div class="square"></div>';
-    for (var i = 0; i < 20; i++) {
+    for (var i = 0; i < 8000; i++) {
       body.append(div);
     }
   }
