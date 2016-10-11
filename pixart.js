@@ -2,6 +2,11 @@ var button = $("button")
 var colorInput
 var brush = $(".brush");
 var form = $("#color-field");
+var square = $(".square");
+
+var squareColor = function() {
+  $(this).css("background", "green");
+};
 
 var colorSet= function() {
   var colorInput = $("#color-field").val();
@@ -16,4 +21,7 @@ form.submit(colorSet);
 
 for (i=0; i<20; i++) {
   $("body").append("<div class='square'></div>");
-}
+  var square = $(".square");
+};
+
+square.on("click", squareColor);
