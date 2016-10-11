@@ -4,9 +4,11 @@ $( document ).ready(function() {
 $("#set-color").on("click", changeColor);
 $("#set-color").keyup(changeColor);
 
+var color;
+
 function changeColor() {
         event.preventDefault();
-        var color = $("input").val();
+        color = $("input").val();
         if (color !==""){
           $(".brush").css("background-color", color);
           $("input").val("");
@@ -17,7 +19,11 @@ function changeColor() {
       };
 
 for (var i = 0; i< 20; i++){
-$("<div>",{"class":"square"}).appendTo("body");
+$("<div>",{"class":"square"}).appendTo("body").on("click", pixelColor);
+};
+
+function pixelColor() {
+  $(this).css("background-color", color);
 };
 
 
