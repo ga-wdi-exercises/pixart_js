@@ -12,5 +12,8 @@ button.on("click", colorSet);
 button.click(function(event) {
   event.preventDefault();
 form.submit(colorSet);
-
 });
+
+for (i=0; i<20; i++) {
+  $("body").append("<div class='square'></div>");
+}
