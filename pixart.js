@@ -12,7 +12,8 @@ function createDivs () {
     $("body").append(div);
   }
   $(".square").on("click", function() {
-    $(this).css("background", "green");
+    var color = $("#color-field").val();
+    $(this).css("background", color);
   });
 }
 createDivs();
