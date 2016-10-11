@@ -24,6 +24,10 @@ $(document).ready(function() {
       }
   });
 
+  for (var i = 20; i > 0, i -- ) {
+    $("body").append("<div> .square </div>")
+  }
+
   $("setColor").on("click", handleClickEvent);
   // input.on("keydown", handleKeyboardEvent);
 
