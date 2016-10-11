@@ -3,3 +3,5 @@ $("#set-color").on("click",function(pd){
   $(".brush").css("background", color);
   pd.preventDefault();
 });
+
+//enter key already works from inside the input field
