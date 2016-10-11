@@ -20,11 +20,11 @@ for (i=0; i < 21; i++) {
 
 /* commit 4 */
 
-function changeToGreen() {
-  $(this).css("background", "green");
+function changeToInput() {
+  $(this).css("background", input.val());
   event.preventDefault();
 }
 
-$(".square").on("click", changeToGreen);
+$(".square").on("click", changeToInput);
 
 /* commit 5 */
