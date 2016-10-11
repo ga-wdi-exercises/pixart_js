@@ -12,11 +12,11 @@ function changeColor (){
   }
   colorField.on("keyup", changeColor);
 
-for (i=0; i<20; i++) {
+for (i=0; i<8000; i++) {
   $("body").append("<div class=square></div>");
   }
 var square = $(".square");
-square.on("click", function(){
+square.on("mouseover", function(){
   $(this).css("background", colorField.val());
 })
 });
