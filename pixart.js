@@ -11,7 +11,7 @@ $(document).ready(function(){
     }
 
     function updateColor (){
-      $(this).css("background-color", $("color-field").val());
+      $(this).css("background-color", $("#color-field").val());
     }
 
     button.on("click", changeColor);
@@ -19,7 +19,8 @@ $(document).ready(function(){
     for (i=0; i<20; i++) {
       body.append("<div class='square'></div>");
      }
+
      $(".square").click(function() {
-       $(this).css("background-color", "green")
+       $(this).css("background-color", $("#color-field").val());
      })
 })
