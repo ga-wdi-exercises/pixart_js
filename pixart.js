@@ -2,6 +2,8 @@
 $(document).ready(function(){
 
   var colorbutton = $("#set-color");
+  var pixels = $("<div class="square"></div>")
+  // var keyPress = $("color-field");
   var newColor;
 
 // prevents form from submitting
@@ -16,9 +18,14 @@ function colorChanger(){
   // gets color from input field
    function colorSetr(){
        return $("#color-field").val();
-
   }
 
-    colorbutton.on("click",colorChanger);
+  //  add divs to body
+   $("body").append($("pixels"))
+
+
+    form.on("keyPress",colorChanger);
+    // colorbutton.on("click",colorChanger);
+
 
 })
