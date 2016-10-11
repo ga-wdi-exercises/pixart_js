@@ -1,7 +1,6 @@
 $( document ).ready(function() {
   console.log("hello jquery")
 
-
 $("#set-color").on("click", changeColor);
 $("#set-color").keyup(changeColor);
 
@@ -16,5 +15,10 @@ function changeColor() {
           alert("Please submit a valid response.");
         }
       };
+
+for (var i = 0; i< 20; i++){
+$("<div>",{"class":"square"}).appendTo("body");
+};
+
 
 });
