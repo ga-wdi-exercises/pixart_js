@@ -14,7 +14,7 @@ button.on("click", changeColor);
 
 /* commit 3 and 6 */
 
-for (i=0; i < 801; i++) {
+for (i=0; i < 8001; i++) {
   body.append("<p class=square></div>");
 }
 
