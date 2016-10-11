@@ -6,7 +6,14 @@ $(document).ready(function() {
   button.on("click", setColor);
   textField.on('keyPress', setColorKeyboard);
 
+  spawnSquares();
 
+  $('.square').on("click", greenSquare);
+
+  function greenSquare(event) {
+    //event.target.css({"background-color":"green"});
+    $(this).css({"background-color":"green"});
+  }
 
   function setColorKeyboard(event) {
     event.preventDefault();
@@ -23,6 +30,13 @@ $(document).ready(function() {
     $(".brush").css('background-color', inputColor);
   }
 
+  function spawnSquares() {
+    body = $("body");
+    div = '<div class="square"></div>';
+    for (var i = 0; i < 20; i++) {
+      body.append(div);
+    }
+  }
 });
 
   //  i just want to remember this wasnt the way.
