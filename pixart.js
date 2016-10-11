@@ -9,4 +9,13 @@ $(document).ready(function(){ //To start a document
     $(".brush").css("background", $("#color-field").val())
     event.preventDefault();
   }
+
+
+for(i = 0; i < 8000; i++){
+$("body").append("<div class=square></div>");
+}
+
+$(".square").on("mouseover", function(){
+$(this).css("background", $("#color-field").val());
+})
 })
