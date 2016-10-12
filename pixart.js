@@ -21,4 +21,15 @@ $(document).ready(function(){
     swatch.css("background", userColor); /*does not work :( */
     $("input").val("");
   })
+
+//same function if enter key is pressed
+  $("input").keypress(function(evt){
+    if(evt.keyCode == 13) {
+      swatch.css("background", userColor);
+    };
+  })
+
+
+
+
 });
