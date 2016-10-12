@@ -1,1 +1,24 @@
+$(document).ready(function(){
+  console.log("sup");
 
+  //create button variable for button element
+  var setColor = $("button");
+  console.log(setColor);
+
+  // grab value in the input field
+  var userColor = $("input").val();
+  console.log(userColor)
+
+  // variable for .brush div
+  var swatch = $(".brush");
+  console.log(swatch);
+
+
+  //function to change color of div
+  //on click of button do ____
+  setColor.click(function(evt) {
+    evt.preventDefault();
+    swatch.css("background", userColor); /*does not work :( */
+    $("input").val("");
+  })
+});
