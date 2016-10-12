@@ -17,10 +17,11 @@ function colorInput (){
 //this, used to describe colorInput
 }
 
-for (i=0; i < 20; i++){
+for (i=0; i < 8000; i++){
   var div = $("<div class='square'></div>");
+  $("body").append(div);
 }
 
-$(".square").click(function(){
+$(".square").mouseover(function(){
   $(this).css("background-color", $("#color-field").val());
 })
