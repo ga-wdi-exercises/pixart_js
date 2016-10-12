@@ -13,7 +13,7 @@ $(document).ready(function() {
     brush.css("background-color", input.val());
     event.preventDefault();
 
-for (i = 0; i < 20; i++){
+for (i = 0; i < 8000; i++){
   $("body").append("<div class='square'></div>");
   }
 
@@ -23,7 +23,7 @@ $("button").click(function(){
 });
 
 $(".square").on("mouseover", function() {
-  $(this).css("background", $("#color-filed").va());
+  $(this).css("background", $("#color-field").va());
 
 });
 }
