@@ -4,37 +4,29 @@ $(document).ready(function() {
   var setColor = $("#set-color"); //set color button
   var colorField = $("#color-field"); //input field
   var brushBox = $(".brush"); //brush box
-  var squareBox = $(".square");
+
 
   //function for changing color of brush box
   function handleClickEvent() {
-    event.preventDefault();
     brushBox.css("background", colorField.val());
-    console.log(colorField.val());
-  }
-
-  // enter key being pressed
-  colorField.keypress(function(event){
-    var keycode = (event.keyCode ? event.keyCode : event.which);
-    if(keycode == '13'){
     event.preventDefault();
-    brushBox.css("background-color", colorField.val());
-    }
-  });
+  }
 
   //function that executes for loop for drawing area
-  function count() {
-    for (var i = 0; i < 8000; i++) {
+  //loop works both ways
+  for (var i = 8000; 0 < i; i--) {
     $("body").append("<div class=square></div>");
-    }
   }
 
-  //click on square and it fills with color--not working
+  //square variable has to be declared inside of function to work
+  var squareBox = $(".square");
+
+  //click on square and it fills with color
   squareBox.on("mouseover", function() {
     $(this).css("background", colorField.val());
   });
 
-  setColor.on("click", handleClickEvent); //button
-  count(); //runs loop for drawing area
+  //button for start function
+  setColor.on("click", handleClickEvent);
 
 });
