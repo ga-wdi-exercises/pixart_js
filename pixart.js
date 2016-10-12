@@ -6,8 +6,7 @@ $(document).ready(function(){
   console.log(setColor);
 
   // grab value in the input field
-  var userColor = $("input").val();
-  console.log(userColor)
+  var userColor;
 
   // variable for .brush div
   var swatch = $(".brush");
@@ -18,8 +17,11 @@ $(document).ready(function(){
   //on click of button do ____
   setColor.click(function(evt) {
     evt.preventDefault();
-    swatch.css("background", userColor); /*does not work :( */
-    $("input").val("");
+    userColor = $("input").val();
+    if (userColor !==""){
+     swatch.css("background-color", userColor);
+    $("input").val("")
+  };
   })
 
   //same function if enter key is pressed
@@ -29,13 +31,17 @@ $(document).ready(function(){
     };
   })
   // append 20 divs to the body
-  for (var i=0; i<21; i++) {
+  for (var i=0; i<8001; i++) {
     $("body").append('<div class="square" />');
   };
 
   //change each square to green on click
+  $(".square").on("mouseover", function(){
+    $(this).css("background", userColor) //this works if argument2 = "green"
+  })
+
   $(".square").on("click", function(){
-    $(this).css("background", "green")
+    $(this).css("background", "red") //this works if argument2 = "green"
   })
 
 
