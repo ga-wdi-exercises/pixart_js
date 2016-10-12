@@ -1,10 +1,11 @@
 console.log("hello!")
 
 var color = $("color-field").val();
+var button = $("#set-color")
+var body = $("body");
 
 $("#set-color").on("click", colorChange);
-
-
+  button.on("click", colorChange);
 
 function colorChange (){
   $(".brush").css("background-color", $("#color-field").val());
@@ -12,6 +13,14 @@ function colorChange (){
 }
 
 function colorInput (){
-  $(this).css("background-color", $("color-field").val());
+  $(this).css("background-color", $("#color-field").val());
 //this, used to describe colorInput
 }
+
+for (i=0; i < 20; i++){
+  var div = $("<div class='square'></div>");
+}
+
+$(".square").click(function(){
+  $(this).css("background-color", $("#color-field").val());
+})
