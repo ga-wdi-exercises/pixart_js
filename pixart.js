@@ -33,5 +33,10 @@ $(document).ready(function(){
     $("body").append('<div class="square" />');
   };
 
+  //change each square to green on click
+  $(".square").on("click", function(){
+    $(this).css("background", "green")
+  })
+
 
 });
