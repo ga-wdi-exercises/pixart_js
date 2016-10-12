@@ -22,14 +22,16 @@ $(document).ready(function(){
     $("input").val("");
   })
 
-//same function if enter key is pressed
+  //same function if enter key is pressed
   $("input").keypress(function(evt){
     if(evt.keyCode == 13) {
       swatch.css("background", userColor);
     };
   })
-
-
+  // append 20 divs to the body
+  for (var i=0; i<21; i++) {
+    $("body").append('<div class="square" />');
+  };
 
 
 });
