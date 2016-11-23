@@ -1,5 +1,5 @@
 
-let obj = {selColor: ""};
+let obj = {selColor: "blue"};
 
 $('form').on('submit', function(e){
   e.preventDefault();
@@ -10,11 +10,11 @@ $('form').on('submit', function(e){
   obj.selColor = input;
 });
 
-for (let i=0;i<20;i++) {
+for (let i=0;i<8000;i++) {
   $("body").append("<div class='square'></div>");
 }
 
-$(".square").on("click", function() {
+$(".square").on("mouseover", function() {
   $(this).css("background-color",obj.selColor);
 
 });
