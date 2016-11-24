@@ -22,7 +22,7 @@ $(function(){
 			$('body').append('<div class="square">');
 		}
 
-		$("div").on("click", function(){
+		$(".square").on("click", function(){
 			$(this).css("background-color", "green");
 			console.log("squares are clicked");
 		});
