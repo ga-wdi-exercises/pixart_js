@@ -11,7 +11,17 @@ $(function(){
 		$('.brush').css("background-color", color);
 
 
-		
 		});
 	});
+
+	// var div = document.createElement('div');
+	// document.body.appendChild(div);
+
+	$(document).ready(function(){
+		for (var i=1; i<=20; i++){
+			$('body').append('<div class="square">');
+		}
+	});
 });
+// var txt3 = document.createElement("p");  // Create with DOM
+//     txt3.innerHTML = "Text.";
