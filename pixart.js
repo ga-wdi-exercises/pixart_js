@@ -23,11 +23,15 @@ $(function(){
 		}
 
 		$(".square").on("click", function(){
-			$(this).css("background-color", "green");
+			var color = $('#color-field').val();
+			$(this).css("background-color", color + $(this).val());
 			console.log("squares are clicked");
 		});
 
 	});
 });
-// var txt3 = document.createElement("p");  // Create with DOM
-//     txt3.innerHTML = "Text.";
+
+
+$('#activite_color').on('keyup', function() {
+    $('.col-lg-1').css('background', '#' + $(this).val());
+});
