@@ -3,7 +3,6 @@ $(function(){
 
 	$('button').click(function(e) {
 	    e.preventDefault();
-	});
 
 	$('button').on('click', function(){
 		console.log(' clicked on color-field');
@@ -11,5 +10,8 @@ $(function(){
 		var color = $('#color-field').val();
 		$('.brush').css("background-color", color);
 
+
+		
+		});
 	});
 });
