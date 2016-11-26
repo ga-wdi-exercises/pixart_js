@@ -9,6 +9,8 @@ const setBrushColor = function (e){
   e.preventDefault();
   let brushColor = $('.brush');
   brushColor.css("background", colorInput.val());
+  // Clears the input field after submit
+  colorInput.val('');
 };
 
 getColor.on("click", setBrushColor);
