@@ -14,3 +14,13 @@ const setBrushColor = function (e){
 };
 
 getColor.on("click", setBrushColor);
+
+
+
+const controlsDiv = $('.controls');
+
+// Create 20 new divs in body after control div
+for (let i = 0; i < 20; i++) {
+  // Add div after the control div
+  controlsDiv.after('<div class="square"></div>');
+}
