@@ -10,7 +10,6 @@ const setBrushColor = function (e){
   let brushColor = $('.brush');
   brushColor.css("background", colorInput.val());
   // Clears the input field after submit
-  colorInput.val('');
 };
 
 getColor.on("click", setBrushColor);
@@ -26,7 +25,9 @@ for (let i = 0; i < 20; i++) {
 const squareDiv = $('.square');
 // Add background color green to clicked on div
 const setSquareColor = function () {
-  $(this).css("background", "green");
+  // Change background color to color-field input
+  $(this).css("background", colorInput.val());
+  colorInput.val('');
 };
 
 squareDiv.on("click", setSquareColor);
