@@ -2,6 +2,7 @@ let $setColor = $(setColor);
 let $colorField = $(colorField);
 let $brush = $(brush);
 let $body = $('body');
+let color;
 
 // updates the brush div when CLICKED
 $setColor.on("click", updateBrush);
@@ -10,7 +11,7 @@ $setColor.keypress("13", updateBrush);
 
 // function find value it text field and updates brush div is the callback
 function updateBrush(){
-  let color = $colorField.val();
+  color = $colorField.val();
   $brush.css("background-color", color);
   return false;
 }
@@ -20,8 +21,9 @@ for(let i=0; i<20; i++){
   $body.append("<div class='square'></div");
   // newSquare selects div based on iterator number
   let $newSquare = $('.square').eq(i).on('click',toGreen);
-  // Turns shit green
+  // Turns square into color in colorField
   function toGreen(){
-    $newSquare.css('background', 'green');
+    color = $colorField.val();
+    $newSquare.css('background', color);
   }
 }
