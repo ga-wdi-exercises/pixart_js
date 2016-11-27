@@ -26,7 +26,11 @@ $(document).ready(function() {
 
   //commit 4: when clicked, change squares' color to green
   $('.square').on('click',function() {
-    $(this).css('background-color', 'green');
+    color = $('#color-field').val();
+    // $(this).css('background-color', 'green');
+
+  //commit: 5: color is now based on input value
+    $(this).css('background-color', color);
   })
 
 });
