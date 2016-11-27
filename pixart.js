@@ -11,5 +11,8 @@ $(function(){
   for(let i = 0; i < 20; i++) {
     $('body').append($('<div>', {class: 'square'}));
   }
+  $('.square').on('click', function(event) {
+    $(this).css('background-color', 'green');
+  });
 
 });
