@@ -12,3 +12,7 @@ form.on("submit", function(event){
    let square = $("<div class='square'/>");
    $("body").append(square);
  }
+
+  $(".square").on("mouseover", function(){
+    $(this).css('background', input.val());
+  })
