@@ -12,7 +12,7 @@ $(function(){
     $('body').append($('<div>', {class: 'square'}));
   }
   $('.square').on('click', function(event) {
-    $(this).css('background-color', 'green');
+    $(this).css('background-color', $colorField.val());
   });
 
 });
