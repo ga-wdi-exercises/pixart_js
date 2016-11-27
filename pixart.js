@@ -13,6 +13,10 @@ $('#set-color').keypress(function(e){
   }
 })
 
-for(i=1; i<20; i++){
+for(i=1; i<=20; i++){
   $('body').append('<div class="square"></div>');
 }
+
+$('body .square').click(function(){
+  $(this).css('background','green');
+});
