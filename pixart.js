@@ -12,3 +12,7 @@ $('#set-color').keypress(function(e){
     changeColor;
   }
 })
+
+for(i=1; i<20; i++){
+  $('body').append('<div class="square"></div>');
+}
