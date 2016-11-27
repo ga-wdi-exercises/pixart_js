@@ -6,3 +6,9 @@ var changeColor = function(){
 }
 
 $('#set-color').on('click',changeColor);
+
+$('#set-color').keypress(function(e){
+  if(e.which == 13){
+    changeColor;
+  }
+})
