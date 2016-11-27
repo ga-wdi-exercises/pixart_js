@@ -20,17 +20,18 @@ $(document).ready(function() {
   })
 
   //commit 3: create 20 divs & append to body
-  for (var i=0; i<20; i++) {
+  //commit 6: changes value to 8000
+  for (var i=0; i<8000; i++) {
     $('body').append('<div class="square"></div>');
   }
 
   //commit 4: when clicked, change squares' color to green
-  $('.square').on('click',function() {
+  //commit 6: changed the event from 'click' to 'mouseover'
+  $('.square').on('mouseover',function() {
     color = $('#color-field').val();
     // $(this).css('background-color', 'green');
 
   //commit: 5: color is now based on input value
     $(this).css('background-color', color);
   })
-
 });
