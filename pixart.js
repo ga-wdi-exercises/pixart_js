@@ -13,10 +13,10 @@ $('#set-color').keypress(function(e){
   }
 })
 
-for(i=1; i<=20; i++){
+for(i=1; i<32000; i++){
   $('body').append('<div class="square"></div>');
 }
 
-$('body .square').click(function(){
+$('body .square').mouseover(function(){
   $(this).css('background',$('#color-field').val());
 });
