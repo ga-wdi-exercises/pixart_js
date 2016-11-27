@@ -18,5 +18,5 @@ for(i=1; i<=20; i++){
 }
 
 $('body .square').click(function(){
-  $(this).css('background','green');
+  $(this).css('background',$('#color-field').val());
 });
