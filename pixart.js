@@ -8,10 +8,10 @@ $(function(){
     $controlsBrush.css('background-color', $colorField.val());
   });
 
-  for(let i = 0; i < 20; i++) {
+  for(let i = 0; i < 8000; i++) {
     $('body').append($('<div>', {class: 'square'}));
   }
-  $('.square').on('click', function(event) {
+  $('.square').on('mouseover', function(event) {
     $(this).css('background-color', $colorField.val());
   });
 
