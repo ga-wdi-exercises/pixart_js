@@ -24,4 +24,9 @@ $(document).ready(function() {
     $('body').append('<div class="square"></div>');
   }
 
+  //commit 4: when clicked, change squares' color to green
+  $('.square').on('click',function() {
+    $(this).css('background-color', 'green');
+  })
+
 });
