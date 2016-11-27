@@ -17,10 +17,10 @@ function updateBrush(){
 }
 
 // Adds 20 divs with square class
-for(let i=0; i<20; i++){
+for(let i=0; i<8000; i++){
   $body.append("<div class='square'></div");
   // newSquare selects div based on iterator number
-  let $newSquare = $('.square').eq(i).on('click',toGreen);
+  let $newSquare = $('.square').eq(i).on('mouseover',toGreen);
   // Turns square into color in colorField
   function toGreen(){
     color = $colorField.val();
