@@ -9,7 +9,7 @@ let updateColor = function (){
   return false;
 };
 //Loop to create 20 divs with square class
-for (i=0; i<21; i++){
+for (i=0; i<8001; i++){
   $('body').append($("<div></div>").addClass("square"));
 }
 //attach set color click to updateColor function
@@ -19,7 +19,7 @@ $setColor.on("click", updateColor);
 //   $(this).toggleClass('clicked');
 // });
 //Commit 5: function changes square color to color-field value
-$('.square').click(function(){
+$('.square').mouseover(function(){
   let newColor = $("#color-field").val();
   $(this).css('background', newColor);
 });
