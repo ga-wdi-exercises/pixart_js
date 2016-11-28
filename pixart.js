@@ -3,15 +3,16 @@ $('#set-color').one("click", function(e){
   var color = $('#color-field').val();
   $('.brush').css({"background" : color});
   e.preventDefault();
-  $("#id_of_textbox").keyup(function(event){
+  $("#color-field").keyup(function(event){
     if(event.keyCode == 13){
-        $("#id_of_button").click();
+        $("#set-color").click();
     }
 });
 });
 
-
-
-
-
+$(document).ready(function() {
+    for(var x = 0; x <= 20; x++) {
+            unit.appendTo('body');
+        }
+    });
 });
