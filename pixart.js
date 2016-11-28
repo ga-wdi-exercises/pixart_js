@@ -17,7 +17,8 @@ $ (function(){
     $('body').append('<div class="square">');
   }
   $(".square").on("click", function(){
- +			$(this).css("background-color", "green");
+        var color = $('#color-field').val();
+ +			$(this).css("background-color", color);
  +			console.log("squares are clicked");
 });
 });
