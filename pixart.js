@@ -14,7 +14,12 @@ for (i=0; i<21; i++){
 }
 //attach set color click to updateColor function
 $setColor.on("click", updateColor);
-//function changes class square color on click
+//Commit 4function changes class square color on click
+// $('.square').click(function(){
+//   $(this).toggleClass('clicked');
+// });
+//Commit 5: function changes square color to color-field value
 $('.square').click(function(){
-  $(this).toggleClass('clicked');
+  let newColor = $("#color-field").val();
+  $(this).css('background', newColor);
 });
