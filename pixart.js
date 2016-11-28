@@ -56,17 +56,13 @@ fixInput = function(input){
 
 let square = function square(){
   $('.controls').append('<div class="brush"></div>');
-  $('.brush').on('click', function(/* */){
+  $('.brush').on('mouseover', function(/* */){
   $(this).css('background', paintMe);
   });
 };
 //////places the square onto the board
-for (let i = 0; i < 800; i++){
+for (let i = 0; i < 1000; i++){
   square();
 }
-
-
-
-
-
+op
 });///END OF DOCUMENT READY

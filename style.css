@@ -1,10 +1,10 @@
 @import url(http://fonts.googleapis.com/css?family=Monoton);
 
 .brush {
-  width: 50px;
-  height: 50px;
+  width: 25px;
+  height: 25px;
   background: #1B4370;
-  margin: 5px;
+  margin: 2px;
   float: left;
 }
 
