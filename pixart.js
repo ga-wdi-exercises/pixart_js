@@ -13,4 +13,7 @@ $ (function(){
     var color = $('#color-field').val();
     $('.brush').css('background-color', color);
   });
+  for (var i=1; i<=20; i++) {
+    $('body').append('<div class="square">');
+  }
 });
