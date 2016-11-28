@@ -7,6 +7,14 @@
   margin: 15px auto;
 }
 
+.swatch {
+  width: 33px;
+  height: 33px;
+  background: #1B4370;
+  margin: 5px 1px 15px 1px;
+  display: inline-block;
+}
+
 .square {
   float: left;
   width: 10px;
