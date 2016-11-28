@@ -12,5 +12,9 @@ let updateColor = function (){
 for (i=0; i<21; i++){
   $('body').append($("<div></div>").addClass("square"));
 }
-
+//attach set color click to updateColor function
 $setColor.on("click", updateColor);
+//function changes class square color on click
+$('.square').click(function(){
+  $(this).toggleClass('clicked');
+});
