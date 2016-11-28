@@ -16,4 +16,8 @@ $ (function(){
   for (var i=1; i<=20; i++) {
     $('body').append('<div class="square">');
   }
+  $(".square").on("click", function(){
+ +			$(this).css("background-color", "green");
+ +			console.log("squares are clicked");
+});
 });
