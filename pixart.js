@@ -1,3 +1,9 @@
+$(document).ready(function() {
+  for (i=0;i<20;i++) {
+    $('body').append("<div class='square'></div>");
+  }
+})
+
 $( document ).ready(function() {
   $('button').on('click', function() {
     var color = $('input').val();
@@ -13,13 +19,9 @@ $( document ).ready(function() {
     else {
     }
   });
+  $('.square').on('click', function() {
+    // var color = $('input').val();
+    // $('.brush').css('background-color', color);
+    $(this).css('background-color', 'green');
+  })
 });
-
-$(document).ready(function() {
-  for (i=0;i<20;i++) {
-    console.log("firing");
-    var div = $("<div></div>");
-    div.addClass('square');
-    $('body').append(div);
-  }
-})
