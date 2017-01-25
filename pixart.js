@@ -15,7 +15,11 @@ $( document ).ready(function() {
   });
 });
 
-// $(document).ready(function() {
-//   var div = $("<div></div>");
-//   $("#box").append(div);
-// })
+$(document).ready(function() {
+  for (i=0;i<20;i++) {
+    console.log("firing");
+    var div = $("<div></div>");
+    div.addClass('square');
+    $('body').append(div);
+  }
+})
