@@ -6,5 +6,4 @@ var inputValue = $('#color-field').val();
   $('.brush').css('background', inputValue)
 
 return false
-
 })
