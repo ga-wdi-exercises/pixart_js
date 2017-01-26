@@ -13,5 +13,5 @@ for (var i = 0; i < 20; i++) {
 }
 
 $('.square').click(function() {
-  $(this).css('background-color', 'green');
+  $(this).css('background-color', brush.css('background-color'));
 });
