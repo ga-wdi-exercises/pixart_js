@@ -13,12 +13,12 @@ $("#set-color").on("click", function(){
 //pressing enter works as well
 
 function addSquares(){
-  for(var i=0;i<20;i++){
+  for(var i=0;i<8000;i++){
     $("body").append('<div class="square"></div>');
   }
 }
 addSquares();
 
-$(".square").click(function(){
+$(".square").mouseover(function(){
   $(this).css("background", input)
 })
