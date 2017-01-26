@@ -10,3 +10,9 @@ $("#set-color").on("click", function(){
 })
 
 //pressing enter works as well
+
+function addSquares(){
+  for(var i=0;i<20;i++){
+    $("body").append('<div class="square"></div>');
+  }
+}
