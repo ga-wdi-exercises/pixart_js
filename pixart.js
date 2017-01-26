@@ -11,3 +11,6 @@ colorField.on('keypress', function(){
       brush.css('background',colorField.val());
     }
 });
+for (i=0; i<20; i++) {
+  $('body').append('<div class="square"></div>');
+}
