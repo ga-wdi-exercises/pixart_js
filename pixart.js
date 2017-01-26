@@ -10,15 +10,15 @@ colorButton.on('click',colorChange)
 
 // commit 3- 20 divs of square class and append them to the body
 function addDiv(){
-  for (var i=0; i<20; i++) {
+  for (var i=0; i<8000; i++) {
     var div = document.createElement('div')
     div.className = 'square'
     $('body').append(div);
     //add function to click to change square.
-    $('.square').on('click',onClick)
+    $('.square').on('mouseover',onClick)
   }
 }
-addDiv(20);
+addDiv(8000);
 
 //commit 4 - change for each square
 function onClick(){
