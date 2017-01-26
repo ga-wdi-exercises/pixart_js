@@ -1,10 +1,11 @@
 
 
 var setcolor = $("#set-color")
+var input = ""
 
 $("#set-color").on("click", function(){
   event.preventDefault()
-  var input = document.getElementById("color-field").value;
+  input = document.getElementById("color-field").value;
 
   $(".brush").css("background", input)
 })
@@ -16,3 +17,8 @@ function addSquares(){
     $("body").append('<div class="square"></div>');
   }
 }
+addSquares();
+
+$(".square").click(function(){
+  $(this).css("background", input)
+})
