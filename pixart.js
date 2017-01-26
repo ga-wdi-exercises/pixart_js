@@ -1,11 +1,14 @@
 $("#set-color").click(function(){event.preventDefault()});
 
-// $("#set-color").click(setColor);
+$("#set-color").click(setColor);
 
+
+var color = "#1B4370";
+console.log(color);
 
 function setColor() {
   // event.preventDefault()
-  var color = $("#color-field").val();
+  color = $("#color-field").val();
   $(".brush").css("background", color);
 }
 
@@ -25,3 +28,7 @@ function addSquares(){
 }
 
 addSquares();
+
+$(".square").click(function(){
+  $(this).css("background",color);
+})
