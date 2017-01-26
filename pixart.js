@@ -7,3 +7,14 @@ $("button").on("click", function(event) {
   $(".brush").css("background", value);
   $("#color-field").val("");
 });
+
+function appendSquares() {
+  for (var i = 0; i < 20; i++) {
+    var div = document.createElement('div');
+    div.className = "square";
+    $("body").append(div);
+    console.log("Appended Square");
+  }
+}
+
+appendSquares();
