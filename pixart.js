@@ -8,17 +8,19 @@ $("button").on("click", function(event) {
   $("#color-field").val("");
 });
 
-function appendSquares() {
-  for (var i = 0; i < 20; i++) {
+function appendSquares(num) {
+  for (var i = 0; i < num; i++) {
     var div = document.createElement('div');
     div.className = "square";
     $("body").append(div);
-    $(".square").on("click", function() {
-      var current = $(".brush").css("background");
-      $(this).css("background", current);
-    })
     console.log("Appended Square");
   }
 }
 
-appendSquares();
+
+appendSquares(8000);
+
+$(".square").on("mouseover", function() {
+  var current = $(".brush").css("background");
+  $(this).css("background", current);
+})
