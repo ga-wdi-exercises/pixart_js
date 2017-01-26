@@ -15,6 +15,21 @@
   margin: 0;
 }
 
+section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.swatch {
+  width: 30px;
+  height: 30px;
+  background: #E7E5DB;
+  margin: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
 h1 {
   font-family: Monoton;
   font-size: 48px;
