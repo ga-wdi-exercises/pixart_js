@@ -15,13 +15,13 @@ function addDiv(){
     div.className = 'square'
     $('body').append(div);
     //add function to click to change square.
-    $('.square').on('mouseover',onClick)
   }
 }
 addDiv(8000);
-
 //commit 4 - change for each square
 function onClick(){
   var colorSelected = document.getElementById('color-field').value;
   $(this).css('background',colorSelected)
 };
+
+$('.square').on('mouseover',onClick)
