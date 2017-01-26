@@ -7,13 +7,19 @@
 </head>
 <body>
   <h1>Pixel Art!</h1>
+  <p>Each value take a number between 1 -255</p>
+
   <div class="controls">
     <form id="form">
-      <input type="text" id="color-field"></input>
+      <input type="number" id="color-fieldRed" placeholder="Red 1-255"></input>
+      <input type="number" id="color-fieldBlue" placeholder="Blue 1-255"></input>
+      <input type="number" id="color-fieldGreen" placeholder="Green 1-255"></input>
       <button id="set-color">Set Color</button>
     </form>
-    <div class="brush"></div>
   </div>
+
+  <div class="brush"></div>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="pixart.js"></script>
 </body>

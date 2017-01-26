@@ -1,10 +1,11 @@
 @import url(http://fonts.googleapis.com/css?family=Monoton);
 
 .brush {
-  width: 100px;
-  height: 100px;
+  width: 25px;
+  height: 25px;
   background: #1B4370;
-  margin: 15px auto;
+  margin: 2px;
+  float: left;
 }
 
 .square {
@@ -14,17 +15,25 @@
   background: #E7E5DB;
   margin: 0;
 }
-
+.form {
+  margin: 25px;
+}
 h1 {
   font-family: Monoton;
   font-size: 48px;
   text-align: center;
 }
-
+p {
+  font-family: sans-serif;
+  font-size: 18px;
+  text-align: center;
+}
 .controls {
   text-align: center;
+  padding-bottom:20px;
 }
 
 body {
   background-image: url('ps_neutral.png');
+
 }
