@@ -8,3 +8,5 @@ $("#set-color").on("click", function(){
 
   $(".brush").css("background", input)
 })
+
+//pressing enter works as well
