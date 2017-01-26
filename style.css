@@ -1,10 +1,21 @@
 @import url(http://fonts.googleapis.com/css?family=Monoton);
 
+.brushes {
+  display: flex;
+  flex-direction: row;
+}
+
 .brush {
   width: 100px;
   height: 100px;
-  background: #1B4370;
+  background: white;
   margin: 15px auto;
+  padding: 2px;
+  background-clip: content-box;
+}
+
+.brush.selected {
+  border: 2px dashed black;
 }
 
 .square {
