@@ -3,18 +3,27 @@
 //use JQuery to select element and add an event listener
 
 //Commit #1
+//Commit #2
+//Commit #3
+//Commit #4
 
-    //blank
-  // })
+
 $("button").on("click", function() {
   var color = $("input").val();
   // $(".brush").css("background-color", color);
   event.preventDefault();
+  $(".brush").css("background-color", color)
   alert("color has changed");
 })
 
-// $(".square").on("click", function() {
-//   $("this").css("background-color", "orange");
-//   //^^use Orange as "COLOR"
+$("document").ready("click", function() {
+  for( var i = 0; i < 20; i++) {
+    $("body”).append(“<div class=“square”></div>")
+  }
+})
 
-// });
+// $(".square").on("click", function() {
+//   $("this").css("background-color", "orange")
+//   ^^use Orange as "COLOR"
+//
+// })
