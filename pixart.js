@@ -12,5 +12,6 @@ function changeColor(){
 
 $("button").click(changeColor)
 $(".square").click(function(){
-  $(this).css("background", "green")
+  var selectedColor = $(".brush").css("background");
+  $(this).css("background", selectedColor)
 })
