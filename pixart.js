@@ -1,5 +1,5 @@
 $("button").on("click", function() {
-	var color = $("input").val();
+	var newColor = $("input").val();
 	event.preventDefault();
-	$(".brush").css("background-color", color)
+	$(".brush").css("background-color", newColor)
 })
