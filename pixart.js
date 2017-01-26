@@ -22,5 +22,6 @@ addDiv(20);
 
 //commit 4 - change for each square
 function onClick(){
-  $(this).css('background','green')
+  var colorSelected = document.getElementById('color-field').value;
+  $(this).css('background',colorSelected)
 };
