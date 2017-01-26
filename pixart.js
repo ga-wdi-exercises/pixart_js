@@ -6,3 +6,7 @@ $("#set-color").click(function(event) {
 for (i=0; i<20; i++) {
 $('body').append('<div class="square"></div>')
 }
+$('.square').on('click', function(){
+  $(this).css('background', $('#color-field').val())
+  console.log($(this).css('background'))
+})
