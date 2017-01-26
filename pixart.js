@@ -13,6 +13,10 @@ function appendSquares() {
     var div = document.createElement('div');
     div.className = "square";
     $("body").append(div);
+    $(".square").on("click", function() {
+      var current = $(".brush").css("background");
+      $(this).css("background", current);
+    })
     console.log("Appended Square");
   }
 }
