@@ -15,6 +15,10 @@
   margin: 0;
 }
 
+.clicked {
+  background-color: green;
+}
+
 h1 {
   font-family: Monoton;
   font-size: 48px;
