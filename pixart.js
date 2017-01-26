@@ -1,5 +1,3 @@
-$("button").click(changeColor)
-
 for (var i = 0; i < 20; i++) {
   var square = $("<div></div>");
   square.addClass("square")
@@ -11,3 +9,8 @@ function changeColor(){
   var userInput = document.getElementById("color-field").value;
   $(".brush").css("background", userInput)
 }
+
+$("button").click(changeColor)
+$(".square").click(function(){
+  $(this).css("background", "green")
+})
