@@ -1,10 +1,25 @@
 @import url(http://fonts.googleapis.com/css?family=Monoton);
 
+.colorBoard {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  align-items: center;
+
+}
+
 .brush {
   width: 100px;
   height: 100px;
   background: #1B4370;
-  margin: 15px auto;
+  margin: 5px;
+}
+
+.swatch {
+  width: 28px;
+  height: 28px;
+  background: #1B4370;
+  margin: 6px 3px;
 }
 
 .square {
