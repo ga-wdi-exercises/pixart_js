@@ -1,4 +1,4 @@
-//commit 1
+//commit 1 & 2
 
 $('button').on('click', function (){
 
@@ -7,3 +7,7 @@ var inputValue = $('#color-field').val();
 
 return false
 })
+//commit 3
+for(var i = 0; i <=20; i++){
+$('body').append("<div class='square'></div>")
+}
