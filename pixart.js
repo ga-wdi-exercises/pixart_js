@@ -26,5 +26,6 @@ var setPieces = function(){
 
 setPieces();
   $('.square').on('click', function (){
-    $(this).css('background', 'green');
+    // $(this).css('background', 'green');
+    $(this).css('background',$('.brush').css('background'));
   });
