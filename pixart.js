@@ -29,4 +29,7 @@ function onClick(){
   $(this).css("background", inputColor);
 }
 
-$('.square').on('mouseover', onClick);
+
+
+
+//messed up on commit -4 was supposed to be 5
