@@ -5,11 +5,11 @@ $("button").on("click", function() {
 })
 
 $("document").ready(function () {
-	for (var i = 0; i < 20; i++) {
+	for (var i = 0; i < 1000; i++) {
 
 		$("body").append("<div class='square'></div>");
 
-		$(".square").on("click", function () {
+		$(".square").on("mouseover", function () {
 			$(this).css("background-color", color)
 		})
 	}
