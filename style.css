@@ -1,6 +1,15 @@
 @import url(http://fonts.googleapis.com/css?family=Monoton);
 
-.brush {
+.easel div {
+  display: inline-block;
+  margin: 40px 10px;
+  height: 50px;
+  width: 50px;
+  background: #FFF;
+  border: 1px solid black;
+}
+
+#brush {
   width: 100px;
   height: 100px;
   background: #1B4370;

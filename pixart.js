@@ -9,22 +9,48 @@ $("#set-color").click(setColor);
 
 
 var color = "#1B4370";
-console.log(color);
+
+console.log($("#brush").css("backgroundColor"));
 
 function setColor() {
   // event.preventDefault()
+  moveColor();
   color = $("#color-field").val();
-  $(".brush").css("background", color);
+  $("#brush").css("background", color);
+
 }
 
-$("#color-field").keypress(function(event){
-  if (event.which == 13) {
-    setColor();
-  } else {
+function moveColor(){
+  var brushOne = $("#brush").css("backgroundColor");
+  var brushTwo = $("#brush2").css("backgroundColor");
+  var brushThree = $("#brush3").css("backgroundColor");
+  $("#brush4").css("background",brushThree);
+  $("#brush3").css("background",brushTwo);
+  $("#brush2").css("background",brushOne);
+}
+
+// $("#color-field").keypress(function(event){
+//   if (event.which == 13) {
+//     setColor();
+//   } else {
+//     return;
+//   }
+// })
+
+// past color functionality
+$(".easel").children().click(function(){
+// checks if brush clicked is already the main brush color
+// if so cancels
+  if($(this).attr("id") == $("#brush").attr("id")) {
     return;
+  } else {
+
+    color = $(this).css("backgroundColor");
+    $("#brush").css("background", color);
+
+    // moveColor();
   }
 })
-
 
 function addSquares(){
   for(var i=0;i<8000;i++){
