@@ -1,3 +1,8 @@
+// I missed the instruction to create a
+// branch and just noticed it after going back to the
+// first instructions.  So I just created the branch
+// and added this to show I know how to do it.
+
 $("#set-color").click(function(){event.preventDefault()});
 
 $("#set-color").click(setColor);
@@ -22,13 +27,13 @@ $("#color-field").keypress(function(event){
 
 
 function addSquares(){
-  for(var i=0;i<20;i++){
+  for(var i=0;i<8000;i++){
     $("body").append('<div class="square"></div>');
   }
 }
 
 addSquares();
 
-$(".square").click(function(){
+$(".square").mouseover(function(){
   $(this).css("background",color);
 })
