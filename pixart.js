@@ -14,6 +14,28 @@ $('input').on('pressEnter', function(){
   $('.brush').css('background', getColor());
 });
 
+$("body").append(`
+<div class='square'></div>
+<div class='square'></div>
+<div class='square'></div>
+<div class='square'></div>
+<div class='square'></div>
+<div class='square'></div>
+<div class='square'></div>
+<div class='square'></div>
+<div class='square'></div>
+<div class='square'></div>
+<div class='square'></div>
+<div class='square'></div>
+<div class='square'></div>
+<div class='square'></div>
+<div class='square'></div>
+<div class='square'></div>
+<div class='square'></div>
+<div class='square'></div>
+<div class='square'></div>
+<div class='square'></div>
+`);
 
 
 
