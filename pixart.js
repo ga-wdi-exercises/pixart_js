@@ -17,9 +17,9 @@ console.log(brushColor)
 function addSquares() {
   $("body").append(square)
 }
-for (i = 0; i < 20; i++) {
+for (i = 0; i < 8000; i++) {
   addSquares()
 }
-$(".square").click(function(evt){
-  $(evt.target).css("background", "green")
+$(".square").mouseover(function(evt){
+  $(evt.target).css("background", brushColor)
 })
