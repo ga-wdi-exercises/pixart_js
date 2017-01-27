@@ -15,6 +15,7 @@ for(var i = 0; i<=8000; i++){
 };
 $(".square").css("height", "10px");
 $(".square").css("width", "10px");
-$(".square").on("click", function(){
-  $("this").css("background-color", "green")
+$(".square").on("mouseover", function(){
+  var color = $("input#color-field").val();
+  $("body").attr("class", $(this).css("background-color", color))
 })
