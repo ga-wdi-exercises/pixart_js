@@ -3,6 +3,6 @@ var setColor = $('button');
 
 setColor.on('click',function(){
   event.preventDefault();
-  var colorSelected = $('#color-feild').value;
-  $('brush').css("background",colorSelected);
+  var colorBlock = document.getElementById('color-field').value;
+  $('.brush').css("background",colorBlock);
 });
