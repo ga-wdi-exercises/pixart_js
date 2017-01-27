@@ -11,7 +11,14 @@ for(i=0;i<20;i++){
 }
 
 // Commit 4
+// $('.square').on('click',function(event){
+//   event.preventDefault();
+//   $(this).css("background","green");
+// });
+
+// Commit 5
 $('.square').on('click',function(event){
   event.preventDefault();
-  $(this).css("background","green");
+  var color = $("#color-field").val();
+  $(this).css("background",color);
 });
