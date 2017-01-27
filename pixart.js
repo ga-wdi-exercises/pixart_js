@@ -6,6 +6,16 @@ console.log('Hello World!');
 $('button').on('click', function(inputColor) {
   $('.button').css('background','#set-color');
     event.preventDefault(inputColor);
+
 });
 
 // the code above always allows the page to not refresh when the enter key is pressed by user
+
+// below: create 20 divs of the square class and apprend them to body
+
+var document = function(){
+  $('document').createElement($('div'));
+      for(var i = 0; i < 20; i++) {
+  ($('body').apprend($('.square')));
+  }
+};
