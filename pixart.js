@@ -21,5 +21,5 @@ function addDiv() {
  addDiv ();
 
  $(".square").on("click", function(e) {
-   $(this).css("background", "green")
+   $(this).css("background", $("input").val())
  })
