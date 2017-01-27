@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+
   //set brush color helper function
   function setBrushColor() {
     var brushColor = $("#color-field").val();
@@ -21,7 +22,7 @@ $(document).ready(function() {
   }
 
   $("body").delegate(".square", "click", function(){
-    $(this).css("background", "green");
+    $(this).css("background", $(".brush").css("background"));
   });
 
 });
