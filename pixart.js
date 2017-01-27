@@ -1,10 +1,12 @@
 //This is to change the color of the brush field
 var button = $('button');
-var input = $('#color-field');
+var brush = $('.brush').css('background');
+
+
 
 button.on('click', function(e){
   e.preventDefault()
-  $('.brush').css('background', input.val());
+  $('.brush').css('background', brush);
 });
 // allows for enter key to submit form
 $("input").keypress(function(e) {
@@ -17,18 +19,16 @@ $("input").keypress(function(e) {
 // appends divs to body tags
 var square = $('.square');
 
-for (let i=0; i < 8000; i ++){
-    var div = $('<div />').appendTo('body');
-     div.attr('class','square').click(function(){
-       $(div).css('background', 'green');
-     });
+for (var i=0; i < 8000; i++){
+    var div = `<div class='square'></div>`;
+    $('body').append(div);
 }
-// .click(function(){
-// $(div).on('click').css('background','green');
+
 
 //attempt to change the color of the divs
 $('.square').on('mouseover', function(){
   console.log("clicked");
+  $(this).css('background',brush);
 })
 
 
