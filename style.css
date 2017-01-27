@@ -1,10 +1,23 @@
 @import url(http://fonts.googleapis.com/css?family=Monoton);
 
+.swatches {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .brush {
   width: 100px;
   height: 100px;
   background: #1B4370;
-  margin: 15px auto;
+  margin: 15px;
+}
+
+.recent {
+  width: 25px;
+  height: 25px;
+  background: #1B4370;
+  margin: 12.5px auto;
 }
 
 .square {
