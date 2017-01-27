@@ -10,20 +10,24 @@
 
 $("button").on("click", function() {
   var color = $("input").val();
-  // $(".brush").css("background-color", color);
   event.preventDefault();
   $(".brush").css("background-color", color)
   alert("color has changed");
 })
 
-$("document").ready("click", function() {
+$("document").ready(function() {
   for( var i = 0; i < 20; i++) {
-    $("body”).append(“<div class=“square”></div>")
+    $("body").append("<div class='square'></div>");
+
+    $(".square").on("click", function() {
+      $(this).css("background-color", "green")
+      // ^^use Orange as "COLOR"
+    })
   }
 })
 
 // $(".square").on("click", function() {
-//   $("this").css("background-color", "orange")
-//   ^^use Orange as "COLOR"
+//   $("this").css("background-color", color)
+//   // ^^use Orange as "COLOR"
 //
 // })
