@@ -5,3 +5,10 @@ button.on('click', function(e){
   e.preventDefault()
   $('.brush').css('background', input.val());
 });
+
+$("input").keypress(function(e) {
+    if (e.which == 13) {
+        e.preventDefault();
+        $("form").submit();
+    }
+});
