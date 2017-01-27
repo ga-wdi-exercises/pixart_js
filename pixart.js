@@ -19,11 +19,13 @@ var square = $('.square');
 
 for (let i=0; i < 20; i ++){
   var div = $('<div />').appendTo('body');
-   div.attr('class','square');
+     div.attr('class','square').click(function(){
+     $(div).on('click').css('background','green');
+   });
 }
 
 // attempt to change the color of the divs
-$('.square').on('click', function(){
-  console.log("clicked");
-  $('.square').on('click').css('background','green');
-})
+// $('.square').on('click', function(){
+//   console.log("clicked");
+//   $('.square').on('click').css('background','green');
+// })
