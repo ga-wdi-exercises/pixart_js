@@ -10,3 +10,12 @@ $(document).on("keypress", function(e) {
     e.preventDefault();
   }
 })
+
+function addDiv() {
+  var newDiv;
+  for (i=0; i<20; i++) {
+    newDiv = $('<div class="square"></div>').val(i)
+    $("body").append(newDiv)
+  }
+}
+ addDiv ();
