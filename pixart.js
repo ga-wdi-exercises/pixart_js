@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  console.log("Commit-2")
+  console.log("Commit-3")
 });
 
 var button = $("#set-color");
@@ -21,3 +21,8 @@ textInput.keyup(function(event){
         button.click();
     }
 });
+
+//obtain the body element
+for (i=0; i<20; i++) {
+    $("body").append("<div id=i class='square'></div>")
+}
