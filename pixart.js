@@ -20,3 +20,6 @@ function addSquares() {
 for (i = 0; i < 20; i++) {
   addSquares()
 }
+$(".square").click(function(evt){
+  $(evt.target).css("background", "green")
+})
