@@ -1,6 +1,9 @@
 //get content of input field with id colorfield
 //set the squares color to match the content of the input field
 $('document').ready(function(){
+  for (i = 0; i < 20; i++) {
+    $('body').append('<div class="square"></div>');
+  }
   $( "#submit_button").click(function(event){
     var color;
     color = $('#color-field').val();
