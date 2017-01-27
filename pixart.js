@@ -16,12 +16,12 @@ $(document).ready(function() {
   //add submit event listener to text box
   $("#color-field").on("submit", setBrushColor);
 
-  for(var i = 0; i <= 20; i++){
+  for(var i = 0; i <= 8000; i++){
     let html = `<div class="square"></div>`;
     $("body").append(html);
   }
 
-  $("body").delegate(".square", "click", function(){
+  $("body").delegate(".square", "mouseover", function(){
     $(this).css("background", $(".brush").css("background"));
   });
 
