@@ -13,13 +13,13 @@ $(document).on("keypress", function(e) {
 
 function addDiv() {
   var newDiv;
-  for (i=0; i<20; i++) {
+  for (i=0; i<8000; i++) {
     newDiv = $('<div class="square"></div>').val(i)
     $("body").append(newDiv)
   }
 }
  addDiv ();
 
- $(".square").on("click", function(e) {
+ $(".square").on("mouseover", function(e) {
    $(this).css("background", $("input").val())
  })
