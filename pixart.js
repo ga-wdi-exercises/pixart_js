@@ -14,33 +14,16 @@ $('input').on('pressEnter', function(){
   $('.brush').css('background', getColor());
 });
 
-$("body").append(`
-<div class='square'></div>
-<div class='square'></div>
-<div class='square'></div>
-<div class='square'></div>
-<div class='square'></div>
-<div class='square'></div>
-<div class='square'></div>
-<div class='square'></div>
-<div class='square'></div>
-<div class='square'></div>
-<div class='square'></div>
-<div class='square'></div>
-<div class='square'></div>
-<div class='square'></div>
-<div class='square'></div>
-<div class='square'></div>
-<div class='square'></div>
-<div class='square'></div>
-<div class='square'></div>
-<div class='square'></div>
-`);
+function createSquares(){
+  for(var i = 0; i < 8000; i++){
+  $('body').append( $("<div class='square'></div>") );
+  }
+}
+createSquares()
 
-$('.square').on('click', function(){
+$('.square').on('mouseover', function(){
   $(this).css('background', getColor());
 });
-
 
 
 })
