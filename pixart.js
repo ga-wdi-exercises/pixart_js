@@ -14,6 +14,11 @@ function addDiv(){
     var div = document.createElement('div')
     div.className = 'square'
     $('body').append(div);
+    $('.square').on('click',onClick)
   }
 }
 addDiv(20);
+
+function onClick(){
+  $(this).css('background','green')
+};
