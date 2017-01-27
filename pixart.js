@@ -37,7 +37,9 @@ $("body").append(`
 <div class='square'></div>
 `);
 
-
+$('.square').on('click', function(){
+  $(this).css('background', 'green');
+});
 
 
 
