@@ -27,4 +27,22 @@ h1 {
 
 body {
   background-image: url('ps_neutral.png');
+  /*display: flex;
+  justify-content: center;*/
+}
+.swatch {
+  width: 100px;
+  height: 40px;
+  background: tan;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 15px auto;
+}
+.hx {
+  width: 30px;
+  height: 30px;
+  background: #1B4370;
+  margin: 15px auto;
 }
