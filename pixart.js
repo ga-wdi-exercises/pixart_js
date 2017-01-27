@@ -7,14 +7,14 @@ var inputValue = $('#color-field').val();
 
 return false
 })
-//commit 3
-for(var i = 0; i <=20; i++){
+//commit 3 & 6
+for(var i = 0; i <=8000; i++){
 $('body').append("<div class='square'></div>")
 }
 
-//commit 4 & 5
+//commit 4 & 5 & 6
 
-$('.square').on('click', function(){
+$('.square').on('mouseover', function(){
 var inputValue = $('#color-field').val();
     $(this).css('background', inputValue);
 
