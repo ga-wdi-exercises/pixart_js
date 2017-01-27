@@ -38,7 +38,7 @@ $("body").append(`
 `);
 
 $('.square').on('click', function(){
-  $(this).css('background', 'green');
+  $(this).css('background', getColor());
 });
 
 
