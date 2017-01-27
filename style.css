@@ -3,15 +3,21 @@
 .brush {
   width: 100px;
   height: 100px;
-  background: #1B4370;
+  background: purple;
   margin: 15px auto;
 }
+
+.controls {
+position: absolute;
+margin: auto;
+}
+
 
 .square {
   float: left;
   width: 10px;
   height: 10px;
-  background: #E7E5DB;
+  background: #1B4370;
   margin: 0;
 }
 
