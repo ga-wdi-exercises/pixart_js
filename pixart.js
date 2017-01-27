@@ -7,3 +7,5 @@ $('button').on('click', function(inputColor) {
   $('.button').css('background','#set-color');
     event.preventDefault(inputColor);
 });
+
+// the code above always allows the page to not refresh when the enter key is pressed by user
