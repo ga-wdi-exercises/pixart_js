@@ -28,3 +28,8 @@ h1 {
 body {
   background-image: url('ps_neutral.png');
 }
+.square {
+  height: 10px;
+  width: 10px;
+  margin: 0;
+}

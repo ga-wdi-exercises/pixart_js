@@ -13,16 +13,16 @@ setColor.on('click', setColor);
 
 
 function createDiv(){
-  for (var i = 0; i < 20; i++){
+  for (var i = 0; i < 4000; i++){
     var div = $('<div class="square"></div>');
     $('body').append(div);
 
 
-    $('.square').on('click', onClick);
+    $('.square').on('mouseover', onClick);
   }
 }
 
-createDiv(20);
+createDiv(4000);
 
 function onClick(){
   var inputColor = document.getElementById("color-field").value;
