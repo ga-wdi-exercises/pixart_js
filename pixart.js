@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  console.log("Commit-4")
+  console.log("Commit-5")
 });
 
 var button = $("#set-color");
@@ -37,5 +37,6 @@ for (i=0; i<20; i++) {
 
 $('.square').on('click',function(event){
   event.preventDefault();
-  $(this).css("background","green");
+  $(this).css("background",textInput.val());
+   // $(this).css("background","green");
 });
