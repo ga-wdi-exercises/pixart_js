@@ -12,10 +12,10 @@ for(var i = 0; i <=20; i++){
 $('body').append("<div class='square'></div>")
 }
 
-//commit 4
+//commit 4 & 5
 
 $('.square').on('click', function(){
-
-    $(this).css('background', 'green');
+var inputValue = $('#color-field').val();
+    $(this).css('background', inputValue);
 
 })
