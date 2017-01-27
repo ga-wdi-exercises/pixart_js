@@ -4,7 +4,7 @@
   width: 100px;
   height: 100px;
   background: #1B4370;
-  margin: 15px auto;
+  /*margin-bottom: 15px auto;*/
 }
 
 .square {
@@ -14,7 +14,24 @@
   background: #E7E5DB;
   margin: 0;
 }
+.history {
+  display:flex;
+  flex-direction:column;
+  height: 100px;
+  width: 33px;
+}
+.paintColors{
+  display:flex;
+  justify-content: center;
+  margin:15px auto;
 
+}
+.history>*{
+  height:100%;
+  width:100%;
+  border:1px rgba(0,0,0,0);
+  box-sizing:border-box;
+}
 h1 {
   font-family: Monoton;
   font-size: 48px;
