@@ -25,5 +25,8 @@ function createDiv(){
 createDiv(20);
 
 function onClick(){
-  $(this).css("background", "green");
+  var inputColor = document.getElementById("color-field").value;
+  $(this).css("background", inputColor);
 }
+
+$('.square').on('mouseover', onClick);
