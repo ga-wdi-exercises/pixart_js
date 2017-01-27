@@ -10,6 +10,13 @@ $('button').on('click', function(event){
   event.preventDefault()
 });
 
+$('input').on('pressEnter', function(){
+  $('.brush').css('background', getColor());
+});
+
+
+
+
 
 
 })
