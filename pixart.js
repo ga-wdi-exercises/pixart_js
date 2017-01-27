@@ -1,5 +1,8 @@
-$("button").on("click", function(){
-    var color = $("input").val();
-    event.preventDefault();
-    $(".brush").css("background", color);
+var setColor = $('button');
+
+
+setColor.on('click',function(){
+  event.preventDefault();
+  var colorSelected = $('#color-feild').value;
+  $('brush').css("background",colorSelected);
 });
