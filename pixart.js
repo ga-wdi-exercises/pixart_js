@@ -8,3 +8,4 @@ function setBrushColor(e) {
 }
 
 setColorButton.on('click', setBrushColor)
+//unsure//
