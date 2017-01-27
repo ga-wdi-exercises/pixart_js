@@ -6,10 +6,10 @@
 //Commit #2
 //Commit #3
 //Commit #4
-
+//Commit #5
 
 $("button").on("click", function() {
-  var color = $("input").val();
+  color = $("input").val();
   event.preventDefault();
   $(".brush").css("background-color", color)
   alert("color has changed");
@@ -20,7 +20,7 @@ $("document").ready(function() {
     $("body").append("<div class='square'></div>");
 
     $(".square").on("click", function() {
-      $(this).css("background-color", "green")
+      $(this).css("background-color", color)
       // ^^use Orange as "COLOR"
     })
   }
