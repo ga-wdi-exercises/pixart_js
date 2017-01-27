@@ -13,9 +13,18 @@ $('button').on('click', function(inputColor) {
 
 // below: create 20 divs of the square class and apprend them to body
 
-var document = function(){
-  $('document').createElement($('div'));
+var setPieces = function(){
+  // $('document').createElement('div');
       for(var i = 0; i < 20; i++) {
-  ($('body').apprend($('.square')));
+  ($('body').append("<div class ='square'></div>"));
   }
 };
+
+
+// functionality: when clicked each square changes the individual color to green
+
+
+setPieces();
+  $('.square').on('click', function (){
+    $(this).css('background', 'green');
+  });
