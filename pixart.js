@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  console.log("Commit-3")
+  console.log("Commit-4")
 });
 
 var button = $("#set-color");
@@ -23,6 +23,19 @@ textInput.keyup(function(event){
 });
 
 //obtain the body element
+var selectBody = $('body');
 for (i=0; i<20; i++) {
-    $("body").append("<div id=i class='square'></div>")
+    console.log("id: " + i);
+    //append('<div id="div'+ i +'" />');
+    //obtain the body element
+    var div = $('<div id="div'+ i +'"  class="square"/>');
+
+    selectBody.append(div);
 }
+
+
+
+$('.square').on('click',function(event){
+  event.preventDefault();
+  $(this).css("background","green");
+});
