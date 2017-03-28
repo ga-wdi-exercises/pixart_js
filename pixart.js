@@ -8,4 +8,9 @@ function changeColor() {
 }
 
 button.click(changeColor);
-inputSubmit.keyup(changeColor);
+inputSubmit.keydown(function(e) {
+  if (e.which === 13) {
+    e.preventDefault();
+    changeColor();
+  }
+});
