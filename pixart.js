@@ -8,4 +8,4 @@ function changeColor() {
 }
 
 button.click(changeColor);
-inputSubmit.on('submit', changeColor);
+inputSubmit.keyup(changeColor);
