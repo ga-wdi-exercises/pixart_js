@@ -20,6 +20,7 @@ function setColor(){
 }
 
 $('#set-color').click(setColor)
+$('#set-color').keydown(setColor)
 
 
 $('#set-color').click(function(event) {
