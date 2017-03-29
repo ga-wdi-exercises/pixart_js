@@ -9,6 +9,11 @@ function setColor() {
 buttonColor.on("click", setColor);
 buttonColor.keypress(setColor);
 
+for (var i = 0; i < 3; i++) {
+  $(".swatches").append("<div class=brush></div>");
+  $(".swatches").css({"display": "flex", "flex-direction": "row"});
+}
+
 for (var i = 0; i < 8000; i++) {
   $("body").append("<div class=square></div>");
 }
