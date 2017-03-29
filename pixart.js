@@ -1,15 +1,18 @@
 $(document).ready(function(){
-
+  /////
   var setColorButton = $('#set-color')
+  // setColorButton.on('click', changeColorFunction)
+  // setColorButton.keypress(changeColorFunction)
+  setColorButton.bind('on click keypress', setColorFunction)
 
-  var changeColorFunction = function(){
+  var setColorFunction = function(){
     event.preventDefault()
     console.log('clicked')
   }
+  /////
 
-  setColorButton.bind('on click keypress',changeColorFunction)
-  // setColorButton.on('click', changeColorFunction)
-  // setColorButton.keypress(changeColorFunction)
-  var squares = $('.square')
-  $('body').append(squares)
+  for(var i = 0; i < 8000; i++) {
+    var square = $('<div class="square"></div>');
+    $('body').append(square);
+  }
 });
