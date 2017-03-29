@@ -9,3 +9,8 @@ function setColor(){
 
 
 colorButton.on("click", setColor);
+
+for (var i = 20 ; i > 0; i--) {
+ var div = $('<div class=square> </div>');
+ $('body').append(div);
+}
