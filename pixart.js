@@ -17,3 +17,8 @@ $(".square").on("mouseover", toGreen);
 function toGreen() {
   $(this).css("background", colorField.val());
 };
+
+for (var i = 0; i < 3; i++) {
+  $(".bonus").append("<div class=brush></div>");
+  $(".bonus").css({"display": "flex", "flex-direction": "row"});
+}
