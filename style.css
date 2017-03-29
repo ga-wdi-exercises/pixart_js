@@ -3,7 +3,7 @@
 .brush {
   width: 100px;
   height: 100px;
-  background: #1B4370;
+  background: #fff;
   margin: 15px auto;
 }
 
@@ -27,4 +27,12 @@ h1 {
 
 body {
   background-image: url('ps_neutral.png');
+}
+
+.row {
+  width: 450px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
 }
