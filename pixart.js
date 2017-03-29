@@ -8,4 +8,5 @@ $(document).ready(function(){
   };
 
   setColorButton.on('click', changeColorFunction);
+  setColorButton.keypress(changeColorFunction)
 });
