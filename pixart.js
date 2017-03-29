@@ -14,5 +14,5 @@ for (var i = 0; i < 8000; i++) {
 
 $(".square").on("click", red);
 function red(){
-  $(this).css("background", "red");
+  $(this).css("background", colorField.val());
 }
