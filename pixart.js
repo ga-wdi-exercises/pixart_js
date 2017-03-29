@@ -7,3 +7,4 @@ function changeColor () {
 }
 
 setColor.on("click", changeColor);
+setColor.keypress(changeColor);
