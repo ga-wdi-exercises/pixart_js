@@ -1,12 +1,15 @@
 $(document).ready(function(){
   /////
   var setColorButton = $('#set-color')
+  var inputVal = $('#form input')
+  var colorBox = $('.brush')
   // setColorButton.on('click', changeColorFunction)
   // setColorButton.keypress(changeColorFunction)
 
   var setColorFunction = function(){
     event.preventDefault()
     console.log('clicked')
+    colorBox.css('background',inputVal.val())
   }
   setColorButton.bind('on click keypress', setColorFunction)
   /////
@@ -21,7 +24,7 @@ $(document).ready(function(){
   //   console.log('clicked')
   // }
 
-  $('.square').on('click',function(){
-    $(this).css('background','green');
+  $('.square').mouseover('click',function(){
+    $(this).css('background',inputVal.val());
   })
 });
