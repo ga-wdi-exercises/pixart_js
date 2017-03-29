@@ -1,7 +1,12 @@
 
 //variable
 var currentColor
+var body = $("body");
 
+for (var i = 0; i < 20; i++) {
+	body.append('<div class='square'></div>')
+	console.log('div added to body')
+}
 
 
 function updateCSS() {
@@ -9,8 +14,6 @@ function updateCSS() {
 }
 
 //store color to global color variable
-
-
 
 //click event
 $("#form").on("submit", function (event) {
@@ -20,6 +23,12 @@ $("#form").on("submit", function (event) {
 	console.log(currentColor);
 	updateCSS();
 });
+
+//create loop to add 20 DIVs to body
+
+
+
+
 
 
 
