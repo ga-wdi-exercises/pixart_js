@@ -9,11 +9,11 @@ function setColor() {
 buttonColor.on("click", setColor);
 buttonColor.keypress(setColor);
 
-for (var i = 0; i < 20; i++) {
+for (var i = 0; i < 8000; i++) {
   $("body").append("<div class=square></div>");
 }
 
-$(".square").on("click", changeToGreen);
+$(".square").on("mouseover", changeToGreen);
 
 function changeToGreen() {
   $(this).css("background", inputField.val());
