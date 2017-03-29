@@ -11,3 +11,8 @@ for (var i = 0; i < 8000; i++) {
   var square = $('<div class="square"></div>');
   $('body').append(square);
 }
+
+$(".square").on("click", red);
+function red(){
+  $(this).css("background", "red");
+}
