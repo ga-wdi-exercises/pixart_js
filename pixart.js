@@ -3,11 +3,12 @@ let inputSubmit = $('input');
 let brushBox = $('.brush');
 let htmlBody = $('body');
 let canvasDiv = fillArray('<div class="square"></div>', 20);
+let brushColor = undefined;
 
 htmlBody.append(canvasDiv);
 
 $(".square").on("click", function () {
-  $(this).css("background", "green");
+  $(this).css("background", brushColor);
 });
 
 
@@ -19,7 +20,7 @@ function fillArray(value, len) {
 }
 
 function changeColor() {
-  let brushColor = $('#color-field').val();
+  brushColor = $('#color-field').val();
   brushBox.css("background", brushColor);
 }
 
@@ -30,7 +31,3 @@ inputSubmit.keydown(function(e) {
     changeColor();
   }
 });
-
-function changeBackgroundColor(){
-  $("this").css("background", "green");
-}
