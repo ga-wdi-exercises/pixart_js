@@ -8,3 +8,7 @@ function changeColor () {
 
 setColor.on("click", changeColor);
 setColor.keypress(changeColor);
+
+for (var i = 0; i < 20; i++) {
+  $("body").append("<div class=square> </div>");
+}
