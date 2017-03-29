@@ -10,10 +10,10 @@ function setColor() {
   brush.css("background-color", inputField.val());
 };
 
-  for (var i = 0; i < 20; i++) {
+  for (var i = 0; i < 8000; i++) {
   $("body").append("<div class= square></div>" );
   }
 
-$(".square").click(function() {
+$(".square").hover(function() {
   $(this).css("background-color", inputField.val());
 });
