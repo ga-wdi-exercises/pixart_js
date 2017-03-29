@@ -2,12 +2,12 @@ let button = $('#set-color');
 let inputSubmit = $('input');
 let brushBox = $('.brush');
 let htmlBody = $('body');
-let canvasDiv = fillArray('<div class="square"></div>', 20);
+let canvasDiv = fillArray('<div class="square"></div>', 8000);
 let brushColor = undefined;
 
 htmlBody.append(canvasDiv);
 
-$(".square").on("click", function () {
+$(".square").on("mouseover", function () {
   $(this).css("background", brushColor);
 });
 
