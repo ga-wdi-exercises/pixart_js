@@ -13,7 +13,12 @@ function changeColor() {
   brushBox.css('background', colorInput.val());
 }
 
-for (var i = 20; i > 0; i--) {
+for (var i = 8000; i > 0; i--) {
   var div = $('<div class=square> </div>');
+  div.on('mouseover', changeBoxColor);
   $('body').append(div);
+}
+
+function changeBoxColor() {
+  $(this).css('background', colorInput.val());
 }
