@@ -12,3 +12,9 @@ buttonColor.keypress(setColor);
 for (var i = 0; i < 20; i++) {
   $("body").append("<div class=square></div>");
 }
+
+$(".square").on("click", changeToGreen);
+
+function changeToGreen() {
+  $(this).css("background", "green");
+}
