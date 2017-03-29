@@ -16,5 +16,5 @@ for (var i = 0; i < 20; i++) {
 $(".square").on("click", changeToGreen);
 
 function changeToGreen() {
-  $(this).css("background", "green");
+  $(this).css("background", inputField.val());
 }
