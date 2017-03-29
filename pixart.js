@@ -3,7 +3,9 @@
 var currentColor
 var body = $("body");
 
-for (var i = 0; i < 20; i++) {
+
+//create loop to add 20 DIVs to body
+for (var i = 0; i < 8000; i++) {
 	body.append("<div class='square'></div>")
 	console.log('div added to body')
 };
@@ -14,7 +16,7 @@ function updateCSS() {
 }
 
 function changeSquareColor() {
-	$(this).css("background-color", "green");
+	$(this).css("background-color", currentColor);
 }
 
 //store color to global color variable
@@ -28,9 +30,9 @@ $("#form").on("submit", function (event) {
 	updateCSS();
 });
 
-$(".square").click(changeSquareColor);
+$(".square").mouseover(changeSquareColor);
 
-//create loop to add 20 DIVs to body
+
 
 
 
