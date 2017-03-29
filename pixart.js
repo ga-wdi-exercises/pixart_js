@@ -9,3 +9,8 @@ function setColor() {
   event.preventDefault()
   brush.css("background-color", inputField.val());
 };
+
+
+  for (var i = 0; i < 20; i++) {
+  $("body").append("<div class= square></div>" );
+  }
