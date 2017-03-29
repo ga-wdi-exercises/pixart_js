@@ -12,7 +12,8 @@ for (var i = 0; i < 8000; i++) {
   $('body').append(square);
 }
 
-$(".square").on("click", red);
+$(".square").on("mouseover", red);
 function red(){
   $(this).css("background", colorField.val());
+
 }
