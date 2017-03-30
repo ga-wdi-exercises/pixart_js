@@ -42,9 +42,11 @@ for (var i = 0; i < 20; i++) {
 	$("body").append($square);
 };
 
+var getAndSetColor3 = function (e){
+	e.preventDefault();
+	var selection = colorField.val();
+	$(this).css("background-color", selection);
+};
 
 
-
-$(".square").click(function() {
-	$(this).css("background-color", "green");
-});
+$(".square").on("click", getAndSetColor3);
