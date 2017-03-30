@@ -41,3 +41,10 @@ for (var i = 0; i < 20; i++) {
 	class: "square"});
 	$("body").append($square);
 };
+
+
+
+
+$(".square").click(function() {
+	$(this).css("background-color", "green");
+});
