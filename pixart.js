@@ -2,38 +2,25 @@ var colorField = $("#color-field");
 var setColor = $("#set-color");
 var brushBox = $(".brush");
 
-var getAndSetColor = function (e){
+var setByClick = function (e){
 	e.preventDefault();
 	var selection = colorField.val();
 	brushBox.css("background-color", selection);
 };
 
-var getAndSetColor2 = function (e){
+var setByEnter = function (e){
 	e.preventDefault();
 	if(e.which == 13) {
 	var selection = colorField.val();
 	brushBox.css("background-color", selection);
-}
+	}
 };
 
-setColor.on("click", getAndSetColor);
-
-setColor.on("keypress", getAndSetColor2);
-
-// var $square1 = $("<div/>", {
-// 	class: "square"});
-
-// var $square2 = $("<div/>", {
-// 	class: "square"});
-
-// var $square3 = $("<div/>", {
-// 	class: "square"});
-
-// $("body").append($square1);
-// $("body").append($square2);
-// $("body").append($square3);
-// can do a for loop!
-
+var setForSquare = function (e){
+	e.preventDefault();
+	var selection = colorField.val();
+	$(this).css("background-color", selection);
+};
 
 for (var i = 0; i < 8000; i++) {
 	var $square = $("<div/>", {
@@ -41,14 +28,13 @@ for (var i = 0; i < 8000; i++) {
 	$("body").append($square);
 };
 
-var getAndSetColor3 = function (e){
-	e.preventDefault();
-	var selection = colorField.val();
-	$(this).css("background-color", selection);
-};
+
+setColor.on("click", setByClick);
+
+setColor.on("keypress", setByEnter);
 
 
-$(".square").on("mouseover", getAndSetColor3);
+$(".square").on("mouseover", setForSquare);
 
 //css file already has square class set with height and width of 10px and a margin of 0
 
