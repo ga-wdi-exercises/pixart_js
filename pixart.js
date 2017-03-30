@@ -14,20 +14,25 @@ var input = $("#color-field");
 var brush = $(".brush");
 var brushHue = undefined;
 var container = "";
+var square = $('div.square');
 
 function setColor(){
     brushHue=input.val();
     brush.css("background", brushHue);
 }
 
+function changeBackground(){
+  // newSquare="green";
+  $('div.square').css("background", "green");
+}
+
 $('#set-color').click(setColor)
 $('#set-color').keydown(setColor)
+$('<div>').click(changeBackground)
 
-// function changeBackground(){
-// for (i=0; i<=20; i++) {
-//   ("<div class= 'square'>").appendTo("<div class= 'controls'>")
-// }
-// }
+// $('.square').on(‘click’, function() {
+// 			$(this).css(“background”, “red”)
+// 			})
 
 for (var x = 0; x <= 100; x++){
     container += '<div class="controls">';
@@ -40,9 +45,6 @@ $('.controls').append(container);
 
 $('#set-color').click(function(event) {
   event.preventDefault();
-  $("<div>")
-    .append("default " + event.type + " prevented")
-    .appendTo("#log");
 });
 
 
