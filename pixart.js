@@ -20,7 +20,6 @@ setColor.on("click", getAndSetColor);
 
 setColor.on("keypress", getAndSetColor2);
 
-
 // var $square1 = $("<div/>", {
 // 	class: "square"});
 
@@ -36,7 +35,7 @@ setColor.on("keypress", getAndSetColor2);
 // can do a for loop!
 
 
-for (var i = 0; i < 20; i++) {
+for (var i = 0; i < 8000; i++) {
 	var $square = $("<div/>", {
 	class: "square"});
 	$("body").append($square);
@@ -49,4 +48,8 @@ var getAndSetColor3 = function (e){
 };
 
 
-$(".square").on("click", getAndSetColor3);
+$(".square").on("mouseover", getAndSetColor3);
+
+//css file already has square class set with height and width of 10px and a margin of 0
+
+
