@@ -23,12 +23,12 @@ function setColor(){
 
 function changeBackground(){
   // newSquare="green";
-  $('div.square').css("background", "green");
+  square.css("background", brushHue);
 }
 
 $('#set-color').click(setColor)
 $('#set-color').keydown(setColor)
-$('<div>').click(changeBackground)
+$(this.square).click(changeBackground)
 
 // $('.square').on(‘click’, function() {
 // 			$(this).css(“background”, “red”)
