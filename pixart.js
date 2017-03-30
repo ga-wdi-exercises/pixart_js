@@ -7,9 +7,9 @@ event.preventDefault();
 $(".brush").css("background-color",inputField.val());
 };
 $("#set-color").on('click',setColor);
-for(var i = 0; i <20; i++){
+for(var i = 0; i <8000; i++){
   $("body").append("<div class = square ></div>");
 }
-$(".square").on("click",function(){
+$(".square").on("mouseover",function(){
   $(this).css("background-color",inputField.val());
 });
