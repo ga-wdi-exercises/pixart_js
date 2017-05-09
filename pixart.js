@@ -9,4 +9,10 @@ $(document).ready(function () {
 
 		$('.brush').css("background", colorVal);
 	})
+	var div = "<div class='square'></div>"
+	for (var i = 0; i < 21; i++) {
+		$('body').append(div)
+	}
+
+
 })
