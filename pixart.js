@@ -11,7 +11,8 @@ for (i = 0; i <= 20; i++) {
 }
 
 $(".square").on("click", function(){
-  $(this).css("background", "green")
+  var color = $(".brush").css("background")
+  $(this).css("background", color)
 })
 
 
