@@ -1,6 +1,6 @@
-var setColor = $("#set-color")
+var setColor = $("#form")
 
-setColor.on("click", function(event){
+setColor.on("submit", function(event){
   event.preventDefault()
   $(".brush").css("background", $("#color-field").val())
 
