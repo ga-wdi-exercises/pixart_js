@@ -20,3 +20,7 @@ for (var i = 0; i < 20; i++) {
   square.addClass("square")
   body.append(square)
 }
+
+$(".square").on("click", function(){
+  $(this).css("background","green")
+})
