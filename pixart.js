@@ -3,7 +3,7 @@ $(document).ready(function () {
 
 	var button = $('#set-color');
 	//create div's
-	for (var i = 0; i < 21; i++) {
+	for (var i = 0; i < 8001; i++) {
 		$('body').append(div)
 	}
 
@@ -15,7 +15,7 @@ $(document).ready(function () {
 	})
 
 	//div will change color when clicked
-	$('.square').on("click",function(){
+	$('.square').on("mouseover",function(){
 		var aColor = colorVal();
 		$(this).css("background", aColor)
 	})
