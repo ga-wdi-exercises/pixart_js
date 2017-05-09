@@ -12,3 +12,4 @@ var setColor = function(e){
 }
 
 submit.on("click", setColor)
+//submit.on(13, setColor)
