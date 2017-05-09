@@ -15,12 +15,12 @@ var setColor = function(e){
 submit.on("click", setColor)
 //submit.on(13, setColor)
 
-for (var i = 0; i < 20; i++) {
+for (var i = 0; i < 8000; i++) {
   var square = $("<div></div>")
   square.addClass("square")
   body.append(square)
 }
 
-$(".square").on("click", function(){
+$(".square").on("mouseover", function(){
   $(this).css("background",color)
 })
