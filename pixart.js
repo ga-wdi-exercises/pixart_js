@@ -1,6 +1,7 @@
 var color_field = $("#color-field")
 var submit = $("#set-color")
 var brush = $(".brush")
+var body = $("body")
 var color
 
 
@@ -13,3 +14,9 @@ var setColor = function(e){
 
 submit.on("click", setColor)
 //submit.on(13, setColor)
+
+for (var i = 0; i < 20; i++) {
+  var square = $("<div></div>")
+  square.addClass("square")
+  body.append(square)
+}
