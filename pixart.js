@@ -11,14 +11,16 @@ $(document).ready(function(){
   })
 
 
-  for (var i = 0; i < 20; i++) {
+  for (var i = 0; i < 8000; i++) {
     var newDiv = $("<div class='square'/>");
     $('body').append(newDiv);
-    $('.square').on('click', function() {
+
+    }
+
+    $('.square').on('mouseover', function() {
       $(this).css('background', input)
     })
 
     // console.log(newDiv);
-  }
 
 });
