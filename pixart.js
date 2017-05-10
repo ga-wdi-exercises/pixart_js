@@ -13,13 +13,23 @@ of the Events & Callbacks lesson plan.
 */
 $( document ).ready(function() {
 
-var input = $("input")
+var input = $("input").val();
 var button = $("button")
 
 $("button").on("click", function() {
     event.preventDefault();
-    console.log(input);
+    // why does commit 2 work with this code and not a separate event listener
+    //console.log(input);
 $(".brush").css("background", "red");
+console.log("red");
 });
+
+var newDiv;
+for(var i = 0; i < 20; i++){
+  newDiv = $("<div class = 'square' />");
+  $('body').append(newDiv);
+
+  console.log(newDiv);
+}
 
 });
