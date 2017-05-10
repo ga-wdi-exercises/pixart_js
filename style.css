@@ -25,6 +25,40 @@ h1 {
   text-align: center;
 }
 
+.colors{
+  display: flex;
+}
+
+.colors div:hover{
+  cursor: pointer;
+}
+
+.recent-one {
+  width: 100px;
+  height: 100px;
+  background: #1B4370;
+  margin: 15px auto;
+}
+
+.recent-two {
+  width: 100px;
+  height: 100px;
+  background: #1B4370;
+  margin: 15px auto;
+}
+
+.recent-three {
+  width: 100px;
+  height: 100px;
+  background: #1B4370;
+  margin: 15px auto;
+}
+
+.activeColor{
+  border: 3px solid black;
+  border-radius: 5px;
+}
+
 body {
   background-image: url('ps_neutral.png');
 }
