@@ -14,6 +14,9 @@ $(document).ready(function(){
   for (var i = 0; i < 20; i++) {
     var newDiv = $("<div class='square'/>");
     $('body').append(newDiv);
+    $('.square').on('click', function() {
+      $('.square').css('background', 'green')
+    })
 
     console.log(newDiv);
   }
