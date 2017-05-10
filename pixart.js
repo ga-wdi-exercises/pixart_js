@@ -26,15 +26,13 @@ $( document ).ready(function() {
   });
 
   var newDiv;
-  for(var i = 0; i < 20; i++){
+  for(var i = 0; i < 8000; i++){
     newDiv = $("<div class = 'square' />");
     $('body').append(newDiv);
 
-    console.log(newDiv);
-
   }
 
-  $(".square").on("click", function() {
+  $(".square").on("mouseover", function() {
     console.log(input);
     $(this).css("background", input);
   });
