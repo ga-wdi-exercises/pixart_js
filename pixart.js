@@ -11,16 +11,15 @@ event prevent default". You can also reference [this portion]
 (https://github.com/ga-wdi-lessons/js-events-callbacks#event-defaults-405---410-5-minutes)
 of the Events & Callbacks lesson plan.
 */
+$( document ).ready(function() {
 
 var input = $("input")
 var button = $("button")
-function changeBrushBoxColor(){
-$(".square").css("background", "");
-}
-button.on("click", changeBrushBoxColor());
 
-//prevent refresh code
-$("button").click(function(event) {
-  event.preventDefault();
-  alert("Color Changed!");
+$("button").on("click", function() {
+    event.preventDefault();
+    console.log(input);
+$(".brush").css("background", "red");
+});
+
 });
