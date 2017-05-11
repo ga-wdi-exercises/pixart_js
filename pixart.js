@@ -7,6 +7,7 @@ function changeColor(evt){
   evt.preventDefault();
   $("div .brush").css("background-color",colorSelected);
   console.log("color changed to "+ colorSelected);
+  $("body").on("click",squareCreated);
 }
 
 buttonClicked.on("click",changeColor);
@@ -19,4 +20,12 @@ function enterKeyPressed(e){
   }
 }
 
+function squareCreated(){
+  console.log("box created");
+var  boxes= []
+for(i=0;i<20;i++) {
+    boxes.push("<div class="square"> </div>");
+  }
+$("body").append(boxes);
+}
 })
