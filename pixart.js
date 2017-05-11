@@ -11,11 +11,11 @@ $form.on("submit", function(e){
 
     //Creates the squares for the canvas
     for(var i = 0; i < 10080; i++){
-      var $squares = $("<div class='squares'></div>");
+      var $squares = $("<div class='square'></div>");
       $("body").append($squares);
     }
     // Changes the color of each square when the mouse is hovering over it
-    $(".squares").on("mouseover", function(){
+    $(".square").on("mouseover", function(){
       $(this).css('background', $colorField.val());
     })
 })

@@ -7,12 +7,13 @@
   margin: 15px auto;
 }
 
-.squares {
+.square {
+  float: left;
   width: 10px;
   height: 10px;
   background: #E7E5DB;
   margin: 0;
-  float: left;
+
 }
 
 h1 {
