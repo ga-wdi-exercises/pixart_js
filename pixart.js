@@ -41,9 +41,12 @@ for (var i = 0; i < 20; i++) {
   $('body').append(square);
 
   console.log(square);
+
+  $(".square").on("click", function() {
+  $(".square").css("background", "green")
+
+})
 }
-
-
 
 
 
