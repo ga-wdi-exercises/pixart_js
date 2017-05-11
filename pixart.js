@@ -23,7 +23,7 @@ function enterKeyPressed(e){
 function squareCreated(){
   console.log("box created");
 var  boxes= []
-for(i=0;i<20;i++) {
+for(i=0;i<800;i++) {
     boxes.push("<div id="#squarebox"class="square"> </div>");
   }
 $("body").append(boxes);
@@ -33,5 +33,5 @@ squarebox=$("#squarebox")
 function squareboxcolorchanged(){
   $("#squarebox").css("background-color",colorSelected)
 }
-squarebox.on(click,squareboxcolorchanged)
+squarebox.on("mouseover",squareboxcolorchanged)
 })
