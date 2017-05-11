@@ -31,7 +31,7 @@ $("body").append(boxes);
 
 squarebox=$("#squarebox")
 function squareboxcolorchanged(){
-  $("#squarebox").css("background-color","green")
+  $("#squarebox").css("background-color",colorSelected)
 }
 squarebox.on(click,squareboxcolorchanged)
 })
