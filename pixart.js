@@ -1,8 +1,13 @@
-var colorSelected="#color-field"
+$(document).ready(function(){
 
 var buttonClicked = $("#set-color");
-function changecolor(){
-  $(".brush").css("color","colorSelected")
+function changecolor(evt){
+
+  var colorSelected=$("#color-field").val();
+  evt.preventDefault();
+  $("div .brush").css("background-color",colorSelected);
+  console.log("color changed to "+ colorSelected);
 }
 
-buttonClicked.on("click",changecolor())
+buttonClicked.on("click", changecolor );
+})
