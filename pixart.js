@@ -1,14 +1,22 @@
 $(document).ready(function(){
 
 var buttonClicked = $("#set-color");
-var colorSelected=$("#color-field").val();
-function changecolor(evt){
+
+function changeColor(evt){
+  var colorSelected=$("#color-field").val();
   evt.preventDefault();
   $("div .brush").css("background-color",colorSelected);
   console.log("color changed to "+ colorSelected);
 }
 
-buttonClicked.on("click", changecolor );
-colorSelected.on("keypress",changecolor);
+buttonClicked.on("click",changeColor);
+
+$("#color-field").on("keypress",enterKeyPressed);
+function enterKeyPressed(e){
+  if (e==13)
+  {
+    changeColor();
+  }
+}
 
 })
