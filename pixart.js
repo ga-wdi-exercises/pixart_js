@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+// 1)
+
 // Select #set-color and store in a variable for "Set Color" button
 var setColorButton = $("#set-color")
 
@@ -17,6 +19,46 @@ var colorInput = $("#color-field")
  $(".brush").css("background", colorInput.val());
 console.log("The brush box color has been changed to " + colorInput.val());
 });
+
+
+
+// var enterEvent = $("#color-field")
+//
+// enterEvent.on("keypress", function() {
+// event.preventDefault();
+//
+// })
+
+
+
+
+// 3)
+
+// !!!!!!!
+for (var i = 0; i < 20; i++) {
+  var square = $("<div class='square'/>");
+
+  $('body').append(square);
+
+  console.log(square);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 });
