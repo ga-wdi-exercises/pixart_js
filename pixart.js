@@ -24,8 +24,14 @@ function squareCreated(){
   console.log("box created");
 var  boxes= []
 for(i=0;i<20;i++) {
-    boxes.push("<div class="square"> </div>");
+    boxes.push("<div id="#squarebox"class="square"> </div>");
   }
 $("body").append(boxes);
 }
+
+squarebox=$("#squarebox")
+function squareboxcolorchanged(){
+  $("#squarebox").css("background-color","green")
+}
+squarebox.on(click,squareboxcolorchanged)
 })
