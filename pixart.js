@@ -4,6 +4,9 @@ var button = $('#set-color')
 var form = $('#form')
 var color
 var colorSwatch = []
+var recentOne = $('#recent-one')
+var recentTwo = $('#recent-two')
+var recentThree = $('#recent-three')
 
 function setColor () {
   color = $('#color-field').val()
@@ -14,6 +17,26 @@ function setColor () {
     colorSwatch.unshift(color)
     colorSwatch.pop()
   }
+  recentOne.css('background', colorSwatch[0])
+  recentTwo.css('background', colorSwatch[1])
+  recentThree.css('background', colorSwatch[2])
+}
+
+recentOne.on('click', swatchPicker)
+recentTwo.on('click', swatchPickerTwo)
+recentThree.on('click', swatchPickerThree)
+
+function swatchPicker() {
+  color = colorSwatch[0]
+  $('.brush').css('background', color)
+}
+function swatchPickerTwo() {
+  color = colorSwatch[1]
+  $('.brush').css('background', color)
+}
+function swatchPickerThree() {
+  color = colorSwatch[2]
+  $('.brush').css('background', color)
 }
 
 function changeFormDefault (evnt) {

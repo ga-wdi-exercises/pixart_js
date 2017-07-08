@@ -4,7 +4,15 @@
   width: 100px;
   height: 100px;
   background: #1B4370;
-  margin: 15px auto;
+  margin: 15px auto 10px;
+}
+
+.recent {
+  width: 20px;
+  height: 20px;
+  margin: 0 5px 5px 5px;
+  border: 1px solid #cccccc;
+  display: inline-block;
 }
 
 .square {
