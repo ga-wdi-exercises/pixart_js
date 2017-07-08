@@ -24,5 +24,5 @@ for (var i = 0; i < 20; i++) {
 var square = $('.square')
 
 square.on('click', function () {
-  $(this).css('background', 'green')
+  $(this).css('background', inputBox.val())
 })
