@@ -10,9 +10,15 @@ function setColor () {
 }
 button.on('click', setColor)
 
-function changeFormDefault (e) {
-  e.preventDefault()
+function changeFormDefault (evnt) {
+  evnt.preventDefault()
+}
+function enterPressed (e) {
+  if (e.which === 13) {
+      setColor()
+  }
 }
 form.on('submit', changeFormDefault)
+form.on('submit', enterPressed)
 
 })
