@@ -1,5 +1,11 @@
 @import url(http://fonts.googleapis.com/css?family=Monoton);
 
+.brushContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 .brush {
   width: 100px;
   height: 100px;
