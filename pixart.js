@@ -18,7 +18,16 @@ function enterPressed (e) {
       setColor()
   }
 }
+
 form.on('submit', changeFormDefault)
 form.on('submit', enterPressed)
+
+function createDivs () {
+  $('<div></div>').attr('class', 'square').appendTo('body')
+}
+
+for (var i = 0; i < 20; i++) {
+  createDivs()
+}
 
 })
