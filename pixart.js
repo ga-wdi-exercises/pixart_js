@@ -15,8 +15,14 @@ inputBox.on('onkeypress', function (e) {
   }
 })
 
-// Create 20 divs of the "square" class and append them to the body
-//  * **Hint**: use `.append()`
 for (var i = 0; i < 20; i++) {
-  $('body').append('<div class="square"></div>')
+  var $newDiv = $('<div class="square"></div>')
+  $newDiv.attr('id', 'square' + i)
+  $('body').append($newDiv)
 }
+
+var square = $('.square')
+
+square.on('click', function () {
+  $(this).css('background', 'green')
+})
