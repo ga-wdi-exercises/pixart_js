@@ -14,5 +14,8 @@ $('#color-field').keypress(function (n) {
 })
 
 for (let i = 0; i < 20; i++) {
-$('body').append('<div class="square"></div>')
+  $('body').append('<div class="square"></div>')
 }
+$('.square').on('click', function () {
+  $(this).css('background', 'green')
+})
