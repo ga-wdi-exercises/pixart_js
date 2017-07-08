@@ -8,6 +8,7 @@ function setColor () {
   color = $('#color-field').val()
   $('.brush').css('background', color)
 }
+
 button.on('click', setColor)
 
 function changeFormDefault (evnt) {
@@ -23,11 +24,18 @@ form.on('submit', changeFormDefault)
 form.on('submit', enterPressed)
 
 function createDivs () {
-  $('<div></div>').attr('class', 'square').appendTo('body')
-}
+  $('<div></div>').attr(
+    {'class': 'square', id: 'circle'}
+  ).appendTo('body')
+  }
 
 for (var i = 0; i < 20; i++) {
   createDivs()
 }
+
+var square = $('.square')
+square.on('click', function() {
+  $(this).css('background', 'green')
+})
 
 })
