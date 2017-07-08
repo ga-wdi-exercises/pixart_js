@@ -10,3 +10,7 @@ form.on('submit', function (event) {
   event.preventDefault()
   colorBrush.css('background-color', input.val())
 })
+form.on('enterKey', function (event) {
+  event.preventDefault()
+  colorBrush.css('background-color', input.val())
+})
