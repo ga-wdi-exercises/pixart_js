@@ -15,7 +15,7 @@ function addDiv () {
 }
 
 function changeSquare () {
-  $(this).css('background', 'green')
+  $(this).css('background', input.val())
 }
 
 setColor.on('click', changeBrushColor)
