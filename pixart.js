@@ -14,6 +14,11 @@ function addDiv () {
   }
 }
 
+function changeSquare () {
+  $(this).css('background', 'green')
+}
+
 setColor.on('click', changeBrushColor)
 setColor.on('keypress', changeBrushColor)
 addDiv()
+$('.square').on('click', changeSquare)
