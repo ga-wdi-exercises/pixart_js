@@ -15,7 +15,7 @@ inputBox.on('onkeypress', function (e) {
   }
 })
 
-for (var i = 0; i < 20; i++) {
+for (var i = 0; i < 8000; i++) {
   var $newDiv = $('<div class="square"></div>')
   $newDiv.attr('id', 'square' + i)
   $('body').append($newDiv)
@@ -23,6 +23,6 @@ for (var i = 0; i < 20; i++) {
 
 var square = $('.square')
 
-square.on('click', function () {
+square.on('mouseover', function () {
   $(this).css('background', inputBox.val())
 })
