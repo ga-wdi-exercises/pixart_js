@@ -17,11 +17,11 @@ form.on('enterKey', function (event) {
 
 // create loop that appends body with div elements and define div
 
-for (let i = 0; i < 20; i++) {
+for (let i = 0; i <8000; i++) {
   var square = $('.square')
   $('body').append('<div class="square"></div>')
 }
 // changes background color of square div on click
-square.on('click', function (event) {
+square.on('mouseover', function (event) {
   $(this).css('background-color', input.val())
 })
