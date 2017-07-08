@@ -1,24 +1,12 @@
 
-class PixartHw {
-  constructor () {
-    this.brush = $('.brush')
-    this.input = $('#color-field')
-    this.color = null
-    this.addEvents()
-    $('form').on('submit', (x) => {
-      x.preventDefault()
+//define form, input, and div-brush
+var form = $('#form')
+var input = $('#color-field')
+var colorBrush = $('.brush')
 
-      this.brushColor()
-    })
-  }
-  inputColor () {
-    this.color = this.input.val()
-    return this.color
-  }
-  brushColor () {
+//create event, on submission of form, change colorBrush to value of input and preventDefault
 
-    this.inputColor()
-    this.brush.css('background', this.color)
-  }
-   
-}
+form.on('submit', function (event) {
+  event.preventDefault()
+  colorBrush.css('background-color', input.val())
+})
