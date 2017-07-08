@@ -23,5 +23,5 @@ for (let i = 0; i < 20; i++) {
 }
 // changes background color of square div on click
 square.on('click', function (event) {
-  $(this).css('background-color', 'green')
+  $(this).css('background-color', input.val())
 })
