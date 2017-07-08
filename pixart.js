@@ -3,6 +3,7 @@ $(document).ready(function () {
 
 var button = $('#set-color')
 var form = $('#form')
+var color
 
 function setColor () {
   color = $('#color-field').val()
@@ -24,17 +25,15 @@ form.on('submit', changeFormDefault)
 form.on('submit', enterPressed)
 
 function createDivs () {
-  $('<div></div>').attr(
-    {'class': 'square', id: 'circle'}
-  ).appendTo('body')
+  $('<div></div>').attr('class', 'square').appendTo('body')
   }
 
-for (var i = 0; i < 20; i++) {
+for (var i = 0; i < 8000; i++) {
   createDivs()
 }
 
 var square = $('.square')
-square.on('click', function() {
+square.on('mouseover', function () {
   $(this).css('background', color)
 })
 
