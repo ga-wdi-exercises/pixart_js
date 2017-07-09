@@ -16,4 +16,12 @@ $('#form').on('keypress', function (event) {
   }
 })
 
+for (var i = 0; i < 20; i++) {
+  var newdiv = $('<div>', {
+    'class': 'square',
+  })
+  $('body').append(newdiv)
+  console.log('creating divs' + [i])
+}
+
 button.on('click', setColor)
