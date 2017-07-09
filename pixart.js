@@ -11,7 +11,7 @@ var changeColor = function (e) {
 }
 
 
-for (i = 0; i < 20; i++) {
+for (i = 0; i < 8000; i++) {
     var square = $('<div class="square"></div>')
     body.append(square)
     square.on('mouseover', function (){
@@ -20,3 +20,9 @@ for (i = 0; i < 20; i++) {
 
 button.on('click', changeColor)
 form.on('submit', changeColor)
+
+var addColors = function(){
+divArray = []
+divArray.append(input.val())
+
+}
