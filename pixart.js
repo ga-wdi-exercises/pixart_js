@@ -15,5 +15,5 @@ $(document).ready(function () {
 })
 
 $('body').on('click', function () {
-  $('.square').css ('background', 'green')
+  $('.square').css ('background', $('input').val())
 })
