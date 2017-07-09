@@ -9,6 +9,7 @@ var setColor = function () {
   $('.brush').css('background', set)
 }
 
+// No annoying refresh on enter -- finally
 $('#form').on('keypress', function (event) {
   if (event.keyCode === 13) {
     event.preventDefault()
@@ -16,12 +17,17 @@ $('#form').on('keypress', function (event) {
   }
 })
 
+// SQUARE INVASION!
 for (var i = 0; i < 20; i++) {
   var newdiv = $('<div>', {
-    'class': 'square',
+    'class': 'square'
   })
   $('body').append(newdiv)
-  console.log('creating divs' + [i])
 }
+
+// GREEN BLOCKS!
+$('.square').click(function () {
+  $(this).css('background', 'green')
+})
 
 button.on('click', setColor)
