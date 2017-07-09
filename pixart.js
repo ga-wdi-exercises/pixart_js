@@ -1,3 +1,4 @@
+/* global $ */
 console.log('online and ready to rock')
 
 // Commit 1
@@ -26,6 +27,12 @@ form.on('submit', setColor)
 // Commit 3
 // Create 20 divs of the "square" class and append them to the body
 // Hint: use .append()
+
+
+for (var i = 0; i < 20; i++) {
+  var sq = $('<div class="square"></div>')
+  $('body').append(sq)
+}
 
 // Commit 4
 // Add functionality so that when I click on each "square", it changes the color of that individual square to "green"
