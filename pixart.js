@@ -34,13 +34,14 @@ for (var i = 0; i < 20; i++) {
 // Hint: either add the event listener while creating the squares, or listen for events on the body element
 
   sq.on('click', function () {
-    $(this).css('background', '#00ff00')
+    $(this).css('background', input.val())
+    // Commit 5
+    // Modify your code so that when I click on each "square", it changes to the color I set using my input instead of "green" every time.
+
   })
 }
 
 
-// Commit 5
-// Modify your code so that when I click on each "square", it changes to the color I set using my input instead of "green" every time.
 
 // Commit 6
 // Modify the CSS so that the "square" class has a height and width of 10px and a margin of 0.
