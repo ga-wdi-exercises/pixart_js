@@ -27,7 +27,8 @@ for (var i = 0; i < 20; i++) {
 
 // GREEN BLOCKS!
 $('.square').click(function () {
-  $(this).css('background', 'green')
+  var set = colorField.val()
+  $(this).css('background', set)
 })
 
 button.on('click', setColor)
