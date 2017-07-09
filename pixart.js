@@ -5,6 +5,11 @@ console.log('online and ready to rock')
 // Use jQuery to select the element and add an event listener
 // HINT: You will notice that the page refreshes whenever you click the button. You need to prevent this from happening using a method you have not used before. Google "javascript event prevent default". You can also reference this portion of the Events & Callbacks lesson plan.
 
+
+// Commit 2
+// The same thing should happen when I press the enter key from inside the input field
+
+
 var button = $('#set-color')
 var input = $('#color-field')
 var brush = $('.brush')
@@ -16,10 +21,7 @@ function setColor (e) {
   brush.css('background-color', input.val())
 }
 
-button.on('click', setColor)
-
-// Commit 2
-// The same thing should happen when I press the enter key from inside the input field
+form.on('submit', setColor)
 
 // Commit 3
 // Create 20 divs of the "square" class and append them to the body
