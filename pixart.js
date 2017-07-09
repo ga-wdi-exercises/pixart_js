@@ -3,6 +3,7 @@ var button = $('#set-color')
 var input = $('#color-field')
 var body = $('body')
 
+
 var setColor = function (e) {
   e.preventDefault()
   brush.css('background-color', input.val())
@@ -10,11 +11,27 @@ var setColor = function (e) {
 
 button.on('click', setColor)
 
-  var makeDiv = function () {
-    var square = '<div class ="square"></div>'
-    for (i = 0; i < 20; i++) {
-      body.append(square)
+for (i = 0; i < 20; i++) {
+var square = $('<div class ="square"></div>')
+    body.append(square)
+    square.on('click', function () {
+      $(this).css('background', 'green')
+    })
 
-    }
   }
-makeDiv()
+
+
+
+var changeColor = function () {
+  $(this).css('background-color', 'green')
+}
+
+squares.on('click', changeColor)
+
+// * Add functionality so that when I click on each "square", it changes the color of that individual square to "green"
+//   * **Hint**: either add the event listener while creating the squares, or listen for events on the `body` element
+// $("#yourID").click(function(){
+//
+//   $(this).css("background-color","yellow");
+//
+//   });
