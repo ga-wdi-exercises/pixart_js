@@ -14,7 +14,8 @@ var button = $("button");
 button.on("click", clickEvent);
 
 var square = [];
-for(i = 0; i < 20; i++) {
+//Modify your code so that you are creating 8000 divs instead of 20.
+for(i = 0; i < 8000; i++) {
   square.push('<div class="square"></div>')
 }
 $('body').append(square)
@@ -22,6 +23,7 @@ $('body').append(square)
 //square to "green". Hint: either add the event listener while creating the squares, or listen
 //for events on the body element
 
-$('.square').on('click', function(){
-  $(this).css('background', 'green')
+//Change the event that changes your box colors from 'click' to 'mouseover'
+$('.square').on('mouseover', function () {
+  $(this).css('background', $('input').val())
 })
