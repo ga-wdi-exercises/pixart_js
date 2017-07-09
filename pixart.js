@@ -1,54 +1,78 @@
 /* global $ */
 console.log('online and ready to rock')
 
-var button = $('#set-color')
+// Variables
 var input = $('#color-field')
 var brush = $('.brush')
 var form = $('#form')
-var square = $('.square')
 
+// Function to set color of brush and swatch to the input value
 function setColor (e) {
   e.preventDefault()
   brush.css('background-color', input.val())
+  addSwatch(input.val())
 }
 
+// Listener that sets the color when a user hits enter or clicks
 form.on('submit', setColor)
 
-
+// Loop to create 8000 divs with class "square"
 for (var i = 0; i < 8000; i++) {
   var sq = $('<div class="square"></div>')
   $('body').append(sq)
 
+/* Each time the div is created, also add an
+ event listener to change to the background color on mouseover */
   sq.on('mouseover', function () {
-    $(this).css('background', input.val())
-
+    $(this).css('background-color', input.val())
   })
 }
+// Bonus - create a swatch of 3 most recently used colors
 
-// Commit 1
-// When I click the "Set Color" button, it should change the color of the "brush" box to the color I specify in the input field.
-// Use jQuery to select the element and add an event listener
-// HINT: You will notice that the page refreshes whenever you click the button. You need to prevent this from happening using a method you have not used before. Google "javascript event prevent default". You can also reference this portion of the Events & Callbacks lesson plan.
-//
-// Commit 2
-// The same thing should happen when I press the enter key from inside the input field
-//
-// Commit 3
-// Create 20 divs of the "square" class and append them to the body
-// Hint: use .append()
-//
-// Commit 4
-// Add functionality so that when I click on each "square", it changes the color of that individual square to "green"
-// Hint: either add the event listener while creating the squares, or listen for events on the body element
-//
-// Commit 5
-// Modify your code so that when I click on each "square", it changes to the color I set using my input instead of "green" every time.
-//
-// Commit 6
-// Modify the CSS so that the "square" class has a height and width of 10px and a margin of 0.
-// Modify your code so that you are creating 8000 divs instead of 20.
-// Change the event that changes your box colors from 'click' to 'mouseover'
-// Paint a picture!
+// Create an array to store my swatch colors
+var colorList = []
 
-// Bonus
-// Add a color swatch. You should have 3 boxes with the most recent 3 colors used. When you click on each of those boxes, it should set the current brush color back to that color.
+// Create a flexbox div for all my swatches to live in neatly
+form.after($('<div class = swatches></div>'))
+
+// Function to add to the Swatch
+function addSwatch (color) {
+  // only add the color if it's not already in the list
+  if (colorList.indexOf(color) < 0) {
+    // do not have more than 3 swatches
+    if (colorList.length < 3) {
+      // add the new color to the end of my list
+      colorList.push(color)
+      // make the actual swatch square
+      makeSwatch()
+    } else {
+      // remove the first color from the list
+      colorList.shift()
+      // add the new color to the end of the list
+      colorList.push(color)
+      // make the actual swatch square
+      makeSwatch()
+    }
+  }
+}
+
+// Function to make the actual swatch sqaure and add it to my swatches div
+function makeSwatch () {
+  // remove any swatch that exists already
+  $('.swatch').remove()
+  // make the swatches for each color in our list
+  for (var i = 0; i < colorList.length; i++) {
+    var $swatch = $(`<div class="swatch"></div>`)
+    // set the background color of the swatch to the color in our list
+    $swatch.css('background-color', colorList[i])
+    // add the swatch to my swatches div
+    $('.swatches').append($swatch)
+  }
+
+
+// Listener so that if a swatch is clicked, the brush becomes that color
+$('.swatch').on('click', function () {
+  input.val($(this).css('background-color'))
+  brush.css('background-color', $(this).css('background-color'))
+})
+}
