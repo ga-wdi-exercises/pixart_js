@@ -15,18 +15,13 @@ for (i = 0; i < 20; i++) {
 var square = $('<div class ="square"></div>')
     body.append(square)
     square.on('click', function () {
-      $(this).css('background', 'green')
+      $(this).css('background', input.val())
     })
 
   }
 
 
 
-var changeColor = function () {
-  $(this).css('background-color', 'green')
-}
-
-squares.on('click', changeColor)
 
 // * Add functionality so that when I click on each "square", it changes the color of that individual square to "green"
 //   * **Hint**: either add the event listener while creating the squares, or listen for events on the `body` element
