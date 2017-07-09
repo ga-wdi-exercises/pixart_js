@@ -6,7 +6,8 @@
   background: #1B4370;
   margin: 15px auto;
 }
-
+/* Modify the CSS so that the "square" class has a height 
+and width of 10px and a margin of 0 */
 .square {
   float: left;
   width: 10px;
