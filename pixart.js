@@ -5,21 +5,18 @@ var input = $('#color-field')
 var form = $('.form')
 var body = $('body')
 
-
 var changeColor = function (e) {
   e.preventDefault()
-  colorBox.css("background-color", input.val())
+  colorBox.css('background-color', input.val())
 }
 
-var createDivs = function () {
-  var square = '<div class="square"></div>'
-  for (i = 0; i < 20; i++){
-  body.append(square)
-}
-}
+
+for (i = 0; i < 20; i++) {
+    var square = $('<div class="square"></div>')
+    body.append(square)
+    square.on('mouseover', function (){
+      $(this).css('background', input.val())
+    })}
 
 button.on('click', changeColor)
-
 form.on('submit', changeColor)
-
-createDivs()
