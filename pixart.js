@@ -1,4 +1,6 @@
 /* global $ */
+
+// finished commit 5
 console.log('hello world')
 
 var colorField = $('#color-field')
@@ -18,7 +20,7 @@ $('#form').on('keypress', function (event) {
 })
 
 // SQUARE INVASION!
-for (var i = 0; i < 20; i++) {
+for (var i = 0; i < 8000; i++) {
   var newdiv = $('<div>', {
     'class': 'square'
   })
@@ -26,7 +28,7 @@ for (var i = 0; i < 20; i++) {
 }
 
 // GREEN BLOCKS!
-$('.square').click(function () {
+$('.square').mouseover(function () {
   var set = colorField.val()
   $(this).css('background', set)
 })
