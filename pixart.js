@@ -17,3 +17,13 @@ var colorx = inputText.val();
 
   event.preventDefault();//prevents from refreshing
 }
+
+
+
+////var oneSquare = $('.square').html();
+//console.log(oneSquare);
+var oneSquare = ('<div class="square"> </div>');
+for(var i =0; i<20; i ++)
+{
+$('body').append(oneSquare);
+}
