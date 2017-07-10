@@ -15,5 +15,5 @@ function changeBrush(event)
 var colorx = inputText.val();
   currentBrush.css('background',colorx);
 
-  event.preventDefault();//prevents from refreshing 
+  event.preventDefault();//prevents from refreshing
 }
