@@ -33,6 +33,7 @@ $('.square').on('click',changetoGreen)
 
 function changetoGreen(event)
 {
-  $(this).css('background','green')
+  var colorx = inputText.val();
+  $(this).css('background',colorx)
   event.preventDefault();
 }
