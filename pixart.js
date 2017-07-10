@@ -7,6 +7,7 @@ var colorSwatch = []
 var recentOne = $('#recent-one')
 var recentTwo = $('#recent-two')
 var recentThree = $('#recent-three')
+var recentColor = $('.recent')
 
 function setColor () {
   color = $('#color-field').val()
@@ -22,20 +23,8 @@ function setColor () {
   recentThree.css('background', colorSwatch[2])
 }
 
-recentOne.on('click', swatchPicker)
-recentTwo.on('click', swatchPickerTwo)
-recentThree.on('click', swatchPickerThree)
-
-function swatchPicker() {
-  color = colorSwatch[0]
-  $('.brush').css('background', color)
-}
-function swatchPickerTwo() {
-  color = colorSwatch[1]
-  $('.brush').css('background', color)
-}
-function swatchPickerThree() {
-  color = colorSwatch[2]
+function swatchPicker () {
+  color = $(this).css('background-color')
   $('.brush').css('background', color)
 }
 
@@ -48,13 +37,9 @@ function enterPressed (e) {
   }
 }
 
-form.on('submit', changeFormDefault)
-form.on('submit', enterPressed)
-button.on('click', setColor)
-
 function createDivs () {
   $('<div></div>').attr('class', 'square').appendTo('body')
-  }
+}
 
 for (var i = 0; i < 8000; i++) {
   createDivs()
@@ -64,3 +49,8 @@ var square = $('.square')
 square.on('mouseover', function () {
   $(this).css('background', color)
 })
+
+form.on('submit', changeFormDefault)
+form.on('submit', enterPressed)
+button.on('click', setColor)
+recentColor.on('click', swatchPicker)
