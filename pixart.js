@@ -8,10 +8,10 @@ $('#form').on('click', function (evnt) {
   $('.brush').css('background', color)
 })
 
-for (let i = 0; i < 20; i++) {
+for (let i = 0; i < 8000; i++) {
   $('body').append("<div class='square'></div>")
 }
 
-$('.square').on('click', function (evnt) {
-  $(evnt.target).css('background', '$input.val()')
+$('.square').on('mouseover', function (evnt) {
+  $(evnt.target).css('background', $input.val())
 })
