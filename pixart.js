@@ -27,3 +27,12 @@ for(var i =0; i<20; i ++)
 {
 $('body').append(oneSquare);
 }
+
+
+$('.square').on('click',changetoGreen)
+
+function changetoGreen(event)
+{
+  $(this).css('background','green')
+  event.preventDefault();
+}
