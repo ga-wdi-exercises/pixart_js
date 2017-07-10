@@ -13,5 +13,5 @@ for (let i = 0; i < 20; i++) {
 }
 
 $('.square').on('click', function (evnt) {
-  $(evnt.target).css('background', 'green')
+  $(evnt.target).css('background', '$input.val()')
 })
