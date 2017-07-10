@@ -5,7 +5,7 @@ class Pixart {
     this.color
     this.brush = $('.brush')
     this.input = $('#color-field')
-    $('#form').on('submit', evnt => {
+    $('#set-color').on('click', evnt => {
       evnt.preventDefault()
       this.makeColor()
     })
