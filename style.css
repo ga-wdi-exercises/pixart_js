@@ -7,6 +7,20 @@
   margin: 15px auto;
 }
 
+.swatch {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: #1B4370;
+  margin: 5px auto;
+}
+
+.swatchHolder {
+  flex: auto;
+  flex-flow: row;
+
+}
+
 .square {
   float: left;
   width: 10px;
