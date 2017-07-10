@@ -23,13 +23,13 @@ var colorx = inputText.val();
 ////var oneSquare = $('.square').html();
 //console.log(oneSquare);
 var oneSquare = ('<div class="square"> </div>');
-for(var i =0; i<20; i ++)
+for(var i =0; i<8000; i ++)
 {
 $('body').append(oneSquare);
 }
 
 
-$('.square').on('click',changetoGreen)
+$('.square').on('mouseover',changetoGreen)
 
 function changetoGreen(event)
 {
