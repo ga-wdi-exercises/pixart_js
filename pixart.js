@@ -19,4 +19,10 @@ class Pixart {
     this.color = this.input.val()
     return this.color
   }
+
+  makeCanvas () {
+    for (var i = 0; i < 20; i++) {
+      $('body').append("<div class='square'></div>")
+    }
+  }
 }
